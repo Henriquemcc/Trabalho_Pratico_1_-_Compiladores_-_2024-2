@@ -59,6 +59,10 @@ if __name__ == '__main__':
     opt_path = shutil.which('opt')
     print('opt_path = {}'.format(opt_path))
 
+    # Obtendo o caminho do llc
+    llc_path = shutil.which('llc')
+    print('llc_path = {}'.format(llc_path))
+
     # Obtendo o caminho do programa
     source_file_path = os.path.realpath(sys.argv[1])
     print('programa = {}'.format(source_file_path))
@@ -91,3 +95,13 @@ if __name__ == '__main__':
         # Executando o Opt
         subprocess.run(args)
 
+        # Definindo o caminho do arquivo assembly
+        assembly_file_path = "{}_{}".format(pathlib.Path(os.path.basename(intermediary_language_file_path)).stem, code_generation_option)
+        assembly_file_path = generate_unique_file_path(os.path.dirname(source_file_path), assembly_file_path, 's')
+        print('assembly_file_path = {}'.format(assembly_file_path))
+
+        # Definindo os argumentos para executar o Llc
+        args = [llc_path, intermediary_language_file_path, '-o', assembly_file_path]
+
+        # Executando o Llc
+        subprocess.run(args)
