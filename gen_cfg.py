@@ -59,12 +59,19 @@ if __name__ == '__main__':
     source_file_path = os.path.realpath(sys.argv[1])
     print('programa = {}'.format(source_file_path))
 
-    # Definindo o caminho do arquivo de bytecodes
-    bytecodes_file_path = generate_unique_file_path(os.path.dirname(source_file_path), pathlib.Path(os.path.basename(source_file_path)).stem, 'bc')
-    print('bytecodes_file_path = {}'.format(bytecodes_file_path))
-
     # Obtendo a representação intermediária
-    args = [clang_path, '-emit-llvm', '-c', source_file_path, '-o', bytecodes_file_path]
-    print('args = {}'.format(args))
-    subprocess.run(args)
+    code_generation_options = ['O0', 'O1', 'O2', 'O3']
+    for code_generation_option in code_generation_options:
+
+        # Definindo o caminho do arquivo de bytecodes
+        bytecodes_base_file_name = "{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, code_generation_option)
+        bytecodes_file_path = generate_unique_file_path(os.path.dirname(source_file_path), bytecodes_base_file_name, 'bc')
+        print('bytecodes_file_path = {}'.format(bytecodes_file_path))
+
+        # Definido os argumentos para executar o Clang
+        args = [clang_path, '-{}'.format(code_generation_option), '-emit-llvm', '-c', source_file_path, '-o', bytecodes_file_path]
+        print('args = {}'.format(args))
+
+        # Executando o Clang
+        subprocess.run(args)
 
