@@ -83,6 +83,13 @@ if __name__ == '__main__':
         # Executando o Clang
         subprocess.run(args)
 
+        # Substituindo o 'optnone' por nada
+        with open(bytecodes_file_path, 'r') as bytecodes_file:
+            bytecodes_file_data = bytecodes_file.read()
+        bytecodes_file_data = bytecodes_file_data.replace('optnone', '')
+        with open(bytecodes_file_path, 'w') as bytecodes_file:
+            bytecodes_file.write(bytecodes_file_data)
+
         # Definindo o caminho do arquivo da linguagem intermediária
         intermediary_language_file_path = "{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, code_generation_option)
         intermediary_language_file_path = generate_unique_file_path(os.path.dirname(source_file_path), intermediary_language_file_path, 'dot')
