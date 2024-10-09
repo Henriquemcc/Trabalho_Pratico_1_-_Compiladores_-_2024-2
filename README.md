@@ -18,8 +18,8 @@ Veja por exemplo o código abaixo, que calcula o fatorial de um número, e seu r
 int fact ( int n) {
     int ans = 1 ;
     while (n > 1 ) {
-        ans ∗= n ;
-        n−−;
+        ans *= n ;
+        n--;
     }
     return ans ;
 }
