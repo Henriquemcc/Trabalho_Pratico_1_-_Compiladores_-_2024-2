@@ -77,7 +77,7 @@ if __name__ == '__main__':
         print('bytecodes_file_path = {}'.format(bytecodes_file_path))
 
         # Definido os argumentos para executar o Clang
-        args = [clang_path, '-emit-llvm', '-c', source_file_path, '-o', bytecodes_file_path]
+        args = [clang_path, '-emit-llvm', '-S', source_file_path, '-o', bytecodes_file_path]
         print('args = {}'.format(args))
 
         # Executando o Clang
