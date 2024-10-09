@@ -55,6 +55,10 @@ if __name__ == '__main__':
     clang_path = shutil.which('clang')
     print('clang_path = {}'.format(clang_path))
 
+    # Obtendo o caminho do opt
+    opt_path = shutil.which('opt')
+    print('opt_path = {}'.format(opt_path))
+
     # Obtendo o caminho do programa
     source_file_path = os.path.realpath(sys.argv[1])
     print('programa = {}'.format(source_file_path))
@@ -64,14 +68,26 @@ if __name__ == '__main__':
     for code_generation_option in code_generation_options:
 
         # Definindo o caminho do arquivo de bytecodes
-        bytecodes_base_file_name = "{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, code_generation_option)
-        bytecodes_file_path = generate_unique_file_path(os.path.dirname(source_file_path), bytecodes_base_file_name, 'bc')
+        bytecodes_file_path = "{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, code_generation_option)
+        bytecodes_file_path = generate_unique_file_path(os.path.dirname(source_file_path), bytecodes_file_path, 'bc')
         print('bytecodes_file_path = {}'.format(bytecodes_file_path))
 
         # Definido os argumentos para executar o Clang
-        args = [clang_path, '-{}'.format(code_generation_option), '-emit-llvm', '-c', source_file_path, '-o', bytecodes_file_path]
+        args = [clang_path, '-emit-llvm', '-c', source_file_path, '-o', bytecodes_file_path]
         print('args = {}'.format(args))
 
         # Executando o Clang
+        subprocess.run(args)
+
+        # Definindo o caminho do arquivo da linguagem intermediária
+        intermediary_language_file_path = "{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, code_generation_option)
+        intermediary_language_file_path = generate_unique_file_path(os.path.dirname(source_file_path), intermediary_language_file_path, 'dot')
+        print('intermediary_language_file_path = {}'.format(intermediary_language_file_path))
+
+        # Definindo os argumentos para executar o Opt
+        args = [opt_path, '-passes=default<{}>,dot-cfg'.format(code_generation_option), bytecodes_file_path, '-o', intermediary_language_file_path]
+        print('args = {}'.format(args))
+
+        # Executando o Opt
         subprocess.run(args)
 
