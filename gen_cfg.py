@@ -116,7 +116,7 @@ if __name__ == '__main__':
                 print('dot_file_path = {}'.format(dot_file_path))
 
                 # Definindo o nome do arquivo .png a ser gerado
-                png_file_path = generate_unique_file_path(current_dir, "{}_{}".format(pathlib.Path(os.path.basename(filename_from_current_dir)).stem, code_generation_option), 'png')
+                png_file_path = generate_unique_file_path(current_dir, "{}_{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, pathlib.Path(os.path.basename(filename_from_current_dir)).stem, code_generation_option), 'png')
                 print('png_file_path = {}'.format(png_file_path))
 
                 # Definindo os argumentos para executar o Dot
@@ -127,7 +127,7 @@ if __name__ == '__main__':
                 subprocess.run(args)
 
                 # Definindo o nome do arquivo '.digraph' a ser gerado
-                digraph_file_path = generate_unique_file_path(current_dir, "{}_{}".format(pathlib.Path(os.path.basename(filename_from_current_dir)).stem, code_generation_option), '.digraph')
+                digraph_file_path = generate_unique_file_path(current_dir, "{}_{}_{}".format(pathlib.Path(os.path.basename(source_file_path)).stem, pathlib.Path(os.path.basename(filename_from_current_dir)).stem, code_generation_option), '.digraph')
                 print('digraph_file_path = {}'.format(digraph_file_path))
 
                 # Definindo os argumentos para executar o Dot
