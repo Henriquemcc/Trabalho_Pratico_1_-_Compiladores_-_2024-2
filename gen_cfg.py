@@ -59,6 +59,10 @@ if __name__ == '__main__':
     opt_path = shutil.which('opt')
     print('opt_path = {}'.format(opt_path))
 
+    # Obtendo o caminho do dot
+    dot_path = shutil.which('dot')
+    print('dot_path = {}'.format(dot_path))
+
     # Obtendo o caminho do llc
     llc_path = shutil.which('llc')
     print('llc_path = {}'.format(llc_path))
@@ -102,13 +106,22 @@ if __name__ == '__main__':
         # Executando o Opt
         subprocess.run(args)
 
-        # Definindo o caminho do arquivo assembly
-        assembly_file_path = "{}_{}".format(pathlib.Path(os.path.basename(intermediary_language_file_path)).stem, code_generation_option)
-        assembly_file_path = generate_unique_file_path(os.path.dirname(source_file_path), assembly_file_path, 's')
-        print('assembly_file_path = {}'.format(assembly_file_path))
+        # Para cada arquivo '.dot', gerando arquivos .png
+        current_dir = pathlib.Path.cwd()
+        for filename_from_current_dir in os.listdir(current_dir):
+            if filename_from_current_dir.endswith('.dot'):
 
-        # Definindo os argumentos para executar o Llc
-        args = [llc_path, intermediary_language_file_path, '-o', assembly_file_path]
+                # Definindo o caminho do arquivo '.dot'
+                dot_file_path = os.path.join(current_dir, filename_from_current_dir)
+                print('dot_file_path = {}'.format(dot_file_path))
 
-        # Executando o Llc
-        subprocess.run(args)
+                # Definindo o nome do arquivo .png a ser gerado
+                png_file_path = generate_unique_file_path(current_dir, "{}_{}".format(pathlib.Path(os.path.basename(filename_from_current_dir)).stem, code_generation_option), 'png')
+                print('png_file_path = {}'.format(png_file_path))
+
+                # Definindo os argumentos para executar o Dot
+                args = [dot_path, '-Tpng', '-o', png_file_path, dot_file_path]
+                print('args = {}'.format(args))
+
+                # Executando o Dot
+                subprocess.run(args)
