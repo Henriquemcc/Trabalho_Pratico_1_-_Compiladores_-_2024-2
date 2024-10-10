@@ -125,3 +125,6 @@ if __name__ == '__main__':
 
                 # Executando o Dot
                 subprocess.run(args)
+
+                # Apagando o arquivo .dot
+                os.remove(dot_file_path)
