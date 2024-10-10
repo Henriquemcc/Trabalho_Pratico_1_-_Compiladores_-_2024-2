@@ -107,7 +107,7 @@ if __name__ == '__main__':
         subprocess.run(args)
 
         # Para cada arquivo '.dot', gerando arquivos .png
-        current_dir = pathlib.Path.cwd()
+        current_dir = str(pathlib.Path.cwd())
         for filename_from_current_dir in os.listdir(current_dir):
             if filename_from_current_dir.endswith('.dot'):
 
