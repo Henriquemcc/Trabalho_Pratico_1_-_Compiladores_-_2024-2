@@ -96,7 +96,7 @@ if __name__ == '__main__':
         print('intermediary_language_file_path = {}'.format(intermediary_language_file_path))
 
         # Definindo os argumentos para executar o Opt
-        args = [opt_path, '-passes=default<{}>,dot-cfg'.format(code_generation_option), bytecodes_file_path, '-o', intermediary_language_file_path]
+        args = [opt_path, '-passes=default<{}>,dot-cfg'.format(code_generation_option), bytecodes_file_path]
         print('args = {}'.format(args))
 
         # Executando o Opt
