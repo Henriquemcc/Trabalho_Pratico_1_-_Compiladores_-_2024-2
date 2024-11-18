@@ -1,0 +1,8 @@
+graph 1 8.7083 4.7222
+node Node0x1dfc3090 4.3542 2.5208 8.7083 4.4028 "{4:\l|  %5 = alloca ptr, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca ptr, align 8\l  store ptr %\
+0, ptr %5, align 8\l  store i32 %1, ptr %6, align 4\l  store i32 %2, ptr %7, align 4\l  store ptr %3, ptr %8, align 8\l  store i32 \
+-2147483648, ptr @best_so_far, align 4\l  %9 = load ptr, ptr %5, align 8\l  %10 = load i32, ptr %6, align 4\l  %11 = load i32, ptr %\
+7, align 4\l  %12 = load ptr, ptr %8, align 8\l  call void @knapsack_seq(ptr noundef %9, i32 noundef %10, i32 noundef %11,\l... \
+i32 noundef 0, ptr noundef %12)\l  %13 = load ptr, ptr %8, align 8\l  %14 = load i32, ptr %13, align 4\l  %15 = call i32 (ptr, ...) @\
+printf(ptr noundef @.str.6, i32 noundef %14)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

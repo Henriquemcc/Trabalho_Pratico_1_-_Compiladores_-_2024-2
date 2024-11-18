@@ -1,0 +1,9 @@
+graph 1 9.0556 5.5556
+node Node0x1dfc4750 4.5278 2.9375 9.0556 5.2361 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca [256 x %struct.item], align \
+16\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  store i32 0, ptr %3, align 4\l  store \
+i32 %0, ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  store i32 0, ptr %9, align 4\l  %10 = load ptr, ptr %5, align 8\l  %\
+11 = getelementptr inbounds ptr, ptr %10, i64 1\l  %12 = load ptr, ptr %11, align 8\l  %13 = getelementptr inbounds [256 x %struct.item], \
+ptr %6, i64 0, i64 0\l  %14 = call i32 @read_input(ptr noundef %12, ptr noundef %13, ptr noundef %8,\l... ptr noundef %7)\l  %15 = \
+getelementptr inbounds [256 x %struct.item], ptr %6, i64 0, i64 0\l  %16 = load i32, ptr %8, align 4\l  %17 = load i32, ptr %7, \
+align 4\l  call void @knapsack_main_par(ptr noundef %15, i32 noundef %16, i32 noundef\l... %17, ptr noundef %9)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+stop

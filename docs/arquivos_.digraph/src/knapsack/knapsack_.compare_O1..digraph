@@ -1,0 +1,8 @@
+graph 1 7.5694 4.5139
+node Node0x31651e70 3.7847 2.4167 7.5694 4.1944 "{2:\l|  %3 = load i32, ptr %0, align 4\l  %4 = sitofp i32 %3 to double\l  %5 = getelementptr inbounds %struct.item, ptr %0, i64 \
+0, i32 1\l  %6 = load i32, ptr %5, align 4\l  %7 = sitofp i32 %6 to double\l  %8 = fdiv double %4, %7\l  %9 = load i32, ptr %1, \
+align 4\l  %10 = sitofp i32 %9 to double\l  %11 = getelementptr inbounds %struct.item, ptr %1, i64 0, i32 1\l  %12 = load i32, ptr %\
+11, align 4\l  %13 = sitofp i32 %12 to double\l  %14 = fdiv double %10, %13\l  %15 = fsub double %8, %14\l  %16 = fcmp ogt double %\
+15, 0.000000e+00\l  %17 = fcmp olt double %15, 0.000000e+00\l  %. = zext i1 %17 to i32\l  %.0 = select i1 %16, i32 -1, i32 %.\l  \
+ret i32 %.0\l}" filled record #b70d28ff #b70d2870
+stop

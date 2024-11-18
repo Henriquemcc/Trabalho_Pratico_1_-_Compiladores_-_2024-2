@@ -1,0 +1,28 @@
+graph 1 20.229 11.958
+node Node0x120c6e10 10.007 10.951 8.7083 2.0139 "{4:\l|  %5 = icmp eq ptr %0, null\l  %spec.store.select = select i1 %5, ptr @.str, ptr %0\l  %6 = tail call noalias ptr @fopen(ptr \
+noundef nonnull %spec.store.select,\l... ptr noundef nonnull @.str.1)\l  %7 = icmp eq ptr %6, null\l  br i1 %7, label %8, label %\
+11\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x120c7fc0 4.2986 5.2986 8.5972 1.2778 "{8:\l|  %9 = load ptr, ptr @stderr, align 8\l  %10 = tail call i32 (ptr, ptr, ...) @fprintf(ptr noundef %9, ptr noundef\l... nonnull @\
+.str.2, ptr noundef nonnull %spec.store.select) #9\l  br label %25\l}" filled record #3d50c3ff #e5705870
+node Node0x120c8010 15.701 8.3333 9.0556 2.2222 "{11:\l|  %12 = tail call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef nonnull\l... %6, ptr noundef nonnull @.str.3, ptr noundef %\
+3) #10\l  %13 = tail call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef nonnull %6,\l... ptr noundef nonnull @.str.3, ptr noundef %\
+2) #10\l  %14 = load i32, ptr %3, align 4\l  %15 = icmp sgt i32 %14, 0\l  br i1 %15, label %.lr.ph, label %._crit_edge\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x120c83e0 10.021 0.75 5.3889 0.86111 "{25:\l|  %.0 = phi i32 [ -1, %8 ], [ 0, %._crit_edge ]\l  ret i32 %.0\l}" filled record #3d50c3ff #d24b4070
+node Node0x120c8b90 13.438 5.2986 9.1667 2.8472 "{.lr.ph:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %.lr.ph ], [ 0, %11 ]\l  %16 = getelementptr inbounds %struct.item, ptr %\
+1, i64 %indvars.iv\l  %17 = getelementptr inbounds %struct.item, ptr %1, i64 %indvars.iv, i32 1\l  %18 = tail call i32 (ptr, ptr, \
+...) @__isoc99_fscanf(ptr noundef nonnull %6,\l... ptr noundef nonnull @.str.4, ptr noundef %16, ptr noundef nonnull %17) #10\l  %\
+indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %19 = load i32, ptr %3, align 4\l  %20 = sext i32 %19 to i64\l  %21 = icmp slt \
+i64 %indvars.iv.next, %20\l  br i1 %21, label %.lr.ph, label %._crit_edge, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x120c8be0 15.729 2.5278 8.7083 1.6944 "{._crit_edge:\l|  %22 = tail call i32 @fclose(ptr noundef nonnull %6)\l  %23 = load i32, ptr %3, align 4\l  %24 = sext i32 %23 to \
+i64\l  tail call void @qsort(ptr noundef %1, i64 noundef %24, i64 noundef 8, ptr\l... noundef nonnull @compare) #10\l  br label %\
+25\l}" filled record #3d50c3ff #d24b4070
+edge Node0x120c6e10 Node0x120c7fc0 4 7.8264 9.9444 7.8264 8.2767 6.3611 6.8347 5.3192 6.0202 solid black
+edge Node0x120c6e10 Node0x120c8010 4 14.382 10.104 14.744 10.104 15.019 9.8628 15.221 9.5591 solid black
+edge Node0x120c7fc0 Node0x120c83e0 4 5.0823 4.6656 6.2281 3.7603 8.3386 2.093 9.3904 1.2619 solid black
+edge Node0x120c8010 Node0x120c8b90 4 13.438 7.2222 13.438 7.1055 13.438 6.9847 13.438 6.8632 solid black
+edge Node0x120c8010 Node0x120c8be0 10 17.965 7.2222 17.965 6.986 18.105 6.955 18.146 6.7222 18.364 5.4757 18.789 4.9647 18.146 3.875 18.055 3.722 17.941 3.5853 17.81 3.4635 solid black
+edge Node0x120c8b90 Node0x120c8b90 7 10.768 3.8814 9.39 3.3559 8.6042 3.4542 8.6042 4.6667 8.6042 4.8398 8.6597 4.9902 8.7597 5.1194 solid black
+edge Node0x120c8b90 Node0x120c8be0 4 15.729 3.875 15.729 3.7577 15.729 3.6346 15.729 3.5126 solid black
+edge Node0x120c8be0 Node0x120c83e0 4 13.03 1.6863 12.502 1.5245 11.967 1.3606 11.498 1.2167 solid black
+stop

@@ -1,0 +1,12 @@
+graph 1 7.25 5.6806
+node Node0x1dfc3c50 3.5972 4.3611 3.7778 2.6389 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store i32 %0, ptr %4, align 4\l  store \
+i32 %1, ptr %5, align 4\l  %6 = load i32, ptr %4, align 4\l  %7 = load i32, ptr %5, align 4\l  %8 = icmp eq i32 %6, %7\l  br i1 %\
+8, label %9, label %10\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1dfc40f0 1.7222 2.1111 3.4444 0.86111 "{9:\l|  store i32 1, ptr %3, align 4\l  br label %11\l}" filled record #3d50c3ff #be242e70
+node Node0x1dfc4140 5.4722 2.1111 3.5556 0.86111 "{10:\l|  store i32 -1, ptr %3, align 4\l  br label %11\l}" filled record #3d50c3ff #be242e70
+node Node0x1dfc42e0 3.5972 0.75 3.7778 0.86111 "{11:\l|  %12 = load i32, ptr %3, align 4\l  ret i32 %12\l}" filled record #b70d28ff #b70d2870
+edge Node0x1dfc3c50 Node0x1dfc40f0 4 1.6944 3.2083 1.4562 3.2083 1.4604 2.9434 1.5256 2.6755 solid black
+edge Node0x1dfc3c50 Node0x1dfc4140 4 5.5 3.2083 5.7382 3.2083 5.734 2.9434 5.6689 2.6755 solid black
+edge Node0x1dfc40f0 Node0x1dfc42e0 4 2.3001 1.6863 2.4908 1.5507 2.7049 1.3985 2.9033 1.2573 solid black
+edge Node0x1dfc4140 Node0x1dfc42e0 4 4.8944 1.6863 4.7037 1.5507 4.4896 1.3985 4.2911 1.2573 solid black
+stop

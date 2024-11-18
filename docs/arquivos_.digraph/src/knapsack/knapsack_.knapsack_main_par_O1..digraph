@@ -1,0 +1,5 @@
+graph 1 9.0556 2.2222
+node Node0x3165f460 4.5278 1.2708 9.0556 1.9028 "{4:\l|  store i32 -2147483648, ptr @best_so_far, align 4\l  tail call void @knapsack_par(ptr noundef %0, i32 noundef %1, i32 noundef %\
+2,\l... i32 noundef 0, ptr noundef %3, i32 noundef 0)\l  %5 = load i32, ptr %3, align 4\l  %6 = tail call i32 (ptr, ...) @printf(\
+ptr noundef nonnull dereferenceable(1)\l... @.str.5, i32 noundef %5)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

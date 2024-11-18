@@ -1,0 +1,28 @@
+graph 1 13.896 15.514
+node Node0x3d4ff210 4.3125 14.715 3.6667 1.5972 "{5:\l|  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = icmp slt i32 %1, 0\l  br i1 %8, label %37, label %9\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3d501f60 4.2986 0.95833 8.5972 1.2778 "{37:\l|  %.sink = phi i32 [ -2147483648, %5 ], [ %3, %9 ], [ -2147483648, %12 ], [\l... %33, %36 ], [ %33, %24 ]\l  store i32 %.sink, \
+ptr %4, align 4\l  ret void\l}" filled record #b70d28ff #b70d2870
+node Node0x3d501d40 5.6319 12.618 4.4722 1.5972 "{9:\l|  %10 = icmp eq i32 %2, 0\l  %11 = icmp eq i32 %1, 0\l  %or.cond = or i1 %11, %10\l  br i1 %or.cond, label %37, label %12\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x3d502390 7.7153 9.6875 7.5694 3.2639 "{12:\l|  %13 = sext i32 %3 to i64\l  %14 = load i32, ptr %0, align 4\l  %15 = mul nsw i32 %14, %1\l  %16 = getelementptr inbounds %\
+struct.item, ptr %0, i64 0, i32 1\l  %17 = load i32, ptr %16, align 4\l  %18 = sdiv i32 %15, %17\l  %19 = sext i32 %18 to i64\l  %\
+20 = add nsw i64 %13, %19\l  %21 = load i32, ptr @best_so_far, align 4\l  %22 = sext i32 %21 to i64\l  %23 = icmp slt i64 %20, %\
+22\l  br i1 %23, label %37, label %24\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #c32e3170
+node Node0x3d5030a0 9.3681 5.5069 9.0556 4.0972 "{24:\l|  %25 = getelementptr inbounds %struct.item, ptr %0, i64 1\l  %26 = add nsw i32 %2, -1\l  call void @knapsack_seq(ptr noundef \
+nonnull %25, i32 noundef %1, i32 noundef\l... %26, i32 noundef %3, ptr noundef nonnull %7)\l  %27 = load i32, ptr %16, align 4\l  %\
+28 = sub nsw i32 %1, %27\l  %29 = load i32, ptr %0, align 4\l  %30 = add nsw i32 %29, %3\l  call void @knapsack_seq(ptr noundef \
+nonnull %25, i32 noundef %28, i32\l... noundef %26, i32 noundef %30, ptr noundef nonnull %6)\l  %31 = load i32, ptr %6, align 4\l  %\
+32 = load i32, ptr %7, align 4\l  %33 = tail call i32 @llvm.smax.i32(i32 %31, i32 %32)\l  %34 = load i32, ptr @best_so_far, align \
+4\l  %35 = icmp sgt i32 %33, %34\l  br i1 %35, label %36, label %37\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x3d505150 7.1042 2.5278 4.8194 0.86111 "{36:\l|  store i32 %33, ptr @best_so_far, align 4\l  br label %37\l}" filled record #3d50c3ff #d0473d70
+edge Node0x3d4ff210 Node0x3d501f60 16 3.3958 13.917 3.3958 13.688 3.3069 13.643 3.2708 13.417 3.0105 11.782 3.0069 11.357 3.0069 9.7014 3.0069 9.7014 3.0069 9.7014 3.0069 5.4931 3.0069 3.9447 3.2219 3.5396 3.7847 2.0972 3.8328 1.974 3.8875 1.8449 3.9429 1.72 solid black
+edge Node0x3d4ff210 Node0x3d501d40 4 5.2292 13.917 5.2292 13.796 5.2455 13.672 5.2716 13.551 solid black
+edge Node0x3d501d40 Node0x3d501f60 7 3.3819 11.979 2.9081 11.979 3.6811 3.9281 3.7431 3.4583 3.8201 2.8737 3.9676 2.2236 4.0913 1.7349 solid black
+edge Node0x3d501d40 Node0x3d502390 4 7.8819 11.979 8.198 11.979 8.3011 11.758 8.2932 11.454 solid black
+edge Node0x3d502390 Node0x3d501f60 4 3.9097 8.2153 3.5879 8.2153 4.028 3.5967 4.2184 1.7357 solid black
+edge Node0x3d502390 Node0x3d5030a0 4 9.6042 8.0556 9.6042 7.9367 9.6016 7.8149 9.5969 7.6921 solid black
+edge Node0x3d5030a0 Node0x3d501f60 4 11.632 3.4583 11.632 2.6337 9.9479 2.0285 8.1938 1.6218 solid black
+edge Node0x3d5030a0 Node0x3d505150 4 7.1042 3.4583 7.1042 3.3407 7.1042 3.2145 7.1042 3.0946 solid black
+edge Node0x3d505150 Node0x3d501f60 4 6.356 2.1028 6.1071 1.966 5.8229 1.8098 5.5467 1.658 solid black
+stop
