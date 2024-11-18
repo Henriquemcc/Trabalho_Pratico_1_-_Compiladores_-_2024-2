@@ -1,0 +1,6 @@
+graph 1 2.8889 2.125
+node Node0x1fb88230 1.3194 1.7986 2.6389 0.65278 "{1:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #f2907270
+node Node0x1fb3f4b0 1.3194 0.64583 2.6389 0.65278 "{tailrecurse:\l|  br label %tailrecurse\l}" filled record #b70d28ff #b70d2870
+edge Node0x1fb88230 Node0x1fb3f4b0 4 1.3194 1.4773 1.3194 1.3632 1.3194 1.2314 1.3194 1.1073 solid black
+edge Node0x1fb3f4b0 Node0x1fb3f4b0 7 2.6419 0.82679 2.7918 0.7929 2.8889 0.73258 2.8889 0.64583 2.8889 0.5889 2.8471 0.54336 2.7759 0.50919 solid black
+stop

@@ -1,0 +1,3 @@
+graph 1 3.7778 1.1806
+node Node0x1fb413c0 1.8889 0.75 3.7778 0.86111 "{0:\l|  tail call void @foo(i32 poison)\l  unreachable\l}" filled record #b70d28ff #b70d2870
+stop

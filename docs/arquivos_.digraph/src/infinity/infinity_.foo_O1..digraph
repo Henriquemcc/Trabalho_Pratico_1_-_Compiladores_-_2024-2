@@ -1,0 +1,6 @@
+graph 1 5.8611 2.5417
+node Node0x210fbde0 2.8056 2.2153 2.6389 0.65278 "{1:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #f2907270
+node Node0x210b34b0 2.8056 0.85417 5.6111 1.0694 "{tailrecurse:\l|  %.tr = phi i32 [ %0, %1 ], [ %2, %tailrecurse ]\l  %2 = add nsw i32 %.tr, 1\l  br label %tailrecurse\l}" filled record #b70d28ff #b70d2870
+edge Node0x210fbde0 Node0x210b34b0 4 2.8056 1.8921 2.8056 1.7826 2.8056 1.6548 2.8056 1.5273 solid black
+edge Node0x210b34b0 Node0x210b34b0 7 5.6136 1.0252 5.7688 0.98363 5.8611 0.92661 5.8611 0.85417 5.8611 0.80549 5.8194 0.76378 5.745 0.72904 solid black
+stop
