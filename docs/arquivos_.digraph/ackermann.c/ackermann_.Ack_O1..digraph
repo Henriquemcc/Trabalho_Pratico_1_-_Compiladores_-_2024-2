@@ -1,0 +1,14 @@
+graph 1 9.1181 6.5278
+node Node0x40210b00 4.1875 6.2014 2.6389 0.65278 "{2:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #d6524470
+node Node0x401c1f90 4.1875 4.5764 6.1944 1.5972 "{tailrecurse:\l|  %.tr = phi i32 [ %0, %2 ], [ %8, %9 ], [ %8, %6 ]\l  %.tr10 = phi i32 [ %1, %2 ], [ %11, %9 ], [ 1, %6 ]\l  %3 = \
+icmp eq i32 %.tr, 0\l  br i1 %3, label %4, label %6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401c1e90 1.6042 2.5833 3.2083 0.86111 "{4:\l|  %5 = add nsw i32 %.tr10, 1\l  ret i32 %5\l}" filled record #3d50c3ff #d6524470
+node Node0x401c4a20 6.3403 2.5833 4.6944 1.3889 "{6:\l|  %7 = icmp eq i32 %.tr10, 0\l  %8 = add nsw i32 %.tr, -1\l  br i1 %7, label %tailrecurse, label %9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401c4f30 5.5625 0.85417 7.1111 1.0694 "{9:\l|  %10 = add nsw i32 %.tr10, -1\l  %11 = tail call i32 @Ack(i32 noundef %.tr, i32 noundef %10)\l  br label %tailrecurse\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x40210b00 Node0x401c1f90 4 4.1875 5.8795 4.1875 5.7705 4.1875 5.6416 4.1875 5.5082 solid black
+edge Node0x401c1f90 Node0x401c1e90 4 1.0764 3.9375 0.71038 3.9375 0.93538 3.4994 1.1953 3.1242 solid black
+edge Node0x401c1f90 Node0x401c4a20 4 5.7431 3.7778 5.7431 3.6513 5.7707 3.5245 5.8141 3.4036 solid black
+edge Node0x401c4a20 Node0x401c1f90 4 3.9792 2.0556 3.8144 2.0556 3.9163 2.927 4.0278 3.6424 solid black
+edge Node0x401c4a20 Node0x401c4f30 4 7.5208 1.8889 7.5208 1.7336 7.4718 1.6019 7.3893 1.4902 solid black
+edge Node0x401c4f30 Node0x401c1f90 7 4.3491 1.3821 4.1563 1.5182 3.9829 1.6856 3.8681 1.8889 3.5681 2.4198 3.6568 3.1038 3.8159 3.6471 solid black
+stop

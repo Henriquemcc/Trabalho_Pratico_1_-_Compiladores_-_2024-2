@@ -1,0 +1,10 @@
+graph 1 8.6667 5.2639
+node Node0x401c5bb0 5 4.6736 3.5556 1.1806 "{2:\l|  %3 = icmp eq i32 %0, 2\l  br i1 %3, label %4, label %8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401c6730 3.2083 2.9444 6.4167 1.2778 "{4:\l|  %5 = getelementptr inbounds ptr, ptr %1, i64 1\l  %6 = load ptr, ptr %5, align 8\l  %7 = tail call i32 @atoi(ptr nocapture \
+noundef %6) #4\l  br label %8\l}" filled record #3d50c3ff #be242e70
+node Node0x401c6c20 5 1.0625 7.3333 1.4861 "{8:\l|  %9 = phi i32 [ %7, %4 ], [ 8, %2 ]\l  %10 = tail call i32 @Ack(i32 noundef 3, i32 noundef %9)\l  %11 = tail call i32 (ptr, \
+...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str, i32 noundef %9, i32 noundef %10)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+edge Node0x401c5bb0 Node0x401c6730 4 3.2083 4.2431 2.9572 4.2431 2.927 3.9946 2.9719 3.7162 solid black
+edge Node0x401c5bb0 Node0x401c6c20 7 6.7917 4.2431 6.8401 4.2431 7.1657 3.4085 6.5417 2.3056 6.4579 2.1575 6.3485 2.0205 6.2266 1.896 solid black
+edge Node0x401c6730 Node0x401c6c20 4 3.8099 2.308 3.9347 2.1789 4.068 2.0409 4.1986 1.9057 solid black
+stop
