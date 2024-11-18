@@ -1,0 +1,13 @@
+graph 1 10.688 6.5139
+node Node0x1efaa8d0 5.2569 5.5069 4.5833 2.0139 "{1:\l|  %2 = alloca double, align 8\l  %3 = alloca double, align 8\l  store double %0, ptr %3, align 8\l  %4 = load double, ptr %\
+3, align 8\l  %5 = fcmp olt double %4, 2.000000e+00\l  br i1 %5, label %6, label %7\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1efab5e0 2.5208 2.8403 5.0417 0.86111 "{6:\l|  store double 1.000000e+00, ptr %2, align 8\l  br label %15\l}" filled record #3d50c3ff #be242e70
+node Node0x1efab630 7.9931 2.8403 5.3889 2.3194 "{7:\l|  %8 = load double, ptr %3, align 8\l  %9 = fsub double %8, 2.000000e+00\l  %10 = call double @fibFP(double noundef %9)\l  %\
+11 = load double, ptr %3, align 8\l  %12 = fsub double %11, 1.000000e+00\l  %13 = call double @fibFP(double noundef %12)\l  %14 = \
+fadd double %10, %13\l  store double %14, ptr %2, align 8\l  br label %15\l}" filled record #3d50c3ff #be242e70
+node Node0x1efab7d0 5.2569 0.75 4.125 0.86111 "{15:\l|  %16 = load double, ptr %2, align 8\l  ret double %16\l}" filled record #b70d28ff #b70d2870
+edge Node0x1efaa8d0 Node0x1efab5e0 4 2.9514 4.6597 2.4315 4.6597 2.3959 3.9426 2.4406 3.4123 solid black
+edge Node0x1efaa8d0 Node0x1efab630 4 7.5625 4.6597 7.8559 4.6597 7.9951 4.4313 8.0526 4.137 solid black
+edge Node0x1efab5e0 Node0x1efab7d0 4 3.068 2.414 3.5079 2.0823 4.1275 1.6152 4.5953 1.2626 solid black
+edge Node0x1efab630 Node0x1efab7d0 4 6.481 1.6866 6.2841 1.5382 6.0913 1.3929 5.9191 1.263 solid black
+stop

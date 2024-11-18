@@ -1,0 +1,14 @@
+graph 1 10.451 7.3611
+node Node0x296cac40 3.8958 6.7708 7.1111 1.1806 "{1:\l|  %2 = icmp slt i32 %0, 2\l  br i1 %2, label %tailrecurse._crit_edge, label %tailrecurse\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x296b6000 2.8681 0.85417 5.7361 1.0694 "{tailrecurse._crit_edge:\l|  %accumulator.tr.lcssa = phi i32 [ 1, %1 ], [ %8,\l... %tailrecurse._crit_edge.loopexit ]\l  ret i32 %\
+accumulator.tr.lcssa\l}" filled record #3d50c3ff #d0473d70
+node Node0x296b5e60 6.1319 4.4653 8.1389 2.4306 "{tailrecurse:\l|  %.tr6 = phi i32 [ %5, %tailrecurse ], [ %0, %1 ]\l  %accumulator.tr5 = phi i32 [ %6, %tailrecurse ], [ 0, %1 ]\l  %\
+3 = add nsw i32 %.tr6, -2\l  %4 = tail call i32 @fib(i32 noundef %3)\l  %5 = add nsw i32 %.tr6, -1\l  %6 = add nsw i32 %4, %accumulator.tr5\l  %\
+7 = icmp ult i32 %.tr6, 3\l  br i1 %7, label %tailrecurse._crit_edge.loopexit, label %tailrecurse\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x296b1580 4.0764 2.3194 4.0139 0.86111 "{tailrecurse._crit_edge.loopexit:\l|  %8 = add nsw i32 %6, 1\l  br label %tailrecurse._crit_edge\l}" filled record #3d50c3ff #d6524470
+edge Node0x296cac40 Node0x296b6000 10 2.1181 6.1806 2.1181 5.9443 1.9782 5.9133 1.9375 5.6806 1.647 4.0206 1.3405 3.4595 1.9514 1.8889 2.0063 1.7478 2.0904 1.6139 2.1858 1.4922 solid black
+edge Node0x296cac40 Node0x296b5e60 4 5.6736 6.1806 5.6736 6.0605 5.6844 5.9373 5.7026 5.8148 solid black
+edge Node0x296b5e60 Node0x296b5e60 7 8.6165 3.2566 9.7838 2.8873 10.451 2.9891 10.451 3.9375 10.451 4.0791 10.4 4.2019 10.308 4.307 solid black
+edge Node0x296b5e60 Node0x296b1580 4 4.0903 3.25 4.0903 3.1323 4.0891 3.0062 4.0875 2.8862 solid black
+edge Node0x296b1580 Node0x296b6000 4 3.7301 1.8936 3.6245 1.7679 3.5059 1.6268 3.3912 1.4904 solid black
+stop

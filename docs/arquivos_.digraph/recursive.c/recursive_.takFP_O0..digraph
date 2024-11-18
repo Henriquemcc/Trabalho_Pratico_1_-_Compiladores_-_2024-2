@@ -1,0 +1,19 @@
+graph 1 12.861 10.264
+node Node0x1efad650 7.5208 8.7361 4.125 3.0556 "{3:\l|  %4 = alloca double, align 8\l  %5 = alloca double, align 8\l  %6 = alloca double, align 8\l  %7 = alloca double, align 8\l  \
+store double %0, ptr %5, align 8\l  store double %1, ptr %6, align 8\l  store double %2, ptr %7, align 8\l  %8 = load double, ptr %\
+6, align 8\l  %9 = load double, ptr %5, align 8\l  %10 = fcmp olt double %8, %9\l  br i1 %10, label %11, label %28\l|{<s0>T|<s1>\
+F}}" filled record #b70d28ff #b70d2870
+node Node0x1efadc10 4.2431 4.1944 8.4861 5.0278 "{11:\l|  %12 = load double, ptr %5, align 8\l  %13 = fsub double %12, 1.000000e+00\l  %14 = load double, ptr %6, align 8\l  %15 = \
+load double, ptr %7, align 8\l  %16 = call double @takFP(double noundef %13, double noundef %14, double\l... noundef %15)\l  %17 = \
+load double, ptr %6, align 8\l  %18 = fsub double %17, 1.000000e+00\l  %19 = load double, ptr %7, align 8\l  %20 = load double, \
+ptr %5, align 8\l  %21 = call double @takFP(double noundef %18, double noundef %19, double\l... noundef %20)\l  %22 = load double, \
+ptr %7, align 8\l  %23 = fsub double %22, 1.000000e+00\l  %24 = load double, ptr %5, align 8\l  %25 = load double, ptr %6, align \
+8\l  %26 = call double @takFP(double noundef %23, double noundef %24, double\l... noundef %25)\l  %27 = call double @takFP(double \
+noundef %16, double noundef %21, double\l... noundef %26)\l  store double %27, ptr %4, align 8\l  br label %30\l}" filled record #3d50c3ff #be242e70
+node Node0x1efadc60 10.799 4.1944 4.125 1.0694 "{28:\l|  %29 = load double, ptr %7, align 8\l  store double %29, ptr %4, align 8\l  br label %30\l}" filled record #3d50c3ff #be242e70
+node Node0x1efae910 7.5208 0.75 4.125 0.86111 "{30:\l|  %31 = load double, ptr %4, align 8\l  ret double %31\l}" filled record #b70d28ff #b70d2870
+edge Node0x1efad650 Node0x1efadc10 4 5.4375 7.375 5.0398 7.375 4.7689 7.1536 4.5855 6.8279 solid black
+edge Node0x1efad650 Node0x1efadc60 4 9.6042 7.375 10.667 7.375 10.824 5.795 10.825 4.8671 solid black
+edge Node0x1efadc10 Node0x1efae910 4 6.6381 1.684 6.7792 1.537 6.9106 1.3999 7.0268 1.2789 solid black
+edge Node0x1efadc60 Node0x1efae910 7 10.39 3.6664 9.968 3.1457 9.2786 2.3272 8.6181 1.6806 8.4753 1.5408 8.3139 1.3984 8.1597 1.2687 solid black
+stop

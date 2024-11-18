@@ -1,0 +1,9 @@
+graph 1 8.1181 5.0556
+node Node0x1d1868d0 3.6111 4.4653 4.6944 1.1806 "{1:\l|  %2 = fcmp olt double %0, 2.000000e+00\l  br i1 %2, label %common.ret5, label %3\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1d184710 3.6111 0.75 7.2222 0.86111 "{common.ret5:\l|  %common.ret5.op = phi double [ %8, %3 ], [ 1.000000e+00, %1 ]\l  ret double %common.ret5.op\l}" filled record #b70d28ff #b70d2870
+node Node0x1d187630 5.25 2.5278 5.7361 1.6944 "{3:\l|  %4 = fadd double %0, -2.000000e+00\l  %5 = tail call double @fibFP(double noundef %4)\l  %6 = fadd double %0, -1.000000e+\
+00\l  %7 = tail call double @fibFP(double noundef %6)\l  %8 = fadd double %5, %7\l  br label %common.ret5\l}" filled record #3d50c3ff #be242e70
+edge Node0x1d1868d0 Node0x1d184710 10 2.4306 3.875 2.4306 3.6387 2.2907 3.6077 2.25 3.375 2.1202 2.6332 1.8962 2.3454 2.25 1.6806 2.3369 1.5172 2.4673 1.3778 2.6136 1.2606 solid black
+edge Node0x1d1868d0 Node0x1d187630 4 4.7917 3.875 4.7917 3.7532 4.809 3.6283 4.8369 3.5062 solid black
+edge Node0x1d187630 Node0x1d184710 4 4.4738 1.685 4.3445 1.547 4.2138 1.4074 4.0945 1.2801 solid black
+stop

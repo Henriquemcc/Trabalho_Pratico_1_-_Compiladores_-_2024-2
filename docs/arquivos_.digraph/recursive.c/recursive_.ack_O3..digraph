@@ -1,0 +1,17 @@
+graph 1 13.722 8.8333
+node Node0x296fd390 3.8611 8.2431 6.5278 1.1806 "{2:\l|  %3 = icmp eq i32 %0, 0\l  br i1 %3, label %tailrecurse._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x296b1480 3.2083 0.85417 6.4167 1.0694 "{tailrecurse._crit_edge:\l|  %.tr9.lcssa = phi i32 [ %1, %2 ], [ %9, %tailrecurse ]\l  %4 = add nsw i32 %.tr9.lcssa, 1\l  ret i32 %\
+4\l}" filled record #3d50c3ff #d24b4070
+node Node0x296b4420 6.4722 6.25 5.9583 1.8056 "{.lr.ph:\l|  %.tr911 = phi i32 [ %9, %tailrecurse ], [ %1, %2 ]\l  %.tr10 = phi i32 [ %5, %tailrecurse ], [ %0, %2 ]\l  %5 = add \
+nsw i32 %.tr10, -1\l  %.not = icmp eq i32 %.tr911, 0\l  br i1 %.not, label %tailrecurse, label %6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x296b4eb0 5.9028 2.5833 6.6528 1.3889 "{tailrecurse:\l|  %9 = phi i32 [ %8, %6 ], [ 1, %.lr.ph ]\l  %10 = icmp eq i32 %5, 0\l  br i1 %10, label %tailrecurse._crit_edge, \
+label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x296b4a80 10.167 4.3125 7.1111 1.0694 "{6:\l|  %7 = add nsw i32 %.tr911, -1\l  %8 = tail call i32 @ack(i32 noundef %.tr10, i32 noundef %7)\l  br label %tailrecurse\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x296fd390 Node0x296b1480 7 2.2222 7.6528 2.2222 5.0891 1.5884 4.3054 2.4444 1.8889 2.4926 1.7529 2.5658 1.62 2.6481 1.4974 solid black
+edge Node0x296fd390 Node0x296b4420 4 7.1389 7.8125 7.4386 7.8125 7.3919 7.5647 7.2279 7.2673 solid black
+edge Node0x296b4420 Node0x296b4eb0 4 4.9722 5.3472 4.9722 4.6665 5.2312 3.9387 5.4759 3.4029 solid black
+edge Node0x296b4420 Node0x296b4a80 4 9.4722 5.5139 9.7575 5.5139 9.9278 5.2553 10.028 4.9795 solid black
+edge Node0x296b4eb0 Node0x296b1480 4 2.5556 2.0556 2.2656 2.0556 2.4062 1.7803 2.6299 1.4948 solid black
+edge Node0x296b4eb0 Node0x296b4420 13 7.5694 1.875 7.5694 1.5062 8.9695 1.627 9.2292 1.8889 9.6638 2.3272 9.6246 2.8038 9.2292 3.2778 8.4353 4.2294 7.2826 2.8284 6.4861 3.7778 6.1603 4.1661 6.1338 4.7233 6.1991 5.2091 solid black
+edge Node0x296b4a80 Node0x296b4eb0 4 8.8758 3.7835 8.5124 3.6385 8.1103 3.4781 7.7222 3.3232 solid black
+stop

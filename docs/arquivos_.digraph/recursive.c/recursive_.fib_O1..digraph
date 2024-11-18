@@ -1,0 +1,12 @@
+graph 1 11.271 5.0556
+node Node0x3663f710 7.4583 4.7292 2.6389 0.65278 "{1:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #d6524470
+node Node0x366404d0 7.4583 3.1042 5.6111 1.5972 "{tailrecurse:\l|  %accumulator.tr = phi i32 [ 0, %1 ], [ %7, %3 ]\l  %.tr = phi i32 [ %0, %1 ], [ %6, %3 ]\l  %2 = icmp slt i32 %\
+.tr, 2\l  br i1 %2, label %8, label %3\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x36641000 3.0972 1.0625 6.1944 0.86111 "{8:\l|  %accumulator.ret.tr = add nsw i32 %accumulator.tr, 1\l  ret i32 %accumulator.ret.tr\l}" filled record #3d50c3ff #d6524470
+node Node0x36640e60 8.8611 1.0625 4.8194 1.4861 "{3:\l|  %4 = add nsw i32 %.tr, -2\l  %5 = tail call i32 @fib(i32 noundef %4)\l  %6 = add nsw i32 %.tr, -1\l  %7 = add nsw i32 %accumulator.tr, %\
+5\l  br label %tailrecurse\l}" filled record #b70d28ff #b70d2870
+edge Node0x3663f710 Node0x366404d0 4 7.4583 4.4073 7.4583 4.2983 7.4583 4.1694 7.4583 4.036 solid black
+edge Node0x366404d0 Node0x36641000 4 4.6389 2.4653 4.1051 2.4653 3.6728 2 3.4032 1.608 solid black
+edge Node0x366404d0 Node0x36640e60 4 8.8611 2.3056 8.8344 2.189 8.8135 2.0662 8.7982 1.9452 solid black
+edge Node0x36640e60 Node0x366404d0 4 8.9398 1.7998 8.9292 1.9176 8.9129 2.0404 8.8909 2.1603 solid black
+stop
