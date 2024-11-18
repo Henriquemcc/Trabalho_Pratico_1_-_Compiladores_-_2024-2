@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="53510c89-8831-40ab-b85a-fc2fcdb3e14b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="53510c89-8831-40ab-b85a-fc2fcdb3e14b" name="Changes" comment="Adicionando nome do arquivo fonte nos arquivos '.png' e '.digraph' gerados">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +28,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.gen_cfg (exemplo.c).executor&quot;: &quot;Run&quot;,
+    &quot;Python.gen_cfg.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.gen_cfg (exemplo.c)">
+    <configuration name="gen_cfg (exemplo.c)" type="PythonConfigurationType" factoryName="Python">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -47,7 +48,29 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen_cfg.py" />
+      <option name="PARAMETERS" value="exemplo.c" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gen_cfg" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gen_cfg.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -56,11 +79,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.gen_cfg (exemplo.c)" />
+      <item itemvalue="Python.gen_cfg" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-0e3be3396995-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23339.19" />
+        <option value="bundled-python-sdk-d7ad00fb9fc3-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.23726.102" />
       </set>
     </attachedChunks>
   </component>
@@ -73,17 +100,153 @@
       <option name="presentableId" value="Default" />
       <updated>1728482707869</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adicionando arquivos gerados pelo Pycharm">
+      <option name="closed" value="true" />
+      <created>1728482854982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728482854983</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Adicionando enunciado">
+      <option name="closed" value="true" />
+      <created>1728489943388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728489943388</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Desenvolvendo parte do programa">
+      <option name="closed" value="true" />
+      <created>1728508512962</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1728508512962</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Desenvolvendo parte do programa">
+      <option name="closed" value="true" />
+      <created>1728508991656</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1728508991656</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adicionando programa de exemplo">
+      <option name="closed" value="true" />
+      <created>1728509003826</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1728509003826</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Adicionando geração do arquivo .dot">
+      <option name="closed" value="true" />
+      <created>1728511615822</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1728511615822</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Adicionando geração do arquivo assembly">
+      <option name="closed" value="true" />
+      <created>1728512085430</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728512085430</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Corrigindo erro no qual os arquivos '.bc' estavam sendo gerados em binário e não texto">
+      <option name="closed" value="true" />
+      <created>1728517881454</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1728517881454</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Alterando os símbolos do programa de exemplo">
+      <option name="closed" value="true" />
+      <created>1728517947570</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728517947570</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Adicionando substituição do 'optnone' dos arquivos de bytecode do clang">
+      <option name="closed" value="true" />
+      <created>1728518359111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1728518359111</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Corrigindo erro no qual o arquivo .dot não era gerado">
+      <option name="closed" value="true" />
+      <created>1728519667816</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1728519667816</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adicionando geração dos arquivos '.png'">
+      <option name="closed" value="true" />
+      <created>1728521308807</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1728521308807</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Adicionando comando para apagar o arquivo .dot lido">
+      <option name="closed" value="true" />
+      <created>1728521464549</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728521464549</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Corrigindo erro no qual era esperado uma string e entregue um objeto">
+      <option name="closed" value="true" />
+      <created>1728521547817</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728521547817</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Adicionando geração do arquivo '.digraph'">
+      <option name="closed" value="true" />
+      <created>1728522022543</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728522022543</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Adicionando nome do arquivo fonte nos arquivos '.png' e '.digraph' gerados">
+      <option name="closed" value="true" />
+      <created>1728522666629</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728522666629</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adicionando arquivos gerados pelo Pycharm" />
+    <MESSAGE value="Adicionando enunciado" />
+    <MESSAGE value="Desenvolvendo parte do programa" />
+    <MESSAGE value="Adicionando programa de exemplo" />
+    <MESSAGE value="Adicionando geração do arquivo .dot" />
+    <MESSAGE value="Adicionando geração do arquivo assembly" />
+    <MESSAGE value="Corrigindo erro no qual os arquivos '.bc' estavam sendo gerados em binário e não texto" />
+    <MESSAGE value="Alterando os símbolos do programa de exemplo" />
+    <MESSAGE value="Adicionando substituição do 'optnone' dos arquivos de bytecode do clang" />
+    <MESSAGE value="Corrigindo erro no qual o arquivo .dot não era gerado" />
+    <MESSAGE value="Adicionando geração dos arquivos '.png'" />
+    <MESSAGE value="Adicionando comando para apagar o arquivo .dot lido" />
+    <MESSAGE value="Corrigindo erro no qual era esperado uma string e entregue um objeto" />
+    <MESSAGE value="Adicionando geração do arquivo '.digraph'" />
+    <MESSAGE value="Adicionando nome do arquivo fonte nos arquivos '.png' e '.digraph' gerados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionando nome do arquivo fonte nos arquivos '.png' e '.digraph' gerados" />
   </component>
 </project>

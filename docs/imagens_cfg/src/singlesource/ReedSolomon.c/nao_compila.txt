@@ -1,0 +1,16 @@
+/mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon.c:60:8: error: type specifier missing, defaults to 'int'; ISO C99 and later do not support implicit int [-Wimplicit-int]
+   60 | static inited = 0;
+      | ~~~~~~ ^
+      | int
+1 error generated.
+clang_path = /usr/bin/clang
+opt_path = /usr/bin/opt
+dot_path = /usr/bin/dot
+llc_path = /usr/bin/llc
+programa = /mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon.c
+bytecodes_file_path = /mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon_O0.bc
+args = ['/usr/bin/clang', '-emit-llvm', '-S', '/mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon.c', '-o', '/mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon_O0.bc']
+Traceback (most recent call last):
+  File "/mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/./gen_cfg.py", line 91, in <module>
+    with open(bytecodes_file_path, 'r') as bytecodes_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/mnt/DADOS/Ciencia da Computacao/Materias/Compiladores - 2024-2/Tarefas/Trabalho Pratico 1/tp1/tp1/src/singlesource/ReedSolomon_O0.bc'
