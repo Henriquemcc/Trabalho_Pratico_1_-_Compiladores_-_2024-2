@@ -1,0 +1,12 @@
+graph 1 10 6.9306
+node Node0x3d325f80 3.4375 5.9236 6.875 2.0139 "{1:\l|  %2 = load i32, ptr @ncol, align 4\l  %3 = sext i32 %2 to i64\l  %4 = shl nsw i64 %3, 2\l  %5 = tail call noalias ptr @malloc(\
+i64 noundef %4) #12\l  %.not5 = icmp eq i32 %2, 0\l  br i1 %.not5, label %._crit_edge, label %.lr.ph.preheader\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3d327520 3.4375 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret ptr %5\l}" filled record #b70d28ff #b70d2870
+node Node0x3d342480 5.7569 2.9444 8.4861 2.9444 "{.lr.ph.preheader:\l|  %6 = add i32 %2, -1\l  %7 = sext i32 %6 to i64\l  %8 = zext i32 %6 to i64\l  %9 = sub nsw i64 %7, %8\l  %\
+10 = shl nsw i64 %9, 2\l  %scevgep = getelementptr i8, ptr %5, i64 %10\l  %scevgep7 = getelementptr i8, ptr %0, i64 %10\l  %11 = \
+zext i32 %2 to i64\l  %12 = shl nuw nsw i64 %11, 2\l  tail call void @llvm.memcpy.p0.p0.i64(ptr align 4 %scevgep, ptr align 4\l... %\
+scevgep7, i64 %12, i1 false)\l  br label %._crit_edge\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x3d325f80 Node0x3d327520 10 1.7153 4.9167 1.7153 4.6496 1.4593 4.6723 1.3819 4.4167 1.0027 3.1642 0.64607 2.5544 1.3819 1.4722 1.632 1.1045 2.077 0.90315 2.4891 0.79297 solid black
+edge Node0x3d325f80 Node0x3d342480 4 5.1597 4.9167 5.1597 4.7966 5.1701 4.6741 5.1882 4.5519 solid black
+edge Node0x3d342480 Node0x3d327520 4 4.2683 1.4731 4.1182 1.3262 3.9761 1.187 3.8533 1.0668 solid black
+stop

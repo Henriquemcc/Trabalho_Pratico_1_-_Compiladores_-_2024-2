@@ -1,0 +1,17 @@
+graph 1 11.368 9.1389
+node Node0x7ece520 5.1736 8.6042 4.0139 1.0694 "{2:\l|  %3 = load i32, ptr @ncol, align 4\l  %4 = sext i32 %3 to i64\l  br label %5\l}" filled record #3d50c3ff #d0473d70
+node Node0x7ece950 5.1736 6.875 6.875 1.3889 "{5:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %7 ], [ %4, %2 ]\l  %6 = icmp eq i64 %indvars.iv, 0\l  br i1 %6, label %.critedge, \
+label %7\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x7ecf510 3.9514 0.75 7.9028 0.86111 "{.critedge:\l|  %.0.lcssa = phi i32 [ %15, %.critedge.split.loop.exit6 ], [ 1, %5 ]\l  ret i32 %.0.lcssa\l}" filled record #3d50c3ff #d0473d70
+node Node0x7ecec50 7.2431 4.5694 8.25 2.2222 "{7:\l|  %indvars.iv.next = add nsw i64 %indvars.iv, -1\l  %8 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.next\l  %9 = \
+load i32, ptr %8, align 4\l  %10 = getelementptr inbounds i32, ptr %1, i64 %indvars.iv.next\l  %11 = load i32, ptr %10, align 4\l  %\
+12 = icmp eq i32 %9, %11\l  br i1 %12, label %5, label %.critedge.split.loop.exit6, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x7ecbcd0 7.2431 2.3194 4.125 1.2778 "{.critedge.split.loop.exit6:\l|  %13 = trunc i64 %indvars.iv to i32\l  %14 = icmp slt i32 %13, 1\l  %15 = zext i1 %14 to i32\l  \
+br label %.critedge\l}" filled record #3d50c3ff #d6524470
+edge Node0x7ece520 Node0x7ece950 4 5.1736 8.0752 5.1736 7.9586 5.1736 7.8321 5.1736 7.7065 solid black
+edge Node0x7ece950 Node0x7ecf510 10 3.4514 6.1806 3.4514 5.8791 3.1023 5.9615 2.9931 5.6806 2.635 4.7601 2.8251 4.4316 2.9931 3.4583 3.1265 2.6848 3.4607 1.839 3.6967 1.3053 solid black
+edge Node0x7ece950 Node0x7ecec50 4 6.8958 6.1806 6.8958 6.061 6.9052 5.9375 6.921 5.8146 solid black
+edge Node0x7ecec50 Node0x7ece950 10 5.1736 3.4444 5.1736 3.216 3.279 3.2963 3.1181 3.4583 2.9441 3.6335 2.9944 5.4669 3.1181 5.6806 3.2092 5.8381 3.3303 5.9764 3.4681 6.0975 solid black
+edge Node0x7ecec50 Node0x7ecbcd0 4 9.3125 3.4583 9.3125 3.3081 9.2699 3.1778 9.1969 3.0648 solid black
+edge Node0x7ecbcd0 Node0x7ecf510 4 5.9232 1.6874 5.6008 1.5364 5.261 1.3773 4.956 1.2344 solid black
+stop

@@ -1,0 +1,31 @@
+graph 1 17.035 16.028
+node Node0x17bb4cc0 4.9861 13.562 9.0556 4.9306 "{0:\l|  %1 = alloca i32, align 4\l  %2 = alloca i32, align 4\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.3)\l  %\
+puts24 = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.4)\l  %puts25 = tail call i32 @puts(ptr nonnull dereferenceable(\
+1) @str.5)\l  %3 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @.str.8)\l  store i32 2, ptr %1, \
+align 4\l  %4 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @.str.13)\l  store i32 7, ptr @ncol, \
+align 4\l  %5 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @.str.14)\l  store i32 8, ptr @nrow, \
+align 4\l  %6 = tail call ptr @make_play(i32 noundef 1)\l  %7 = load i32, ptr @nrow, align 4\l  %8 = load i32, ptr @ncol, align \
+4\l  %9 = tail call ptr @make_data(i32 noundef %7, i32 noundef %8)\l  %.not27 = icmp eq ptr %9, null\l  br i1 %.not27, label %._\
+crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17bb8c80 3.7222 1.0625 7.4444 1.4861 "{._crit_edge:\l|  %.020.lcssa = phi i32 [ 1, %0 ], [ %18, %._crit_edge.loopexit ]\l  tail call void @dump_play(ptr noundef %6)\l  %\
+19 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.16, i32 noundef %.020.lcssa)\l  ret i32 \
+0\l}" filled record #3d50c3ff #d24b4070
+node Node0x17bb8c30 8.3333 9.5903 8.4861 2.0139 "{.lr.ph:\l|  %.02029 = phi i32 [ %.1, %17 ], [ 0, %0 ]\l  %.02128 = phi ptr [ %11, %17 ], [ %9, %0 ]\l  %10 = tail call ptr @where(\
+ptr noundef nonnull %.02128, ptr noundef %6)\l  %11 = tail call ptr @get_good_move(ptr noundef %10)\l  %.not26 = icmp eq ptr %11, \
+null\l  br i1 %.not26, label %17, label %12\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bb9280 7.2361 4.3611 8.3611 1.3889 "{17:\l|  %.1 = phi i32 [ %16, %12 ], [ %.02029, %.lr.ph ]\l  %.not = icmp eq ptr %11, null\l  br i1 %.not, label %._crit_edge.loopexit, \
+label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bb9230 12.681 6.8194 8.7083 2.5278 "{12:\l|  call void @get_real_move(ptr noundef nonnull %11, ptr noundef nonnull\l... %.02128, ptr noundef nonnull %1, ptr noundef \
+nonnull %2)\l  %13 = load i32, ptr %1, align 4\l  %14 = load i32, ptr %2, align 4\l  %15 = tail call i32 (ptr, ...) @printf(ptr \
+noundef nonnull\l... dereferenceable(1) @.str.15, i32 noundef %.02029, i32 noundef %13, i32\l... noundef %14)\l  %16 = sub nuw nsw \
+i32 1, %.02029\l  tail call void @free(ptr noundef %.02128) #12\l  br label %17\l}" filled record #b70d28ff #bb1b2c70
+node Node0x17ba7bd0 4.9583 2.7361 3.4444 0.86111 "{._crit_edge.loopexit:\l|  %18 = sub nuw nsw i32 1, %.1\l  br label %._crit_edge\l}" filled record #3d50c3ff #d6524470
+edge Node0x17bb4cc0 Node0x17bb8c80 13 2.7222 11.097 2.7222 9.202 2.6667 8.7286 2.6667 6.8333 2.6667 6.8333 2.6667 6.8333 2.6667 4.3472 2.6667 3.4186 2.8033 3.1817 3.1111 2.3056 3.1545 2.1821 3.2074 2.055 3.2637 1.9315 solid black
+edge Node0x17bb4cc0 Node0x17bb8c30 4 7.25 11.097 7.25 10.968 7.277 10.842 7.3224 10.722 solid black
+edge Node0x17bb8c30 Node0x17bb9280 4 6.2083 8.5833 6.2083 7.374 6.6138 6.0235 6.9154 5.1864 solid black
+edge Node0x17bb8c30 Node0x17bb9230 4 12.597 8.7431 12.889 8.7431 12.99 8.5173 12.997 8.221 solid black
+edge Node0x17bb9280 Node0x17bb8c30 13 9.3333 3.6528 9.3333 3.4213 11.254 3.5024 11.417 3.6667 11.852 4.1046 11.818 4.5868 11.417 5.0556 10.474 6.1561 9.1374 4.455 8.1944 5.5556 7.5212 6.3413 7.6737 7.5642 7.9216 8.4551 solid black
+edge Node0x17bb9280 Node0x17ba7bd0 4 5.1389 3.6667 5.1389 3.5466 5.1238 3.4193 5.1023 3.299 solid black
+edge Node0x17bb9230 Node0x17bb9280 4 9.8945 5.5618 9.5458 5.4061 9.1984 5.251 8.8754 5.1068 solid black
+edge Node0x17ba7bd0 Node0x17bb8c80 4 4.6496 2.3112 4.5591 2.1907 4.4567 2.0543 4.3537 1.9172 solid black
+stop

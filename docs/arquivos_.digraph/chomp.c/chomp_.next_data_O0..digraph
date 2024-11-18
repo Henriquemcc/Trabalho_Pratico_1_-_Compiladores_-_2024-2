@@ -1,0 +1,30 @@
+graph 1 16.951 14.681
+node Node0x23950e60 4.1667 13.729 3.6667 1.9028 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  store \
+i32 0, ptr %3, align 4\l  store i32 0, ptr %4, align 4\l  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x23951190 4.1667 11.479 4.125 1.5972 "{5:\l|  %6 = load i32, ptr %3, align 4\l  %7 = load i32, ptr @ncol, align 4\l  %8 = icmp ne i32 %6, %7\l  br i1 %8, label %9, label %\
+13\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x239513e0 1.8889 9.5417 3.7778 1.2778 "{9:\l|  %10 = load i32, ptr %4, align 4\l  %11 = icmp ne i32 %10, 0\l  %12 = xor i1 %11, true\l  br label %13\l}" filled record #3d50c3ff #be242e70
+node Node0x23951430 8.2222 7.8125 4.6944 1.1806 "{13:\l|  %14 = phi i1 [ false, %5 ], [ %12, %9 ]\l  br i1 %14, label %15, label %38\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x239517e0 8.3611 5.5069 6.0694 2.4306 "{15:\l|  %16 = load ptr, ptr %2, align 8\l  %17 = load i32, ptr %3, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr \
+inbounds i32, ptr %16, i64 %18\l  %20 = load i32, ptr %19, align 4\l  %21 = load i32, ptr @nrow, align 4\l  %22 = icmp eq i32 %20, %\
+21\l  br i1 %22, label %23, label %30\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x23951830 13.542 5.5069 3.7778 0.86111 "{38:\l|  %39 = load i32, ptr %4, align 4\l  ret i32 %39\l}" filled record #3d50c3ff #d6524470
+node Node0x23951cd0 7.5972 2.6319 6.0694 2.3194 "{23:\l|  %24 = load ptr, ptr %2, align 8\l  %25 = load i32, ptr %3, align 4\l  %26 = sext i32 %25 to i64\l  %27 = getelementptr \
+inbounds i32, ptr %24, i64 %26\l  store i32 0, ptr %27, align 4\l  %28 = load i32, ptr %3, align 4\l  %29 = add nsw i32 %28, 1\l  \
+store i32 %29, ptr %3, align 4\l  br label %37\l}" filled record #3d50c3ff #be242e70
+node Node0x23951d20 13.917 2.6319 6.0694 2.3194 "{30:\l|  %31 = load ptr, ptr %2, align 8\l  %32 = load i32, ptr %3, align 4\l  %33 = sext i32 %32 to i64\l  %34 = getelementptr \
+inbounds i32, ptr %31, i64 %33\l  %35 = load i32, ptr %34, align 4\l  %36 = add nsw i32 %35, 1\l  store i32 %36, ptr %34, align \
+4\l  store i32 1, ptr %4, align 4\l  br label %37\l}" filled record #3d50c3ff #be242e70
+node Node0x239522c0 7.5972 0.64583 3.2083 0.65278 "{37:\l|  br label %5, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x23950e60 Node0x23951190 4 4.1667 12.779 4.1667 12.658 4.1667 12.534 4.1667 12.414 solid black
+edge Node0x23951190 Node0x239513e0 4 2.0833 10.84 1.8305 10.84 1.7618 10.594 1.7644 10.317 solid black
+edge Node0x23951190 Node0x23951430 4 6.25 10.84 7.3466 10.84 7.8663 9.426 8.0849 8.535 solid black
+edge Node0x239513e0 Node0x23951430 4 3.7805 9.0196 4.4671 8.8352 5.2496 8.6249 5.9646 8.4329 solid black
+edge Node0x23951430 Node0x239517e0 4 7.0417 7.2222 7.0417 7.0946 7.0651 6.9707 7.1058 6.8519 solid black
+edge Node0x23951430 Node0x23951830 4 10.583 7.3819 11.596 7.3819 12.545 6.5911 13.084 6.0405 solid black
+edge Node0x239517e0 Node0x23951cd0 4 6.8333 4.2917 6.8333 4.1681 6.8513 4.0437 6.8817 3.9217 solid black
+edge Node0x239517e0 Node0x23951d20 7 11.417 4.4514 11.503 4.4514 11.466 4.3527 11.528 4.2917 11.673 4.1474 11.832 4.0075 11.997 3.8742 solid black
+edge Node0x23951cd0 Node0x239522c0 4 7.5972 1.4789 7.5972 1.3478 7.5972 1.2207 7.5972 1.1072 solid black
+edge Node0x23951d20 Node0x239522c0 7 10.881 1.5089 10.842 1.4965 10.803 1.4843 10.764 1.4722 10.207 1.2999 9.5862 1.1349 9.0434 0.99926 solid black
+edge Node0x239522c0 Node0x23951190 13 5.9922 0.89593 5.3239 1.0289 4.6545 1.2196 4.4444 1.4722 3.299 2.8494 4.1667 3.7018 4.1667 5.4931 4.1667 7.8264 4.1667 7.8264 4.1667 7.8264 4.1667 8.7503 4.1667 9.8062 4.1667 10.542 solid black
+stop

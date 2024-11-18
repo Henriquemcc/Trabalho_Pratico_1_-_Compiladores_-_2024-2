@@ -1,0 +1,61 @@
+graph 1 15.34 31.556
+node Node0x3d337a20 3.4028 30.549 6.5278 2.0139 "{2:\l|  %3 = load i32, ptr @ncol, align 4\l  %4 = sext i32 %3 to i64\l  %5 = shl nsw i64 %4, 2\l  %6 = tail call noalias ptr @malloc(\
+i64 noundef %5) #12\l  %.not11 = icmp eq i32 %1, 0\l  br i1 %.not11, label %.preheader, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x3d334210 3.7222 15.674 7.4444 1.1806 "{.preheader:\l|  %.not1013 = icmp eq i32 %3, %1\l  br i1 %.not1013, label %._crit_edge, label %.lr.ph15.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x3d336d80 6.7778 28.243 8.1389 1.5972 "{.lr.ph:\l|  %7 = load i32, ptr @nrow, align 4\l  %8 = zext i32 %1 to i64\l  %min.iters.check = icmp ult i32 %1, 8\l  br i1 %min.iters.check, \
+label %scalar.ph.preheader, label %vector.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3d332600 5.875 19.917 7.7917 0.86111 "{scalar.ph.preheader:\l|  %indvars.iv.ph = phi i64 [ 0, %.lr.ph ], [ %n.vec, %middle.block ]\l  br label %scalar.ph\l}" filled record #3d50c3ff #d6524470
+node Node0x3d326ba0 10.139 26.201 9.0556 1.4861 "{vector.ph:\l|  %n.vec = and i64 %8, 4294967288\l  %broadcast.splatinsert = insertelement \<4 x i32\> poison, i32 %7, i64 0\l  %\
+broadcast.splat = shufflevector \<4 x i32\> %broadcast.splatinsert, \<4 x i32\>\l... poison, \<4 x i32\> zeroinitializer\l  br label %\
+vector.body\l}" filled record #3d50c3ff #d8564670
+node Node0x3d3b5640 10.389 23.743 7.7917 2.4306 "{vector.body:\l|  %index = phi i64 [ 0, %vector.ph ], [ %index.next, %vector.body ]\l  %9 = getelementptr inbounds i32, ptr %6, \
+i64 %index\l  %10 = getelementptr inbounds i32, ptr %9, i64 4\l  store \<4 x i32\> %broadcast.splat, ptr %9, align 4\l  store \<\
+4 x i32\> %broadcast.splat, ptr %10, align 4\l  %index.next = add nuw i64 %index, 8\l  %11 = icmp eq i64 %index.next, %n.vec\l  \
+br i1 %11, label %middle.block, label %vector.body, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x3d3fdb90 8.6806 21.438 7.1111 1.1806 "{middle.block:\l|  %cmp.n = icmp eq i64 %n.vec, %8\l  br i1 %cmp.n, label %.preheader, label %scalar.ph.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d8564670
+node Node0x3d3383b0 5.875 17.875 8.5972 2.2222 "{scalar.ph:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %scalar.ph ], [ %indvars.iv.ph,\l... %scalar.ph.preheader ]\l  %17 = getelementptr \
+inbounds i32, ptr %6, i64 %indvars.iv\l  store i32 %7, ptr %17, align 4\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %\
+.not = icmp eq i64 %indvars.iv.next, %8\l  br i1 %.not, label %.preheader, label %scalar.ph, !llvm.loop !9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3d338eb0 3.7083 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret ptr %6\l}" filled record #3d50c3ff #d0473d70
+node Node0x3d3bd290 7.0139 13.681 8.7083 1.8056 "{.lr.ph15.preheader:\l|  %12 = zext i32 %1 to i64\l  %13 = zext i32 %3 to i64\l  %14 = sub nsw i64 %13, %12\l  %min.iters.check22 = \
+icmp ult i64 %14, 8\l  br i1 %min.iters.check22, label %.lr.ph15.preheader33, label %vector.ph23\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x3d3c75f0 5.75 4.7292 8.0278 1.0694 "{.lr.ph15.preheader33:\l|  %indvars.iv17.ph = phi i64 [ %12, %.lr.ph15.preheader ], [ %ind.end,\l... %middle.block20 ]\l  br label %\
+.lr.ph15\l}" filled record #3d50c3ff #d8564670
+node Node0x3d3fd9d0 10.431 11.326 8.9444 1.9028 "{vector.ph23:\l|  %n.vec25 = and i64 %14, -8\l  %ind.end = add nsw i64 %n.vec25, %12\l  %broadcast.splatinsert30 = insertelement \<\
+4 x i32\> poison, i32 %0, i64 0\l  %broadcast.splat31 = shufflevector \<4 x i32\> %broadcast.splatinsert30, \<4 x\l... i32\> poison, \<\
+4 x i32\> zeroinitializer\l  %invariant.gep = getelementptr i32, ptr %6, i64 %12\l  br label %vector.body28\l}" filled record #3d50c3ff #dc5d4a70
+node Node0x3d331a90 10.792 8.6597 8.5972 2.4306 "{vector.body28:\l|  %index29 = phi i64 [ 0, %vector.ph23 ], [ %index.next32, %vector.body28 ]\l  %gep = getelementptr i32, ptr %\
+invariant.gep, i64 %index29\l  %15 = getelementptr inbounds i32, ptr %gep, i64 4\l  store \<4 x i32\> %broadcast.splat31, ptr %gep, \
+align 4\l  store \<4 x i32\> %broadcast.splat31, ptr %15, align 4\l  %index.next32 = add nuw i64 %index29, 8\l  %16 = icmp eq i64 %\
+index.next32, %n.vec25\l  br i1 %16, label %middle.block20, label %vector.body28, !llvm.loop !8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #be242e70
+node Node0x3d32a580 9.0139 6.3542 7.5694 1.1806 "{middle.block20:\l|  %cmp.n27 = icmp eq i64 %14, %n.vec25\l  br i1 %cmp.n27, label %._crit_edge, label %.lr.ph15.preheader33\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #dc5d4a70
+node Node0x3d338e60 5.6944 2.5833 7.9028 2.2222 "{.lr.ph15:\l|  %indvars.iv17 = phi i64 [ %indvars.iv.next18, %.lr.ph15 ], [\l... %indvars.iv17.ph, %.lr.ph15.preheader33 ]\l  %18 = \
+getelementptr inbounds i32, ptr %6, i64 %indvars.iv17\l  store i32 %0, ptr %18, align 4\l  %indvars.iv.next18 = add nuw nsw i64 %\
+indvars.iv17, 1\l  %.not10 = icmp eq i64 %indvars.iv.next18, %13\l  br i1 %.not10, label %._crit_edge, label %.lr.ph15, !llvm.loop !\
+10\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+edge Node0x3d337a20 Node0x3d334210 13 1.7639 29.542 1.7639 28.041 1.1806 27.716 1.1806 26.215 1.1806 26.215 1.1806 26.215 1.1806 19.903 1.1806 18.503 0.64634 17.914 1.4444 16.764 1.5589 16.599 1.7056 16.459 1.8692 16.339 solid black
+edge Node0x3d337a20 Node0x3d336d80 4 6.6806 29.701 6.9419 29.701 7.007 29.463 6.9921 29.18 solid black
+edge Node0x3d334210 Node0x3d338eb0 13 1.8611 15.083 1.8611 13.404 1.3472 13.019 1.3472 11.34 1.3472 11.34 1.3472 11.34 1.3472 4.7153 1.3472 3.2692 0.74612 2.6311 1.6111 1.4722 1.8829 1.1081 2.3408 0.90718 2.7595 0.79626 solid black
+edge Node0x3d334210 Node0x3d3bd290 4 7.4583 15.243 7.7422 15.243 7.7311 15 7.6144 14.706 solid black
+edge Node0x3d336d80 Node0x3d332600 7 4.7361 27.444 4.7361 24.51 3.8544 23.549 5 20.847 5.0618 20.702 5.1579 20.565 5.2642 20.445 solid black
+edge Node0x3d336d80 Node0x3d326ba0 4 10.861 27.604 11.161 27.604 11.068 27.346 10.865 27.052 solid black
+edge Node0x3d332600 Node0x3d3383b0 4 5.875 19.49 5.875 19.381 5.875 19.256 5.875 19.126 solid black
+edge Node0x3d326ba0 Node0x3d3b5640 4 10.213 25.465 10.225 25.347 10.238 25.221 10.251 25.094 solid black
+edge Node0x3d3b5640 Node0x3d3b5640 7 12.726 22.534 13.869 22.122 14.535 22.22 14.535 23.215 14.535 23.369 14.481 23.501 14.386 23.613 solid black
+edge Node0x3d3b5640 Node0x3d3fdb90 4 8.4306 22.528 8.4306 22.407 8.4458 22.28 8.4688 22.157 solid black
+edge Node0x3d3fdb90 Node0x3d334210 10 6.9028 20.847 6.9028 20.174 9.3495 20.749 9.8889 20.347 11.188 19.379 11.608 17.995 10.556 16.764 10.142 16.28 8.8994 16.012 7.5851 15.865 solid black
+edge Node0x3d3fdb90 Node0x3d332600 4 10.458 20.847 10.458 20.622 10.244 20.452 9.9069 20.323 solid black
+edge Node0x3d3383b0 Node0x3d334210 4 3.7222 16.764 3.7222 16.646 3.7222 16.52 3.7222 16.398 solid black
+edge Node0x3d3383b0 Node0x3d3383b0 7 8.5462 16.771 9.7426 16.438 10.424 16.541 10.424 17.403 10.424 17.526 10.375 17.634 10.288 17.728 solid black
+edge Node0x3d3bd290 Node0x3d3c75f0 7 4.8333 12.778 4.8333 9.6583 4.1656 8.741 5.0972 5.7639 5.1382 5.6329 5.2007 5.5024 5.2711 5.3805 solid black
+edge Node0x3d3bd290 Node0x3d3fd9d0 4 11.389 12.944 11.718 12.944 11.636 12.692 11.416 12.388 solid black
+edge Node0x3d3c75f0 Node0x3d338e60 4 5.7364 4.1971 5.7334 4.0838 5.7302 3.9592 5.7268 3.8311 solid black
+edge Node0x3d3fd9d0 Node0x3d331a90 4 10.558 10.378 10.575 10.259 10.592 10.135 10.609 10.01 solid black
+edge Node0x3d331a90 Node0x3d331a90 7 13.374 7.4509 14.626 7.0385 15.34 7.1367 15.34 8.1319 15.34 8.2743 15.29 8.3983 15.199 8.505 solid black
+edge Node0x3d331a90 Node0x3d32a580 4 8.6389 7.4444 8.6389 7.3222 8.6607 7.1963 8.6938 7.0757 solid black
+edge Node0x3d32a580 Node0x3d338eb0 10 7.1111 5.7639 7.1111 4.5095 9.0467 6.1935 9.8889 5.2639 10.228 4.8891 10.147 1.6238 10.014 1.4722 9.6664 1.0771 6.3379 0.81979 4.6622 0.71423 solid black
+edge Node0x3d32a580 Node0x3d3c75f0 4 10.903 5.7639 10.903 5.589 10.44 5.4272 9.7919 5.2865 solid black
+edge Node0x3d338e60 Node0x3d338eb0 4 3.7083 1.4722 3.7083 1.3552 3.7083 1.2287 3.7083 1.1111 solid black
+edge Node0x3d338e60 Node0x3d338e60 7 8.1792 1.4785 9.267 1.1755 9.8958 1.2824 9.8958 2.1111 9.8958 2.2367 9.8471 2.3456 9.7592 2.4391 solid black
+stop

@@ -1,0 +1,10 @@
+graph 1 8.2431 5.0556
+node Node0x17b972c0 2.4653 4.4653 4.9306 1.1806 "{1:\l|  %.not = icmp eq ptr %0, null\l  br i1 %.not, label %common.ret, label %2\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17b8f4d0 2.4653 0.64583 1.4861 0.65278 "{common.ret:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+node Node0x17b97540 4.5208 2.4236 7.4444 1.9028 "{2:\l|  %3 = getelementptr inbounds %struct._list, ptr %0, i64 0, i32 1\l  %4 = load ptr, ptr %3, align 8\l  tail call void @dump_\
+list(ptr noundef %4)\l  %5 = load ptr, ptr %0, align 8\l  tail call void @free(ptr noundef %5) #12\l  tail call void @free(ptr noundef %\
+0) #12\l  br label %common.ret\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x17b972c0 Node0x17b8f4d0 10 1.2292 3.875 1.2292 3.5428 0.80876 3.6785 0.67361 3.375 0.32956 2.6025 0.21546 2.183 0.67361 1.4722 0.8778 1.1554 1.2389 0.96077 1.5836 0.84183 solid black
+edge Node0x17b972c0 Node0x17b97540 4 4.9514 4.0347 5.2366 4.0347 5.2357 3.7943 5.1278 3.5001 solid black
+edge Node0x17b97540 Node0x17b8f4d0 4 3.4269 1.4784 3.2542 1.3314 3.084 1.1865 2.9359 1.0604 solid black
+stop

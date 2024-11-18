@@ -1,0 +1,4 @@
+graph 1 7.6806 1.5972
+node Node0x3d333ad0 3.8403 0.95833 7.6806 1.2778 "{1:\l|  %2 = tail call i32 @putchar(i32 noundef 40)\l  tail call void @show_data(ptr noundef %0)\l  %puts = tail call i32 @puts(\
+ptr nonnull dereferenceable(1) @str)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

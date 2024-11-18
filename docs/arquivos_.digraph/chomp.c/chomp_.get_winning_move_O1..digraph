@@ -1,0 +1,10 @@
+graph 1 9.8056 5.0556
+node Node0x17bb0b30 5.7153 4.7292 1.4861 0.65278 "{1:\l|  br label %2\l}" filled record #3d50c3ff #d6524470
+node Node0x17bb0d20 5.7153 3 7.6806 1.8056 "{2:\l|  %.0 = phi ptr [ %0, %1 ], [ %4, %2 ]\l  %3 = getelementptr inbounds %struct._play, ptr %.0, i64 0, i32 3\l  %4 = load ptr, \
+ptr %3, align 8\l  %.not = icmp eq ptr %4, null\l  br i1 %.not, label %5, label %2, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bb1080 3.7847 0.95833 7.5694 1.2778 "{5:\l|  %6 = getelementptr inbounds %struct._play, ptr %.0, i64 0, i32 2\l  %7 = load ptr, ptr %6, align 8\l  %8 = tail call ptr @\
+get_good_move(ptr noundef %7)\l  ret ptr %8\l}" filled record #3d50c3ff #d6524470
+edge Node0x17bb0b30 Node0x17bb0d20 4 5.7153 4.4072 5.7153 4.2999 5.7153 4.1728 5.7153 4.0397 solid black
+edge Node0x17bb0d20 Node0x17bb0d20 7 8.1947 2.1036 9.2153 1.8505 9.8056 1.9503 9.8056 2.6319 9.8056 2.7362 9.7591 2.8269 9.6752 2.9047 solid black
+edge Node0x17bb0d20 Node0x17bb1080 4 3.7847 2.0972 3.7847 1.9793 3.7847 1.8544 3.7847 1.7324 solid black
+stop

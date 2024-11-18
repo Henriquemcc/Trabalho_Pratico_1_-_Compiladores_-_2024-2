@@ -1,0 +1,38 @@
+graph 1 17.513 18.444
+node Node0x17ba9d70 5.1042 17.333 8.7083 2.2222 "{1:\l|  %2 = tail call noalias dereferenceable_or_null(16) ptr @malloc(i64 noundef\l... 16) #12\l  %3 = getelementptr inbounds %\
+struct._list, ptr %2, i64 0, i32 1\l  store ptr null, ptr %3, align 8\l  %4 = load i32, ptr @nrow, align 4\l  %.not33 = icmp eq \
+i32 %4, 0\l  br i1 %.not33, label %._crit_edge36, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+node Node0x17babdd0 2.4653 0.95833 4.9306 1.2778 "{._crit_edge36:\l|  %27 = load ptr, ptr %3, align 8\l  tail call void @free(ptr noundef %2) #13\l  store ptr %27, ptr @wanted, align \
+8\l  ret void\l}" filled record #3d50c3ff #e8765c70
+node Node0x17c23e00 8.0069 14.819 6.5278 1.8056 "{.preheader:\l|  %.035 = phi ptr [ %.1.lcssa, %._crit_edge ], [ %2, %1 ]\l  %.02134 = phi i32 [ %25, %._crit_edge ], [ 0, %1 ]\l  %\
+5 = load i32, ptr @ncol, align 4\l  %.not2628 = icmp eq i32 %5, 0\l  br i1 %.not2628, label %._crit_edge, label %.lr.ph\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17baee20 6.5903 3.1042 8.0278 2.0139 "{._crit_edge:\l|  %.122.lcssa = phi i32 [ %.02134, %.preheader ], [ %.3, %22 ]\l  %.1.lcssa = phi ptr [ %.035, %.preheader ], [ %\
+.2, %22 ]\l  %25 = add nsw i32 %.122.lcssa, 1\l  %26 = load i32, ptr @nrow, align 4\l  %.not = icmp eq i32 %25, %26\l  br i1 %.not, \
+label %._crit_edge36, label %.preheader, !llvm.loop !7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17bac200 10.007 12.201 8.7083 2.4306 "{.lr.ph:\l|  %.131 = phi ptr [ %.2, %22 ], [ %.035, %.preheader ]\l  %.12230 = phi i32 [ %.3, %22 ], [ %.02134, %.preheader ]\l  %\
+.02429 = phi i32 [ %23, %22 ], [ 0, %.preheader ]\l  %6 = tail call ptr @make_data(i32 noundef %.12230, i32 noundef %.02429)\l  \
+tail call void @melt_data(ptr noundef %6, ptr noundef %0)\l  %7 = tail call i32 @equal_data(ptr noundef %6, ptr noundef %0), !range !\
+4\l  %.not27 = icmp eq i32 %7, 0\l  br i1 %.not27, label %8, label %16\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bacb60 6.5486 9.0139 8.7083 2.9444 "{8:\l|  %9 = tail call noalias dereferenceable_or_null(16) ptr @malloc(i64 noundef\l... 16) #12\l  %10 = getelementptr inbounds %\
+struct._list, ptr %.131, i64 0, i32 1\l  store ptr %9, ptr %10, align 8\l  %11 = tail call ptr @copy_data(ptr noundef %6)\l  %12 = \
+load ptr, ptr %10, align 8\l  store ptr %11, ptr %12, align 8\l  %13 = load ptr, ptr %10, align 8\l  %14 = getelementptr inbounds %\
+struct._list, ptr %13, i64 0, i32 1\l  store ptr null, ptr %14, align 8\l  %15 = load ptr, ptr %10, align 8\l  br label %22\l}" filled record #3d50c3ff #c32e3170
+node Node0x17bacb10 14.326 9.0139 5.2778 1.9028 "{16:\l|  %17 = icmp eq i32 %.02429, 0\l  %18 = load i32, ptr @nrow, align 4\l  %19 = add nsw i32 %18, -1\l  %.223 = select i1 %17, \
+i32 %19, i32 %.12230\l  %20 = load i32, ptr @ncol, align 4\l  %21 = add nsw i32 %20, -1\l  br label %22\l}" filled record #b70d28ff #bb1b2c70
+node Node0x17bae190 8.9514 5.8264 7.5694 2.4306 "{22:\l|  %.125 = phi i32 [ %21, %16 ], [ %.02429, %8 ]\l  %.3 = phi i32 [ %.223, %16 ], [ %.12230, %8 ]\l  %.2 = phi ptr [ %.131, %\
+16 ], [ %15, %8 ]\l  tail call void @free(ptr noundef %6) #13\l  %23 = add nsw i32 %.125, 1\l  %24 = load i32, ptr @ncol, align \
+4\l  %.not26 = icmp eq i32 %23, %24\l  br i1 %.not26, label %._crit_edge, label %.lr.ph, !llvm.loop !5\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x17ba9d70 Node0x17babdd0 10 0.72917 16.389 -1.1413 16.389 1.2708 14.086 1.2708 12.215 1.2708 12.215 1.2708 12.215 1.2708 5.8125 1.2708 4.3296 1.8058 2.6637 2.1597 1.7239 solid black
+edge Node0x17ba9d70 Node0x17c23e00 4 7.2847 16.222 7.2847 16.095 7.3087 15.969 7.3479 15.846 solid black
+edge Node0x17c23e00 Node0x17baee20 7 4.7292 14.083 1.5895 14.083 0.85076 10.438 2.0625 7.5417 2.6446 6.1502 3.904 4.9793 4.9471 4.1923 solid black
+edge Node0x17c23e00 Node0x17bac200 4 9.6458 13.917 9.6458 13.797 9.6545 13.674 9.6691 13.551 solid black
+edge Node0x17baee20 Node0x17babdd0 4 2.5625 2.2569 2.3107 2.2569 2.2615 2.0085 2.2855 1.7301 solid black
+edge Node0x17baee20 Node0x17c23e00 10 10.618 2.2569 15.271 2.2569 18.741 6.1356 17.09 10.486 16.473 12.113 15.996 12.539 14.493 13.417 13.565 13.958 12.452 14.29 11.412 14.492 solid black
+edge Node0x17bac200 Node0x17bacb60 4 5.6319 11.146 5.2941 11.146 5.2783 10.916 5.4089 10.608 solid black
+edge Node0x17bac200 Node0x17bacb10 4 14.382 11.146 14.848 11.146 14.839 10.627 14.711 10.103 solid black
+edge Node0x17bacb60 Node0x17bae190 4 7.6551 7.545 7.7551 7.4135 7.856 7.2808 7.955 7.1506 solid black
+edge Node0x17bacb10 Node0x17bae190 4 12.743 8.0691 12.232 7.7687 11.656 7.4304 11.111 7.1098 solid black
+edge Node0x17bae190 Node0x17baee20 4 7.0486 4.6111 7.0486 4.49 7.0346 4.3656 7.0116 4.2429 solid black
+edge Node0x17bae190 Node0x17bac200 16 10.84 4.6042 10.84 4.3935 12.588 4.4686 12.736 4.6181 13.495 5.3825 13.33 6.143 12.736 7.0417 12.423 7.5147 11.917 7.099 11.562 7.5417 10.731 8.5805 11.489 9.2407 11.021 10.486 10.973 10.613 10.916 10.741 10.854 10.867 solid black
+stop

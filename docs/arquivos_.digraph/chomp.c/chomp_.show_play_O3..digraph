@@ -1,0 +1,15 @@
+graph 1 10.557 7.25
+node Node0x7ed6dd0 3.3207 6.6597 5.7361 1.1806 "{1:\l|  %.not6 = icmp eq ptr %0, null\l  br i1 %.not6, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x7ed7160 2.1819 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x7ed7110 5.7791 3.5208 9.0556 4.0972 "{.lr.ph:\l|  %.07 = phi ptr [ %9, %.lr.ph ], [ %0, %1 ]\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.1)\l  %\
+2 = getelementptr inbounds %struct._play, ptr %.07, i64 0, i32 1\l  %3 = load ptr, ptr %2, align 8\l  tail call void @show_data(\
+ptr noundef %3)\l  %4 = load i32, ptr %.07, align 8\l  %5 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(\
+1)\l... @.str.3, i32 noundef %4)\l  %puts5 = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.2)\l  %6 = getelementptr inbounds %\
+struct._play, ptr %.07, i64 0, i32 2\l  %7 = load ptr, ptr %6, align 8\l  tail call void @show_list(ptr noundef %7)\l  %8 = getelementptr \
+inbounds %struct._play, ptr %.07, i64 0, i32 3\l  %9 = load ptr, ptr %8, align 8\l  %.not = icmp eq ptr %9, null\l  br i1 %.not, \
+label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x7ed6dd0 Node0x7ed7160 7 0.43186 6.2292 -0.63645 6.2292 0.58543 2.3935 1.1263 1.4722 1.2215 1.3101 1.3626 1.1691 1.5109 1.052 solid black
+edge Node0x7ed6dd0 Node0x7ed7110 4 6.2096 6.2292 6.5537 6.2292 6.6679 6.0123 6.6549 5.7017 solid black
+edge Node0x7ed7110 Node0x7ed7160 4 1.2374 1.6319 0.8962 1.6319 1.2445 1.32 1.6107 1.0496 solid black
+edge Node0x7ed7110 Node0x7ed7110 7 8.4038 1.4778 9.7739 0.9268 10.557 1.0463 10.557 2.5764 10.557 2.8007 10.499 2.9947 10.394 3.1608 solid black
+stop

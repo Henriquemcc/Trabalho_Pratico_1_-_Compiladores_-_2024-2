@@ -1,0 +1,4 @@
+graph 1 6.4167 2.2222
+node Node0x2395bad0 3.2083 1.2708 6.4167 1.9028 "{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = call i32 @putchar(i32 noundef 40)\l  %4 = load ptr, ptr %\
+2, align 8\l  call void @show_data(ptr noundef %4)\l  %5 = call i32 (ptr, ...) @printf(ptr noundef @.str.1)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

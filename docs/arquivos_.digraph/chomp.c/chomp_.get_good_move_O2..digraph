@@ -1,0 +1,17 @@
+graph 1 11.482 8.625
+node Node0x3d345a90 3.2917 8.0347 4.5833 1.1806 "{1:\l|  %2 = icmp eq ptr %0, null\l  br i1 %2, label %8, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x3d345fc0 2.8056 0.75 5.6111 0.86111 "{8:\l|  %.06 = phi ptr [ %7, %.critedge ], [ null, %1 ]\l  ret ptr %.06\l}" filled record #3d50c3ff #cc403a70
+node Node0x3d346080 5.4167 5.9375 7.6806 2.0139 "{.preheader:\l|  %.0 = phi ptr [ %4, %5 ], [ %0, %1 ]\l  %3 = getelementptr inbounds %struct._list, ptr %.0, i64 0, i32 1\l  %4 = \
+load ptr, ptr %3, align 8\l  %.not = icmp eq ptr %4, null\l  %.pre = load ptr, ptr %.0, align 8\l  br i1 %.not, label %.critedge, \
+label %5\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3d348010 4.4444 2.1111 5.7361 0.86111 "{.critedge:\l|  %7 = tail call ptr @copy_data(ptr noundef %.pre)\l  br label %8\l}" filled record #3d50c3ff #d0473d70
+node Node0x3d347a20 7.3333 3.7361 7.6806 1.3889 "{5:\l|  %6 = tail call i32 @get_value(ptr noundef %.pre)\l  %.not8 = icmp eq i32 %6, 0\l  br i1 %.not8, label %.critedge, label %\
+.preheader, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x3d345a90 Node0x3d345fc0 7 0.98611 7.6042 -0.33418 7.6042 0.77966 2.8213 1.4444 1.6806 1.5403 1.5162 1.6787 1.3751 1.8311 1.2565 solid black
+edge Node0x3d345a90 Node0x3d346080 4 5.5972 7.6042 5.8751 7.6042 5.9184 7.3705 5.8644 7.0789 solid black
+edge Node0x3d346080 Node0x3d348010 10 3.4861 4.9306 3.4861 4.7015 3.3891 4.6579 3.3611 4.4306 3.2857 3.8179 3.1014 3.6017 3.3611 3.0417 3.4324 2.888 3.5435 2.7508 3.6679 2.6322 solid black
+edge Node0x3d346080 Node0x3d347a20 4 7.3333 4.9306 7.3333 4.8127 7.3333 4.6882 7.3333 4.5661 solid black
+edge Node0x3d348010 Node0x3d345fc0 4 3.9394 1.6863 3.7758 1.5532 3.5925 1.4041 3.4218 1.2653 solid black
+edge Node0x3d347a20 Node0x3d346080 10 9.25 3.0278 9.25 2.814 11.023 2.89 11.174 3.0417 11.609 3.4797 11.551 3.9423 11.174 4.4306 10.912 4.7685 10.218 5.044 9.3982 5.2621 solid black
+edge Node0x3d347a20 Node0x3d348010 4 5.4028 3.0417 5.4028 2.8916 5.3407 2.7586 5.2481 2.6436 solid black
+stop

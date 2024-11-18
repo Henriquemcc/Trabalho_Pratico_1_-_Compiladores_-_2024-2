@@ -1,0 +1,11 @@
+graph 1 8.3472 5.8889
+node Node0x17b98290 2.4653 5.2986 4.9306 1.1806 "{1:\l|  %.not = icmp eq ptr %0, null\l  br i1 %.not, label %common.ret, label %2\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17b97590 2.4653 0.64583 1.4861 0.65278 "{common.ret:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+node Node0x17b98490 4.5625 2.8403 7.5694 2.7361 "{2:\l|  %3 = getelementptr inbounds %struct._play, ptr %0, i64 0, i32 3\l  %4 = load ptr, ptr %3, align 8\l  tail call void @dump_\
+play(ptr noundef %4)\l  %5 = getelementptr inbounds %struct._play, ptr %0, i64 0, i32 2\l  %6 = load ptr, ptr %5, align 8\l  tail \
+call void @dump_list(ptr noundef %6)\l  %7 = getelementptr inbounds %struct._play, ptr %0, i64 0, i32 1\l  %8 = load ptr, ptr %7, \
+align 8\l  tail call void @free(ptr noundef %8) #12\l  tail call void @free(ptr noundef %0) #12\l  br label %common.ret\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x17b98290 Node0x17b97590 10 1.2292 4.7083 1.2292 4.3669 0.78852 4.5186 0.64583 4.2083 0.1377 3.1035 -0.015906 2.4925 0.64583 1.4722 0.85616 1.148 1.2295 0.95197 1.5834 0.83406 solid black
+edge Node0x17b98290 Node0x17b98490 4 3.7014 4.7083 3.7014 4.5858 3.717 4.4627 3.7441 4.3413 solid black
+edge Node0x17b98490 Node0x17b97590 4 3.2581 1.4788 3.1151 1.3311 2.9789 1.1903 2.8609 1.0684 solid black
+stop

@@ -1,0 +1,26 @@
+graph 1 11.527 13.431
+node Node0x2395e260 8.1875 12.479 4.3611 1.9028 "{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %3, align 8\l  %5 = \
+load ptr, ptr @wanted, align 8\l  store ptr %5, ptr %4, align 8\l  br label %6\l}" filled record #3d50c3ff #d0473d70
+node Node0x2395e5f0 8.1875 10.333 3.6667 1.3889 "{6:\l|  %7 = load ptr, ptr %4, align 8\l  %8 = icmp ne ptr %7, null\l  br i1 %8, label %9, label %21\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2395e7c0 3.8958 8.0278 7.7917 2.2222 "{9:\l|  %10 = load ptr, ptr %4, align 8\l  %11 = getelementptr inbounds %struct._list, ptr %10, i32 0, i32 0\l  %12 = load ptr, \
+ptr %11, align 8\l  %13 = load ptr, ptr %3, align 8\l  %14 = call i32 @equal_data(ptr noundef %12, ptr noundef %13)\l  %15 = icmp \
+ne i32 %14, 0\l  br i1 %15, label %16, label %17\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2395e810 6.0347 3.7361 3.9028 1.3889 "{21:\l|  %22 = load ptr, ptr %4, align 8\l  %23 = icmp eq ptr %22, null\l  br i1 %23, label %24, label %25\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2395ed30 1.4097 5.6736 1.6111 0.65278 "{16:\l|  br label %21\l}" filled record #3d50c3ff #d6524470
+node Node0x2395ed80 6.3681 5.6736 7.7917 1.4861 "{17:\l|  %18 = load ptr, ptr %4, align 8\l  %19 = getelementptr inbounds %struct._list, ptr %18, i32 0, i32 1\l  %20 = load ptr, \
+ptr %19, align 8\l  store ptr %20, ptr %4, align 8\l  br label %6, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x2395f3d0 4.1875 2.1111 3.4444 0.86111 "{24:\l|  store i32 0, ptr %2, align 4\l  br label %26\l}" filled record #3d50c3ff #d8564670
+node Node0x2395f420 7.8819 2.1111 3.4444 0.86111 "{25:\l|  store i32 1, ptr %2, align 4\l  br label %26\l}" filled record #3d50c3ff #d6524470
+node Node0x2395f600 6.0347 0.75 3.7778 0.86111 "{26:\l|  %27 = load i32, ptr %2, align 4\l  ret i32 %27\l}" filled record #3d50c3ff #d0473d70
+edge Node0x2395e260 Node0x2395e5f0 4 8.1875 11.53 8.1875 11.407 8.1875 11.283 8.1875 11.162 solid black
+edge Node0x2395e5f0 Node0x2395e7c0 4 6.3403 9.8056 5.826 9.8056 5.3464 9.5457 4.9506 9.2254 solid black
+edge Node0x2395e5f0 Node0x2395e810 7 10.035 9.8056 12.207 9.8056 11.716 6.6559 10.396 4.9306 10.104 4.5498 9.0968 4.2635 8.1235 4.0682 solid black
+edge Node0x2395e7c0 Node0x2395ed30 4 1.9375 6.9167 1.9375 6.6371 1.8208 6.3487 1.6972 6.1215 solid black
+edge Node0x2395e7c0 Node0x2395ed80 4 5.8403 6.9167 5.8403 6.7935 5.8629 6.6686 5.8989 6.548 solid black
+edge Node0x2395e810 Node0x2395f3d0 4 4.0625 3.2083 3.8217 3.2083 3.851 2.9409 3.9415 2.6718 solid black
+edge Node0x2395e810 Node0x2395f420 4 8.0069 3.2083 8.2477 3.2083 8.2184 2.9409 8.1279 2.6718 solid black
+edge Node0x2395ed30 Node0x2395e810 7 1.7428 5.3513 1.9118 5.2077 2.1262 5.0439 2.3403 4.9306 2.8381 4.6669 3.4051 4.4496 3.9429 4.2763 solid black
+edge Node0x2395ed80 Node0x2395e5f0 7 7.5103 6.4126 7.668 6.5607 7.8099 6.7294 7.9097 6.9167 8.337 7.7185 8.3522 8.78 8.2956 9.5028 solid black
+edge Node0x2395f3d0 Node0x2395f600 4 4.7568 1.6863 4.9447 1.5507 5.1556 1.3985 5.3511 1.2573 solid black
+edge Node0x2395f420 Node0x2395f600 4 7.3126 1.6863 7.1248 1.5507 6.9139 1.3985 6.7184 1.2573 solid black
+stop

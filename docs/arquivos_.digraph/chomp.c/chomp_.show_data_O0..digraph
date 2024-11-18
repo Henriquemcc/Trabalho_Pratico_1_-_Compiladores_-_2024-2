@@ -1,0 +1,20 @@
+graph 1 10.674 10.181
+node Node0x2395a370 8.6111 9.4375 3.6667 1.4861 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  store i32 0, ptr %3, align 4\l  \
+br label %4\l}" filled record #3d50c3ff #d6524470
+node Node0x2395a600 8.6111 7.3958 4.125 1.5972 "{4:\l|  %5 = load i32, ptr %3, align 4\l  %6 = load i32, ptr @ncol, align 4\l  %7 = icmp ne i32 %5, %6\l  br i1 %7, label %8, label %\
+22\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2395a850 4.125 4.4653 8.25 3.2639 "{8:\l|  %9 = load ptr, ptr %2, align 8\l  %10 = load i32, ptr %3, align 4\l  %11 = add nsw i32 %10, 1\l  store i32 %11, ptr %3, \
+align 4\l  %12 = sext i32 %10 to i64\l  %13 = getelementptr inbounds i32, ptr %9, i64 %12\l  %14 = load i32, ptr %13, align 4\l  %\
+15 = call i32 (ptr, ...) @printf(ptr noundef @.str, i32 noundef %14)\l  %16 = load i32, ptr %3, align 4\l  %17 = load i32, ptr @\
+ncol, align 4\l  %18 = icmp ne i32 %16, %17\l  br i1 %18, label %19, label %21\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2395a8a0 9.6389 4.4653 1.1528 0.65278 "{22:\l|  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x2395b0c0 2.7639 1.9028 4.6944 0.86111 "{19:\l|  %20 = call i32 @putchar(i32 noundef 44)\l  br label %21\l}" filled record #3d50c3ff #be242e70
+node Node0x2395b110 6.1944 0.64583 3.2083 0.65278 "{21:\l|  br label %4, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x2395a370 Node0x2395a600 4 8.6111 8.6966 8.6111 8.5783 8.6111 8.4545 8.6111 8.3323 solid black
+edge Node0x2395a600 Node0x2395a850 4 6.5278 6.7569 6.0491 6.7569 5.6276 6.5159 5.2767 6.1906 solid black
+edge Node0x2395a600 Node0x2395a8a0 4 9.6389 6.5972 9.6389 6.0216 9.6389 5.3579 9.6389 4.9292 solid black
+edge Node0x2395a850 Node0x2395b0c0 4 2.0556 2.8333 2.0556 2.6931 2.1081 2.5612 2.1847 2.4435 solid black
+edge Node0x2395a850 Node0x2395b110 4 6.1944 2.8333 6.1944 2.2375 6.1944 1.5499 6.1944 1.1103 solid black
+edge Node0x2395b0c0 Node0x2395b110 4 3.911 1.4779 4.331 1.3274 4.8022 1.1586 5.207 1.0135 solid black
+edge Node0x2395b110 Node0x2395a600 7 6.6653 0.96624 7.1894 1.3374 8.0104 2.0156 8.375 2.8333 8.8957 4.0011 8.8528 5.5084 8.7506 6.4604 solid black
+stop

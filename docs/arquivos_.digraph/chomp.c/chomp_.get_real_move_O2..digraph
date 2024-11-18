@@ -1,0 +1,11 @@
+graph 1 7.1042 5.6806
+node Node0x3d34aca0 3.6319 5.3542 1.4861 0.65278 "{4:\l|  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x3d34b290 3.6319 3.1042 6.7639 2.8472 "{5:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %5 ], [ 0, %4 ]\l  %6 = trunc i64 %indvars.iv to i32\l  store i32 %6, ptr %3, \
+align 4\l  %7 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv\l  %8 = load i32, ptr %7, align 4\l  %9 = getelementptr inbounds \
+i32, ptr %1, i64 %indvars.iv\l  %10 = load i32, ptr %9, align 4\l  %11 = icmp eq i32 %8, %10\l  %indvars.iv.next = add nuw i64 %\
+indvars.iv, 1\l  br i1 %11, label %5, label %12, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3d34ba50 5.3264 0.75 3.5556 0.86111 "{12:\l|  store i32 %8, ptr %2, align 4\l  ret void\l}" filled record #3d50c3ff #d6524470
+edge Node0x3d34aca0 Node0x3d34b290 4 3.6319 5.0313 3.6319 4.9257 3.6319 4.7995 3.6319 4.6629 solid black
+edge Node0x3d34b290 Node0x3d34b290 7 1.5839 1.687 0.58671 1.2901 0 1.3991 0 2.4722 0 2.6509 0.054154 2.8028 0.15031 2.9301 solid black
+edge Node0x3d34b290 Node0x3d34ba50 4 5.3264 1.6806 5.3264 1.5629 5.3264 1.4367 5.3264 1.3168 solid black
+stop

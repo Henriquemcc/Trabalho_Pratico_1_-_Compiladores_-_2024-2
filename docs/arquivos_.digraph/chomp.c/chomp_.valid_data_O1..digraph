@@ -1,0 +1,21 @@
+graph 1 12.398 10.403
+node Node0x17b95b00 4.8194 9.7083 6.875 1.3889 "{1:\l|  %2 = load i32, ptr @ncol, align 4\l  %.not9 = icmp eq i32 %2, 0\l  br i1 %.not9, label %._crit_edge, label %.lr.ph.preheader\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #c5333470
+node Node0x17b961d0 4.0694 0.95833 8.1389 1.2778 "{._crit_edge:\l|  %.not.lcssa = phi i1 [ %.not9, %1 ], [ %.not9, %.lr.ph.preheader ], [\l... %.not, %.lr.ph16 ], [ %.not, %.lr.ph ]\l  %\
+11 = zext i1 %.not.lcssa to i32\l  ret i32 %11\l}" filled record #3d50c3ff #c5333470
+node Node0x17c1c530 6.4861 7.6111 5.5 1.8056 "{.lr.ph.preheader:\l|  %3 = load i32, ptr @nrow, align 4\l  %4 = zext i32 %2 to i64\l  %5 = load i32, ptr %0, align 4\l  %6 = icmp \
+sgt i32 %5, %3\l  br i1 %6, label %._crit_edge, label %.lr.ph16\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x17b95f30 7.8611 5.2014 7.3333 2.0139 "{.lr.ph16:\l|  %7 = phi i32 [ %9, %.lr.ph ], [ %5, %.lr.ph.preheader ]\l  %indvars.iv15 = phi i64 [ %indvars.iv.next, %.lr.ph ], [ \
+0,\l... %.lr.ph.preheader ]\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv15, 1\l  %.not = icmp eq i64 %indvars.iv.next, %4\l  \
+br i1 %.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17b96180 8.3889 2.8958 7.3333 1.5972 "{.lr.ph:\l|  %8 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.next\l  %9 = load i32, ptr %8, align 4\l  %10 = icmp sgt i32 %\
+9, %7\l  br i1 %10, label %._crit_edge, label %.lr.ph16, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x17b95b00 Node0x17b961d0 7 3.0972 9.0139 3.0972 5.9309 2.919 5.0983 3.625 2.0972 3.654 1.9741 3.6939 1.8467 3.738 1.7238 solid black
+edge Node0x17b95b00 Node0x17c1c530 4 6.5417 9.0139 6.5417 8.8968 6.5397 8.7742 6.5364 8.6524 solid black
+edge Node0x17c1c530 Node0x17b961d0 4 3.7222 6.875 3.2128 6.875 3.7022 3.3258 3.9477 1.7316 solid black
+edge Node0x17c1c530 Node0x17b95f30 4 7.8611 6.7083 7.8611 6.5897 7.8611 6.4657 7.8611 6.3422 solid black
+edge Node0x17b95f30 Node0x17b961d0 4 4.1806 4.3542 4.0504 4.3542 4.0472 2.7323 4.0576 1.7349 solid black
+edge Node0x17b95f30 Node0x17b96180 4 9.6944 4.1944 9.6944 4.0552 9.6562 3.926 9.5929 3.8075 solid black
+edge Node0x17b96180 Node0x17b961d0 4 4.7083 2.2569 4.6376 2.2569 4.5038 2.004 4.3769 1.7225 solid black
+edge Node0x17b96180 Node0x17b95f30 10 10.222 2.0903 10.222 1.8866 11.912 1.9596 12.056 2.1042 12.553 2.6058 12.463 3.1169 12.056 3.6944 11.936 3.8638 11.796 4.014 11.64 4.1473 solid black
+stop

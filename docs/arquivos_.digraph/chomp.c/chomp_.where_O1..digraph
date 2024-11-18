@@ -1,0 +1,15 @@
+graph 1 12.403 6.8333
+node Node0x17bb1b10 7.0625 5.9306 8.7083 1.8056 "{2:\l|  %3 = getelementptr inbounds %struct._play, ptr %1, i64 0, i32 1\l  %4 = load ptr, ptr %3, align 8\l  %5 = tail call i32 @\
+equal_data(ptr noundef %4, ptr noundef %0), !range !4\l  %.not4 = icmp eq i32 %5, 0\l  br i1 %.not4, label %.lr.ph, label %._crit_\
+edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x17bb22d0 4.6597 3.3125 8.8194 2.4306 "{.lr.ph:\l|  %.05 = phi ptr [ %7, %.lr.ph ], [ %1, %2 ]\l  %6 = getelementptr inbounds %struct._play, ptr %.05, i64 0, i32 3\l  %\
+7 = load ptr, ptr %6, align 8\l  %8 = getelementptr inbounds %struct._play, ptr %7, i64 0, i32 1\l  %9 = load ptr, ptr %8, align \
+8\l  %10 = tail call i32 @equal_data(ptr noundef %9, ptr noundef %0), !range !4\l  %.not = icmp eq i32 %10, 0\l  br i1 %.not, label %\
+.lr.ph, label %._crit_edge, !llvm.loop !5\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bb2320 8.1597 0.95833 8.4861 1.2778 "{._crit_edge:\l|  %.0.lcssa = phi ptr [ %1, %2 ], [ %7, %.lr.ph ]\l  %11 = getelementptr inbounds %struct._play, ptr %.0.lcssa, \
+i64 0, i32 2\l  %12 = load ptr, ptr %11, align 8\l  ret ptr %12\l}" filled record #3d50c3ff #d0473d70
+edge Node0x17bb1b10 Node0x17bb22d0 4 4.8819 5.0278 4.8819 4.9087 4.8765 4.7854 4.8674 4.662 solid black
+edge Node0x17bb1b10 Node0x17bb2320 7 9.2431 5.0278 9.2431 3.7252 9.6853 3.3066 9.2014 2.0972 9.1454 1.9572 9.0631 1.8241 8.969 1.7016 solid black
+edge Node0x17bb22d0 Node0x17bb22d0 7 2.0153 2.1032 0.73129 1.6842 0 1.7821 0 2.7847 0 2.9263 0.050453 3.0499 0.14172 3.1565 solid black
+edge Node0x17bb22d0 Node0x17bb2320 4 9.0903 2.2569 9.4144 2.2569 9.2438 1.9854 8.9649 1.692 solid black
+stop

@@ -1,0 +1,16 @@
+graph 1 11.306 7.4722
+node Node0x3d336260 3.8125 6.7778 5.7361 1.3889 "{1:\l|  %.07 = load ptr, ptr @wanted, align 8\l  %cond8 = icmp eq ptr %.07, null\l  br i1 %cond8, label %._crit_edge, label %.lr.ph\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x3d337600 3.0347 0.75 6.0694 0.86111 "{._crit_edge:\l|  %.05 = phi i32 [ 0, %1 ], [ 1, %.lr.ph ], [ 0, %2 ]\l  ret i32 %.05\l}" filled record #3d50c3ff #cc403a70
+node Node0x3d3367c0 6.9514 4.6806 8.7083 1.8056 "{.lr.ph:\l|  %.09 = phi ptr [ %.0, %2 ], [ %.07, %1 ]\l  %4 = load ptr, ptr %.09, align 8\l  %5 = tail call i32 @equal_data(ptr \
+noundef %4, ptr noundef %0), !range !6\l  %.not6 = icmp eq i32 %5, 0\l  br i1 %.not6, label %2, label %._crit_edge\l|{<s0>T|<s1>\
+F}}" filled record #b70d28ff #b70d2870
+node Node0x3d3365f0 4.9653 2.4792 7.6806 1.5972 "{2:\l|  %3 = getelementptr inbounds %struct._list, ptr %.09, i64 0, i32 1\l  %.0 = load ptr, ptr %3, align 8\l  %cond = icmp eq \
+ptr %.0, null\l  br i1 %cond, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x3d336260 Node0x3d337600 7 0.92361 6.25 -0.091938 6.25 0.43482 2.5289 0.99306 1.6806 1.1087 1.5048 1.2667 1.3624 1.4441 1.2471 solid black
+edge Node0x3d336260 Node0x3d3367c0 4 6.7014 6.25 6.9765 6.25 7.074 6.0099 7.091 5.7184 solid black
+edge Node0x3d3367c0 Node0x3d337600 7 9.1319 3.7778 9.1319 2.8417 9.5787 2.3625 8.9375 1.6806 8.5454 1.2636 7.3941 1.0357 6.2111 0.91149 solid black
+edge Node0x3d3367c0 Node0x3d3365f0 4 4.7708 3.7778 4.7708 3.6581 4.7792 3.5329 4.7924 3.4096 solid black
+edge Node0x3d3365f0 Node0x3d337600 4 3.0347 1.6806 3.0347 1.5629 3.0347 1.4367 3.0347 1.3168 solid black
+edge Node0x3d3365f0 Node0x3d3367c0 10 6.8819 1.6736 6.8819 1.4599 8.655 1.5358 8.8056 1.6875 9.0545 1.9383 8.9637 2.9617 8.8056 3.2778 8.7324 3.4239 8.6358 3.5586 8.525 3.6819 solid black
+stop

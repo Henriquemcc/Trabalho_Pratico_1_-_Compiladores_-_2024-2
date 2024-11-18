@@ -1,0 +1,14 @@
+graph 1 15.833 6.3056
+node Node0x23970b30 5.7986 5.6667 3.6667 1.2778 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  br label %4\l}" filled record #3d50c3ff #d6524470
+node Node0x23970d20 5.7986 3.625 7.5694 1.8056 "{4:\l|  %5 = load ptr, ptr %2, align 8\l  %6 = getelementptr inbounds %struct._play, ptr %5, i32 0, i32 3\l  %7 = load ptr, ptr %\
+6, align 8\l  %8 = icmp ne ptr %7, null\l  br i1 %8, label %9, label %13\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x23971030 3.8958 1.2708 7.7917 1.4861 "{9:\l|  %10 = load ptr, ptr %2, align 8\l  %11 = getelementptr inbounds %struct._play, ptr %10, i32 0, i32 3\l  %12 = load ptr, \
+ptr %11, align 8\l  store ptr %12, ptr %2, align 8\l  br label %4, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x23971080 11.938 1.2708 7.7917 1.9028 "{13:\l|  %14 = load ptr, ptr %2, align 8\l  %15 = getelementptr inbounds %struct._play, ptr %14, i32 0, i32 2\l  %16 = load ptr, \
+ptr %15, align 8\l  %17 = call ptr @get_good_move(ptr noundef %16)\l  store ptr %17, ptr %3, align 8\l  %18 = load ptr, ptr %3, \
+align 8\l  ret ptr %18\l}" filled record #3d50c3ff #d6524470
+edge Node0x23970b30 Node0x23970d20 4 5.7986 5.0321 5.7986 4.9154 5.7986 4.7905 5.7986 4.6652 solid black
+edge Node0x23970d20 Node0x23971030 4 3.8958 2.7222 3.8596 2.5373 3.8339 2.3389 3.8187 2.1505 solid black
+edge Node0x23970d20 Node0x23971080 4 9.6042 2.8889 10.116 2.8889 10.598 2.6231 10.99 2.3079 solid black
+edge Node0x23971030 Node0x23970d20 4 3.9825 2.01 3.9725 2.1924 3.952 2.3907 3.921 2.5813 solid black
+stop

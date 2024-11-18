@@ -1,0 +1,79 @@
+graph 1 13.021 40.819
+node Node0x17b9fa20 3.2917 39.812 6.5278 2.0139 "{2:\l|  %3 = load i32, ptr @ncol, align 4\l  %4 = sext i32 %3 to i64\l  %5 = shl nsw i64 %4, 2\l  %6 = tail call noalias ptr @malloc(\
+i64 noundef %5) #12\l  %.not11 = icmp eq i32 %1, 0\l  br i1 %.not11, label %.preheader, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x17b9c210 3.7222 18.792 7.4444 1.3889 "{.preheader:\l|  %.0.lcssa = phi i32 [ 0, %2 ], [ %11, %.preheader.loopexit ]\l  %.not1013 = icmp eq i32 %.0.lcssa, %3\l  br i1 %\
+.not1013, label %._crit_edge, label %.lr.ph15.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x17b9ed80 5.4444 37.403 7.7917 1.8056 "{.lr.ph:\l|  %7 = load i32, ptr @nrow, align 4\l  %8 = zext i32 %1 to i64\l  %xtraiter = and i64 %8, 7\l  %9 = icmp ult i32 %1, \
+8\l  br i1 %9, label %.preheader.loopexit.unr-lcssa, label %.lr.ph.new\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17c0cc50 5.9028 26.222 8.4861 1.8056 "{.preheader.loopexit.unr-lcssa:\l|  %indvars.iv.next.lcssa.ph = phi i64 [ undef, %.lr.ph ], [\l... %indvars.iv.next.7, %18 ]\l  %\
+indvars.iv.unr = phi i64 [ 0, %.lr.ph ], [ %indvars.iv.next.7, %18 ]\l  %lcmp.mod.not = icmp eq i64 %xtraiter, 0\l  br i1 %lcmp.mod.not, \
+label %.preheader.loopexit, label %.epil.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17ba28f0 7.6806 35.569 4.4722 0.86111 "{.lr.ph.new:\l|  %unroll_iter = and i64 %8, 4294967288\l  br label %18\l}" filled record #3d50c3ff #d8564670
+node Node0x17ba03b0 7.9861 31.132 8.25 7.0139 "{18:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph.new ], [ %indvars.iv.next.7, %18 ]\l  %niter = phi i64 [ 0, %.lr.ph.new ], [ %niter.next.7, %\
+18 ]\l  %19 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv\l  store i32 %7, ptr %19, align 4\l  %indvars.iv.next = or disjoint \
+i64 %indvars.iv, 1\l  %20 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv.next\l  store i32 %7, ptr %20, align 4\l  %indvars.iv.next.1 = \
+or disjoint i64 %indvars.iv, 2\l  %21 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv.next.1\l  store i32 %7, ptr %21, align \
+4\l  %indvars.iv.next.2 = or disjoint i64 %indvars.iv, 3\l  %22 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv.next.2\l  \
+store i32 %7, ptr %22, align 4\l  %indvars.iv.next.3 = or disjoint i64 %indvars.iv, 4\l  %23 = getelementptr inbounds i32, ptr %\
+6, i64 %indvars.iv.next.3\l  store i32 %7, ptr %23, align 4\l  %indvars.iv.next.4 = or disjoint i64 %indvars.iv, 5\l  %24 = getelementptr \
+inbounds i32, ptr %6, i64 %indvars.iv.next.4\l  store i32 %7, ptr %24, align 4\l  %indvars.iv.next.5 = or disjoint i64 %indvars.iv, \
+6\l  %25 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv.next.5\l  store i32 %7, ptr %25, align 4\l  %indvars.iv.next.6 = \
+or disjoint i64 %indvars.iv, 7\l  %26 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv.next.6\l  store i32 %7, ptr %26, align \
+4\l  %indvars.iv.next.7 = add nuw nsw i64 %indvars.iv, 8\l  %niter.next.7 = add i64 %niter, 8\l  %niter.ncmp.7 = icmp eq i64 %niter.next.7, %\
+unroll_iter\l  br i1 %niter.ncmp.7, label %.preheader.loopexit.unr-lcssa, label %18,\l... !llvm.loop !7\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x17b9cf40 6.3056 20.625 9.5139 1.2778 "{.preheader.loopexit:\l|  %indvars.iv.next.lcssa = phi i64 [ %indvars.iv.next.lcssa.ph,\l... %.preheader.loopexit.unr-lcssa ], [ %\
+indvars.iv.next.epil, %.epil.preheader ]\l  %11 = trunc i64 %indvars.iv.next.lcssa to i32\l  br label %.preheader\l}" filled record #3d50c3ff #d24b4070
+node Node0x17b99470 8.4583 23.292 8.5972 3.0556 "{.epil.preheader:\l|  %indvars.iv.epil = phi i64 [ %indvars.iv.next.epil, %.epil.preheader ], [\l... %indvars.iv.unr, %.preheader.loopexit.unr-lcssa ]\l  %\
+epil.iter = phi i64 [ %epil.iter.next, %.epil.preheader ], [ 0,\l... %.preheader.loopexit.unr-lcssa ]\l  %10 = getelementptr inbounds \
+i32, ptr %6, i64 %indvars.iv.epil\l  store i32 %7, ptr %10, align 4\l  %indvars.iv.next.epil = add nuw nsw i64 %indvars.iv.epil, \
+1\l  %epil.iter.next = add i64 %epil.iter, 1\l  %epil.iter.cmp.not = icmp eq i64 %epil.iter.next, %xtraiter\l  br i1 %epil.iter.cmp.not, \
+label %.preheader.loopexit, label\l... %.epil.preheader, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17ba0eb0 2.4306 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret ptr %6\l}" filled record #3d50c3ff #d0473d70
+node Node0x17c14490 6.125 16.59 8.8194 2.0139 "{.lr.ph15.preheader:\l|  %12 = zext i32 %.0.lcssa to i64\l  %13 = zext i32 %3 to i64\l  %14 = sub nsw i64 %13, %12\l  %xtraiter21 = \
+and i64 %14, 7\l  %lcmp.mod22.not = icmp eq i64 %xtraiter21, 0\l  br i1 %lcmp.mod22.not, label %.lr.ph15.prol.loopexit, label %.lr.ph15.prol\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x17b93060 5.3194 10.625 7.2222 1.8056 "{.lr.ph15.prol.loopexit:\l|  %indvars.iv17.unr = phi i64 [ %12, %.lr.ph15.preheader ], [\l... %indvars.iv.next18.prol, %.lr.ph15.prol ]\l  %\
+16 = sub nsw i64 %12, %13\l  %17 = icmp ugt i64 %16, -8\l  br i1 %17, label %._crit_edge, label %.lr.ph15.preheader.new\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x17c1c1c0 8.4722 13.556 8.5972 3.0556 "{.lr.ph15.prol:\l|  %indvars.iv17.prol = phi i64 [ %indvars.iv.next18.prol, %.lr.ph15.prol ],\l... [ %12, %.lr.ph15.preheader ]\l  %\
+prol.iter = phi i64 [ %prol.iter.next, %.lr.ph15.prol ], [ 0,\l... %.lr.ph15.preheader ]\l  %15 = getelementptr inbounds i32, ptr %\
+6, i64 %indvars.iv17.prol\l  store i32 %0, ptr %15, align 4\l  %indvars.iv.next18.prol = add nuw nsw i64 %indvars.iv17.prol, 1\l  %\
+prol.iter.next = add i64 %prol.iter, 1\l  %prol.iter.cmp.not = icmp eq i64 %prol.iter.next, %xtraiter21\l  br i1 %prol.iter.cmp.not, \
+label %.lr.ph15.prol.loopexit, label\l... %.lr.ph15.prol, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x17b91190 7.125 8.1667 6.1944 2.1111 "{.lr.ph15.preheader.new:\l|  %invariant.gep = getelementptr i32, ptr %6, i64 1\l  %invariant.gep23 = getelementptr i32, ptr %6, \
+i64 2\l  %invariant.gep25 = getelementptr i32, ptr %6, i64 3\l  %invariant.gep27 = getelementptr i32, ptr %6, i64 4\l  %invariant.gep29 = \
+getelementptr i32, ptr %6, i64 5\l  %invariant.gep31 = getelementptr i32, ptr %6, i64 6\l  %invariant.gep33 = getelementptr i32, \
+ptr %6, i64 7\l  br label %.lr.ph15\l}" filled record #3d50c3ff #d8564670
+node Node0x17ba0e60 7.125 4.0417 8.5972 5.1389 "{.lr.ph15:\l|  %indvars.iv17 = phi i64 [ %indvars.iv17.unr, %.lr.ph15.preheader.new ], [\l... %indvars.iv.next18.7, %.lr.ph15 ]\l  %\
+27 = getelementptr inbounds i32, ptr %6, i64 %indvars.iv17\l  store i32 %0, ptr %27, align 4\l  %gep = getelementptr i32, ptr %invariant.gep, \
+i64 %indvars.iv17\l  store i32 %0, ptr %gep, align 4\l  %gep24 = getelementptr i32, ptr %invariant.gep23, i64 %indvars.iv17\l  store \
+i32 %0, ptr %gep24, align 4\l  %gep26 = getelementptr i32, ptr %invariant.gep25, i64 %indvars.iv17\l  store i32 %0, ptr %gep26, \
+align 4\l  %gep28 = getelementptr i32, ptr %invariant.gep27, i64 %indvars.iv17\l  store i32 %0, ptr %gep28, align 4\l  %gep30 = \
+getelementptr i32, ptr %invariant.gep29, i64 %indvars.iv17\l  store i32 %0, ptr %gep30, align 4\l  %gep32 = getelementptr i32, ptr %\
+invariant.gep31, i64 %indvars.iv17\l  store i32 %0, ptr %gep32, align 4\l  %gep34 = getelementptr i32, ptr %invariant.gep33, i64 %\
+indvars.iv17\l  store i32 %0, ptr %gep34, align 4\l  %indvars.iv.next18.7 = add nuw nsw i64 %indvars.iv17, 8\l  %.not10.7 = icmp \
+eq i64 %indvars.iv.next18.7, %13\l  br i1 %.not10.7, label %._crit_edge, label %.lr.ph15, !llvm.loop !9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+edge Node0x17b9fa20 Node0x17b9c210 16 1.6528 38.806 1.6528 38.56 1.482 38.542 1.4167 38.306 1.0937 37.134 1.1528 36.799 1.1528 35.583 1.1528 35.583 1.1528 35.583 1.1528 23.278 1.1528 21.81 0.60161 21.207 1.4167 19.986 1.5232 19.827 1.6582 19.687 1.8092 19.566 solid black
+edge Node0x17b9fa20 Node0x17b9ed80 4 4.9306 38.806 4.9306 38.683 4.9483 38.558 4.9772 38.436 solid black
+edge Node0x17b9c210 Node0x17ba0eb0 16 1.8611 18.097 1.8611 17.843 1.6551 17.841 1.5833 17.597 1.0768 15.876 1.3194 15.363 1.3194 13.569 1.3194 13.569 1.3194 13.569 1.3194 8.1528 1.3194 5.179 0.5471 4.2158 1.6944 1.4722 1.7557 1.3257 1.8553 1.1883 1.9616 1.0698 solid black
+edge Node0x17b9c210 Node0x17c14490 4 5.5833 18.097 5.5833 17.975 5.5996 17.85 5.6264 17.728 solid black
+edge Node0x17b9ed80 Node0x17c0cc50 7 3.4861 36.5 3.4861 32.554 1.7944 31.06 3.7361 27.625 3.8194 27.478 3.9255 27.343 4.0459 27.222 solid black
+edge Node0x17b9ed80 Node0x17ba28f0 4 7.3889 36.5 7.3889 36.378 7.4128 36.25 7.4469 36.13 solid black
+edge Node0x17c0cc50 Node0x17b9cf40 7 3.7778 25.319 3.7778 23.735 3.1449 23.079 4.0278 21.764 4.1366 21.602 4.2758 21.462 4.4317 21.342 solid black
+edge Node0x17c0cc50 Node0x17b99470 4 8.0278 25.319 8.0278 25.2 8.0351 25.077 8.0479 24.954 solid black
+edge Node0x17ba28f0 Node0x17ba03b0 4 7.709 35.145 7.7165 35.037 7.7251 34.912 7.7347 34.775 solid black
+edge Node0x17ba03b0 Node0x17c0cc50 4 5.9167 27.625 5.9167 27.508 5.9162 27.385 5.9154 27.264 solid black
+edge Node0x17ba03b0 Node0x17ba03b0 7 10.265 27.631 11.595 26.687 12.361 26.816 12.361 29.458 12.361 29.886 12.292 30.248 12.17 30.55 solid black
+edge Node0x17b9cf40 Node0x17b9c210 4 5.4201 19.992 5.2223 19.854 5.0104 19.706 4.8056 19.563 solid black
+edge Node0x17b99470 Node0x17b9cf40 4 6.3056 21.764 6.3056 21.646 6.3056 21.521 6.3056 21.399 solid black
+edge Node0x17b99470 Node0x17b99470 7 10.996 21.771 12.275 21.274 13.007 21.382 13.007 22.611 13.007 22.792 12.952 22.949 12.854 23.083 solid black
+edge Node0x17c14490 Node0x17b93060 7 3.9167 15.583 3.9167 14.002 3.4413 13.491 4.0417 12.028 4.0979 11.891 4.174 11.759 4.2613 11.635 solid black
+edge Node0x17c14490 Node0x17c1c1c0 4 8.3333 15.583 8.3333 15.465 8.3358 15.343 8.34 15.22 solid black
+edge Node0x17b93060 Node0x17ba0eb0 4 1.6944 9.8889 1.2484 9.8889 2.1294 2.9492 2.3714 1.1052 solid black
+edge Node0x17b93060 Node0x17b91190 4 7.125 9.7222 7.125 9.6036 7.125 9.4798 7.125 9.3563 solid black
+edge Node0x17c1c1c0 Node0x17b93060 4 6.3194 12.028 6.3194 11.897 6.2898 11.77 6.2408 11.649 solid black
+edge Node0x17c1c1c0 Node0x17c1c1c0 7 10.977 12.034 12.276 11.474 13.021 11.578 13.021 12.875 13.021 13.066 12.965 13.231 12.865 13.372 solid black
+edge Node0x17b91190 Node0x17ba0e60 4 7.125 7.1136 7.125 6.9961 7.125 6.8726 7.125 6.7455 solid black
+edge Node0x17ba0e60 Node0x17ba0eb0 4 2.8056 1.6389 2.6821 1.6389 2.5842 1.3641 2.5194 1.1056 solid black
+edge Node0x17ba0e60 Node0x17ba0e60 7 9.5797 1.4774 10.91 0.80124 11.674 0.93171 11.674 2.8403 11.674 3.1363 11.61 3.3895 11.497 3.6036 solid black
+stop

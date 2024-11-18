@@ -1,0 +1,11 @@
+graph 1 9.1528 5.375
+node Node0x17b9c0a0 2.8681 4.7847 5.7361 1.1806 "{1:\l|  %.not3 = icmp eq ptr %0, null\l  br i1 %.not3, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x17b9c430 1.8819 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x17b9c3e0 5.0069 2.5833 7.7917 2.2222 "{.lr.ph:\l|  %.04 = phi ptr [ %4, %.lr.ph ], [ %0, %1 ]\l  %2 = load ptr, ptr %.04, align 8\l  tail call void @show_move(ptr noundef %\
+2)\l  %3 = getelementptr inbounds %struct._list, ptr %.04, i64 0, i32 1\l  %4 = load ptr, ptr %3, align 8\l  %.not = icmp eq ptr %\
+4, null\l  br i1 %.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x17b9c0a0 Node0x17b9c430 10 1.4236 4.1944 1.4236 3.8971 1.0848 3.9724 0.97917 3.6944 0.62817 2.7713 0.57735 2.3744 0.97917 1.4722 1.0489 1.3157 1.1653 1.1767 1.2917 1.0599 solid black
+edge Node0x17b9c0a0 Node0x17b9c3e0 4 4.2986 4.1944 4.2986 4.071 4.3165 3.9465 4.3466 3.8243 solid black
+edge Node0x17b9c3e0 Node0x17b9c430 4 1.0903 1.6389 0.77603 1.6389 1.0643 1.3301 1.3775 1.0594 solid black
+edge Node0x17b9c3e0 Node0x17b9c3e0 7 7.4572 1.4785 8.531 1.1755 9.1528 1.2824 9.1528 2.1111 9.1528 2.238 9.1036 2.348 9.0151 2.4422 solid black
+stop

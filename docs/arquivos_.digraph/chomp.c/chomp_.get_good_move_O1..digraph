@@ -1,0 +1,16 @@
+graph 1 11.582 8.8333
+node Node0x17bada90 3.3472 8.2431 4.6944 1.1806 "{1:\l|  %2 = icmp eq ptr %0, null\l  br i1 %2, label %10, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x17badfc0 2.8056 0.75 5.6111 0.86111 "{10:\l|  %.06 = phi ptr [ %9, %.critedge ], [ null, %1 ]\l  ret ptr %.06\l}" filled record #3d50c3ff #cc403a70
+node Node0x17bae080 5.4722 6.25 7.6806 1.8056 "{.preheader:\l|  %.0 = phi ptr [ %4, %5 ], [ %0, %1 ]\l  %3 = getelementptr inbounds %struct._list, ptr %.0, i64 0, i32 1\l  %4 = \
+load ptr, ptr %3, align 8\l  %.not = icmp eq ptr %4, null\l  br i1 %.not, label %.critedge, label %5\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x17bb0010 4.375 2.2153 5.5 1.0694 "{.critedge:\l|  %8 = load ptr, ptr %.0, align 8\l  %9 = tail call ptr @copy_data(ptr noundef %8)\l  br label %10\l}" filled record #3d50c3ff #d0473d70
+node Node0x17bafa20 7.3889 4.0486 7.6806 1.5972 "{5:\l|  %6 = load ptr, ptr %.0, align 8\l  %7 = tail call i32 @get_value(ptr noundef %6)\l  %.not8 = icmp eq i32 %7, 0\l  br i1 %\
+.not8, label %.critedge, label %.preheader, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x17bada90 Node0x17badfc0 7 0.98611 7.8125 -0.38132 7.8125 0.81921 2.8665 1.5 1.6806 1.5923 1.5198 1.7256 1.3804 1.8721 1.2622 solid black
+edge Node0x17bada90 Node0x17bae080 4 5.7083 7.8125 5.9819 7.8125 6.004 7.5734 5.9301 7.2831 solid black
+edge Node0x17bae080 Node0x17bb0010 10 3.5417 5.3472 3.5417 5.1182 3.4447 5.0746 3.4167 4.8472 3.3299 4.1427 3.1554 3.91 3.4167 3.25 3.4728 3.1081 3.5591 2.9744 3.6573 2.8534 solid black
+edge Node0x17bae080 Node0x17bafa20 4 7.3889 5.3472 7.3889 5.2302 7.3889 5.1072 7.3889 4.9855 solid black
+edge Node0x17bb0010 Node0x17badfc0 4 3.8128 1.6865 3.6656 1.5516 3.507 1.4064 3.3602 1.2719 solid black
+edge Node0x17bafa20 Node0x17bae080 10 9.3056 3.2431 9.3056 3.0293 11.079 3.1053 11.229 3.2569 11.727 3.7585 11.666 4.2919 11.229 4.8472 10.966 5.1815 10.271 5.4448 9.4514 5.6481 solid black
+edge Node0x17bafa20 Node0x17bb0010 4 3.5278 3.4097 3.2141 3.4097 3.405 3.1312 3.6843 2.8448 solid black
+stop

@@ -1,0 +1,12 @@
+graph 1 8.2909 6.5139
+node Node0x239572c0 5.9514 5.6111 3.7778 1.8056 "{1:\l|  %2 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %3 = load ptr, ptr %2, align 8\l  %4 = icmp ne ptr %3, null\l  \
+br i1 %4, label %5, label %13\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x23957540 3.8403 2.8403 7.6806 2.7361 "{5:\l|  %6 = load ptr, ptr %2, align 8\l  %7 = getelementptr inbounds %struct._list, ptr %6, i32 0, i32 1\l  %8 = load ptr, ptr %\
+7, align 8\l  call void @dump_list(ptr noundef %8)\l  %9 = load ptr, ptr %2, align 8\l  %10 = getelementptr inbounds %struct._list, \
+ptr %9, i32 0, i32 0\l  %11 = load ptr, ptr %10, align 8\l  call void @free(ptr noundef %11) #4\l  %12 = load ptr, ptr %2, align \
+8\l  call void @free(ptr noundef %12) #4\l  br label %13\l}" filled record #b70d28ff #bb1b2c70
+node Node0x23957590 5.9514 0.64583 1.1528 0.65278 "{13:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x239572c0 Node0x23957540 4 4.0486 4.875 3.7444 4.875 3.6216 4.6457 3.5924 4.3415 solid black
+edge Node0x239572c0 Node0x23957590 7 7.8542 4.875 8.6104 4.875 8.2305 2.1024 7.8125 1.4722 7.5569 1.0868 7.0746 0.88308 6.665 0.77599 solid black
+edge Node0x23957540 Node0x23957590 4 5.1533 1.4788 5.2972 1.3311 5.4344 1.1903 5.5531 1.0684 solid black
+stop
