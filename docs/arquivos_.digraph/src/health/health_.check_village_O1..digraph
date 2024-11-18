@@ -1,0 +1,36 @@
+graph 1 8.4861 20.764
+node Node0x40218ed0 4.2431 10.542 8.4861 20.444 "{1:\l|  %2 = alloca %struct.Results, align 8\l  call void @get_results(ptr dead_on_unwind nonnull writable\l... sret(%struct.Results) \
+align 8 %2, ptr noundef %0)\l  %3 = load i32, ptr @res_population, align 4\l  %4 = sext i32 %3 to i64\l  %5 = getelementptr inbounds %\
+struct.Results, ptr %2, i64 0, i32 2\l  %6 = load i64, ptr %5, align 8\l  %.not = icmp eq i64 %6, %4\l  %7 = load i32, ptr @res_\
+hospitals, align 4\l  %8 = sext i32 %7 to i64\l  %9 = load i64, ptr %2, align 8\l  %.not9 = icmp eq i64 %9, %8\l  %10 = load i32, \
+ptr @res_personnel, align 4\l  %11 = sext i32 %10 to i64\l  %12 = getelementptr inbounds %struct.Results, ptr %2, i64 0, i32 1\l  %\
+13 = load i64, ptr %12, align 8\l  %.not10 = icmp eq i64 %13, %11\l  %14 = load i32, ptr @res_checkin, align 4\l  %15 = sext i32 %\
+14 to i64\l  %16 = getelementptr inbounds %struct.Results, ptr %2, i64 0, i32 8\l  %17 = load i64, ptr %16, align 8\l  %.not11 = \
+icmp eq i64 %17, %15\l  %18 = load i32, ptr @res_village, align 4\l  %19 = sext i32 %18 to i64\l  %20 = getelementptr inbounds %\
+struct.Results, ptr %2, i64 0, i32 3\l  %21 = load i64, ptr %20, align 8\l  %.not12 = icmp eq i64 %21, %19\l  %22 = load i32, ptr @\
+res_waiting, align 4\l  %23 = sext i32 %22 to i64\l  %24 = getelementptr inbounds %struct.Results, ptr %2, i64 0, i32 4\l  %25 = \
+load i64, ptr %24, align 8\l  %.not13 = icmp eq i64 %25, %23\l  %26 = load i32, ptr @res_assess, align 4\l  %27 = sext i32 %26 to \
+i64\l  %28 = getelementptr inbounds %struct.Results, ptr %2, i64 0, i32 5\l  %29 = load i64, ptr %28, align 8\l  %.not14 = icmp \
+eq i64 %29, %27\l  %30 = load i32, ptr @res_inside, align 4\l  %31 = sext i32 %30 to i64\l  %32 = getelementptr inbounds %struct.Results, \
+ptr %2, i64 0, i32 6\l  %33 = load i64, ptr %32, align 8\l  %.not15 = icmp eq i64 %33, %31\l  %34 = select i1 %.not15, i1 %.not14, \
+i1 false\l  %35 = select i1 %34, i1 %.not13, i1 false\l  %36 = select i1 %35, i1 %.not12, i1 false\l  %37 = select i1 %36, i1 %.not11, \
+i1 false\l  %38 = select i1 %37, i1 %.not10, i1 false\l  %39 = select i1 %38, i1 %.not9, i1 false\l  %40 = select i1 %39, i1 %.not, \
+i1 false\l  %spec.store.select7 = select i1 %40, i32 1, i32 -1\l  %putchar = tail call i32 @putchar(i32 10)\l  %puts = tail call \
+i32 @puts(ptr nonnull dereferenceable(1) @str)\l  %41 = load i32, ptr @res_population, align 4\l  %42 = trunc i64 %6 to i32\l  %\
+43 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.18, i32 noundef %41, i32 noundef %42)\l  %\
+44 = load i32, ptr @res_hospitals, align 4\l  %45 = trunc i64 %9 to i32\l  %46 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... \
+dereferenceable(1) @.str.19, i32 noundef %44, i32 noundef %45)\l  %47 = load i32, ptr @res_personnel, align 4\l  %48 = trunc i64 %\
+13 to i32\l  %49 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.20, i32 noundef %47, i32 noundef %\
+48)\l  %50 = load i32, ptr @res_checkin, align 4\l  %51 = trunc i64 %17 to i32\l  %52 = tail call i32 (ptr, ...) @printf(ptr noundef \
+nonnull\l... dereferenceable(1) @.str.21, i32 noundef %50, i32 noundef %51)\l  %53 = load i32, ptr @res_village, align 4\l  %54 = \
+trunc i64 %21 to i32\l  %55 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.22, i32 noundef %\
+53, i32 noundef %54)\l  %56 = load i32, ptr @res_waiting, align 4\l  %57 = trunc i64 %25 to i32\l  %58 = tail call i32 (ptr, ...) @\
+printf(ptr noundef nonnull\l... dereferenceable(1) @.str.23, i32 noundef %56, i32 noundef %57)\l  %59 = load i32, ptr @res_assess, \
+align 4\l  %60 = trunc i64 %29 to i32\l  %61 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.24, \
+i32 noundef %59, i32 noundef %60)\l  %62 = load i32, ptr @res_inside, align 4\l  %63 = trunc i64 %33 to i32\l  %64 = tail call i32 (\
+ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.25, i32 noundef %62, i32 noundef %63)\l  %65 = load float, ptr @\
+res_avg_stay, align 4\l  %66 = fpext float %65 to double\l  %67 = getelementptr inbounds %struct.Results, ptr %2, i64 0, i32 7\l  %\
+68 = load i64, ptr %67, align 8\l  %69 = sitofp i64 %68 to float\l  %70 = sitofp i64 %6 to float\l  %71 = fdiv float %69, %70\l  %\
+72 = fpext float %71 to double\l  %73 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.26, double \
+noundef %66, double noundef %72)\l  tail call void @my_print(ptr noundef %0)\l  ret i32 %spec.store.select7\l}" filled record #b70d28ff #b70d2870
+stop

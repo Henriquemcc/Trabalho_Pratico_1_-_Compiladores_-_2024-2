@@ -1,0 +1,33 @@
+graph 1 16.833 15.194
+node Node0x1de67210 12.333 14.451 3.6667 1.4861 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  br \
+label %5\l}" filled record #3d50c3ff #ec7f6370
+node Node0x1de67480 12.333 12.201 7.7917 2.0139 "{5:\l|  %6 = load ptr, ptr %2, align 8\l  %7 = getelementptr inbounds %struct.Village, ptr %6, i32 0, i32 5\l  %8 = getelementptr \
+inbounds %struct.Hosp, ptr %7, i32 0, i32 5\l  %9 = load ptr, ptr %8, align 8\l  %10 = icmp ne ptr %9, null\l  br i1 %10, label %\
+11, label %41\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x1de67cf0 8.4167 9.7431 8.0278 1.9028 "{11:\l|  %12 = load ptr, ptr %2, align 8\l  %13 = getelementptr inbounds %struct.Village, ptr %12, i32 0, i32 5\l  %14 = getelementptr \
+inbounds %struct.Hosp, ptr %13, i32 0, i32 5\l  %15 = load ptr, ptr %14, align 8\l  store ptr %15, ptr %4, align 8\l  store ptr %\
+15, ptr %3, align 8\l  br label %16\l}" filled record #3d50c3ff #d6524470
+node Node0x1de67d40 14.278 9.7431 1.1528 0.65278 "{41:\l|  ret void\l}" filled record #3d50c3ff #ec7f6370
+node Node0x1de68200 8.4167 7.5972 3.9028 1.3889 "{16:\l|  %17 = load ptr, ptr %3, align 8\l  %18 = icmp ne ptr %17, null\l  br i1 %18, label %19, label %33\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de683d0 4.0139 5.1389 8.0278 2.4306 "{19:\l|  %20 = load ptr, ptr %3, align 8\l  %21 = getelementptr inbounds %struct.Patient, ptr %20, i32 0, i32 0\l  %22 = load i32, \
+ptr %21, align 8\l  %23 = load ptr, ptr %4, align 8\l  %24 = getelementptr inbounds %struct.Patient, ptr %23, i32 0, i32 0\l  %25 = \
+load i32, ptr %24, align 8\l  %26 = icmp slt i32 %22, %25\l  br i1 %26, label %27, label %29\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de68420 12.819 5.1389 8.0278 2.5278 "{33:\l|  %34 = load ptr, ptr %2, align 8\l  %35 = getelementptr inbounds %struct.Village, ptr %34, i32 0, i32 5\l  %36 = getelementptr \
+inbounds %struct.Hosp, ptr %35, i32 0, i32 5\l  %37 = load ptr, ptr %4, align 8\l  call void @removeList(ptr noundef %36, ptr noundef %\
+37)\l  %38 = load ptr, ptr %2, align 8\l  %39 = getelementptr inbounds %struct.Village, ptr %38, i32 0, i32 5\l  %40 = load ptr, \
+ptr %4, align 8\l  call void @put_in_hosp(ptr noundef %39, ptr noundef %40)\l  br label %5, !llvm.loop !6\l}" filled record #3d50c3ff #d6524470
+node Node0x1de68970 2.875 2.8403 3.7778 1.0694 "{27:\l|  %28 = load ptr, ptr %3, align 8\l  store ptr %28, ptr %4, align 8\l  br label %29\l}" filled record #3d50c3ff #be242e70
+node Node0x1de689c0 6.0278 1.0625 8.0278 1.4861 "{29:\l|  %30 = load ptr, ptr %3, align 8\l  %31 = getelementptr inbounds %struct.Patient, ptr %30, i32 0, i32 7\l  %32 = load ptr, \
+ptr %31, align 8\l  store ptr %32, ptr %3, align 8\l  br label %16, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de67210 Node0x1de67480 4 12.333 13.71 12.333 13.592 12.333 13.468 12.333 13.343 solid black
+edge Node0x1de67480 Node0x1de67cf0 4 8.4167 11.354 8.145 11.354 8.0812 11.12 8.1061 10.831 solid black
+edge Node0x1de67480 Node0x1de67d40 4 14.278 11.194 14.278 10.863 14.278 10.488 14.278 10.205 solid black
+edge Node0x1de67cf0 Node0x1de68200 4 8.4167 8.794 8.4167 8.6713 8.4167 8.5464 8.4167 8.426 solid black
+edge Node0x1de68200 Node0x1de683d0 4 6.4444 7.0694 5.9191 7.0694 5.4405 6.7899 5.0496 6.4444 solid black
+edge Node0x1de68200 Node0x1de68420 4 10.389 7.0694 10.89 7.0694 11.348 6.8152 11.729 6.4919 solid black
+edge Node0x1de683d0 Node0x1de68970 4 2 3.9167 2 3.7612 2.0565 3.616 2.1409 3.4861 solid black
+edge Node0x1de683d0 Node0x1de689c0 4 6.0278 3.9167 6.0278 3.253 6.0278 2.5021 6.0278 1.9391 solid black
+edge Node0x1de68420 Node0x1de67480 7 12.796 6.3989 12.766 7.5237 12.7 9.223 12.556 10.694 12.544 10.814 12.529 10.938 12.513 11.062 solid black
+edge Node0x1de68970 Node0x1de689c0 4 3.8039 2.3108 4.0543 2.1718 4.3312 2.0181 4.602 1.8678 solid black
+edge Node0x1de689c0 Node0x1de68200 7 6.7716 1.8042 7.2574 2.33 7.8549 3.0843 8.1528 3.875 8.5094 4.8217 8.5282 5.9994 8.4892 6.7702 solid black
+stop

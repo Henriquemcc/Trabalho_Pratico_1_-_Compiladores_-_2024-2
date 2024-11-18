@@ -1,0 +1,48 @@
+graph 1 21.134 19.917
+node Node0x31d64530 7.3299 19.118 8.4861 1.5972 "{1:\l|  %2 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 3\l  %3 = load ptr, ptr %2, align 8\l  %.not30 = \
+icmp eq ptr %3, null\l  br i1 %.not30, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x31d64da0 6.191 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x31d4d2e0 13.747 16.868 8.5972 1.9028 "{.lr.ph:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 1\l  %5 = getelementptr inbounds %struct.Village, \
+ptr %0, i64 0, i32 4\l  %6 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 6\l  %7 = getelementptr inbounds %struct.Village, \
+ptr %0, i64 0, i32 5, i32 6\l  %8 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 1\l  %9 = getelementptr inbounds %\
+struct.Village, ptr %0, i64 0, i32 5, i32 4\l  br label %10\l}" filled record #3d50c3ff #d6524470
+node Node0x31d64d50 16.33 14.097 8.25 2.6389 "{10:\l|  %.031 = phi ptr [ %3, %.lr.ph ], [ %12, %43 ]\l  %11 = getelementptr inbounds %struct.Patient, ptr %.031, i64 0, i32 7\l  %\
+12 = load ptr, ptr %11, align 8\l  %13 = getelementptr inbounds %struct.Patient, ptr %.031, i64 0, i32 3\l  %14 = load i32, ptr %\
+13, align 4\l  %15 = add nsw i32 %14, -1\l  store i32 %15, ptr %13, align 4\l  %16 = icmp eq i32 %15, 0\l  br i1 %16, label %17, \
+label %43\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x31d657a0 12.566 11.375 8.1389 1.8056 "{17:\l|  %18 = getelementptr inbounds %struct.Patient, ptr %.031, i64 0, i32 1\l  %19 = tail call float @my_rand(ptr noundef nonnull %\
+18)\l  %20 = load float, ptr @sim_convalescence_p, align 4\l  %21 = fcmp olt float %19, %20\l  br i1 %21, label %22, label %40\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #c32e3170
+node Node0x31d657f0 15.969 2.0625 6.875 1.1806 "{43:\l|  %.not = icmp eq ptr %12, null\l  br i1 %.not, label %._crit_edge, label %10, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x31d65dc0 6.191 9.1736 6.5278 1.5972 "{22:\l|  %23 = tail call float @my_rand(ptr noundef nonnull %18)\l  %24 = load float, ptr @sim_realloc_p, align 4\l  %25 = fcmp \
+ogt float %23, %24\l  br i1 %25, label %30, label %26\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #c5333470
+node Node0x31d65e10 14.608 7.0278 9.1667 1.6944 "{40:\l|  %41 = load i32, ptr %4, align 4\l  %42 = add nsw i32 %41, 1\l  store i32 %42, ptr %4, align 4\l  tail call void @removeList(\
+ptr noundef nonnull %2, ptr noundef nonnull %.031)\l  tail call void @addList(ptr noundef nonnull %5, ptr noundef nonnull %.031)\l  \
+br label %43\l}" filled record #3d50c3ff #c5333470
+node Node0x31d663b0 4.8299 4.4167 8.8194 2.5278 "{30:\l|  tail call void @removeList(ptr noundef nonnull %2, ptr noundef nonnull\l... %.031)\l  tail call void @addList(ptr noundef \
+nonnull %9, ptr noundef nonnull %.031)\l  %31 = load i32, ptr @sim_convalescence_time, align 4\l  store i32 %31, ptr %13, align \
+4\l  %32 = getelementptr inbounds %struct.Patient, ptr %.031, i64 0, i32 2\l  %33 = load i32, ptr %32, align 8\l  %34 = add nsw \
+i32 %33, %31\l  store i32 %34, ptr %32, align 8\l  br label %43\l}" filled record #3d50c3ff #ca3b3770
+node Node0x31d66400 7.3577 7.0278 4.8194 1.5972 "{26:\l|  %27 = load i32, ptr %6, align 8\l  %28 = load i32, ptr @sim_level, align 4\l  %29 = icmp eq i32 %27, %28\l  br i1 %29, \
+label %30, label %35\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x31d66810 14.08 4.4167 9.1667 2.5278 "{35:\l|  %36 = load i32, ptr %4, align 4\l  %37 = add nsw i32 %36, 1\l  store i32 %37, ptr %4, align 4\l  tail call void @removeList(\
+ptr noundef nonnull %2, ptr noundef nonnull %.031)\l  tail call void @omp_set_lock(ptr noundef nonnull %7) #14\l  %38 = load ptr, \
+ptr %8, align 8\l  %39 = getelementptr inbounds %struct.Village, ptr %38, i64 0, i32 5, i32 5\l  tail call void @addList(ptr noundef \
+nonnull %39, ptr noundef nonnull %.031)\l  tail call void @omp_unset_lock(ptr noundef nonnull %7) #14\l  br label %43\l}" filled record #3d50c3ff #d24b4070
+edge Node0x31d64530 Node0x31d64da0 13 3.066 18.479 0.70034 18.479 0.024342 16.477 0.024342 14.111 0.024342 14.111 0.024342 14.111 0.024342 4.4028 0.024342 3.835 -0.073026 3.5908 0.28823 3.1528 1.5516 1.6209 3.9229 1.0132 5.2429 0.78565 solid black
+edge Node0x31d64530 Node0x31d4d2e0 4 11.594 18.479 12.075 18.479 12.518 18.219 12.876 17.909 solid black
+edge Node0x31d4d2e0 Node0x31d64d50 4 14.625 15.922 14.75 15.789 14.88 15.651 15.011 15.512 solid black
+edge Node0x31d64d50 Node0x31d657a0 4 12.191 12.944 11.908 12.944 11.91 12.698 12.014 12.401 solid black
+edge Node0x31d64d50 Node0x31d657f0 13 20.469 12.944 22.146 12.944 20.108 10.865 20.108 9.1875 20.108 9.1875 20.108 9.1875 20.108 7.0139 20.108 5.2915 20.872 4.4805 19.774 3.1528 19.632 2.9804 19.316 2.8261 18.923 2.6917 solid black
+edge Node0x31d657a0 Node0x31d65dc0 4 8.4827 10.639 7.9597 10.639 7.4591 10.366 7.06 10.056 solid black
+edge Node0x31d657a0 Node0x31d65e10 4 14.608 10.472 14.608 9.6423 14.608 8.6995 14.608 8.0126 solid black
+edge Node0x31d657f0 Node0x31d64da0 4 12.51 1.6319 10.584 1.6319 8.3649 1.1851 7.1356 0.89725 solid black
+edge Node0x31d657f0 Node0x31d64d50 10 19.427 1.6319 20.025 1.6319 19.58 6.4157 19.58 7.0139 19.58 9.1875 19.58 9.1875 19.58 9.1875 19.58 10.526 18.726 11.778 17.894 12.681 solid black
+edge Node0x31d65dc0 Node0x31d663b0 4 4.5521 8.375 4.5521 7.5235 4.6173 6.5712 4.6845 5.8157 solid black
+edge Node0x31d65dc0 Node0x31d66400 4 7.8299 8.375 7.8299 8.2369 7.8071 8.0951 7.7715 7.9579 solid black
+edge Node0x31d65e10 Node0x31d657f0 10 18.283 6.1866 18.474 6.0432 18.646 5.8759 18.788 5.6806 19.451 4.7735 19.425 4.0781 18.788 3.1528 18.674 2.9862 18.529 2.8454 18.367 2.7264 solid black
+edge Node0x31d663b0 Node0x31d657f0 7 9.2452 3.1807 9.2875 3.1713 9.3296 3.1619 9.3716 3.1528 10.345 2.9401 11.407 2.749 12.389 2.589 solid black
+edge Node0x31d66400 Node0x31d663b0 4 4.9271 6.3889 4.7715 6.3889 4.7146 6.1391 4.7058 5.8179 solid black
+edge Node0x31d66400 Node0x31d66810 7 9.7882 6.3889 9.8932 6.3889 9.8218 6.2512 9.8993 6.1806 10.068 6.027 10.252 5.8858 10.446 5.7561 solid black
+edge Node0x31d66810 Node0x31d657f0 4 15.091 3.1579 15.202 3.0208 15.312 2.8853 15.415 2.759 solid black
+stop

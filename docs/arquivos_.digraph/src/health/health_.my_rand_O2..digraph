@@ -1,0 +1,7 @@
+graph 1 5.3889 4.3056
+node Node0x31d47600 2.6944 2.3125 5.3889 3.9861 "{1:\l|  %2 = load i32, ptr %0, align 4\l  %3 = xor i32 %2, 123459876\l  %4 = sdiv i32 %3, 127773\l  %.neg = mul nsw i32 %4, -127773\l  %\
+5 = add i32 %.neg, %3\l  %6 = mul nsw i32 %5, 16807\l  %.neg12 = mul nsw i32 %4, -2836\l  %7 = add i32 %6, %.neg12\l  %8 = xor i32 %\
+7, 123459876\l  %9 = icmp slt i32 %7, 0\l  %10 = add nsw i32 %8, 2147483647\l  %spec.select = select i1 %9, i32 %10, i32 %8\l  %\
+11 = mul nsw i32 %spec.select, 2147483647\l  store i32 %11, ptr %0, align 4\l  %12 = sitofp i32 %spec.select to float\l  %13 = fmul \
+float %12, 0x3E00000000000000\l  ret float %13\l}" filled record #b70d28ff #b70d2870
+stop

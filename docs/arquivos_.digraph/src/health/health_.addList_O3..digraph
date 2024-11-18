@@ -1,0 +1,18 @@
+graph 1 16.736 7.5694
+node Node0x1a433fe0 8.9236 6.875 4.5833 1.3889 "{2:\l|  %3 = load ptr, ptr %0, align 8\l  %4 = icmp eq ptr %3, null\l  br i1 %4, label %5, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1a434890 3.8958 2.4236 7.7917 1.4861 "{5:\l|  store ptr %1, ptr %0, align 8\l  %6 = getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 6\l  tail call void @llvm.memset.p0.i64(\
+ptr noundef nonnull align 8\l... dereferenceable(16) %6, i8 0, i64 16, i1 false)\l  br label %13\l}" filled record #3d50c3ff #dc5d4a70
+node Node0x1a435240 12.535 4.7778 7.9028 1.8056 "{.preheader:\l|  %.0 = phi ptr [ %8, %.preheader ], [ %3, %2 ]\l  %7 = getelementptr inbounds %struct.Patient, ptr %.0, i64 0, i32 \
+7\l  %8 = load ptr, ptr %7, align 8\l  %.not = icmp eq ptr %8, null\l  br i1 %.not, label %9, label %.preheader, !llvm.loop !4\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1a434fe0 7.9375 0.64583 1.1528 0.65278 "{13:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x1a4355a0 11.993 2.4236 7.9028 1.9028 "{9:\l|  %10 = getelementptr inbounds %struct.Patient, ptr %.0, i64 0, i32 7\l  store ptr %1, ptr %10, align 8\l  %11 = getelementptr \
+inbounds %struct.Patient, ptr %1, i64 0, i32 6\l  store ptr %.0, ptr %11, align 8\l  %12 = getelementptr inbounds %struct.Patient, \
+ptr %1, i64 0, i32 7\l  store ptr null, ptr %12, align 8\l  br label %13\l}" filled record #3d50c3ff #d6524470
+edge Node0x1a433fe0 Node0x1a434890 4 6.6181 6.3472 5.1437 6.3472 4.4027 4.4516 4.0886 3.3003 solid black
+edge Node0x1a433fe0 Node0x1a435240 4 11.229 6.3472 11.593 6.3472 11.876 6.0939 12.084 5.7918 solid black
+edge Node0x1a434890 Node0x1a434fe0 4 5.5689 1.6853 6.148 1.4345 6.7665 1.1668 7.2261 0.96774 solid black
+edge Node0x1a435240 Node0x1a435240 7 14.972 3.8818 16.089 3.5328 16.736 3.6241 16.736 4.4097 16.736 4.527 16.687 4.6288 16.599 4.716 solid black
+edge Node0x1a435240 Node0x1a4355a0 4 10.549 3.875 10.549 3.7399 10.581 3.6131 10.635 3.4952 solid black
+edge Node0x1a4355a0 Node0x1a434fe0 4 9.8347 1.4784 9.4038 1.2924 8.9808 1.1099 8.644 0.96459 solid black
+stop

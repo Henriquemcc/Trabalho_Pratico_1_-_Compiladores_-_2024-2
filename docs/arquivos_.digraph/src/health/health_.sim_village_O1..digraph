@@ -1,0 +1,19 @@
+graph 1 11.604 9.4583
+node Node0x40212090 2.8538 8.8681 3.5556 1.1806 "{1:\l|  %2 = icmp eq ptr %0, null\l  br i1 %2, label %6, label %3\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x40212520 2.8815 0.64583 1.1528 0.65278 "{6:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x402123e0 4.9788 6.9792 7.6806 1.5972 "{3:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 3\l  %.011 = load ptr, ptr %4, align 8\l  %.not12 = icmp \
+eq ptr %.011, null\l  br i1 %.not12, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x40212a60 5.0343 2.3194 7.7917 1.6944 "{._crit_edge:\l|  tail call void @check_patients_inside(ptr noundef nonnull %0)\l  tail call void @check_patients_assess_par(ptr \
+noundef nonnull %0)\l  tail call void @check_patients_waiting(ptr noundef nonnull %0)\l  tail call void @check_patients_realloc(\
+ptr noundef nonnull %0)\l  tail call void @check_patients_population(ptr noundef nonnull %0)\l  br label %6\l}" filled record #3d50c3ff #d24b4070
+node Node0x40212a10 7.2843 4.6736 8.1389 2.0139 "{.lr.ph:\l|  %.013 = phi ptr [ %.0, %.lr.ph ], [ %.011, %3 ]\l  tail call void @sim_village(ptr noundef nonnull %.013)\l  %5 = getelementptr \
+inbounds %struct.Village, ptr %.013, i64 0, i32 2\l  %.0 = load ptr, ptr %5, align 8\l  %.not = icmp eq ptr %.0, null\l  br i1 %\
+.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x40212090 Node0x40212520 7 1.0621 8.4375 0.79705 8.4375 -1.1496 4.7564 1.0065 1.4722 1.2628 1.0819 1.7512 0.87814 2.1653 0.77231 solid black
+edge Node0x40212090 Node0x402123e0 4 4.6454 8.4375 4.913 8.4375 5.0182 8.1992 5.0488 7.9161 solid black
+edge Node0x402123e0 Node0x40212a60 7 3.0482 6.1806 3.0482 5.0631 2.5609 4.651 3.0899 3.6667 3.1693 3.5188 3.2733 3.3841 3.3918 3.2621 solid black
+edge Node0x402123e0 Node0x40212a10 4 6.8954 6.1806 6.8954 6.0599 6.9075 5.9355 6.9273 5.8123 solid black
+edge Node0x40212a60 Node0x40212520 4 3.9516 1.4778 3.7577 1.3295 3.564 1.1814 3.3957 1.0528 solid black
+edge Node0x40212a10 Node0x40212a60 4 5.2426 3.6667 5.2426 3.5488 5.2346 3.4257 5.2217 3.3041 solid black
+edge Node0x40212a10 Node0x40212a10 7 9.7342 3.6731 10.923 3.2597 11.604 3.3486 11.604 4.25 11.604 4.3833 11.553 4.4988 11.46 4.5976 solid black
+stop

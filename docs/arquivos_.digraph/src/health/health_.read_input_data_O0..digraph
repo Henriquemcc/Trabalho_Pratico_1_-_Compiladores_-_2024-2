@@ -1,0 +1,32 @@
+graph 1 22.264 13.917
+node Node0x1de70e70 8.75 12.597 7.7917 2.6389 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  %5 = \
+load ptr, ptr %2, align 8\l  %6 = call noalias ptr @fopen(ptr noundef %5, ptr noundef @.str.2)\l  store ptr %6, ptr %3, align 8\l  %\
+7 = icmp eq ptr %6, null\l  br i1 %7, label %8, label %11\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de713a0 4.1806 8.9375 8.3611 1.2778 "{8:\l|  %9 = load ptr, ptr %2, align 8\l  %10 = call i32 (ptr, ...) @printf(ptr noundef @.str.3, ptr noundef %9)\l  call void @exit(\
+i32 noundef -1) #6\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x1de713f0 13.319 8.9375 9.4028 3.6806 "{11:\l|  %12 = load ptr, ptr %3, align 8\l  %13 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %12, ptr noundef\l... @.str.4, \
+ptr noundef @sim_level, ptr noundef @sim_cities, ptr noundef\l... @sim_population_ratio, ptr noundef @sim_time, ptr noundef @sim_\
+assess_time,\l... ptr noundef @sim_convalescence_time, ptr noundef @sim_seed, ptr noundef\l... @sim_get_sick_p, ptr noundef @sim_\
+convalescence_p, ptr noundef\l... @sim_realloc_p, ptr noundef @res_population, ptr noundef @res_hospitals, ptr\l... noundef @res_\
+personnel, ptr noundef @res_checkin, ptr noundef @res_village,\l... ptr noundef @res_waiting, ptr noundef @res_assess, ptr noundef @\
+res_inside,\l... ptr noundef @res_avg_stay)\l  store i32 %13, ptr %4, align 4\l  %14 = load i32, ptr %4, align 4\l  %15 = icmp eq \
+i32 %14, -1\l  br i1 %15, label %16, label %19\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de71ff0 8.8194 3.4583 8.4861 1.2778 "{16:\l|  %17 = load ptr, ptr %2, align 8\l  %18 = call i32 (ptr, ...) @printf(ptr noundef @.str.5, ptr noundef %17)\l  call void @\
+exit(i32 noundef -1) #6\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x1de72040 17.792 3.4583 8.9444 6.2778 "{19:\l|  %20 = load ptr, ptr %3, align 8\l  %21 = call i32 @fclose(ptr noundef %20)\l  %22 = call i32 (ptr, ...) @printf(ptr noundef @\
+.str.6)\l  %23 = load i32, ptr @sim_level, align 4\l  %24 = call i32 (ptr, ...) @printf(ptr noundef @.str.7, i32 noundef %23)\l  %\
+25 = load i32, ptr @sim_cities, align 4\l  %26 = call i32 (ptr, ...) @printf(ptr noundef @.str.8, i32 noundef %25)\l  %27 = load \
+i32, ptr @sim_population_ratio, align 4\l  %28 = call i32 (ptr, ...) @printf(ptr noundef @.str.9, i32 noundef %27)\l  %29 = load \
+i32, ptr @sim_time, align 4\l  %30 = call i32 (ptr, ...) @printf(ptr noundef @.str.10, i32 noundef %29)\l  %31 = load i32, ptr @\
+sim_assess_time, align 4\l  %32 = call i32 (ptr, ...) @printf(ptr noundef @.str.11, i32 noundef %31)\l  %33 = load i32, ptr @sim_\
+convalescence_time, align 4\l  %34 = call i32 (ptr, ...) @printf(ptr noundef @.str.12, i32 noundef %33)\l  %35 = load i64, ptr @\
+sim_seed, align 8\l  %36 = trunc i64 %35 to i32\l  %37 = call i32 (ptr, ...) @printf(ptr noundef @.str.13, i32 noundef %36)\l  %\
+38 = load float, ptr @sim_get_sick_p, align 4\l  %39 = fpext float %38 to double\l  %40 = call i32 (ptr, ...) @printf(ptr noundef @\
+.str.14, double noundef %39)\l  %41 = load float, ptr @sim_convalescence_p, align 4\l  %42 = fpext float %41 to double\l  %43 = \
+call i32 (ptr, ...) @printf(ptr noundef @.str.15, double noundef %42)\l  %44 = load float, ptr @sim_realloc_p, align 4\l  %45 = \
+fpext float %44 to double\l  %46 = call i32 (ptr, ...) @printf(ptr noundef @.str.16, double noundef %45)\l  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de70e70 Node0x1de713a0 4 4.8333 11.444 4.1098 11.444 4.0399 10.45 4.0865 9.7168 solid black
+edge Node0x1de70e70 Node0x1de713f0 4 12.667 11.444 13.009 11.444 13.205 11.222 13.311 10.91 solid black
+edge Node0x1de713f0 Node0x1de71ff0 4 8.5972 7.2569 8.2976 7.2569 8.5366 5.3424 8.6996 4.2367 solid black
+edge Node0x1de713f0 Node0x1de72040 4 18.042 7.2569 18.437 7.2569 18.633 7.0491 18.702 6.7309 solid black
+stop

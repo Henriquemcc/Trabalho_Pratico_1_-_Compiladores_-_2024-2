@@ -1,0 +1,24 @@
+graph 1 14.326 12.889
+node Node0x1de6b580 10.431 11.625 7.7917 2.5278 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca float, align 4\l  store \
+ptr %0, ptr %2, align 8\l  %6 = load ptr, ptr %2, align 8\l  %7 = getelementptr inbounds %struct.Village, ptr %6, i32 0, i32 4\l  %\
+8 = load ptr, ptr %7, align 8\l  store ptr %8, ptr %3, align 8\l  br label %9\l}" filled record #3d50c3ff #d6524470
+node Node0x1de6bad0 10.431 9.1667 3.9028 1.3889 "{9:\l|  %10 = load ptr, ptr %3, align 8\l  %11 = icmp ne ptr %10, null\l  br i1 %11, label %12, label %31\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de6bca0 6.0278 6.1319 8.0278 3.6806 "{12:\l|  %13 = load ptr, ptr %3, align 8\l  store ptr %13, ptr %4, align 8\l  %14 = load ptr, ptr %3, align 8\l  %15 = getelementptr \
+inbounds %struct.Patient, ptr %14, i32 0, i32 7\l  %16 = load ptr, ptr %15, align 8\l  store ptr %16, ptr %3, align 8\l  %17 = load \
+ptr, ptr %4, align 8\l  %18 = getelementptr inbounds %struct.Patient, ptr %17, i32 0, i32 1\l  %19 = call float @my_rand(ptr noundef %\
+18)\l  store float %19, ptr %5, align 4\l  %20 = load float, ptr %5, align 4\l  %21 = load float, ptr @sim_get_sick_p, align 4\l  %\
+22 = fcmp olt float %20, %21\l  br i1 %22, label %23, label %30\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de6bcf0 11.403 6.1319 1.1528 0.65278 "{31:\l|  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x1de6c610 4.0139 2.6319 8.0278 2.3194 "{23:\l|  %24 = load ptr, ptr %2, align 8\l  %25 = getelementptr inbounds %struct.Village, ptr %24, i32 0, i32 4\l  %26 = load ptr, \
+ptr %4, align 8\l  call void @removeList(ptr noundef %25, ptr noundef %26)\l  %27 = load ptr, ptr %2, align 8\l  %28 = getelementptr \
+inbounds %struct.Village, ptr %27, i32 0, i32 5\l  %29 = load ptr, ptr %4, align 8\l  call void @put_in_hosp(ptr noundef %28, ptr \
+noundef %29)\l  br label %30\l}" filled record #3d50c3ff #be242e70
+node Node0x1de6c660 8.4167 0.64583 3.2083 0.65278 "{30:\l|  br label %9, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de6b580 Node0x1de6bad0 4 10.431 10.367 10.431 10.243 10.431 10.119 10.431 10 solid black
+edge Node0x1de6bad0 Node0x1de6bca0 4 8.4583 8.6389 7.9797 8.6389 7.5646 8.4004 7.2196 8.0709 solid black
+edge Node0x1de6bad0 Node0x1de6bcf0 4 11.403 8.4722 11.403 7.8199 11.403 7.0646 11.403 6.596 solid black
+edge Node0x1de6bca0 Node0x1de6c610 4 4.0139 4.2917 4.0139 4.1733 4.0139 4.0502 4.0139 3.927 solid black
+edge Node0x1de6bca0 Node0x1de6c660 7 8.0417 4.2917 8.0417 4.064 8.1185 4.0167 8.1528 3.7917 8.2976 2.8423 8.368 1.7181 8.3979 1.1081 solid black
+edge Node0x1de6c610 Node0x1de6c660 4 6.575 1.4789 6.9441 1.3147 7.2994 1.1567 7.5977 1.024 solid black
+edge Node0x1de6c660 Node0x1de6bad0 7 8.6184 0.96891 9.0022 1.5762 9.8295 2.98 10.167 4.2917 10.523 5.6785 10.523 7.3587 10.483 8.3367 solid black
+stop

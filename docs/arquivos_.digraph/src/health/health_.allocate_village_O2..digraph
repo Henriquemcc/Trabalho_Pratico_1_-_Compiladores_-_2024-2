@@ -1,0 +1,58 @@
+graph 1 15.208 30.958
+node Node0x31d4e6e0 6.3194 30.264 3.5556 1.3889 "{5:\l|  %6 = alloca ptr, align 8\l  %7 = icmp eq i32 %3, 0\l  br i1 %7, label %8, label %9\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x31d4f2c0 1.8889 19.507 3.7778 0.86111 "{8:\l|  store ptr null, ptr %0, align 8\l  br label %67\l}" filled record #3d50c3ff #d6524470
+node Node0x31d4f310 10.736 26.188 8.9444 5.7639 "{9:\l|  %ldexp = tail call double @ldexp(double 1.000000e+00, i32 %3) #14\l  %10 = fptosi double %ldexp to i32\l  %11 = load i32, \
+ptr @sim_population_ratio, align 4\l  %12 = mul nsw i32 %11, %10\l  %13 = tail call noalias dereferenceable_or_null(96) ptr @malloc(\
+i64 noundef\l... 96) #15\l  store ptr %13, ptr %0, align 8\l  %14 = getelementptr inbounds %struct.Village, ptr %13, i64 0, i32 \
+1\l  store ptr %1, ptr %14, align 8\l  %15 = getelementptr inbounds %struct.Village, ptr %13, i64 0, i32 2\l  store ptr %2, ptr %\
+15, align 8\l  %16 = getelementptr inbounds %struct.Village, ptr %13, i64 0, i32 6\l  store i32 %3, ptr %16, align 8\l  store i32 %\
+4, ptr %13, align 8\l  %17 = load i64, ptr @sim_seed, align 8\l  %18 = trunc i64 %17 to i32\l  %19 = add i32 %18, 127773\l  %20 = \
+mul i32 %19, %4\l  %21 = getelementptr inbounds %struct.Village, ptr %13, i64 0, i32 7\l  store i32 %20, ptr %21, align 4\l  %22 = \
+getelementptr inbounds %struct.Village, ptr %13, i64 0, i32 4\l  store ptr null, ptr %22, align 8\l  %23 = icmp sgt i32 %12, 0\l  \
+br i1 %23, label %.lr.ph, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x31d4f530 5.3056 0.64583 1.1528 0.65278 "{67:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x31d51e70 8.5 19.507 8.9444 6.5972 "{.lr.ph:\l|  %.048 = phi i32 [ %38, %.lr.ph ], [ 0, %9 ]\l  %24 = tail call noalias dereferenceable_or_null(48) ptr @malloc(i64 \
+noundef\l... 48) #15\l  %25 = load i32, ptr @sim_pid, align 4\l  %26 = add nsw i32 %25, 1\l  store i32 %26, ptr @sim_pid, align \
+4\l  store i32 %25, ptr %24, align 8\l  %27 = load ptr, ptr %0, align 8\l  %28 = getelementptr inbounds %struct.Village, ptr %27, \
+i64 0, i32 7\l  %29 = load i32, ptr %28, align 4\l  %30 = getelementptr inbounds %struct.Patient, ptr %24, i64 0, i32 1\l  store \
+i32 %29, ptr %30, align 4\l  %31 = tail call float @my_rand(ptr noundef nonnull %28)\l  %32 = getelementptr inbounds %struct.Patient, \
+ptr %24, i64 0, i32 4\l  store i32 0, ptr %32, align 8\l  %33 = getelementptr inbounds %struct.Patient, ptr %24, i64 0, i32 2\l  \
+store i32 0, ptr %33, align 8\l  %34 = getelementptr inbounds %struct.Patient, ptr %24, i64 0, i32 3\l  store i32 0, ptr %34, align \
+4\l  %35 = load ptr, ptr %0, align 8\l  %36 = getelementptr inbounds %struct.Patient, ptr %24, i64 0, i32 5\l  store ptr %35, ptr %\
+36, align 8\l  %37 = getelementptr inbounds %struct.Village, ptr %35, i64 0, i32 4\l  tail call void @addList(ptr noundef nonnull %\
+37, ptr noundef nonnull %24)\l  %38 = add nuw nsw i32 %.048, 1\l  %exitcond.not = icmp eq i32 %38, %12\l  br i1 %exitcond.not, label %\
+._crit_edge.loopexit, label %.lr.ph, !llvm.loop\l... !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x31d51ec0 9 11.465 8.8194 5.7639 "{._crit_edge:\l|  %39 = phi ptr [ %.pre, %._crit_edge.loopexit ], [ %13, %9 ]\l  %40 = getelementptr inbounds %struct.Village, ptr %\
+39, i64 0, i32 5\l  store i32 %10, ptr %40, align 8\l  %41 = load ptr, ptr %0, align 8\l  %42 = getelementptr inbounds %struct.Village, \
+ptr %41, i64 0, i32 5, i32 1\l  store i32 %10, ptr %42, align 4\l  %43 = load ptr, ptr %0, align 8\l  %44 = getelementptr inbounds %\
+struct.Village, ptr %43, i64 0, i32 5, i32 3\l  store ptr null, ptr %44, align 8\l  %45 = load ptr, ptr %0, align 8\l  %46 = getelementptr \
+inbounds %struct.Village, ptr %45, i64 0, i32 5, i32 2\l  store ptr null, ptr %46, align 8\l  %47 = load ptr, ptr %0, align 8\l  %\
+48 = getelementptr inbounds %struct.Village, ptr %47, i64 0, i32 5, i32 4\l  store ptr null, ptr %48, align 8\l  %49 = load ptr, \
+ptr %0, align 8\l  %50 = getelementptr inbounds %struct.Village, ptr %49, i64 0, i32 5, i32 5\l  store ptr null, ptr %50, align \
+8\l  %51 = load ptr, ptr %0, align 8\l  %52 = getelementptr inbounds %struct.Village, ptr %51, i64 0, i32 5, i32 6\l  tail call \
+void @omp_init_lock(ptr noundef nonnull %52) #14\l  %53 = load i32, ptr @sim_cities, align 4\l  %54 = icmp sgt i32 %53, 0\l  br \
+i1 %54, label %.lr.ph52, label %._crit_edge53\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x31d4d330 7.625 15.278 4.0139 0.86111 "{._crit_edge.loopexit:\l|  %.pre = load ptr, ptr %0, align 8\l  br label %._crit_edge\l}" filled record #3d50c3ff #d6524470
+node Node0x31d6e230 6.6528 7.6528 2.9861 0.86111 "{.lr.ph52:\l|  %55 = add nsw i32 %3, -1\l  br label %56\l}" filled record #3d50c3ff #d6524470
+node Node0x31d56080 8.7361 2.2153 8.0278 1.4861 "{._crit_edge53:\l|  %64 = phi ptr [ undef, %._crit_edge ], [ %61, %56 ]\l  %65 = load ptr, ptr %0, align 8\l  %66 = getelementptr \
+inbounds %struct.Village, ptr %65, i64 0, i32 3\l  store ptr %64, ptr %66, align 8\l  br label %67\l}" filled record #3d50c3ff #d24b4070
+node Node0x31d56030 6.5833 5.0903 8.5972 3.2639 "{56:\l|  %.150 = phi i32 [ %53, %.lr.ph52 ], [ %62, %56 ]\l  %.04649 = phi ptr [ null, %.lr.ph52 ], [ %61, %56 ]\l  %57 = load ptr, \
+ptr %0, align 8\l  %58 = load i32, ptr @sim_cities, align 4\l  %59 = mul nsw i32 %58, %4\l  %60 = add nsw i32 %59, %.150\l  call \
+void @allocate_village(ptr noundef nonnull %6, ptr noundef %57, ptr\l... noundef %.04649, i32 noundef %55, i32 noundef %60)\l  %\
+61 = load ptr, ptr %6, align 8\l  %62 = add nsw i32 %.150, -1\l  %63 = icmp ugt i32 %.150, 1\l  br i1 %63, label %56, label %._crit_\
+edge53, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x31d4e6e0 Node0x31d4f2c0 4 4.5278 29.736 0.49901 29.736 1.4451 22.196 1.7914 20.072 solid black
+edge Node0x31d4e6e0 Node0x31d4f310 4 8.1111 29.736 8.6085 29.736 9.0227 29.508 9.3638 29.167 solid black
+edge Node0x31d4f2c0 Node0x31d4f530 13 1.8889 19.08 1.8889 17.897 1.8889 14.39 1.8889 11.479 1.8889 11.479 1.8889 11.479 1.8889 5.0764 1.8889 4.3478 1.8014 4.0966 2.1528 3.4583 2.7463 2.3803 3.9202 1.5111 4.6561 1.0414 solid black
+edge Node0x31d4f310 Node0x31d51e70 4 8.5 23.306 8.5 23.186 8.5 23.065 8.5 22.942 solid black
+edge Node0x31d4f310 Node0x31d51ec0 10 12.972 23.306 12.972 23.028 13.259 23.069 13.347 22.806 14.274 20.024 14.412 18.94 13.347 16.208 13.104 15.585 12.737 14.994 12.316 14.455 solid black
+edge Node0x31d51e70 Node0x31d51e70 7 10.975 16.213 12.402 15.32 13.222 15.448 13.222 17.938 13.222 18.323 13.154 18.651 13.034 18.928 solid black
+edge Node0x31d51e70 Node0x31d4d330 4 6.2639 16.208 6.2639 16.047 6.3306 15.912 6.4344 15.8 solid black
+edge Node0x31d51ec0 Node0x31d6e230 4 6.7917 8.5833 6.7917 8.4655 6.7803 8.34 6.7641 8.221 solid black
+edge Node0x31d51ec0 Node0x31d56080 7 11.208 8.5833 11.208 6.3039 12.219 5.3933 11.014 3.4583 10.916 3.3018 10.792 3.1639 10.651 3.0426 solid black
+edge Node0x31d4d330 Node0x31d51ec0 4 7.7748 14.852 7.8147 14.742 7.8611 14.614 7.9121 14.474 solid black
+edge Node0x31d6e230 Node0x31d56030 4 6.6415 7.226 6.6385 7.1167 6.635 6.9915 6.6314 6.8578 solid black
+edge Node0x31d56080 Node0x31d4f530 4 7.1263 1.478 6.7361 1.3026 6.3387 1.124 6.0151 0.97857 solid black
+edge Node0x31d56030 Node0x31d56080 4 8.7361 3.4583 8.7361 3.3418 8.7361 3.219 8.7361 3.0979 solid black
+edge Node0x31d56030 Node0x31d56030 7 4.0457 3.4649 2.7665 2.9898 2.0347 3.1 2.0347 4.3542 2.0347 4.5388 2.0894 4.6986 2.1877 4.8355 solid black
+stop

@@ -1,0 +1,22 @@
+graph 1 15.965 10.681
+node Node0x1de699f0 8.0694 8.8403 7.7917 3.6806 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %3, align 8\l  store ptr %1, ptr %4, align 8\l  %\
+5 = load ptr, ptr %4, align 8\l  %6 = getelementptr inbounds %struct.Patient, ptr %5, i32 0, i32 4\l  %7 = load i32, ptr %6, align \
+8\l  %8 = add nsw i32 %7, 1\l  store i32 %8, ptr %6, align 8\l  %9 = load ptr, ptr %3, align 8\l  %10 = getelementptr inbounds %\
+struct.Hosp, ptr %9, i32 0, i32 1\l  %11 = load i32, ptr %10, align 4\l  %12 = icmp sgt i32 %11, 0\l  br i1 %12, label %13, label %\
+31\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de6a140 4.0139 3.9861 8.0278 5.0278 "{13:\l|  %14 = load ptr, ptr %3, align 8\l  %15 = getelementptr inbounds %struct.Hosp, ptr %14, i32 0, i32 1\l  %16 = load i32, \
+ptr %15, align 4\l  %17 = add nsw i32 %16, -1\l  store i32 %17, ptr %15, align 4\l  %18 = load ptr, ptr %3, align 8\l  %19 = getelementptr \
+inbounds %struct.Hosp, ptr %18, i32 0, i32 3\l  %20 = load ptr, ptr %4, align 8\l  call void @addList(ptr noundef %19, ptr noundef %\
+20)\l  %21 = load i32, ptr @sim_assess_time, align 4\l  %22 = load ptr, ptr %4, align 8\l  %23 = getelementptr inbounds %struct.Patient, \
+ptr %22, i32 0, i32 3\l  store i32 %21, ptr %23, align 4\l  %24 = load ptr, ptr %4, align 8\l  %25 = getelementptr inbounds %struct.Patient, \
+ptr %24, i32 0, i32 3\l  %26 = load i32, ptr %25, align 4\l  %27 = load ptr, ptr %4, align 8\l  %28 = getelementptr inbounds %struct.Patient, \
+ptr %27, i32 0, i32 2\l  %29 = load i32, ptr %28, align 8\l  %30 = add nsw i32 %29, %26\l  store i32 %30, ptr %28, align 8\l  br \
+label %35\l}" filled record #b70d28ff #bb1b2c70
+node Node0x1de6a190 12.125 3.9861 7.6806 1.4861 "{31:\l|  %32 = load ptr, ptr %3, align 8\l  %33 = getelementptr inbounds %struct.Hosp, ptr %32, i32 0, i32 2\l  %34 = load ptr, \
+ptr %4, align 8\l  call void @addList(ptr noundef %33, ptr noundef %34)\l  br label %35\l}" filled record #3d50c3ff #c32e3170
+node Node0x1de6afd0 8.0694 0.64583 1.1528 0.65278 "{35:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de699f0 Node0x1de6a140 4 4.1528 7.1597 3.7888 7.1597 3.604 6.9479 3.53 6.634 solid black
+edge Node0x1de699f0 Node0x1de6a190 4 11.986 7.1597 12.91 7.1597 12.68 5.7953 12.413 4.8596 solid black
+edge Node0x1de6a140 Node0x1de6afd0 4 7.0669 1.4785 7.2589 1.3218 7.4341 1.1786 7.5826 1.0574 solid black
+edge Node0x1de6a190 Node0x1de6afd0 4 11.24 3.2494 10.416 2.5763 9.2182 1.598 8.5557 1.0569 solid black
+stop

@@ -1,0 +1,6 @@
+graph 1 8.7083 2.8472
+node Node0x1a4684d0 4.3542 1.5833 8.7083 2.5278 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = getelementptr inbounds ptr, ptr %1, i64 1\l  %5 = load ptr, ptr %4, align 8\l  tail call \
+void @read_input_data(ptr noundef %5)\l  %6 = load i32, ptr @sim_level, align 4\l  call void @allocate_village(ptr noundef nonnull %\
+3, ptr noundef null, ptr\l... noundef null, i32 noundef %6, i32 noundef 0)\l  %7 = load ptr, ptr %3, align 8\l  tail call void @\
+sim_village_main(ptr noundef %7)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+stop

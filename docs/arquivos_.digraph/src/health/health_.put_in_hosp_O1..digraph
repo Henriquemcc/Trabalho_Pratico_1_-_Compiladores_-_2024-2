@@ -1,0 +1,17 @@
+graph 1 15.833 7.3472
+node Node0x4020e9f0 7.9792 6.1319 7.6806 2.4306 "{2:\l|  %3 = getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 4\l  %4 = load i32, ptr %3, align 8\l  %5 = add nsw i32 %\
+4, 1\l  store i32 %5, ptr %3, align 8\l  %6 = getelementptr inbounds %struct.Hosp, ptr %0, i64 0, i32 1\l  %7 = load i32, ptr %6, \
+align 4\l  %8 = icmp sgt i32 %7, 0\l  br i1 %8, label %9, label %17\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x4020f140 3.9514 2.9444 7.9028 2.9444 "{9:\l|  %10 = add nsw i32 %7, -1\l  store i32 %10, ptr %6, align 4\l  %11 = getelementptr inbounds %struct.Hosp, ptr %0, i64 0, \
+i32 3\l  tail call void @addList(ptr noundef nonnull %11, ptr noundef %1)\l  %12 = load i32, ptr @sim_assess_time, align 4\l  %13 = \
+getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 3\l  store i32 %12, ptr %13, align 4\l  %14 = getelementptr inbounds %\
+struct.Patient, ptr %1, i64 0, i32 2\l  %15 = load i32, ptr %14, align 8\l  %16 = add nsw i32 %15, %12\l  store i32 %16, ptr %14, \
+align 8\l  br label %19\l}" filled record #b70d28ff #bb1b2c70
+node Node0x4020f190 11.993 2.9444 7.6806 1.0694 "{17:\l|  %18 = getelementptr inbounds %struct.Hosp, ptr %0, i64 0, i32 2\l  tail call void @addList(ptr noundef nonnull %18, ptr \
+noundef %1)\l  br label %19\l}" filled record #3d50c3ff #c32e3170
+node Node0x4020ffd0 7.9653 0.64583 1.1528 0.65278 "{19:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x4020e9f0 Node0x4020f140 4 4.1181 5.0764 3.8112 5.0764 3.6862 4.8527 3.6572 4.5508 solid black
+edge Node0x4020e9f0 Node0x4020f190 4 11.84 5.0764 12.435 5.0764 12.341 4.2355 12.19 3.6134 solid black
+edge Node0x4020f140 Node0x4020ffd0 4 6.5218 1.4763 6.8061 1.3155 7.074 1.1639 7.3 1.0361 solid black
+edge Node0x4020f190 Node0x4020ffd0 4 11.079 2.4153 10.336 1.9961 9.3034 1.4142 8.635 1.0373 solid black
+stop

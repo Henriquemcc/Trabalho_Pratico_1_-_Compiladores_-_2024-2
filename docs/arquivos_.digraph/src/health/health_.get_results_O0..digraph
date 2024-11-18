@@ -1,0 +1,137 @@
+graph 1 24.549 68.181
+node Node0x1de4efd0 3.9514 64.986 7.9028 6.3889 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca ptr, align 8\l  %6 = alloca %struct.Results, align 8\l  %\
+7 = alloca %struct.Results, align 8\l  store ptr %1, ptr %3, align 8\l  %8 = getelementptr inbounds %struct.Results, ptr %0, i32 \
+0, i32 0\l  store i64 0, ptr %8, align 8\l  %9 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 1\l  store i64 0, ptr %\
+9, align 8\l  %10 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 2\l  store i64 0, ptr %10, align 8\l  %11 = getelementptr \
+inbounds %struct.Results, ptr %0, i32 0, i32 3\l  store i64 0, ptr %11, align 8\l  %12 = getelementptr inbounds %struct.Results, \
+ptr %0, i32 0, i32 4\l  store i64 0, ptr %12, align 8\l  %13 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 5\l  store \
+i64 0, ptr %13, align 8\l  %14 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 6\l  store i64 0, ptr %14, align 8\l  %\
+15 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  store i64 0, ptr %15, align 8\l  %16 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 7\l  store i64 0, ptr %16, align 8\l  %17 = load ptr, ptr %3, align 8\l  %18 = icmp eq ptr %17, \
+null\l  br i1 %18, label %19, label %20\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1de52690 1.0208 58.611 1.7222 0.65278 "{19:\l|  br label %250\l}" filled record #3d50c3ff #dc5d4a70
+node Node0x1de526e0 6.5069 60.549 8.0278 1.4861 "{20:\l|  %21 = load ptr, ptr %3, align 8\l  %22 = getelementptr inbounds %struct.Village, ptr %21, i32 0, i32 3\l  %23 = load ptr, \
+ptr %22, align 8\l  store ptr %23, ptr %4, align 8\l  br label %24\l}" filled record #3d50c3ff #d6524470
+node Node0x1de527e0 5.7153 0.64583 1.1528 0.65278 "{250:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x1de52b00 6.6875 58.611 3.9028 1.3889 "{24:\l|  %25 = load ptr, ptr %4, align 8\l  %26 = icmp ne ptr %25, null\l  br i1 %26, label %27, label %77\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de52cd0 5.7014 50.528 8.9444 13.778 "{27:\l|  %28 = load ptr, ptr %4, align 8\l  call void @get_results(ptr dead_on_unwind writable sret(%struct.Results)\l... align \
+8 %7, ptr noundef %28)\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %6, ptr align 8 %7, i64 72, i1\l... false)\l  %29 = getelementptr \
+inbounds %struct.Results, ptr %6, i32 0, i32 0\l  %30 = load i64, ptr %29, align 8\l  %31 = getelementptr inbounds %struct.Results, \
+ptr %0, i32 0, i32 0\l  %32 = load i64, ptr %31, align 8\l  %33 = add nsw i64 %32, %30\l  store i64 %33, ptr %31, align 8\l  %34 = \
+getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 1\l  %35 = load i64, ptr %34, align 8\l  %36 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 1\l  %37 = load i64, ptr %36, align 8\l  %38 = add nsw i64 %37, %35\l  store i64 %38, ptr %36, \
+align 8\l  %39 = getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 2\l  %40 = load i64, ptr %39, align 8\l  %41 = getelementptr \
+inbounds %struct.Results, ptr %0, i32 0, i32 2\l  %42 = load i64, ptr %41, align 8\l  %43 = add nsw i64 %42, %40\l  store i64 %43, \
+ptr %41, align 8\l  %44 = getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 3\l  %45 = load i64, ptr %44, align 8\l  %46 = \
+getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 3\l  %47 = load i64, ptr %46, align 8\l  %48 = add nsw i64 %47, %45\l  \
+store i64 %48, ptr %46, align 8\l  %49 = getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 4\l  %50 = load i64, ptr %49, \
+align 8\l  %51 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 4\l  %52 = load i64, ptr %51, align 8\l  %53 = add nsw \
+i64 %52, %50\l  store i64 %53, ptr %51, align 8\l  %54 = getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 5\l  %55 = load \
+i64, ptr %54, align 8\l  %56 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 5\l  %57 = load i64, ptr %56, align 8\l  %\
+58 = add nsw i64 %57, %55\l  store i64 %58, ptr %56, align 8\l  %59 = getelementptr inbounds %struct.Results, ptr %6, i32 0, i32 \
+6\l  %60 = load i64, ptr %59, align 8\l  %61 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 6\l  %62 = load i64, ptr %\
+61, align 8\l  %63 = add nsw i64 %62, %60\l  store i64 %63, ptr %61, align 8\l  %64 = getelementptr inbounds %struct.Results, ptr %\
+6, i32 0, i32 8\l  %65 = load i64, ptr %64, align 8\l  %66 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  %67 = \
+load i64, ptr %66, align 8\l  %68 = add nsw i64 %67, %65\l  store i64 %68, ptr %66, align 8\l  %69 = getelementptr inbounds %struct.Results, \
+ptr %6, i32 0, i32 7\l  %70 = load i64, ptr %69, align 8\l  %71 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 7\l  %\
+72 = load i64, ptr %71, align 8\l  %73 = add nsw i64 %72, %70\l  store i64 %73, ptr %71, align 8\l  %74 = load ptr, ptr %4, align \
+8\l  %75 = getelementptr inbounds %struct.Village, ptr %74, i32 0, i32 2\l  %76 = load ptr, ptr %75, align 8\l  store ptr %76, ptr %\
+4, align 8\l  br label %24, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x1de52d20 14.438 50.528 8.0278 4.6111 "{77:\l|  %78 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 0\l  %79 = load i64, ptr %78, align 8\l  %80 = sitofp \
+i64 %79 to double\l  %81 = fadd double %80, 1.000000e+00\l  %82 = fptosi double %81 to i64\l  store i64 %82, ptr %78, align 8\l  %\
+83 = load ptr, ptr %3, align 8\l  %84 = getelementptr inbounds %struct.Village, ptr %83, i32 0, i32 5\l  %85 = getelementptr inbounds %\
+struct.Hosp, ptr %84, i32 0, i32 0\l  %86 = load i32, ptr %85, align 8\l  %87 = sext i32 %86 to i64\l  %88 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 1\l  %89 = load i64, ptr %88, align 8\l  %90 = add nsw i64 %89, %87\l  store i64 %90, ptr %88, \
+align 8\l  %91 = load ptr, ptr %3, align 8\l  %92 = getelementptr inbounds %struct.Village, ptr %91, i32 0, i32 4\l  %93 = load \
+ptr, ptr %92, align 8\l  store ptr %93, ptr %5, align 8\l  br label %94\l}" filled record #3d50c3ff #d6524470
+node Node0x1de56b60 12.41 42.444 4.0139 1.3889 "{94:\l|  %95 = load ptr, ptr %5, align 8\l  %96 = icmp ne ptr %95, null\l  br i1 %96, label %97, label %129\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de54120 9.3819 37.174 8.25 8.1528 "{97:\l|  %98 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 2\l  %99 = load i64, ptr %98, align 8\l  %100 = sitofp \
+i64 %99 to double\l  %101 = fadd double %100, 1.000000e+00\l  %102 = fptosi double %101 to i64\l  store i64 %102, ptr %98, align \
+8\l  %103 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 3\l  %104 = load i64, ptr %103, align 8\l  %105 = sitofp \
+i64 %104 to double\l  %106 = fadd double %105, 1.000000e+00\l  %107 = fptosi double %106 to i64\l  store i64 %107, ptr %103, align \
+8\l  %108 = load ptr, ptr %5, align 8\l  %109 = getelementptr inbounds %struct.Patient, ptr %108, i32 0, i32 4\l  %110 = load i32, \
+ptr %109, align 8\l  %111 = sitofp i32 %110 to float\l  %112 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  %\
+113 = load i64, ptr %112, align 8\l  %114 = sitofp i64 %113 to float\l  %115 = fadd float %114, %111\l  %116 = fptosi float %115 \
+to i64\l  store i64 %116, ptr %112, align 8\l  %117 = load ptr, ptr %5, align 8\l  %118 = getelementptr inbounds %struct.Patient, \
+ptr %117, i32 0, i32 2\l  %119 = load i32, ptr %118, align 8\l  %120 = sitofp i32 %119 to float\l  %121 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 7\l  %122 = load i64, ptr %121, align 8\l  %123 = sitofp i64 %122 to float\l  %124 = fadd float %\
+123, %120\l  %125 = fptosi float %124 to i64\l  store i64 %125, ptr %121, align 8\l  %126 = load ptr, ptr %5, align 8\l  %127 = \
+getelementptr inbounds %struct.Patient, ptr %126, i32 0, i32 7\l  %128 = load ptr, ptr %127, align 8\l  store ptr %128, ptr %5, \
+align 8\l  br label %94, !llvm.loop !6\l}" filled record #b70d28ff #b70d2870
+node Node0x1de54170 17.882 37.174 8.25 1.6944 "{129:\l|  %130 = load ptr, ptr %3, align 8\l  %131 = getelementptr inbounds %struct.Village, ptr %130, i32 0, i32 5\l  %132 = getelementptr \
+inbounds %struct.Hosp, ptr %131, i32 0, i32 2\l  %133 = load ptr, ptr %132, align 8\l  store ptr %133, ptr %5, align 8\l  br label %\
+134\l}" filled record #3d50c3ff #d6524470
+node Node0x1de58fb0 15.007 31.903 4.2361 1.3889 "{134:\l|  %135 = load ptr, ptr %5, align 8\l  %136 = icmp ne ptr %135, null\l  br i1 %136, label %137, label %169\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de59180 11.076 26.632 8.25 8.1528 "{137:\l|  %138 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 2\l  %139 = load i64, ptr %138, align 8\l  %140 = sitofp \
+i64 %139 to double\l  %141 = fadd double %140, 1.000000e+00\l  %142 = fptosi double %141 to i64\l  store i64 %142, ptr %138, align \
+8\l  %143 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 4\l  %144 = load i64, ptr %143, align 8\l  %145 = sitofp \
+i64 %144 to double\l  %146 = fadd double %145, 1.000000e+00\l  %147 = fptosi double %146 to i64\l  store i64 %147, ptr %143, align \
+8\l  %148 = load ptr, ptr %5, align 8\l  %149 = getelementptr inbounds %struct.Patient, ptr %148, i32 0, i32 4\l  %150 = load i32, \
+ptr %149, align 8\l  %151 = sitofp i32 %150 to float\l  %152 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  %\
+153 = load i64, ptr %152, align 8\l  %154 = sitofp i64 %153 to float\l  %155 = fadd float %154, %151\l  %156 = fptosi float %155 \
+to i64\l  store i64 %156, ptr %152, align 8\l  %157 = load ptr, ptr %5, align 8\l  %158 = getelementptr inbounds %struct.Patient, \
+ptr %157, i32 0, i32 2\l  %159 = load i32, ptr %158, align 8\l  %160 = sitofp i32 %159 to float\l  %161 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 7\l  %162 = load i64, ptr %161, align 8\l  %163 = sitofp i64 %162 to float\l  %164 = fadd float %\
+163, %160\l  %165 = fptosi float %164 to i64\l  store i64 %165, ptr %161, align 8\l  %166 = load ptr, ptr %5, align 8\l  %167 = \
+getelementptr inbounds %struct.Patient, ptr %166, i32 0, i32 7\l  %168 = load ptr, ptr %167, align 8\l  store ptr %168, ptr %5, \
+align 8\l  br label %134, !llvm.loop !7\l}" filled record #b70d28ff #b70d2870
+node Node0x1de591d0 19.576 26.632 8.25 1.6944 "{169:\l|  %170 = load ptr, ptr %3, align 8\l  %171 = getelementptr inbounds %struct.Village, ptr %170, i32 0, i32 5\l  %172 = getelementptr \
+inbounds %struct.Hosp, ptr %171, i32 0, i32 3\l  %173 = load ptr, ptr %172, align 8\l  store ptr %173, ptr %5, align 8\l  br label %\
+174\l}" filled record #3d50c3ff #d6524470
+node Node0x1de5aba0 16.174 21.361 4.2361 1.3889 "{174:\l|  %175 = load ptr, ptr %5, align 8\l  %176 = icmp ne ptr %175, null\l  br i1 %176, label %177, label %209\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de5ad70 11.924 16.09 8.25 8.1528 "{177:\l|  %178 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 2\l  %179 = load i64, ptr %178, align 8\l  %180 = sitofp \
+i64 %179 to double\l  %181 = fadd double %180, 1.000000e+00\l  %182 = fptosi double %181 to i64\l  store i64 %182, ptr %178, align \
+8\l  %183 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 5\l  %184 = load i64, ptr %183, align 8\l  %185 = sitofp \
+i64 %184 to double\l  %186 = fadd double %185, 1.000000e+00\l  %187 = fptosi double %186 to i64\l  store i64 %187, ptr %183, align \
+8\l  %188 = load ptr, ptr %5, align 8\l  %189 = getelementptr inbounds %struct.Patient, ptr %188, i32 0, i32 4\l  %190 = load i32, \
+ptr %189, align 8\l  %191 = sitofp i32 %190 to float\l  %192 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  %\
+193 = load i64, ptr %192, align 8\l  %194 = sitofp i64 %193 to float\l  %195 = fadd float %194, %191\l  %196 = fptosi float %195 \
+to i64\l  store i64 %196, ptr %192, align 8\l  %197 = load ptr, ptr %5, align 8\l  %198 = getelementptr inbounds %struct.Patient, \
+ptr %197, i32 0, i32 2\l  %199 = load i32, ptr %198, align 8\l  %200 = sitofp i32 %199 to float\l  %201 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 7\l  %202 = load i64, ptr %201, align 8\l  %203 = sitofp i64 %202 to float\l  %204 = fadd float %\
+203, %200\l  %205 = fptosi float %204 to i64\l  store i64 %205, ptr %201, align 8\l  %206 = load ptr, ptr %5, align 8\l  %207 = \
+getelementptr inbounds %struct.Patient, ptr %206, i32 0, i32 7\l  %208 = load ptr, ptr %207, align 8\l  store ptr %208, ptr %5, \
+align 8\l  br label %174, !llvm.loop !8\l}" filled record #b70d28ff #b70d2870
+node Node0x1de5adc0 20.424 16.09 8.25 1.6944 "{209:\l|  %210 = load ptr, ptr %3, align 8\l  %211 = getelementptr inbounds %struct.Village, ptr %210, i32 0, i32 5\l  %212 = getelementptr \
+inbounds %struct.Hosp, ptr %211, i32 0, i32 4\l  %213 = load ptr, ptr %212, align 8\l  store ptr %213, ptr %5, align 8\l  br label %\
+214\l}" filled record #3d50c3ff #d6524470
+node Node0x1de57ca0 14.979 10.819 4.2361 1.3889 "{214:\l|  %215 = load ptr, ptr %5, align 8\l  %216 = icmp ne ptr %215, null\l  br i1 %216, label %217, label %249\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de5d960 12.354 5.5486 8.25 8.1528 "{217:\l|  %218 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 2\l  %219 = load i64, ptr %218, align 8\l  %220 = sitofp \
+i64 %219 to double\l  %221 = fadd double %220, 1.000000e+00\l  %222 = fptosi double %221 to i64\l  store i64 %222, ptr %218, align \
+8\l  %223 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 6\l  %224 = load i64, ptr %223, align 8\l  %225 = sitofp \
+i64 %224 to double\l  %226 = fadd double %225, 1.000000e+00\l  %227 = fptosi double %226 to i64\l  store i64 %227, ptr %223, align \
+8\l  %228 = load ptr, ptr %5, align 8\l  %229 = getelementptr inbounds %struct.Patient, ptr %228, i32 0, i32 4\l  %230 = load i32, \
+ptr %229, align 8\l  %231 = sitofp i32 %230 to float\l  %232 = getelementptr inbounds %struct.Results, ptr %0, i32 0, i32 8\l  %\
+233 = load i64, ptr %232, align 8\l  %234 = sitofp i64 %233 to float\l  %235 = fadd float %234, %231\l  %236 = fptosi float %235 \
+to i64\l  store i64 %236, ptr %232, align 8\l  %237 = load ptr, ptr %5, align 8\l  %238 = getelementptr inbounds %struct.Patient, \
+ptr %237, i32 0, i32 2\l  %239 = load i32, ptr %238, align 8\l  %240 = sitofp i32 %239 to float\l  %241 = getelementptr inbounds %\
+struct.Results, ptr %0, i32 0, i32 7\l  %242 = load i64, ptr %241, align 8\l  %243 = sitofp i64 %242 to float\l  %244 = fadd float %\
+243, %240\l  %245 = fptosi float %244 to i64\l  store i64 %245, ptr %241, align 8\l  %246 = load ptr, ptr %5, align 8\l  %247 = \
+getelementptr inbounds %struct.Patient, ptr %246, i32 0, i32 7\l  %248 = load ptr, ptr %247, align 8\l  store ptr %248, ptr %5, \
+align 8\l  br label %214, !llvm.loop !9\l}" filled record #b70d28ff #b70d2870
+node Node0x1de5d9b0 17.59 5.5486 1.7222 0.65278 "{249:\l|  br label %250\l}" filled record #3d50c3ff #d6524470
+edge Node0x1de4efd0 Node0x1de52690 4 1.9653 61.792 1.9653 60.778 1.5156 59.656 1.2368 59.057 solid black
+edge Node0x1de4efd0 Node0x1de526e0 4 5.9236 61.792 5.9236 61.668 5.948 61.544 5.9867 61.424 solid black
+edge Node0x1de52690 Node0x1de527e0 10 1.0148 58.29 0.9835 56.657 0.84028 48.847 0.84028 42.458 0.84028 42.458 0.84028 42.458 0.84028 10.806 0.84028 6.647 4.2087 2.3916 5.3456 1.0737 solid black
+edge Node0x1de526e0 Node0x1de52b00 4 6.5757 59.807 6.587 59.688 6.5988 59.563 6.6103 59.441 solid black
+edge Node0x1de52b00 Node0x1de52cd0 4 5.7014 57.917 5.6968 57.796 5.6923 57.674 5.6881 57.551 solid black
+edge Node0x1de52b00 Node0x1de52d20 4 8.6597 58.083 11.286 58.083 12.88 55.167 13.71 52.961 solid black
+edge Node0x1de52cd0 Node0x1de52b00 4 5.7195 57.412 5.7154 57.533 5.7112 57.653 5.7068 57.772 solid black
+edge Node0x1de52d20 Node0x1de56b60 4 13.862 48.227 13.444 46.567 12.903 44.417 12.613 43.268 solid black
+edge Node0x1de56b60 Node0x1de54120 4 10.382 41.917 9.8994 41.917 9.571 41.704 9.3543 41.368 solid black
+edge Node0x1de56b60 Node0x1de54170 4 14.438 41.917 16.283 41.917 17.244 39.534 17.646 38.151 solid black
+edge Node0x1de54120 Node0x1de56b60 4 9.4185 41.245 9.5816 41.608 9.8401 41.859 10.236 41.908 solid black
+edge Node0x1de54170 Node0x1de58fb0 4 17.426 36.329 16.884 35.34 15.984 33.699 15.448 32.721 solid black
+edge Node0x1de58fb0 Node0x1de59180 4 12.868 31.375 12.36 31.375 11.982 31.158 11.702 30.817 solid black
+edge Node0x1de58fb0 Node0x1de591d0 4 17.146 31.375 18.821 31.375 19.343 28.997 19.504 27.614 solid black
+edge Node0x1de59180 Node0x1de58fb0 4 11.751 30.704 11.981 31.068 12.293 31.32 12.719 31.367 solid black
+edge Node0x1de591d0 Node0x1de5aba0 4 19.037 25.787 18.394 24.796 17.326 23.15 16.692 22.173 solid black
+edge Node0x1de5aba0 Node0x1de5ad70 4 14.035 20.833 13.513 20.833 13.112 20.615 12.806 20.271 solid black
+edge Node0x1de5aba0 Node0x1de5adc0 4 18.312 20.833 19.945 20.833 20.324 18.456 20.406 17.072 solid black
+edge Node0x1de5ad70 Node0x1de5aba0 4 12.85 20.162 13.108 20.528 13.445 20.78 13.888 20.826 solid black
+edge Node0x1de5adc0 Node0x1de57ca0 4 19.561 15.246 18.523 14.246 16.795 12.582 15.784 11.608 solid black
+edge Node0x1de57ca0 Node0x1de5d960 4 12.84 10.292 12.367 10.292 12.067 10.08 11.889 9.7472 solid black
+edge Node0x1de57ca0 Node0x1de5d9b0 4 17.118 10.292 18.833 10.292 18.075 7.1756 17.729 6.0023 solid black
+edge Node0x1de5d960 Node0x1de57ca0 4 11.964 9.6203 12.086 9.9816 12.312 10.232 12.693 10.282 solid black
+edge Node0x1de5d9b0 Node0x1de527e0 7 17.624 5.2242 17.689 4.4509 17.736 2.4324 16.604 1.4722 15.831 0.81631 8.7461 0.68925 6.4383 0.6652 solid black
+stop

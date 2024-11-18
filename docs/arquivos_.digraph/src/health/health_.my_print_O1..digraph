@@ -1,0 +1,28 @@
+graph 1 12.013 14.069
+node Node0x40213a60 2.6654 13.479 3.6667 1.1806 "{1:\l|  %2 = icmp eq ptr %0, null\l  br i1 %2, label %12, label %3\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x40213f30 2.4987 0.64583 1.1528 0.65278 "{12:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x40213e30 4.7904 11.59 7.6806 1.5972 "{3:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 3\l  %.01013 = load ptr, ptr %4, align 8\l  %.not14 = icmp \
+eq ptr %.01013, null\l  br i1 %.not14, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x40214470 4.7904 6.9792 7.6806 1.5972 "{._crit_edge:\l|  %6 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 4\l  %.016 = load ptr, ptr %6, align 8\l  %.not1217 = \
+icmp eq ptr %.016, null\l  br i1 %.not1217, label %._crit_edge21, label %.lr.ph20\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x40214420 7.1515 9.2847 8.3611 2.0139 "{.lr.ph:\l|  %.01015 = phi ptr [ %.010, %.lr.ph ], [ %.01013, %3 ]\l  tail call void @my_print(ptr noundef nonnull %.01015)\l  %\
+5 = getelementptr inbounds %struct.Village, ptr %.01015, i64 0, i32 2\l  %.010 = load ptr, ptr %5, align 8\l  %.not = icmp eq ptr %\
+.010, null\l  br i1 %.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x40214f70 4.4432 2.1111 6.9861 1.2778 "{._crit_edge21:\l|  %10 = load i32, ptr %0, align 8\l  %11 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(\
+1) @.str.1, i32 noundef %10)\l  br label %12\l}" filled record #3d50c3ff #d24b4070
+node Node0x40214f20 7.2348 4.4653 9.0556 2.4306 "{.lr.ph20:\l|  %.018 = phi ptr [ %.0, %.lr.ph20 ], [ %.016, %._crit_edge ]\l  %7 = load i32, ptr %.018, align 8\l  %8 = tail call \
+i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @.str, i32 noundef %7)\l  %9 = getelementptr inbounds %struct.Patient, \
+ptr %.018, i64 0, i32 7\l  %.0 = load ptr, ptr %9, align 8\l  %.not12 = icmp eq ptr %.0, null\l  br i1 %.not12, label %._crit_edge21, \
+label %.lr.ph20, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x40213a60 Node0x40213f30 13 0.81816 13.049 -0.85263 13.049 0.55427 10.969 0.55427 9.2986 0.55427 9.2986 0.55427 9.2986 0.55427 4.4514 0.55427 3.1221 0.062777 2.566 0.81816 1.4722 1.0425 1.1474 1.4339 0.94768 1.7826 0.82762 solid black
+edge Node0x40213a60 Node0x40213e30 4 4.5126 13.049 4.7781 13.049 4.8738 12.81 4.8938 12.527 solid black
+edge Node0x40213e30 Node0x40214470 7 2.8598 10.792 2.8598 9.6744 2.3167 9.2618 2.8459 8.2778 2.9276 8.1259 3.0359 7.9891 3.1598 7.8664 solid black
+edge Node0x40213e30 Node0x40214420 4 6.707 10.792 6.707 10.671 6.7206 10.547 6.7429 10.424 solid black
+edge Node0x40214470 Node0x40214f70 10 2.8598 6.1806 2.8598 5.9263 2.6458 5.9266 2.582 5.6806 2.3111 4.6348 2.0514 4.1909 2.582 3.25 2.6715 3.0915 2.7932 2.9527 2.9319 2.832 solid black
+edge Node0x40214470 Node0x40214f20 4 6.707 6.1806 6.707 6.0603 6.7192 5.9374 6.7399 5.8154 solid black
+edge Node0x40214420 Node0x40214470 4 5.0543 8.2778 5.0543 8.1599 5.0435 8.0373 5.0263 7.9165 solid black
+edge Node0x40214420 Node0x40214420 7 9.6674 8.2842 10.886 7.8708 11.582 7.9597 11.582 8.8611 11.582 8.9929 11.531 9.1074 11.438 9.2054 solid black
+edge Node0x40214f70 Node0x40213f30 4 3.6016 1.4751 3.4063 1.3307 3.2038 1.181 3.0264 1.0498 solid black
+edge Node0x40214f20 Node0x40214f70 4 4.9709 3.25 4.9709 3.1233 4.9431 2.9954 4.9003 2.8737 solid black
+edge Node0x40214f20 Node0x40214f20 7 9.9459 3.256 11.262 2.837 12.013 2.9349 12.013 3.9375 12.013 4.0775 11.962 4.1998 11.871 4.3056 solid black
+stop

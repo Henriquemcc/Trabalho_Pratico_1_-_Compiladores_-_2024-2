@@ -1,0 +1,23 @@
+graph 1 13.116 11.653
+node Node0x31d60bc0 4.8245 10.854 8.4861 1.5972 "{1:\l|  %2 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 4\l  %3 = load ptr, ptr %2, align 8\l  %.not11 = \
+icmp eq ptr %3, null\l  br i1 %.not11, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x31d612f0 2.9633 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x31d5e960 8.3522 9.0208 8.4861 1.0694 "{.lr.ph:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 1\l  %5 = getelementptr inbounds %struct.Village, \
+ptr %0, i64 0, i32 4\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x31d612a0 9.0467 6.6667 8.1389 2.6389 "{6:\l|  %.012 = phi ptr [ %3, %.lr.ph ], [ %8, %16 ]\l  %7 = getelementptr inbounds %struct.Patient, ptr %.012, i64 0, i32 7\l  %\
+8 = load ptr, ptr %7, align 8\l  %9 = getelementptr inbounds %struct.Patient, ptr %.012, i64 0, i32 3\l  %10 = load i32, ptr %9, \
+align 4\l  %11 = add nsw i32 %10, -1\l  store i32 %11, ptr %9, align 4\l  %12 = icmp eq i32 %11, 0\l  br i1 %12, label %13, label %\
+16\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x31d61cf0 6.2967 4 9.1667 1.6944 "{13:\l|  %14 = load i32, ptr %4, align 4\l  %15 = add nsw i32 %14, 1\l  store i32 %15, ptr %4, align 4\l  tail call void @removeList(\
+ptr noundef nonnull %2, ptr noundef nonnull %.012)\l  tail call void @addList(ptr noundef nonnull %5, ptr noundef nonnull %.012)\l  \
+br label %16\l}" filled record #3d50c3ff #c32e3170
+node Node0x31d61d40 7.9356 2.0625 6.7639 1.1806 "{16:\l|  %.not = icmp eq ptr %8, null\l  br i1 %.not, label %._crit_edge, label %6, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x31d60bc0 Node0x31d612f0 10 0.56057 10.215 -1.0467 10.215 1.3245 8.2878 1.3245 6.6806 1.3245 6.6806 1.3245 6.6806 1.3245 3.9861 1.3245 2.84 2.117 1.6793 2.5998 1.0785 solid black
+edge Node0x31d60bc0 Node0x31d5e960 4 9.0883 10.215 9.3874 10.215 9.225 9.9392 8.9776 9.6541 solid black
+edge Node0x31d5e960 Node0x31d612a0 4 8.5064 8.4906 8.5408 8.3752 8.579 8.2473 8.6187 8.1143 solid black
+edge Node0x31d612a0 Node0x31d61cf0 4 7.005 5.3472 7.005 5.2202 6.9796 5.0934 6.9385 4.9715 solid black
+edge Node0x31d612a0 Node0x31d61d40 10 11.088 5.3472 11.088 5.0694 11.376 5.1107 11.463 4.8472 11.701 4.1328 11.911 3.758 11.463 3.1528 11.337 2.9824 11.04 2.8282 10.67 2.6932 solid black
+edge Node0x31d61cf0 Node0x31d61d40 4 7.006 3.1596 7.1209 3.0257 7.2387 2.8884 7.3502 2.7584 solid black
+edge Node0x31d61d40 Node0x31d612f0 4 4.5328 1.6319 4.0761 1.6319 3.6415 1.3307 3.346 1.0636 solid black
+edge Node0x31d61d40 Node0x31d612a0 7 11.338 1.6319 11.698 1.6319 11.173 4.5295 11.005 4.8472 10.932 4.9848 10.845 5.1175 10.748 5.2441 solid black
+stop

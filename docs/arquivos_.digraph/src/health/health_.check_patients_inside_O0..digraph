@@ -1,0 +1,27 @@
+graph 1 14.326 14.764
+node Node0x1de5bbc0 10.431 13.5 7.7917 2.5278 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %5 = \
+load ptr, ptr %2, align 8\l  %6 = getelementptr inbounds %struct.Village, ptr %5, i32 0, i32 5\l  %7 = getelementptr inbounds %struct.Hosp, \
+ptr %6, i32 0, i32 4\l  %8 = load ptr, ptr %7, align 8\l  store ptr %8, ptr %3, align 8\l  br label %9\l}" filled record #3d50c3ff #d6524470
+node Node0x1de5c0d0 10.431 11.042 3.9028 1.3889 "{9:\l|  %10 = load ptr, ptr %3, align 8\l  %11 = icmp ne ptr %10, null\l  br i1 %11, label %12, label %39\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de5c2a0 6.0278 7.7986 8.0278 4.0972 "{12:\l|  %13 = load ptr, ptr %3, align 8\l  store ptr %13, ptr %4, align 8\l  %14 = load ptr, ptr %3, align 8\l  %15 = getelementptr \
+inbounds %struct.Patient, ptr %14, i32 0, i32 7\l  %16 = load ptr, ptr %15, align 8\l  store ptr %16, ptr %3, align 8\l  %17 = load \
+ptr, ptr %4, align 8\l  %18 = getelementptr inbounds %struct.Patient, ptr %17, i32 0, i32 3\l  %19 = load i32, ptr %18, align 4\l  %\
+20 = add nsw i32 %19, -1\l  store i32 %20, ptr %18, align 4\l  %21 = load ptr, ptr %4, align 8\l  %22 = getelementptr inbounds %\
+struct.Patient, ptr %21, i32 0, i32 3\l  %23 = load i32, ptr %22, align 4\l  %24 = icmp eq i32 %23, 0\l  br i1 %24, label %25, label %\
+38\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de5c2f0 11.403 7.7986 1.1528 0.65278 "{39:\l|  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x1de5ccf0 4.0139 3.3611 8.0278 3.7778 "{25:\l|  %26 = load ptr, ptr %2, align 8\l  %27 = getelementptr inbounds %struct.Village, ptr %26, i32 0, i32 5\l  %28 = getelementptr \
+inbounds %struct.Hosp, ptr %27, i32 0, i32 1\l  %29 = load i32, ptr %28, align 4\l  %30 = add nsw i32 %29, 1\l  store i32 %30, ptr %\
+28, align 4\l  %31 = load ptr, ptr %2, align 8\l  %32 = getelementptr inbounds %struct.Village, ptr %31, i32 0, i32 5\l  %33 = getelementptr \
+inbounds %struct.Hosp, ptr %32, i32 0, i32 4\l  %34 = load ptr, ptr %4, align 8\l  call void @removeList(ptr noundef %33, ptr noundef %\
+34)\l  %35 = load ptr, ptr %2, align 8\l  %36 = getelementptr inbounds %struct.Village, ptr %35, i32 0, i32 4\l  %37 = load ptr, \
+ptr %4, align 8\l  call void @addList(ptr noundef %36, ptr noundef %37)\l  br label %38\l}" filled record #3d50c3ff #c32e3170
+node Node0x1de5cd40 8.4167 0.64583 3.2083 0.65278 "{38:\l|  br label %9, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de5bbc0 Node0x1de5c0d0 4 10.431 12.242 10.431 12.118 10.431 11.994 10.431 11.875 solid black
+edge Node0x1de5c0d0 Node0x1de5c2a0 4 8.4583 10.514 7.9803 10.514 7.5723 10.277 7.2348 9.944 solid black
+edge Node0x1de5c0d0 Node0x1de5c2f0 4 11.403 10.347 11.403 9.6163 11.403 8.7668 11.403 8.2603 solid black
+edge Node0x1de5c2a0 Node0x1de5ccf0 4 4.0139 5.75 4.0139 5.6317 4.0139 5.51 4.0139 5.3873 solid black
+edge Node0x1de5c2a0 Node0x1de5cd40 7 8.0417 5.75 8.0417 5.5224 8.1215 5.4755 8.1528 5.25 8.3622 3.7428 8.406 1.9349 8.4148 1.1099 solid black
+edge Node0x1de5ccf0 Node0x1de5cd40 4 7.0778 1.477 7.3417 1.3159 7.5859 1.1668 7.7916 1.0413 solid black
+edge Node0x1de5cd40 Node0x1de5c0d0 7 8.5567 0.96703 8.9043 1.7468 9.8047 3.8735 10.167 5.75 10.467 7.3072 10.482 9.168 10.46 10.212 solid black
+stop

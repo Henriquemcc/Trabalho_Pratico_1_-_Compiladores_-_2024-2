@@ -1,0 +1,12 @@
+graph 1 8.3264 5.5833
+node Node0x4021d740 5.6875 4.8889 5.2778 1.3889 "{1:\l|  %2 = load i32, ptr @sim_time, align 4\l  %3 = icmp sgt i32 %2, 0\l  br i1 %3, label %.lr.ph, label %._crit_edge\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x4021dc90 3.7431 2.5833 6.9861 2.2222 "{.lr.ph:\l|  %.02 = phi i64 [ %4, %.lr.ph ], [ 0, %1 ]\l  tail call void @sim_village(ptr noundef %0)\l  %4 = add nuw nsw i64 %.02, \
+1\l  %5 = load i32, ptr @sim_time, align 4\l  %6 = sext i32 %5 to i64\l  %7 = icmp slt i64 %4, %6\l  br i1 %7, label %.lr.ph, label %\
+._crit_edge, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x4021dce0 6.5625 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+edge Node0x4021d740 Node0x4021dc90 4 4.3681 4.1944 4.3681 4.0722 4.352 3.9481 4.325 3.8259 solid black
+edge Node0x4021d740 Node0x4021dce0 10 7.0069 4.1944 7.0069 3.9203 7.2837 3.9553 7.3681 3.6944 7.6719 2.7547 7.7441 2.3855 7.3681 1.4722 7.3055 1.3202 7.1992 1.1816 7.0839 1.0635 solid black
+edge Node0x4021dc90 Node0x4021dc90 7 1.5361 1.4785 0.56559 1.1755 0 1.2824 0 2.1111 0 2.2477 0.051424 2.3647 0.1432 2.4634 solid black
+edge Node0x4021dc90 Node0x4021dce0 4 7.2569 1.6389 7.5539 1.6389 7.3051 1.3355 7.0261 1.0665 solid black
+stop

@@ -1,0 +1,136 @@
+graph 1 13.542 71.347
+node Node0x401f3fd0 3.9514 69.611 7.9028 3.4722 "{2:\l|  %3 = alloca %struct.Results, align 8\l  %4 = getelementptr inbounds %struct.Results, ptr %0, i64 0, i32 1\l  %5 = getelementptr \
+inbounds %struct.Results, ptr %0, i64 0, i32 2\l  %6 = getelementptr inbounds %struct.Results, ptr %0, i64 0, i32 3\l  %7 = getelementptr \
+inbounds %struct.Results, ptr %0, i64 0, i32 4\l  %8 = getelementptr inbounds %struct.Results, ptr %0, i64 0, i32 5\l  %9 = getelementptr \
+inbounds %struct.Results, ptr %0, i64 0, i32 6\l  %10 = getelementptr inbounds %struct.Results, ptr %0, i64 0, i32 8\l  %11 = getelementptr \
+inbounds %struct.Results, ptr %0, i64 0, i32 7\l  %12 = icmp eq ptr %1, null\l  tail call void @llvm.memset.p0.i64(ptr noundef nonnull \
+align 8\l... dereferenceable(72) %0, i8 0, i64 72, i1 false)\l  br i1 %12, label %140, label %13\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x401f77e0 4.2847 0.64583 1.1528 0.65278 "{140:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x401f76e0 6.0903 65.639 7.7917 3.4722 "{13:\l|  %14 = getelementptr inbounds %struct.Village, ptr %1, i64 0, i32 3\l  %.promoted = load i64, ptr %0, align 8\l  %.promoted32 = \
+load i64, ptr %4, align 8\l  %.promoted34 = load i64, ptr %5, align 8\l  %.promoted36 = load i64, ptr %6, align 8\l  %.promoted38 = \
+load i64, ptr %7, align 8\l  %.promoted40 = load i64, ptr %8, align 8\l  %.promoted42 = load i64, ptr %9, align 8\l  %.promoted44 = \
+load i64, ptr %10, align 8\l  %.promoted46 = load i64, ptr %11, align 8\l  %.048 = load ptr, ptr %14, align 8\l  %.not49 = icmp \
+eq ptr %.048, null\l  br i1 %.not49, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x401f7d20 6.3542 48 7.9028 8.4722 "{._crit_edge:\l|  %.lcssa47 = phi i64 [ %.promoted46, %13 ], [ %33, %15 ]\l  %.lcssa45 = phi i64 [ %.promoted44, %13 ], [ %32, %\
+15 ]\l  %.lcssa43 = phi i64 [ %.promoted42, %13 ], [ %31, %15 ]\l  %.lcssa41 = phi i64 [ %.promoted40, %13 ], [ %30, %15 ]\l  %.lcssa39 = \
+phi i64 [ %.promoted38, %13 ], [ %29, %15 ]\l  %.lcssa37 = phi i64 [ %.promoted36, %13 ], [ %28, %15 ]\l  %.lcssa35 = phi i64 [ %\
+.promoted34, %13 ], [ %27, %15 ]\l  %.lcssa33 = phi i64 [ %.promoted32, %13 ], [ %26, %15 ]\l  %.lcssa = phi i64 [ %.promoted, %\
+13 ], [ %25, %15 ]\l  store i64 %.lcssa, ptr %0, align 8\l  store i64 %.lcssa33, ptr %4, align 8\l  store i64 %.lcssa35, ptr %5, \
+align 8\l  store i64 %.lcssa37, ptr %6, align 8\l  store i64 %.lcssa39, ptr %7, align 8\l  store i64 %.lcssa41, ptr %8, align 8\l  \
+store i64 %.lcssa43, ptr %9, align 8\l  store i64 %.lcssa45, ptr %10, align 8\l  store i64 %.lcssa47, ptr %11, align 8\l  %35 = \
+load i64, ptr %0, align 8\l  %36 = sitofp i64 %35 to double\l  %37 = fadd double %36, 1.000000e+00\l  %38 = fptosi double %37 to \
+i64\l  store i64 %38, ptr %0, align 8\l  %39 = getelementptr inbounds %struct.Village, ptr %1, i64 0, i32 5\l  %40 = load i32, ptr %\
+39, align 8\l  %41 = sext i32 %40 to i64\l  %42 = load i64, ptr %4, align 8\l  %43 = add nsw i64 %42, %41\l  store i64 %43, ptr %\
+4, align 8\l  %44 = getelementptr inbounds %struct.Village, ptr %1, i64 0, i32 4\l  %.promoted59 = load i64, ptr %5, align 8\l  %\
+.promoted61 = load i64, ptr %6, align 8\l  %.promoted63 = load i64, ptr %10, align 8\l  %.promoted65 = load i64, ptr %11, align \
+8\l  %.02667 = load ptr, ptr %44, align 8\l  %.not2868 = icmp eq ptr %.02667, null\l  br i1 %.not2868, label %._crit_edge72, label %\
+.lr.ph71\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x4020aef0 8.2153 62.243 7.6806 2.3194 "{.lr.ph:\l|  %.sroa.2.0..sroa_idx = getelementptr inbounds i8, ptr %3, i64 8\l  %.sroa.3.0..sroa_idx = getelementptr inbounds i8, \
+ptr %3, i64 16\l  %.sroa.4.0..sroa_idx = getelementptr inbounds i8, ptr %3, i64 24\l  %.sroa.5.0..sroa_idx = getelementptr inbounds \
+i8, ptr %3, i64 32\l  %.sroa.6.0..sroa_idx = getelementptr inbounds i8, ptr %3, i64 40\l  %.sroa.7.0..sroa_idx = getelementptr inbounds \
+i8, ptr %3, i64 48\l  %.sroa.8.0..sroa_idx = getelementptr inbounds i8, ptr %3, i64 56\l  %.sroa.9.0..sroa_idx = getelementptr inbounds \
+i8, ptr %3, i64 64\l  br label %15\l}" filled record #3d50c3ff #d6524470
+node Node0x401f7cd0 8.4514 56.66 8.25 7.8472 "{15:\l|  %.050 = phi ptr [ %.048, %.lr.ph ], [ %.0, %15 ]\l  %16 = phi i64 [ %.promoted, %.lr.ph ], [ %25, %15 ]\l  %17 = phi i64 [ %\
+.promoted32, %.lr.ph ], [ %26, %15 ]\l  %18 = phi i64 [ %.promoted34, %.lr.ph ], [ %27, %15 ]\l  %19 = phi i64 [ %.promoted36, %\
+.lr.ph ], [ %28, %15 ]\l  %20 = phi i64 [ %.promoted38, %.lr.ph ], [ %29, %15 ]\l  %21 = phi i64 [ %.promoted40, %.lr.ph ], [ %30, %\
+15 ]\l  %22 = phi i64 [ %.promoted42, %.lr.ph ], [ %31, %15 ]\l  %23 = phi i64 [ %.promoted44, %.lr.ph ], [ %32, %15 ]\l  %24 = \
+phi i64 [ %.promoted46, %.lr.ph ], [ %33, %15 ]\l  call void @get_results(ptr dead_on_unwind nonnull writable\l... sret(%struct.Results) \
+align 8 %3, ptr noundef nonnull %.050)\l  %.sroa.0.0.copyload = load i64, ptr %3, align 8\l  %.sroa.2.0.copyload = load i64, ptr %\
+.sroa.2.0..sroa_idx, align 8\l  %.sroa.3.0.copyload = load i64, ptr %.sroa.3.0..sroa_idx, align 8\l  %.sroa.4.0.copyload = load \
+i64, ptr %.sroa.4.0..sroa_idx, align 8\l  %.sroa.5.0.copyload = load i64, ptr %.sroa.5.0..sroa_idx, align 8\l  %.sroa.6.0.copyload = \
+load i64, ptr %.sroa.6.0..sroa_idx, align 8\l  %.sroa.7.0.copyload = load i64, ptr %.sroa.7.0..sroa_idx, align 8\l  %.sroa.8.0.copyload = \
+load i64, ptr %.sroa.8.0..sroa_idx, align 8\l  %.sroa.9.0.copyload = load i64, ptr %.sroa.9.0..sroa_idx, align 8\l  %25 = add nsw \
+i64 %16, %.sroa.0.0.copyload\l  %26 = add nsw i64 %17, %.sroa.2.0.copyload\l  %27 = add nsw i64 %18, %.sroa.3.0.copyload\l  %28 = \
+add nsw i64 %19, %.sroa.4.0.copyload\l  %29 = add nsw i64 %20, %.sroa.5.0.copyload\l  %30 = add nsw i64 %21, %.sroa.6.0.copyload\l  %\
+31 = add nsw i64 %22, %.sroa.7.0.copyload\l  %32 = add nsw i64 %23, %.sroa.9.0.copyload\l  %33 = add nsw i64 %24, %.sroa.8.0.copyload\l  %\
+34 = getelementptr inbounds %struct.Village, ptr %.050, i64 0, i32 2\l  %.0 = load ptr, ptr %34, align 8\l  %.not = icmp eq ptr %\
+.0, null\l  br i1 %.not, label %._crit_edge, label %15, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401f9170 6.6319 34.639 8.7083 3.4722 "{._crit_edge72:\l|  %.lcssa66 = phi i64 [ %.promoted65, %._crit_edge ], [ %66, %.lr.ph71 ]\l  %.lcssa64 = phi i64 [ %.promoted63, %\
+._crit_edge ], [ %60, %.lr.ph71 ]\l  %.lcssa62 = phi i64 [ %.promoted61, %._crit_edge ], [ %54, %.lr.ph71 ]\l  %.lcssa60 = phi i64 [ %\
+.promoted59, %._crit_edge ], [ %51, %.lr.ph71 ]\l  store i64 %.lcssa60, ptr %5, align 8\l  store i64 %.lcssa62, ptr %6, align 8\l  \
+store i64 %.lcssa64, ptr %10, align 8\l  store i64 %.lcssa66, ptr %11, align 8\l  %68 = getelementptr inbounds %struct.Village, \
+ptr %1, i64 0, i32 5, i32 2\l  %.promoted79 = load i64, ptr %7, align 8\l  %.185 = load ptr, ptr %68, align 8\l  %.not2986 = icmp \
+eq ptr %.185, null\l  br i1 %.not2986, label %._crit_edge90, label %.lr.ph89\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x401f9120 8.7847 40.069 8.4861 6.3889 "{.lr.ph71:\l|  %.02669 = phi ptr [ %.026, %.lr.ph71 ], [ %.02667, %._crit_edge ]\l  %45 = phi i64 [ %51, %.lr.ph71 ], [ %.promoted59, %\
+._crit_edge ]\l  %46 = phi i64 [ %54, %.lr.ph71 ], [ %.promoted61, %._crit_edge ]\l  %47 = phi i64 [ %60, %.lr.ph71 ], [ %.promoted63, %\
+._crit_edge ]\l  %48 = phi i64 [ %66, %.lr.ph71 ], [ %.promoted65, %._crit_edge ]\l  %49 = sitofp i64 %45 to double\l  %50 = fadd \
+double %49, 1.000000e+00\l  %51 = fptosi double %50 to i64\l  %52 = sitofp i64 %46 to double\l  %53 = fadd double %52, 1.000000e+\
+00\l  %54 = fptosi double %53 to i64\l  %55 = getelementptr inbounds %struct.Patient, ptr %.02669, i64 0, i32 4\l  %56 = load i32, \
+ptr %55, align 8\l  %57 = sitofp i32 %56 to float\l  %58 = sitofp i64 %47 to float\l  %59 = fadd float %57, %58\l  %60 = fptosi \
+float %59 to i64\l  %61 = getelementptr inbounds %struct.Patient, ptr %.02669, i64 0, i32 2\l  %62 = load i32, ptr %61, align 8\l  %\
+63 = sitofp i32 %62 to float\l  %64 = sitofp i64 %48 to float\l  %65 = fadd float %63, %64\l  %66 = fptosi float %65 to i64\l  %\
+67 = getelementptr inbounds %struct.Patient, ptr %.02669, i64 0, i32 7\l  %.026 = load ptr, ptr %67, align 8\l  %.not28 = icmp eq \
+ptr %.026, null\l  br i1 %.not28, label %._crit_edge72, label %.lr.ph71, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401fe1d0 6.7014 23.778 8.7083 3.4722 "{._crit_edge90:\l|  %.lcssa84 = phi i64 [ %.lcssa66, %._crit_edge72 ], [ %90, %.lr.ph89 ]\l  %.lcssa82 = phi i64 [ %.lcssa64, %._\
+crit_edge72 ], [ %84, %.lr.ph89 ]\l  %.lcssa80 = phi i64 [ %.promoted79, %._crit_edge72 ], [ %78, %.lr.ph89 ]\l  %.lcssa78 = phi \
+i64 [ %.lcssa60, %._crit_edge72 ], [ %75, %.lr.ph89 ]\l  store i64 %.lcssa78, ptr %5, align 8\l  store i64 %.lcssa80, ptr %7, align \
+8\l  store i64 %.lcssa82, ptr %10, align 8\l  store i64 %.lcssa84, ptr %11, align 8\l  %92 = getelementptr inbounds %struct.Village, \
+ptr %1, i64 0, i32 5, i32 3\l  %.promoted97 = load i64, ptr %8, align 8\l  %.2103 = load ptr, ptr %92, align 8\l  %.not30104 = icmp \
+eq ptr %.2103, null\l  br i1 %.not30104, label %._crit_edge108, label %.lr.ph107\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x401fe180 8.8819 29.208 8.25 6.3889 "{.lr.ph89:\l|  %.187 = phi ptr [ %.1, %.lr.ph89 ], [ %.185, %._crit_edge72 ]\l  %69 = phi i64 [ %75, %.lr.ph89 ], [ %.lcssa60, %\
+._crit_edge72 ]\l  %70 = phi i64 [ %78, %.lr.ph89 ], [ %.promoted79, %._crit_edge72 ]\l  %71 = phi i64 [ %84, %.lr.ph89 ], [ %.lcssa64, %\
+._crit_edge72 ]\l  %72 = phi i64 [ %90, %.lr.ph89 ], [ %.lcssa66, %._crit_edge72 ]\l  %73 = sitofp i64 %69 to double\l  %74 = fadd \
+double %73, 1.000000e+00\l  %75 = fptosi double %74 to i64\l  %76 = sitofp i64 %70 to double\l  %77 = fadd double %76, 1.000000e+\
+00\l  %78 = fptosi double %77 to i64\l  %79 = getelementptr inbounds %struct.Patient, ptr %.187, i64 0, i32 4\l  %80 = load i32, \
+ptr %79, align 8\l  %81 = sitofp i32 %80 to float\l  %82 = sitofp i64 %71 to float\l  %83 = fadd float %81, %82\l  %84 = fptosi \
+float %83 to i64\l  %85 = getelementptr inbounds %struct.Patient, ptr %.187, i64 0, i32 2\l  %86 = load i32, ptr %85, align 8\l  %\
+87 = sitofp i32 %86 to float\l  %88 = sitofp i64 %72 to float\l  %89 = fadd float %87, %88\l  %90 = fptosi float %89 to i64\l  %\
+91 = getelementptr inbounds %struct.Patient, ptr %.187, i64 0, i32 7\l  %.1 = load ptr, ptr %91, align 8\l  %.not29 = icmp eq ptr %\
+.1, null\l  br i1 %.not29, label %._crit_edge90, label %.lr.ph89, !llvm.loop !7\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401ffdc0 6.7292 12.917 8.8194 3.4722 "{._crit_edge108:\l|  %.lcssa102 = phi i64 [ %.lcssa84, %._crit_edge90 ], [ %114, %.lr.ph107 ]\l  %.lcssa100 = phi i64 [ %.lcssa82, %\
+._crit_edge90 ], [ %108, %.lr.ph107 ]\l  %.lcssa98 = phi i64 [ %.promoted97, %._crit_edge90 ], [ %102, %.lr.ph107 ]\l  %.lcssa96 = \
+phi i64 [ %.lcssa78, %._crit_edge90 ], [ %99, %.lr.ph107 ]\l  store i64 %.lcssa96, ptr %5, align 8\l  store i64 %.lcssa98, ptr %\
+8, align 8\l  store i64 %.lcssa100, ptr %10, align 8\l  store i64 %.lcssa102, ptr %11, align 8\l  %116 = getelementptr inbounds %\
+struct.Village, ptr %1, i64 0, i32 5, i32 4\l  %.promoted115 = load i64, ptr %9, align 8\l  %.3121 = load ptr, ptr %116, align 8\l  %\
+.not31122 = icmp eq ptr %.3121, null\l  br i1 %.not31122, label %.loopexit, label %.lr.ph125\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x401ffd70 9.0208 18.347 8.4861 6.3889 "{.lr.ph107:\l|  %.2105 = phi ptr [ %.2, %.lr.ph107 ], [ %.2103, %._crit_edge90 ]\l  %93 = phi i64 [ %99, %.lr.ph107 ], [ %.lcssa78, %\
+._crit_edge90 ]\l  %94 = phi i64 [ %102, %.lr.ph107 ], [ %.promoted97, %._crit_edge90 ]\l  %95 = phi i64 [ %108, %.lr.ph107 ], [ %\
+.lcssa82, %._crit_edge90 ]\l  %96 = phi i64 [ %114, %.lr.ph107 ], [ %.lcssa84, %._crit_edge90 ]\l  %97 = sitofp i64 %93 to double\l  %\
+98 = fadd double %97, 1.000000e+00\l  %99 = fptosi double %98 to i64\l  %100 = sitofp i64 %94 to double\l  %101 = fadd double %100, \
+1.000000e+00\l  %102 = fptosi double %101 to i64\l  %103 = getelementptr inbounds %struct.Patient, ptr %.2105, i64 0, i32 4\l  %\
+104 = load i32, ptr %103, align 8\l  %105 = sitofp i32 %104 to float\l  %106 = sitofp i64 %95 to float\l  %107 = fadd float %105, %\
+106\l  %108 = fptosi float %107 to i64\l  %109 = getelementptr inbounds %struct.Patient, ptr %.2105, i64 0, i32 2\l  %110 = load \
+i32, ptr %109, align 8\l  %111 = sitofp i32 %110 to float\l  %112 = sitofp i64 %96 to float\l  %113 = fadd float %111, %112\l  %\
+114 = fptosi float %113 to i64\l  %115 = getelementptr inbounds %struct.Patient, ptr %.2105, i64 0, i32 7\l  %.2 = load ptr, ptr %\
+115, align 8\l  %.not30 = icmp eq ptr %.2, null\l  br i1 %.not30, label %._crit_edge108, label %.lr.ph107, !llvm.loop !8\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401fcbe0 6.7708 2.6319 9.1667 2.3194 "{.loopexit:\l|  %.lcssa120 = phi i64 [ %.lcssa102, %._crit_edge108 ], [ %138, %.lr.ph125 ]\l  %.lcssa118 = phi i64 [ %.lcssa100, %\
+._crit_edge108 ], [ %132, %.lr.ph125 ]\l  %.lcssa116 = phi i64 [ %.promoted115, %._crit_edge108 ], [ %126, %.lr.ph125 ]\l  %.lcssa114 = \
+phi i64 [ %.lcssa96, %._crit_edge108 ], [ %123, %.lr.ph125 ]\l  store i64 %.lcssa114, ptr %5, align 8\l  store i64 %.lcssa116, ptr %\
+9, align 8\l  store i64 %.lcssa118, ptr %10, align 8\l  store i64 %.lcssa120, ptr %11, align 8\l  br label %140\l}" filled record #3d50c3ff #d24b4070
+node Node0x40202960 9.0486 7.4861 8.4861 6.3889 "{.lr.ph125:\l|  %.3123 = phi ptr [ %.3, %.lr.ph125 ], [ %.3121, %._crit_edge108 ]\l  %117 = phi i64 [ %123, %.lr.ph125 ], [ %.lcssa96, %\
+._crit_edge108 ]\l  %118 = phi i64 [ %126, %.lr.ph125 ], [ %.promoted115, %._crit_edge108 ]\l  %119 = phi i64 [ %132, %.lr.ph125 ], [ %\
+.lcssa100, %._crit_edge108 ]\l  %120 = phi i64 [ %138, %.lr.ph125 ], [ %.lcssa102, %._crit_edge108 ]\l  %121 = sitofp i64 %117 to \
+double\l  %122 = fadd double %121, 1.000000e+00\l  %123 = fptosi double %122 to i64\l  %124 = sitofp i64 %118 to double\l  %125 = \
+fadd double %124, 1.000000e+00\l  %126 = fptosi double %125 to i64\l  %127 = getelementptr inbounds %struct.Patient, ptr %.3123, \
+i64 0, i32 4\l  %128 = load i32, ptr %127, align 8\l  %129 = sitofp i32 %128 to float\l  %130 = sitofp i64 %119 to float\l  %131 = \
+fadd float %129, %130\l  %132 = fptosi float %131 to i64\l  %133 = getelementptr inbounds %struct.Patient, ptr %.3123, i64 0, i32 \
+2\l  %134 = load i32, ptr %133, align 8\l  %135 = sitofp i32 %134 to float\l  %136 = sitofp i64 %120 to float\l  %137 = fadd float %\
+135, %136\l  %138 = fptosi float %137 to i64\l  %139 = getelementptr inbounds %struct.Patient, ptr %.3123, i64 0, i32 7\l  %.3 = \
+load ptr, ptr %139, align 8\l  %.not31 = icmp eq ptr %.3, null\l  br i1 %.not31, label %.loopexit, label %.lr.ph125, !llvm.loop !\
+9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x401f3fd0 Node0x401f77e0 13 1.9653 67.875 1.9653 65.377 1.7986 64.755 1.7986 62.257 1.7986 62.257 1.7986 62.257 1.7986 7.4722 1.7986 4.803 0.48538 3.6257 2.0625 1.4722 2.4086 0.99965 3.0586 0.80145 3.5666 0.71858 solid black
+edge Node0x401f3fd0 Node0x401f76e0 4 5.9236 67.875 5.9236 67.756 5.926 67.633 5.9303 67.509 solid black
+edge Node0x401f76e0 Node0x401f7d20 7 4.1319 63.903 4.1319 58.94 3.1329 57.583 4.2014 52.736 4.2285 52.613 4.259 52.49 4.2925 52.366 solid black
+edge Node0x401f76e0 Node0x4020aef0 4 8.0347 63.903 8.0347 63.784 8.0394 63.66 8.0474 63.537 solid black
+edge Node0x401f7d20 Node0x401f9170 7 4.3681 43.764 4.3681 40.702 3.2295 39.7 4.4097 36.875 4.4647 36.743 4.5316 36.615 4.6075 36.492 solid black
+edge Node0x401f7d20 Node0x401f9120 4 8.3264 43.764 8.3264 43.643 8.3288 43.521 8.3334 43.397 solid black
+edge Node0x4020aef0 Node0x401f7cd0 4 8.2639 61.085 8.2689 60.968 8.2741 60.846 8.2795 60.718 solid black
+edge Node0x401f7cd0 Node0x401f7d20 4 6.3819 52.736 6.3819 52.615 6.3819 52.493 6.3817 52.37 solid black
+edge Node0x401f7cd0 Node0x401f7cd0 7 10.685 52.743 12.042 51.505 12.826 51.625 12.826 54.778 12.826 55.292 12.755 55.725 12.628 56.085 solid black
+edge Node0x401f9170 Node0x401fe1d0 7 4.4514 32.903 4.4514 29.84 3.4732 28.849 4.6319 26.014 4.6856 25.883 4.7508 25.754 4.8246 25.63 solid black
+edge Node0x401f9170 Node0x401fe180 4 8.8125 32.903 8.8125 32.783 8.8129 32.661 8.8136 32.538 solid black
+edge Node0x401f9120 Node0x401f9170 4 6.6597 36.875 6.6597 36.756 6.6593 36.633 6.6586 36.509 solid black
+edge Node0x401f9120 Node0x401f9120 7 11.095 36.878 12.479 35.693 13.278 35.808 13.278 38.556 13.278 38.992 13.208 39.362 13.086 39.671 solid black
+edge Node0x401fe1d0 Node0x401ffdc0 7 4.5208 22.042 4.5208 18.979 3.4939 17.99 4.6458 15.153 4.6993 15.021 4.7646 14.892 4.8386 14.768 solid black
+edge Node0x401fe1d0 Node0x401ffd70 4 8.8819 22.042 8.8819 21.922 8.8827 21.8 8.8841 21.677 solid black
+edge Node0x401fe180 Node0x401fe1d0 4 6.8125 26.014 6.8125 25.895 6.8109 25.772 6.808 25.648 solid black
+edge Node0x401fe180 Node0x401fe180 7 11.132 26.017 12.479 24.831 13.257 24.947 13.257 27.694 13.257 28.138 13.187 28.513 13.064 28.825 solid black
+edge Node0x401ffdc0 Node0x401fcbe0 7 4.5208 11.181 4.5208 8.1181 3.3036 7.0306 4.6736 4.2917 4.7441 4.1508 4.8329 4.0183 4.9339 3.8944 solid black
+edge Node0x401ffdc0 Node0x40202960 4 8.9375 11.181 8.9375 11.061 8.9381 10.939 8.9392 10.816 solid black
+edge Node0x401ffd70 Node0x401ffdc0 4 6.8958 15.153 6.8958 15.033 6.8934 14.91 6.8891 14.786 solid black
+edge Node0x401ffd70 Node0x401ffd70 7 11.331 15.156 12.715 13.97 13.514 14.086 13.514 16.833 13.514 17.27 13.445 17.639 13.322 17.948 solid black
+edge Node0x401fcbe0 Node0x401f77e0 4 5.3247 1.4789 5.1321 1.3272 4.9462 1.1808 4.7862 1.0548 solid black
+edge Node0x40202960 Node0x401fcbe0 4 6.9236 4.2917 6.9236 4.1728 6.9196 4.0494 6.9129 3.9259 solid black
+edge Node0x40202960 Node0x40202960 7 11.38 4.2965 12.751 3.256 13.542 3.3776 13.542 5.9722 13.542 6.3826 13.474 6.7311 13.353 7.0229 solid black
+stop

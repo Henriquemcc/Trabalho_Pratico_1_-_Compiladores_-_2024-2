@@ -1,0 +1,27 @@
+graph 1 19.738 12.278
+node Node0x31d69d90 4.7661 11.479 8.4861 1.5972 "{1:\l|  %2 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 2\l  %3 = load ptr, ptr %2, align 8\l  %.not15 = \
+icmp eq ptr %3, null\l  br i1 %.not15, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x31d6a440 2.905 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x31d64b80 9.0439 9.6458 8.5972 1.0694 "{.lr.ph:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5, i32 1\l  %5 = getelementptr inbounds %struct.Village, \
+ptr %0, i64 0, i32 5, i32 3\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x31d6a3f0 9.7383 7.6042 8.1389 2.0139 "{6:\l|  %.016 = phi ptr [ %3, %.lr.ph ], [ %8, %22 ]\l  %7 = getelementptr inbounds %struct.Patient, ptr %.016, i64 0, i32 7\l  %\
+8 = load ptr, ptr %7, align 8\l  %9 = load i32, ptr %4, align 4\l  %10 = icmp sgt i32 %9, 0\l  br i1 %10, label %11, label %18\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x31d6abd0 6.2383 4.625 9.1667 2.9444 "{11:\l|  %12 = add nsw i32 %9, -1\l  store i32 %12, ptr %4, align 4\l  %13 = load i32, ptr @sim_assess_time, align 4\l  %14 = getelementptr \
+inbounds %struct.Patient, ptr %.016, i64 0, i32 3\l  store i32 %13, ptr %14, align 4\l  %15 = getelementptr inbounds %struct.Patient, \
+ptr %.016, i64 0, i32 2\l  %16 = load i32, ptr %15, align 8\l  %17 = add nsw i32 %16, %13\l  store i32 %17, ptr %15, align 8\l  \
+tail call void @removeList(ptr noundef nonnull %2, ptr noundef nonnull %.016)\l  tail call void @addList(ptr noundef nonnull %5, \
+ptr noundef nonnull %.016)\l  br label %22\l}" filled record #b70d28ff #bb1b2c70
+node Node0x31d6ac20 15.669 4.625 8.1389 1.4861 "{18:\l|  %19 = getelementptr inbounds %struct.Patient, ptr %.016, i64 0, i32 2\l  %20 = load i32, ptr %19, align 8\l  %21 = add \
+nsw i32 %20, 1\l  store i32 %21, ptr %19, align 8\l  br label %22\l}" filled record #3d50c3ff #c32e3170
+node Node0x31d6bf40 7.8772 2.0625 6.7639 1.1806 "{22:\l|  %.not = icmp eq ptr %8, null\l  br i1 %.not, label %._crit_edge, label %6, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x31d69d90 Node0x31d6a440 13 0.50221 10.84 -0.96958 10.84 1.2661 9.0898 1.2661 7.6181 1.2661 7.6181 1.2661 7.6181 1.2661 4.6111 1.2661 3.9524 1.3094 3.7734 1.53 3.1528 1.8035 2.3832 2.2968 1.5685 2.6122 1.0875 solid black
+edge Node0x31d69d90 Node0x31d64b80 4 9.03 10.84 9.2737 10.84 9.294 10.586 9.2459 10.313 solid black
+edge Node0x31d64b80 Node0x31d6a3f0 4 9.2227 9.1133 9.2631 8.9962 9.3075 8.8674 9.3528 8.7361 solid black
+edge Node0x31d6a3f0 Node0x31d6abd0 4 5.655 6.7569 5.3363 6.7569 5.2878 6.5313 5.3671 6.2273 solid black
+edge Node0x31d6a3f0 Node0x31d6ac20 4 13.822 6.7569 14.529 6.7569 15.027 6.0787 15.326 5.4898 solid black
+edge Node0x31d6abd0 Node0x31d6bf40 4 7.1774 3.1587 7.2643 3.0243 7.3494 2.8927 7.4286 2.7702 solid black
+edge Node0x31d6ac20 Node0x31d6bf40 7 13.602 3.8888 12.906 3.6495 12.123 3.3851 11.405 3.1528 10.927 2.9983 10.412 2.8375 9.9257 2.6888 solid black
+edge Node0x31d6bf40 Node0x31d6a440 4 4.4744 1.6319 4.0177 1.6319 3.5831 1.3307 3.2876 1.0636 solid black
+edge Node0x31d6bf40 Node0x31d6a3f0 7 11.28 1.6319 11.778 1.6319 11.134 5.6364 10.947 6.0972 10.893 6.2295 10.823 6.3592 10.745 6.4837 solid black
+stop

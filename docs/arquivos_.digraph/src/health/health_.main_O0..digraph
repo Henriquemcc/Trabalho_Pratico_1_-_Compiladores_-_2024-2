@@ -1,0 +1,7 @@
+graph 1 8.7083 4.3056
+node Node0x1de794d0 4.3542 2.3125 8.7083 3.9861 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca ptr, align 8\l  store i32 \
+0, ptr %3, align 4\l  store i32 %0, ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  %7 = load ptr, ptr %5, align 8\l  %8 = getelementptr \
+inbounds ptr, ptr %7, i64 1\l  %9 = load ptr, ptr %8, align 8\l  call void @read_input_data(ptr noundef %9)\l  %10 = load i32, ptr @\
+sim_level, align 4\l  call void @allocate_village(ptr noundef %6, ptr noundef null, ptr noundef\l... null, i32 noundef %10, i32 \
+noundef 0)\l  %11 = load ptr, ptr %6, align 8\l  call void @sim_village_main(ptr noundef %11)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+stop

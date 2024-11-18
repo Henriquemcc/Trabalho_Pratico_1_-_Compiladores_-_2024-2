@@ -1,0 +1,24 @@
+graph 1 15.75 10.597
+node Node0x1de6d090 3.4861 9.5903 3.7778 2.0139 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca ptr, align 8\l  store ptr %0, ptr %2, align 8\l  %4 = load ptr, ptr %2, align 8\l  %\
+5 = icmp eq ptr %4, null\l  br i1 %5, label %6, label %7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1de6d390 0.80556 5.4028 1.6111 0.65278 "{6:\l|  br label %25\l}" filled record #3d50c3ff #dc5d4a70
+node Node0x1de6d3e0 5.9167 7.3403 7.7917 1.4861 "{7:\l|  %8 = load ptr, ptr %2, align 8\l  %9 = getelementptr inbounds %struct.Village, ptr %8, i32 0, i32 3\l  %10 = load ptr, ptr %\
+9, align 8\l  store ptr %10, ptr %3, align 8\l  br label %11\l}" filled record #3d50c3ff #d6524470
+node Node0x1de6d520 6.5972 0.64583 1.1528 0.65278 "{25:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x1de6d840 6.0556 5.4028 3.9028 1.3889 "{11:\l|  %12 = load ptr, ptr %3, align 8\l  %13 = icmp ne ptr %12, null\l  br i1 %13, label %14, label %19\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de6da10 5.0694 2.8403 8.0278 1.9028 "{14:\l|  %15 = load ptr, ptr %3, align 8\l  call void @sim_village(ptr noundef %15)\l  %16 = load ptr, ptr %3, align 8\l  %17 = \
+getelementptr inbounds %struct.Village, ptr %16, i32 0, i32 2\l  %18 = load ptr, ptr %17, align 8\l  store ptr %18, ptr %3, align \
+8\l  br label %11, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x1de6da60 12.542 2.8403 6.4167 2.7361 "{19:\l|  %20 = load ptr, ptr %2, align 8\l  call void @check_patients_inside(ptr noundef %20)\l  %21 = load ptr, ptr %2, align 8\l  \
+call void @check_patients_assess_par(ptr noundef %21)\l  %22 = load ptr, ptr %2, align 8\l  call void @check_patients_waiting(ptr \
+noundef %22)\l  %23 = load ptr, ptr %2, align 8\l  call void @check_patients_realloc(ptr noundef %23)\l  %24 = load ptr, ptr %2, \
+align 8\l  call void @check_patients_population(ptr noundef %24)\l  br label %25\l}" filled record #3d50c3ff #d6524470
+edge Node0x1de6d090 Node0x1de6d390 4 1.5833 8.7431 0.41479 8.7431 0.58426 6.7726 0.72434 5.8648 solid black
+edge Node0x1de6d090 Node0x1de6d3e0 4 5.3889 8.7431 5.6661 8.7431 5.8036 8.4982 5.8698 8.2142 solid black
+edge Node0x1de6d390 Node0x1de6d520 7 0.69926 5.0817 0.46829 4.3519 0.011692 2.4987 0.93056 1.4722 1.574 0.75345 4.5002 0.65757 5.877 0.65321 solid black
+edge Node0x1de6d3e0 Node0x1de6d840 4 5.9696 6.599 5.9783 6.4793 5.9874 6.3545 5.9962 6.2328 solid black
+edge Node0x1de6d840 Node0x1de6da10 4 5.0694 4.7083 5.0311 4.4557 5.0046 4.1838 4.9897 3.9281 solid black
+edge Node0x1de6d840 Node0x1de6da60 4 8.0278 4.875 8.8297 4.875 9.6472 4.606 10.362 4.2644 solid black
+edge Node0x1de6da10 Node0x1de6d840 4 5.1563 3.7849 5.1459 4.0338 5.1237 4.3059 5.0897 4.5652 solid black
+edge Node0x1de6da60 Node0x1de6d520 7 9.3325 1.517 9.2909 1.5019 9.2495 1.487 9.2083 1.4722 8.5744 1.2453 7.8415 1.0204 7.3138 0.86498 solid black
+stop

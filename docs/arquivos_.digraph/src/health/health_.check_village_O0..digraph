@@ -1,0 +1,84 @@
+graph 1 12.465 47.181
+node Node0x1de73ed0 8.1667 45.34 8.5972 3.6806 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca %struct.Results, align 8\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %2, align \
+8\l  %5 = load ptr, ptr %2, align 8\l  call void @get_results(ptr dead_on_unwind writable sret(%struct.Results)\l... align 8 %3, \
+ptr noundef %5)\l  store i32 1, ptr %4, align 4\l  %6 = load i32, ptr @res_population, align 4\l  %7 = sext i32 %6 to i64\l  %8 = \
+getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 2\l  %9 = load i64, ptr %8, align 8\l  %10 = icmp ne i64 %7, %9\l  br \
+i1 %10, label %11, label %12\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de74430 6.5556 42.569 3.5556 0.86111 "{11:\l|  store i32 -1, ptr %4, align 4\l  br label %12\l}" filled record #3d50c3ff #be242e70
+node Node0x1de74480 7.6389 40.632 7.9028 2.0139 "{12:\l|  %13 = load i32, ptr @res_hospitals, align 4\l  %14 = sext i32 %13 to i64\l  %15 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 0\l  %16 = load i64, ptr %15, align 8\l  %17 = icmp ne i64 %14, %16\l  br i1 %17, label %18, label %19\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de74950 6.1111 38.694 3.5556 0.86111 "{18:\l|  store i32 -1, ptr %4, align 4\l  br label %19\l}" filled record #3d50c3ff #be242e70
+node Node0x1de749a0 7.1944 36.757 7.9028 2.0139 "{19:\l|  %20 = load i32, ptr @res_personnel, align 4\l  %21 = sext i32 %20 to i64\l  %22 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 1\l  %23 = load i64, ptr %22, align 8\l  %24 = icmp ne i64 %21, %23\l  br i1 %24, label %25, label %26\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de74e70 5.6667 34.819 3.5556 0.86111 "{25:\l|  store i32 -1, ptr %4, align 4\l  br label %26\l}" filled record #3d50c3ff #be242e70
+node Node0x1de74ec0 6.75 32.882 7.9028 2.0139 "{26:\l|  %27 = load i32, ptr @res_checkin, align 4\l  %28 = sext i32 %27 to i64\l  %29 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 8\l  %30 = load i64, ptr %29, align 8\l  %31 = icmp ne i64 %28, %30\l  br i1 %31, label %32, label %33\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de75390 5.2222 30.944 3.5556 0.86111 "{32:\l|  store i32 -1, ptr %4, align 4\l  br label %33\l}" filled record #3d50c3ff #be242e70
+node Node0x1de753e0 6.3056 29.007 7.9028 2.0139 "{33:\l|  %34 = load i32, ptr @res_village, align 4\l  %35 = sext i32 %34 to i64\l  %36 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 3\l  %37 = load i64, ptr %36, align 8\l  %38 = icmp ne i64 %35, %37\l  br i1 %38, label %39, label %40\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de758b0 4.7778 27.069 3.5556 0.86111 "{39:\l|  store i32 -1, ptr %4, align 4\l  br label %40\l}" filled record #3d50c3ff #be242e70
+node Node0x1de75900 5.8611 25.132 7.9028 2.0139 "{40:\l|  %41 = load i32, ptr @res_waiting, align 4\l  %42 = sext i32 %41 to i64\l  %43 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 4\l  %44 = load i64, ptr %43, align 8\l  %45 = icmp ne i64 %42, %44\l  br i1 %45, label %46, label %47\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de75dd0 4.3333 23.194 3.5556 0.86111 "{46:\l|  store i32 -1, ptr %4, align 4\l  br label %47\l}" filled record #3d50c3ff #be242e70
+node Node0x1de75e20 5.4167 21.257 7.9028 2.0139 "{47:\l|  %48 = load i32, ptr @res_assess, align 4\l  %49 = sext i32 %48 to i64\l  %50 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 5\l  %51 = load i64, ptr %50, align 8\l  %52 = icmp ne i64 %49, %51\l  br i1 %52, label %53, label %54\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de76b00 3.8889 19.319 3.5556 0.86111 "{53:\l|  store i32 -1, ptr %4, align 4\l  br label %54\l}" filled record #3d50c3ff #be242e70
+node Node0x1de76b50 4.9722 17.382 7.9028 2.0139 "{54:\l|  %55 = load i32, ptr @res_inside, align 4\l  %56 = sext i32 %55 to i64\l  %57 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 6\l  %58 = load i64, ptr %57, align 8\l  %59 = icmp ne i64 %56, %58\l  br i1 %59, label %60, label %61\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1de77020 3.4444 15.444 3.5556 0.86111 "{60:\l|  store i32 -1, ptr %4, align 4\l  br label %61\l}" filled record #3d50c3ff #be242e70
+node Node0x1de77070 4.5278 7.4167 9.0556 14.194 "{61:\l|  %62 = call i32 (ptr, ...) @printf(ptr noundef @.str.6)\l  %63 = call i32 (ptr, ...) @printf(ptr noundef @.str.17)\l  %64 = \
+load i32, ptr @res_population, align 4\l  %65 = getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 2\l  %66 = load i64, \
+ptr %65, align 8\l  %67 = trunc i64 %66 to i32\l  %68 = call i32 (ptr, ...) @printf(ptr noundef @.str.18, i32 noundef %64, i32\l... \
+noundef %67)\l  %69 = load i32, ptr @res_hospitals, align 4\l  %70 = getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 \
+0\l  %71 = load i64, ptr %70, align 8\l  %72 = trunc i64 %71 to i32\l  %73 = call i32 (ptr, ...) @printf(ptr noundef @.str.19, i32 \
+noundef %69, i32\l... noundef %72)\l  %74 = load i32, ptr @res_personnel, align 4\l  %75 = getelementptr inbounds %struct.Results, \
+ptr %3, i32 0, i32 1\l  %76 = load i64, ptr %75, align 8\l  %77 = trunc i64 %76 to i32\l  %78 = call i32 (ptr, ...) @printf(ptr \
+noundef @.str.20, i32 noundef %74, i32\l... noundef %77)\l  %79 = load i32, ptr @res_checkin, align 4\l  %80 = getelementptr inbounds %\
+struct.Results, ptr %3, i32 0, i32 8\l  %81 = load i64, ptr %80, align 8\l  %82 = trunc i64 %81 to i32\l  %83 = call i32 (ptr, ...) @\
+printf(ptr noundef @.str.21, i32 noundef %79, i32\l... noundef %82)\l  %84 = load i32, ptr @res_village, align 4\l  %85 = getelementptr \
+inbounds %struct.Results, ptr %3, i32 0, i32 3\l  %86 = load i64, ptr %85, align 8\l  %87 = trunc i64 %86 to i32\l  %88 = call i32 (\
+ptr, ...) @printf(ptr noundef @.str.22, i32 noundef %84, i32\l... noundef %87)\l  %89 = load i32, ptr @res_waiting, align 4\l  %\
+90 = getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 4\l  %91 = load i64, ptr %90, align 8\l  %92 = trunc i64 %91 to \
+i32\l  %93 = call i32 (ptr, ...) @printf(ptr noundef @.str.23, i32 noundef %89, i32\l... noundef %92)\l  %94 = load i32, ptr @res_\
+assess, align 4\l  %95 = getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 5\l  %96 = load i64, ptr %95, align 8\l  %97 = \
+trunc i64 %96 to i32\l  %98 = call i32 (ptr, ...) @printf(ptr noundef @.str.24, i32 noundef %94, i32\l... noundef %97)\l  %99 = \
+load i32, ptr @res_inside, align 4\l  %100 = getelementptr inbounds %struct.Results, ptr %3, i32 0, i32 6\l  %101 = load i64, ptr %\
+100, align 8\l  %102 = trunc i64 %101 to i32\l  %103 = call i32 (ptr, ...) @printf(ptr noundef @.str.25, i32 noundef %99,\l... i32 \
+noundef %102)\l  %104 = load float, ptr @res_avg_stay, align 4\l  %105 = fpext float %104 to double\l  %106 = getelementptr inbounds %\
+struct.Results, ptr %3, i32 0, i32 7\l  %107 = load i64, ptr %106, align 8\l  %108 = sitofp i64 %107 to float\l  %109 = getelementptr \
+inbounds %struct.Results, ptr %3, i32 0, i32 2\l  %110 = load i64, ptr %109, align 8\l  %111 = sitofp i64 %110 to float\l  %112 = \
+fdiv float %108, %111\l  %113 = fpext float %112 to double\l  %114 = call i32 (ptr, ...) @printf(ptr noundef @.str.26, double noundef\l... %\
+105, double noundef %113)\l  %115 = load ptr, ptr %2, align 8\l  call void @my_print(ptr noundef %115)\l  %116 = load i32, ptr %\
+4, align 4\l  ret i32 %116\l}" filled record #b70d28ff #b70d2870
+edge Node0x1de73ed0 Node0x1de74430 4 6.0139 43.5 6.0139 43.368 6.0558 43.239 6.1164 43.121 solid black
+edge Node0x1de73ed0 Node0x1de74480 4 10.319 43.5 10.319 42.794 9.8785 42.191 9.3543 41.724 solid black
+edge Node0x1de74430 Node0x1de74480 4 6.7906 42.141 6.8566 42.025 6.9315 41.893 7.009 41.756 solid black
+edge Node0x1de74480 Node0x1de74950 4 5.6528 39.625 5.6528 39.496 5.6897 39.366 5.7427 39.246 solid black
+edge Node0x1de74480 Node0x1de749a0 4 9.6111 39.625 9.6111 38.939 9.1989 38.332 8.7149 37.857 solid black
+edge Node0x1de74950 Node0x1de749a0 4 6.3462 38.266 6.4121 38.15 6.4871 38.018 6.5645 37.881 solid black
+edge Node0x1de749a0 Node0x1de74e70 4 5.2083 35.75 5.2083 35.621 5.2453 35.491 5.2982 35.371 solid black
+edge Node0x1de749a0 Node0x1de74ec0 4 9.1667 35.75 9.1667 35.064 8.7544 34.457 8.2705 33.982 solid black
+edge Node0x1de74e70 Node0x1de74ec0 4 5.9017 34.391 5.9677 34.275 6.0427 34.143 6.1201 34.006 solid black
+edge Node0x1de74ec0 Node0x1de75390 4 4.7639 31.875 4.7639 31.746 4.8009 31.616 4.8538 31.496 solid black
+edge Node0x1de74ec0 Node0x1de753e0 4 8.7222 31.875 8.7222 31.189 8.31 30.582 7.8261 30.107 solid black
+edge Node0x1de75390 Node0x1de753e0 4 5.4573 30.516 5.5232 30.4 5.5982 30.268 5.6757 30.131 solid black
+edge Node0x1de753e0 Node0x1de758b0 4 4.3194 28 4.3194 27.871 4.3564 27.741 4.4093 27.621 solid black
+edge Node0x1de753e0 Node0x1de75900 4 8.2778 28 8.2778 27.314 7.8656 26.707 7.3816 26.232 solid black
+edge Node0x1de758b0 Node0x1de75900 4 5.0128 26.641 5.0788 26.525 5.1538 26.393 5.2312 26.256 solid black
+edge Node0x1de75900 Node0x1de75dd0 4 3.875 24.125 3.875 23.996 3.912 23.866 3.9649 23.746 solid black
+edge Node0x1de75900 Node0x1de75e20 4 7.8333 24.125 7.8333 23.439 7.4211 22.832 6.9372 22.357 solid black
+edge Node0x1de75dd0 Node0x1de75e20 4 4.5684 22.766 4.6343 22.65 4.7093 22.518 4.7868 22.381 solid black
+edge Node0x1de75e20 Node0x1de76b00 4 3.4306 20.25 3.4306 20.121 3.4675 19.991 3.5205 19.871 solid black
+edge Node0x1de75e20 Node0x1de76b50 4 7.3889 20.25 7.3889 19.564 6.9767 18.957 6.4927 18.482 solid black
+edge Node0x1de76b00 Node0x1de76b50 4 4.124 18.891 4.1899 18.775 4.2649 18.643 4.3423 18.506 solid black
+edge Node0x1de76b50 Node0x1de77020 4 2.9861 16.375 2.9861 16.246 3.0231 16.116 3.076 15.996 solid black
+edge Node0x1de76b50 Node0x1de77070 4 6.9444 16.375 6.9444 15.809 6.8988 15.23 6.8201 14.652 solid black
+edge Node0x1de77020 Node0x1de77070 4 3.5004 15.017 3.5145 14.913 3.531 14.791 3.5496 14.654 solid black
+stop

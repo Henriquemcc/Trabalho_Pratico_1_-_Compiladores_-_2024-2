@@ -1,0 +1,21 @@
+graph 1 13.007 11.028
+node Node0x1a45a580 3.8403 10.229 7.6806 1.5972 "{1:\l|  %2 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 4\l  %3 = load ptr, ptr %2, align 8\l  %.not10 = icmp eq \
+ptr %3, null\l  br i1 %.not10, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1a45acf0 3.1875 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x1a454220 7.1736 8.5 7.6806 0.86111 "{.lr.ph:\l|  %4 = getelementptr inbounds %struct.Village, ptr %0, i64 0, i32 5\l  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x1a45aca0 8.9375 6.3542 8.1389 2.4306 "{5:\l|  %.011 = phi ptr [ %3, %.lr.ph ], [ %7, %13 ]\l  %6 = getelementptr inbounds %struct.Patient, ptr %.011, i64 0, i32 7\l  %\
+7 = load ptr, ptr %6, align 8\l  %8 = getelementptr inbounds %struct.Patient, ptr %.011, i64 0, i32 1\l  %9 = tail call float @my_\
+rand(ptr noundef nonnull %8)\l  %10 = load float, ptr @sim_get_sick_p, align 4\l  %11 = fcmp olt float %9, %10\l  br i1 %11, label %\
+12, label %13\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1a45b610 6.3542 3.8958 8.4861 1.4861 "{12:\l|  tail call void @removeList(ptr noundef nonnull %2, ptr noundef nonnull\l... %.011)\l  tail call void @put_in_hosp(ptr noundef \
+nonnull %4, ptr noundef nonnull\l... %.011)\l  br label %13\l}" filled record #3d50c3ff #be242e70
+node Node0x1a45b660 7.8264 2.0625 6.7639 1.1806 "{13:\l|  %.not = icmp eq ptr %7, null\l  br i1 %.not, label %._crit_edge, label %5, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x1a45a580 Node0x1a45acf0 10 1.9097 9.4306 1.9097 8.0667 1.7153 7.7319 1.7153 6.3681 1.7153 6.3681 1.7153 6.3681 1.7153 3.8819 1.7153 2.7944 2.4176 1.672 2.8521 1.0817 solid black
+edge Node0x1a45a580 Node0x1a454220 4 7.7014 9.5903 7.9721 9.5903 7.8315 9.3124 7.6276 9.039 solid black
+edge Node0x1a454220 Node0x1a45aca0 4 7.5179 8.0727 7.617 7.9537 7.7307 7.8172 7.8497 7.6743 solid black
+edge Node0x1a45aca0 Node0x1a45b610 4 6.8958 5.1389 6.8958 5.0152 6.8726 4.89 6.8357 4.7692 solid black
+edge Node0x1a45aca0 Node0x1a45b660 10 10.979 5.1389 10.979 4.8981 11.14 4.875 11.188 4.6389 11.317 3.9912 11.577 3.6863 11.188 3.1528 11.066 2.9869 10.919 2.846 10.755 2.7264 solid black
+edge Node0x1a45b610 Node0x1a45b660 4 6.9445 3.158 7.052 3.0261 7.1638 2.889 7.2703 2.7584 solid black
+edge Node0x1a45b660 Node0x1a45acf0 4 4.4236 1.6319 4.0414 1.6319 3.7075 1.3412 3.4835 1.0777 solid black
+edge Node0x1a45b660 Node0x1a45aca0 7 11.229 1.6319 11.568 1.6319 10.899 4.3459 10.729 4.6389 10.65 4.7752 10.557 4.9074 10.455 5.0339 solid black
+stop

@@ -1,0 +1,13 @@
+graph 1 10.014 6.5139
+node Node0x401ece00 3.8958 4.8819 7.7917 3.2639 "{2:\l|  %3 = getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 6\l  %4 = load ptr, ptr %3, align 8\l  %.not = icmp eq ptr %\
+4, null\l  %5 = getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 7\l  %6 = load ptr, ptr %5, align 8\l  %7 = getelementptr \
+inbounds %struct.Patient, ptr %4, i64 0, i32 7\l  %.sink = select i1 %.not, ptr %0, ptr %7\l  store ptr %6, ptr %.sink, align 8\l  %\
+8 = getelementptr inbounds %struct.Patient, ptr %1, i64 0, i32 7\l  %9 = load ptr, ptr %8, align 8\l  %.not9 = icmp eq ptr %9, null\l  \
+br i1 %.not9, label %13, label %10\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x401edfc0 3.8819 0.64583 1.1528 0.65278 "{13:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+node Node0x401edf70 6.0625 2.1111 7.9028 1.2778 "{10:\l|  %11 = load ptr, ptr %3, align 8\l  %12 = getelementptr inbounds %struct.Patient, ptr %9, i64 0, i32 6\l  store ptr %11, \
+ptr %12, align 8\l  br label %13\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x401ece00 Node0x401edfc0 7 1.9375 3.25 1.9375 2.4597 1.536 2.1266 1.9792 1.4722 2.2452 1.0794 2.7432 0.87568 3.163 0.77045 solid black
+edge Node0x401ece00 Node0x401edf70 4 5.8403 3.25 5.8403 3.1312 5.8523 3.0067 5.8709 2.8856 solid black
+edge Node0x401edf70 Node0x401edfc0 4 5.1188 1.4751 4.8976 1.3293 4.6683 1.1781 4.4681 1.0461 solid black
+stop
