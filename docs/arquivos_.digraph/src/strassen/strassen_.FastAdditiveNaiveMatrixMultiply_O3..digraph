@@ -1,0 +1,46 @@
+graph 1 12.59 25.736
+node Node0x1fe1d470 3.6111 24.208 7.2222 3.0556 "{7:\l|  %8 = shl i32 %6, 3\l  %9 = zext i32 %8 to i64\l  %10 = shl i32 %5, 3\l  %11 = zext i32 %10 to i64\l  %12 = shl i32 %3, 3\l  %\
+13 = zext i32 %12 to i64\l  %14 = sub i32 %4, %3\l  %15 = shl i32 %14, 3\l  %16 = zext i32 %15 to i64\l  %.not = icmp eq i32 %3, \
+0\l  br i1 %.not, label %._crit_edge, label %.preheader.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #f5a08170
+node Node0x1fe201f0 2.9583 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #f5a08170
+node Node0x1fe203d0 5.8056 21.75 2.9861 0.86111 "{.preheader.preheader:\l|  %17 = zext i32 %3 to i64\l  br label %.preheader\l}" filled record #3d50c3ff #f6a38570
+node Node0x1fe3a240 6.1944 20.181 7.4444 1.2778 "{.preheader:\l|  %.0105 = phi ptr [ %62, %57 ], [ %0, %.preheader.preheader ]\l  %.084104 = phi ptr [ %59, %57 ], [ %1, %.preheader.preheader ]\l  %\
+.086103 = phi i32 [ %63, %57 ], [ 0, %.preheader.preheader ]\l  br label %18\l}" filled record #3d50c3ff #ec7f6370
+node Node0x1fe20620 6.1944 17.569 7.9028 2.9444 "{18:\l|  %indvars.iv = phi i64 [ 0, %.preheader ], [ %indvars.iv.next, %51 ]\l  %.1102 = phi ptr [ %.0105, %.preheader ], [ %55, %\
+51 ]\l  %.185101 = phi ptr [ %.084104, %.preheader ], [ %54, %51 ]\l  %19 = getelementptr inbounds double, ptr %2, i64 %indvars.iv\l  %\
+20 = load \<2 x double\>, ptr %.1102, align 8\l  %21 = getelementptr inbounds double, ptr %.1102, i64 2\l  %22 = load \<2 x double\>, \
+ptr %21, align 8\l  %23 = getelementptr inbounds double, ptr %.1102, i64 4\l  %24 = load \<2 x double\>, ptr %23, align 8\l  %25 = \
+getelementptr inbounds double, ptr %.1102, i64 6\l  %26 = load \<2 x double\>, ptr %25, align 8\l  br label %27\l}" filled record #3d50c3ff #d6524470
+node Node0x1fe21eb0 6.9167 11.778 8.4861 7.6389 "{27:\l|  %.07499 = phi i32 [ 0, %18 ], [ %50, %27 ]\l  %.08390 = phi ptr [ %19, %18 ], [ %49, %27 ]\l  %.289 = phi ptr [ %.185101, %\
+18 ], [ %32, %27 ]\l  %28 = phi \<2 x double\> [ %20, %18 ], [ %37, %27 ]\l  %29 = phi \<2 x double\> [ %22, %18 ], [ %40, %27 ]\l  %\
+30 = phi \<2 x double\> [ %24, %18 ], [ %43, %27 ]\l  %31 = phi \<2 x double\> [ %26, %18 ], [ %46, %27 ]\l  %32 = getelementptr \
+inbounds double, ptr %.289, i64 1\l  %33 = load double, ptr %.289, align 8\l  %34 = load \<2 x double\>, ptr %.08390, align 8\l  %\
+35 = insertelement \<2 x double\> poison, double %33, i64 0\l  %36 = shufflevector \<2 x double\> %35, \<2 x double\> poison, \<\
+2 x i32\>\l... zeroinitializer\l  %37 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %36, \<2 x\l... double\> %34, \<\
+2 x double\> %28)\l  %38 = getelementptr inbounds double, ptr %.08390, i64 2\l  %39 = load \<2 x double\>, ptr %38, align 8\l  %\
+40 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %36, \<2 x\l... double\> %39, \<2 x double\> %29)\l  %41 = getelementptr \
+inbounds double, ptr %.08390, i64 4\l  %42 = load \<2 x double\>, ptr %41, align 8\l  %43 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<\
+2 x double\> %36, \<2 x\l... double\> %42, \<2 x double\> %30)\l  %44 = getelementptr inbounds double, ptr %.08390, i64 6\l  %45 = \
+load \<2 x double\>, ptr %44, align 8\l  %46 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %36, \<2 x\l... double\> %\
+45, \<2 x double\> %31)\l  %47 = ptrtoint ptr %.08390 to i64\l  %48 = add i64 %47, %9\l  %49 = inttoptr i64 %48 to ptr\l  %50 = \
+add nuw i32 %.07499, 1\l  %exitcond.not = icmp eq i32 %50, %3\l  br i1 %exitcond.not, label %51, label %27, !llvm.loop !4\l|{<s0>\
+T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1fe21f00 5.0972 5.9306 6.5278 3.0556 "{51:\l|  %52 = ptrtoint ptr %32 to i64\l  %53 = sub i64 %52, %13\l  %54 = inttoptr i64 %53 to ptr\l  store \<2 x double\> %37, ptr %\
+.1102, align 8\l  store \<2 x double\> %40, ptr %21, align 8\l  store \<2 x double\> %43, ptr %23, align 8\l  store \<2 x double\> %\
+46, ptr %25, align 8\l  %55 = getelementptr inbounds double, ptr %.1102, i64 8\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, \
+8\l  %56 = icmp ult i64 %indvars.iv.next, %17\l  br i1 %56, label %18, label %57, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x1fe20670 6.7361 2.6875 9.0556 2.4306 "{57:\l|  %58 = add i64 %53, %11\l  %59 = inttoptr i64 %58 to ptr\l  %60 = ptrtoint ptr %55 to i64\l  %61 = add i64 %60, %16\l  %\
+62 = inttoptr i64 %61 to ptr\l  %63 = add nuw i32 %.086103, 1\l  %exitcond117.not = icmp eq i32 %63, %3\l  br i1 %exitcond117.not, \
+label %._crit_edge, label %.preheader, !llvm.loop !7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ec7f6370
+edge Node0x1fe1d470 Node0x1fe201f0 13 1.8056 22.681 1.8056 21.564 1.4444 21.311 1.4444 20.194 1.4444 20.194 1.4444 20.194 1.4444 5.9167 1.4444 3.9211 1.1572 3.2399 2.0833 1.4722 2.1638 1.3187 2.285 1.1788 2.4117 1.06 solid black
+edge Node0x1fe1d470 Node0x1fe203d0 4 5.4167 22.681 5.4167 22.555 5.448 22.427 5.4929 22.308 solid black
+edge Node0x1fe203d0 Node0x1fe3a240 4 5.9098 21.323 5.9385 21.209 5.9707 21.082 6.0027 20.955 solid black
+edge Node0x1fe3a240 Node0x1fe20620 4 6.1944 19.548 6.1944 19.433 6.1944 19.308 6.1944 19.179 solid black
+edge Node0x1fe20620 Node0x1fe21eb0 4 6.3767 16.101 6.3916 15.982 6.407 15.859 6.4228 15.733 solid black
+edge Node0x1fe21eb0 Node0x1fe21eb0 7 9.2143 7.9625 10.606 6.6855 11.41 6.8083 11.41 9.9514 11.41 10.456 11.339 10.882 11.213 11.237 solid black
+edge Node0x1fe21eb0 Node0x1fe21f00 4 4.7917 7.9583 4.7917 7.8389 4.797 7.7158 4.8062 7.5923 solid black
+edge Node0x1fe21f00 Node0x1fe20620 10 1.8194 4.5694 1.4985 4.5694 1.8186 7.1377 1.8333 7.4583 1.9165 9.2719 1.5426 14.081 2.5417 15.597 2.637 15.742 2.7466 15.877 2.8671 16.002 solid black
+edge Node0x1fe21f00 Node0x1fe20670 4 6.7361 4.4028 6.7361 4.2837 6.7361 4.1599 6.7361 4.0358 solid black
+edge Node0x1fe20670 Node0x1fe201f0 4 2.1944 1.6319 1.8872 1.6319 2.1623 1.3281 2.4646 1.0601 solid black
+edge Node0x1fe20670 Node0x1fe3a240 10 11.278 1.6319 14.092 1.6319 11.483 5.1448 11.542 7.9583 11.645 12.915 13.926 15.684 10.278 19.042 10.092 19.213 9.882 19.358 9.6584 19.482 solid black
+stop

@@ -1,0 +1,101 @@
+graph 1 23.125 43.625
+node Node0x1fe1a720 10.674 41.264 8.3611 4.7222 "{8:\l|  %9 = lshr i32 %3, 1\l  %10 = zext nneg i32 %9 to i64\l  %11 = getelementptr inbounds double, ptr %1, i64 %10\l  %12 = mul \
+i32 %9, %5\l  %13 = zext i32 %12 to i64\l  %14 = getelementptr inbounds double, ptr %1, i64 %13\l  %15 = getelementptr inbounds \
+double, ptr %14, i64 %10\l  %16 = getelementptr inbounds double, ptr %2, i64 %10\l  %17 = mul i32 %9, %6\l  %18 = zext i32 %17 to \
+i64\l  %19 = getelementptr inbounds double, ptr %2, i64 %18\l  %20 = getelementptr inbounds double, ptr %19, i64 %10\l  %21 = getelementptr \
+inbounds double, ptr %0, i64 %10\l  %22 = mul i32 %9, %4\l  %23 = zext i32 %22 to i64\l  %24 = getelementptr inbounds double, ptr %\
+0, i64 %23\l  %25 = getelementptr inbounds double, ptr %24, i64 %10\l  %26 = icmp ugt i32 %3, 33\l  br i1 %26, label %tailrecurse.preheader, \
+label %tailrecurse._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x1fe1f2e0 7.8125 33.854 9.4028 9.0972 "{tailrecurse.preheader:\l|  tail call void @MultiplyByDivideAndConquer(ptr noundef %0, ptr noundef %1,\l... ptr noundef %2, i32 \
+noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef %7)\l  tail call void @MultiplyByDivideAndConquer(ptr \
+noundef %21, ptr noundef %1,\l... ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef %\
+7)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %25, ptr noundef %14,\l... ptr noundef %16, i32 noundef %9, i32 noundef %\
+4, i32 noundef %5, i32 noundef\l... %6, i32 noundef %7)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %24, ptr noundef %\
+14,\l... ptr noundef %2, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef %7)\l  tail call void @\
+MultiplyByDivideAndConquer(ptr noundef %0, ptr noundef %11,\l... ptr noundef %19, i32 noundef %9, i32 noundef %4, i32 noundef %5, \
+i32 noundef\l... %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %21, ptr noundef %11,\l... ptr noundef %\
+20, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(\
+ptr noundef %25, ptr noundef %15,\l... ptr noundef %20, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 \
+noundef 1)\l  %27 = lshr i32 %3, 2\l  %28 = zext nneg i32 %27 to i64\l  %29 = getelementptr inbounds double, ptr %15, i64 %28\l  %\
+30 = mul i32 %27, %5\l  %31 = zext i32 %30 to i64\l  %32 = getelementptr inbounds double, ptr %15, i64 %31\l  %33 = getelementptr \
+inbounds double, ptr %32, i64 %28\l  %34 = getelementptr inbounds double, ptr %19, i64 %28\l  %35 = mul i32 %27, %6\l  %36 = zext \
+i32 %35 to i64\l  %37 = getelementptr inbounds double, ptr %19, i64 %36\l  %38 = getelementptr inbounds double, ptr %37, i64 %28\l  %\
+39 = getelementptr inbounds double, ptr %24, i64 %28\l  %40 = mul i32 %27, %4\l  %41 = zext i32 %40 to i64\l  %42 = getelementptr \
+inbounds double, ptr %24, i64 %41\l  %43 = getelementptr inbounds double, ptr %42, i64 %28\l  %44 = icmp ugt i32 %3, 67\l  br i1 %\
+44, label %tailrecurse, label %tailrecurse._crit_edge.thread\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1fe2a0a0 14.16 22.799 7.2222 1.1806 "{tailrecurse._crit_edge:\l|  %.not = icmp eq i32 %7, 0\l  br i1 %.not, label %73, label %tailrecurse._crit_edge.thread\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1fe2a050 5.0069 22.799 9.5139 12.014 "{tailrecurse:\l|  %45 = phi ptr [ %71, %tailrecurse ], [ %43, %tailrecurse.preheader ]\l  %46 = phi ptr [ %70, %tailrecurse ], [ %\
+42, %tailrecurse.preheader ]\l  %47 = phi ptr [ %67, %tailrecurse ], [ %39, %tailrecurse.preheader ]\l  %48 = phi ptr [ %66, %tailrecurse ], [ %\
+38, %tailrecurse.preheader ]\l  %49 = phi ptr [ %65, %tailrecurse ], [ %37, %tailrecurse.preheader ]\l  %50 = phi ptr [ %62, %tailrecurse ], [ %\
+34, %tailrecurse.preheader ]\l  %51 = phi ptr [ %61, %tailrecurse ], [ %33, %tailrecurse.preheader ]\l  %52 = phi ptr [ %60, %tailrecurse ], [ %\
+32, %tailrecurse.preheader ]\l  %53 = phi ptr [ %57, %tailrecurse ], [ %29, %tailrecurse.preheader ]\l  %54 = phi i32 [ %55, %tailrecurse ], [ %\
+27, %tailrecurse.preheader ]\l  %.tr168185 = phi ptr [ %49, %tailrecurse ], [ %19, %tailrecurse.preheader ]\l  %.tr167184 = phi \
+ptr [ %51, %tailrecurse ], [ %15, %tailrecurse.preheader ]\l  %.tr183 = phi ptr [ %46, %tailrecurse ], [ %24, %tailrecurse.preheader ]\l  \
+tail call void @MultiplyByDivideAndConquer(ptr noundef %.tr183, ptr noundef\l... %.tr167184, ptr noundef %.tr168185, i32 noundef %\
+54, i32 noundef %4, i32\l... noundef %5, i32 noundef %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %\
+47, ptr noundef\l... %.tr167184, ptr noundef %50, i32 noundef %54, i32 noundef %4, i32 noundef %5,\l... i32 noundef %6, i32 noundef \
+1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %45, ptr noundef %52,\l... ptr noundef %50, i32 noundef %54, i32 noundef %\
+4, i32 noundef %5, i32 noundef\l... %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %46, ptr noundef %\
+52,\l... ptr noundef %.tr168185, i32 noundef %54, i32 noundef %4, i32 noundef %5, i32\l... noundef %6, i32 noundef 1)\l  tail call \
+void @MultiplyByDivideAndConquer(ptr noundef %.tr183, ptr noundef\l... %53, ptr noundef %49, i32 noundef %54, i32 noundef %4, i32 \
+noundef %5, i32\l... noundef %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %47, ptr noundef %53,\l... \
+ptr noundef %48, i32 noundef %54, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(\
+ptr noundef %45, ptr noundef %51,\l... ptr noundef %48, i32 noundef %54, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 \
+noundef 1)\l  %55 = lshr i32 %54, 1\l  %56 = zext nneg i32 %55 to i64\l  %57 = getelementptr inbounds double, ptr %51, i64 %56\l  %\
+58 = mul i32 %55, %5\l  %59 = zext i32 %58 to i64\l  %60 = getelementptr inbounds double, ptr %51, i64 %59\l  %61 = getelementptr \
+inbounds double, ptr %60, i64 %56\l  %62 = getelementptr inbounds double, ptr %49, i64 %56\l  %63 = mul i32 %55, %6\l  %64 = zext \
+i32 %63 to i64\l  %65 = getelementptr inbounds double, ptr %49, i64 %64\l  %66 = getelementptr inbounds double, ptr %65, i64 %56\l  %\
+67 = getelementptr inbounds double, ptr %46, i64 %56\l  %68 = mul i32 %55, %4\l  %69 = zext i32 %68 to i64\l  %70 = getelementptr \
+inbounds double, ptr %46, i64 %69\l  %71 = getelementptr inbounds double, ptr %70, i64 %56\l  %72 = icmp ugt i32 %54, 33\l  br i1 %\
+72, label %tailrecurse, label %tailrecurse._crit_edge.thread,\l... !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1fe2d8b0 8.7708 12.007 9.4028 8.5694 "{tailrecurse._crit_edge.thread:\l|  %.lcssa249 = phi ptr [ %25, %tailrecurse._crit_edge ], [ %43,\l... %tailrecurse.preheader ], [ %\
+71, %tailrecurse ]\l  %.lcssa174247 = phi ptr [ %24, %tailrecurse._crit_edge ], [ %42,\l... %tailrecurse.preheader ], [ %70, %tailrecurse ]\l  %\
+.lcssa175245 = phi ptr [ %21, %tailrecurse._crit_edge ], [ %39,\l... %tailrecurse.preheader ], [ %67, %tailrecurse ]\l  %.lcssa176244 = \
+phi ptr [ %20, %tailrecurse._crit_edge ], [ %38,\l... %tailrecurse.preheader ], [ %66, %tailrecurse ]\l  %.lcssa177242 = phi ptr [ %\
+19, %tailrecurse._crit_edge ], [ %37,\l... %tailrecurse.preheader ], [ %65, %tailrecurse ]\l  %.lcssa178240 = phi ptr [ %16, %tailrecurse._\
+crit_edge ], [ %34,\l... %tailrecurse.preheader ], [ %62, %tailrecurse ]\l  %.lcssa179239 = phi ptr [ %15, %tailrecurse._crit_edge ], [ %\
+33,\l... %tailrecurse.preheader ], [ %61, %tailrecurse ]\l  %.lcssa180237 = phi ptr [ %14, %tailrecurse._crit_edge ], [ %32,\l... %\
+tailrecurse.preheader ], [ %60, %tailrecurse ]\l  %.lcssa181236 = phi ptr [ %11, %tailrecurse._crit_edge ], [ %29,\l... %tailrecurse.preheader ], [ %\
+57, %tailrecurse ]\l  %.lcssa182233 = phi i32 [ %9, %tailrecurse._crit_edge ], [ %27,\l... %tailrecurse.preheader ], [ %55, %tailrecurse ]\l  %\
+.tr168.lcssa232 = phi ptr [ %2, %tailrecurse._crit_edge ], [ %19,\l... %tailrecurse.preheader ], [ %49, %tailrecurse ]\l  %.tr167.lcssa231 = \
+phi ptr [ %1, %tailrecurse._crit_edge ], [ %15,\l... %tailrecurse.preheader ], [ %51, %tailrecurse ]\l  %.tr.lcssa230 = phi ptr [ %\
+0, %tailrecurse._crit_edge ], [ %24,\l... %tailrecurse.preheader ], [ %46, %tailrecurse ]\l  tail call void @FastAdditiveNaiveMatrixMultiply(\
+ptr noundef %.tr.lcssa230,\l... ptr noundef %.tr167.lcssa231, ptr noundef %.tr168.lcssa232, i32 noundef\l... %.lcssa182233, i32 \
+noundef %4, i32 noundef %5, i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.lcssa175245,\l... ptr \
+noundef %.tr167.lcssa231, ptr noundef %.lcssa178240, i32 noundef\l... %.lcssa182233, i32 noundef %4, i32 noundef %5, i32 noundef %\
+6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.lcssa249, ptr\l... noundef %.lcssa180237, ptr noundef %.lcssa178240, \
+i32 noundef %.lcssa182233,\l... i32 noundef %4, i32 noundef %5, i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(\
+ptr noundef %.lcssa174247,\l... ptr noundef %.lcssa180237, ptr noundef %.tr168.lcssa232, i32 noundef\l... %.lcssa182233, i32 noundef %\
+4, i32 noundef %5, i32 noundef %6)\l  br label %74\l}" filled record #3d50c3ff #cc403a70
+node Node0x1fe2d900 18.424 12.007 9.4028 2.9444 "{73:\l|  tail call void @FastNaiveMatrixMultiply(ptr noundef %0, ptr noundef %1,\l... ptr noundef %2, i32 noundef %9, i32 noundef %\
+4, i32 noundef %5, i32 noundef\l... %6)\l  tail call void @FastNaiveMatrixMultiply(ptr noundef %21, ptr noundef %1, ptr\l... noundef %\
+16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef %6)\l  tail call void @FastNaiveMatrixMultiply(ptr noundef %25, \
+ptr noundef %14,\l... ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6)\l  tail call void @FastNaiveMatrixMultiply(\
+ptr noundef %24, ptr noundef %14,\l... ptr noundef %2, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6)\l  br \
+label %74\l}" filled record #3d50c3ff #d8564670
+node Node0x1fe2ef90 13.59 3.7708 9.4028 6.9028 "{74:\l|  %.lcssa250 = phi ptr [ %25, %73 ], [ %.lcssa249,\l... %tailrecurse._crit_edge.thread ]\l  %.lcssa174248 = phi ptr [ %24, %\
+73 ], [ %.lcssa174247,\l... %tailrecurse._crit_edge.thread ]\l  %.lcssa175246 = phi ptr [ %21, %73 ], [ %.lcssa175245,\l... %tailrecurse._\
+crit_edge.thread ]\l  %.lcssa176243 = phi ptr [ %20, %73 ], [ %.lcssa176244,\l... %tailrecurse._crit_edge.thread ]\l  %.lcssa177241 = \
+phi ptr [ %19, %73 ], [ %.lcssa177242,\l... %tailrecurse._crit_edge.thread ]\l  %.lcssa179238 = phi ptr [ %15, %73 ], [ %.lcssa179239,\l... %\
+tailrecurse._crit_edge.thread ]\l  %.lcssa181235 = phi ptr [ %11, %73 ], [ %.lcssa181236,\l... %tailrecurse._crit_edge.thread ]\l  %\
+.lcssa182234 = phi i32 [ %9, %73 ], [ %.lcssa182233,\l... %tailrecurse._crit_edge.thread ]\l  %.tr.lcssa229 = phi ptr [ %0, %73 ], [ %\
+.tr.lcssa230,\l... %tailrecurse._crit_edge.thread ]\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.tr.lcssa229,\l... \
+ptr noundef %.lcssa181235, ptr noundef %.lcssa177241, i32 noundef\l... %.lcssa182234, i32 noundef %4, i32 noundef %5, i32 noundef %\
+6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.lcssa175246,\l... ptr noundef %.lcssa181235, ptr noundef %.lcssa176243, \
+i32 noundef\l... %.lcssa182234, i32 noundef %4, i32 noundef %5, i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(\
+ptr noundef %.lcssa250, ptr\l... noundef %.lcssa179238, ptr noundef %.lcssa176243, i32 noundef %.lcssa182234,\l... i32 noundef %\
+4, i32 noundef %5, i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.lcssa174248,\l... ptr noundef %\
+.lcssa179238, ptr noundef %.lcssa177241, i32 noundef\l... %.lcssa182234, i32 noundef %4, i32 noundef %5, i32 noundef %6)\l  ret \
+void\l}" filled record #3d50c3ff #ca3b3770
+edge Node0x1fe1a720 Node0x1fe1f2e0 4 8.5764 38.903 8.5764 38.782 8.5742 38.66 8.5701 38.538 solid black
+edge Node0x1fe1a720 Node0x1fe2a0a0 4 12.771 38.903 12.771 32.939 13.73 25.777 14.054 23.526 solid black
+edge Node0x1fe1f2e0 Node0x1fe2a050 4 5.4514 29.306 5.4514 29.184 5.4506 29.062 5.4491 28.939 solid black
+edge Node0x1fe1f2e0 Node0x1fe2d8b0 7 10.16 29.306 10.16 23.742 10.578 22.311 9.8819 16.792 9.8667 16.671 9.8496 16.548 9.831 16.425 solid black
+edge Node0x1fe2a0a0 Node0x1fe2d8b0 4 15.965 22.201 15.965 20.055 14.885 18.043 13.562 16.384 solid black
+edge Node0x1fe2a0a0 Node0x1fe2d900 4 12.354 22.201 12.354 18.745 14.966 15.442 16.763 13.579 solid black
+edge Node0x1fe2a050 Node0x1fe2a050 7 2.5211 16.797 0.91236 14.259 0 14.367 0 19.875 0 20.734 0.078119 21.462 0.21643 22.069 solid black
+edge Node0x1fe2a050 Node0x1fe2d8b0 4 7.3819 16.792 7.3819 16.672 7.386 16.552 7.3937 16.431 solid black
+edge Node0x1fe2d8b0 Node0x1fe2ef90 4 11.276 7.7266 11.351 7.5981 11.427 7.4697 11.502 7.3421 solid black
+edge Node0x1fe2d900 Node0x1fe2ef90 4 17.568 10.54 17.043 9.649 16.347 8.467 15.684 7.341 solid black
+stop

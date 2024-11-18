@@ -1,0 +1,4 @@
+graph 1 6.5278 1.8056
+node Node0x25a8bc50 3.2639 1.0625 6.5278 1.4861 "{1:\l|  %2 = mul nsw i32 %0, %0\l  %3 = zext nneg i32 %2 to i64\l  %4 = shl nuw nsw i64 %3, 3\l  %5 = tail call noalias ptr @malloc(\
+i64 noundef %4) #15\l  ret ptr %5\l}" filled record #b70d28ff #b70d2870
+stop

@@ -1,0 +1,50 @@
+graph 1 21.458 20.069
+node Node0x25a5c9f0 6.4792 19.743 2.6389 0.65278 "{8:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #d6524470
+node Node0x25a5ea00 6.4792 16.035 6.875 5.7639 "{tailrecurse:\l|  %.tr = phi ptr [ %0, %8 ], [ %24, %27 ]\l  %.tr167 = phi ptr [ %1, %8 ], [ %15, %27 ]\l  %.tr168 = phi ptr [ %\
+2, %8 ], [ %19, %27 ]\l  %.tr169 = phi i32 [ %3, %8 ], [ %9, %27 ]\l  %.tr173 = phi i32 [ %7, %8 ], [ 1, %27 ]\l  %9 = lshr i32 %\
+.tr169, 1\l  %10 = zext nneg i32 %9 to i64\l  %11 = getelementptr inbounds double, ptr %.tr167, i64 %10\l  %12 = mul i32 %9, %5\l  %\
+13 = zext i32 %12 to i64\l  %14 = getelementptr inbounds double, ptr %.tr167, i64 %13\l  %15 = getelementptr inbounds double, ptr %\
+14, i64 %10\l  %16 = getelementptr inbounds double, ptr %.tr168, i64 %10\l  %17 = mul i32 %9, %6\l  %18 = zext i32 %17 to i64\l  %\
+19 = getelementptr inbounds double, ptr %.tr168, i64 %18\l  %20 = getelementptr inbounds double, ptr %19, i64 %10\l  %21 = getelementptr \
+inbounds double, ptr %.tr, i64 %10\l  %22 = mul i32 %9, %4\l  %23 = zext i32 %22 to i64\l  %24 = getelementptr inbounds double, \
+ptr %.tr, i64 %23\l  %25 = getelementptr inbounds double, ptr %24, i64 %10\l  %26 = icmp ugt i32 %.tr169, 33\l  br i1 %26, label %\
+27, label %28\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x25a66050 4.7569 10.139 9.5139 5.0278 "{27:\l|  tail call void @MultiplyByDivideAndConquer(ptr noundef %.tr, ptr noundef\l... %.tr167, ptr noundef %.tr168, i32 noundef %\
+9, i32 noundef %4, i32 noundef %5,\l... i32 noundef %6, i32 noundef %.tr173)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %\
+21, ptr noundef\l... %.tr167, ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6, i32 noundef %\
+.tr173)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %25, ptr noundef %14,\l... ptr noundef %16, i32 noundef %9, i32 \
+noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef %.tr173)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %\
+24, ptr noundef %14,\l... ptr noundef %.tr168, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6, i32 noundef %\
+.tr173)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %.tr, ptr noundef\l... %11, ptr noundef %19, i32 noundef %9, i32 \
+noundef %4, i32 noundef %5, i32\l... noundef %6, i32 noundef 1)\l  tail call void @MultiplyByDivideAndConquer(ptr noundef %21, ptr \
+noundef %11,\l... ptr noundef %20, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6, i32 noundef 1)\l  tail call \
+void @MultiplyByDivideAndConquer(ptr noundef %25, ptr noundef %15,\l... ptr noundef %20, i32 noundef %9, i32 noundef %4, i32 noundef %\
+5, i32 noundef\l... %6, i32 noundef 1)\l  br label %tailrecurse\l}" filled record #b70d28ff #b70d2870
+node Node0x25a660a0 11.826 10.139 4.125 1.1806 "{28:\l|  %.not = icmp eq i32 %.tr173, 0\l  br i1 %.not, label %30, label %29\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x25a69900 6.9375 5.5486 9.5139 3.1528 "{30:\l|  tail call void @FastNaiveMatrixMultiply(ptr noundef %.tr, ptr noundef\l... %.tr167, ptr noundef %.tr168, i32 noundef %9, \
+i32 noundef %4, i32 noundef %5,\l... i32 noundef %6)\l  tail call void @FastNaiveMatrixMultiply(ptr noundef %21, ptr noundef\l... %\
+.tr167, ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6)\l  tail call void @FastNaiveMatrixMultiply(\
+ptr noundef %25, ptr noundef %14,\l... ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32 noundef\l... %6)\l  \
+tail call void @FastNaiveMatrixMultiply(ptr noundef %24, ptr noundef %14,\l... ptr noundef %.tr168, i32 noundef %9, i32 noundef %\
+4, i32 noundef %5, i32\l... noundef %6)\l  br label %31\l}" filled record #3d50c3ff #de614d70
+node Node0x25a698b0 16.701 5.5486 9.5139 3.1528 "{29:\l|  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.tr, ptr\l... noundef %.tr167, ptr noundef %.tr168, i32 noundef %\
+9, i32 noundef %4, i32\l... noundef %5, i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %21, ptr \
+noundef\l... %.tr167, ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(\
+ptr noundef %25, ptr noundef\l... %14, ptr noundef %16, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6)\l  \
+tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %24, ptr noundef\l... %14, ptr noundef %.tr168, i32 noundef %9, i32 \
+noundef %4, i32 noundef %5, i32\l... noundef %6)\l  br label %31\l}" filled record #3d50c3ff #d8564670
+node Node0x25a6af90 11.812 1.8958 9.5139 3.1528 "{31:\l|  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %.tr, ptr\l... noundef %11, ptr noundef %19, i32 noundef %9, \
+i32 noundef %4, i32 noundef %5,\l... i32 noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %21, ptr noundef\l... %\
+11, ptr noundef %20, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6)\l  tail call void @FastAdditiveNaiveMatrixMultiply(\
+ptr noundef %25, ptr noundef\l... %15, ptr noundef %20, i32 noundef %9, i32 noundef %4, i32 noundef %5, i32\l... noundef %6)\l  \
+tail call void @FastAdditiveNaiveMatrixMultiply(ptr noundef %24, ptr noundef\l... %15, ptr noundef %19, i32 noundef %9, i32 noundef %\
+4, i32 noundef %5, i32\l... noundef %6)\l  ret void\l}" filled record #3d50c3ff #d6524470
+edge Node0x25a5c9f0 Node0x25a5ea00 4 6.4792 19.422 6.4792 19.318 6.4792 19.193 6.4792 19.052 solid black
+edge Node0x25a5ea00 Node0x25a66050 4 4.7569 13.153 4.7458 13.034 4.7356 12.912 4.7264 12.789 solid black
+edge Node0x25a5ea00 Node0x25a660a0 4 9.9375 13.312 11.071 13.312 11.541 11.795 11.722 10.864 solid black
+edge Node0x25a66050 Node0x25a5ea00 4 4.7974 12.65 4.7891 12.771 4.7799 12.892 4.7697 13.011 solid black
+edge Node0x25a660a0 Node0x25a69900 7 9.7431 9.7083 9.5112 9.7083 9.7401 7.83 9.6319 7.625 9.5586 7.486 9.4713 7.3535 9.3737 7.2278 solid black
+edge Node0x25a660a0 Node0x25a698b0 4 13.91 9.7083 15.157 9.7083 15.883 8.4018 16.281 7.2557 solid black
+edge Node0x25a69900 Node0x25a6af90 4 9.0297 3.979 9.2207 3.8369 9.4147 3.6927 9.6067 3.5499 solid black
+edge Node0x25a698b0 Node0x25a6af90 4 14.603 3.979 14.412 3.8369 14.217 3.6927 14.025 3.5499 solid black
+stop

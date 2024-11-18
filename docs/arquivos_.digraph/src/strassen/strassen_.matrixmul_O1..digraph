@@ -1,0 +1,69 @@
+graph 1 23.983 34.014
+node Node0x25a47f20 20.545 33.424 6.875 1.1806 "{7:\l|  %8 = icmp sgt i32 %0, 0\l  br i1 %8, label %.preheader26.lr.ph, label %._crit_edge32\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #f59c7d70
+node Node0x25a4b900 18.198 30.965 5.3889 2.7361 "{.preheader26.lr.ph:\l|  %9 = sext i32 %4 to i64\l  %10 = sext i32 %2 to i64\l  %11 = sext i32 %6 to i64\l  %wide.trip.count42 = \
+zext nneg i32 %0 to i64\l  %12 = zext nneg i32 %0 to i64\l  %wide.trip.count37 = zext nneg i32 %0 to i64\l  %xtraiter = and i64 %\
+12, 3\l  %13 = icmp ult i32 %0, 4\l  %unroll_iter = and i64 %12, 2147483644\l  %lcmp.mod.not = icmp eq i64 %xtraiter, 0\l  br label %\
+.preheader26\l}" filled record #3d50c3ff #f5a08170
+node Node0x25a4b720 18.976 0.64583 1.8333 0.65278 "{._crit_edge32:\l|  ret void\l}" filled record #3d50c3ff #f59c7d70
+node Node0x25a7f820 17.879 27.729 8.5972 2.7361 "{.preheader26:\l|  %indvars.iv39 = phi i64 [ 0, %.preheader26.lr.ph ], [ %indvars.iv.next40,\l... %._crit_edge30 ]\l  %14 = mul \
+nsw i64 %indvars.iv39, %10\l  %15 = mul nsw i64 %indvars.iv39, %11\l  %invariant.gep = getelementptr double, ptr %1, i64 %14\l  %\
+invariant.gep49 = getelementptr double, ptr %1, i64 %14\l  %invariant.gep53 = getelementptr double, ptr %1, i64 %14\l  %invariant.gep57 = \
+getelementptr double, ptr %1, i64 %14\l  %invariant.gep61 = getelementptr double, ptr %1, i64 %14\l  %invariant.gep65 = getelementptr \
+double, ptr %5, i64 %15\l  br label %.preheader\l}" filled record #3d50c3ff #e97a5f70
+node Node0x25a7c470 12.837 25.167 7.9028 1.3889 "{.preheader:\l|  %indvars.iv34 = phi i64 [ 0, %.preheader26 ], [ %indvars.iv.next35,\l... %._crit_edge ]\l  br i1 %13, label %._\
+crit_edge.unr-lcssa, label %.preheader.new\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x25a7aae0 4.9482 12.632 8.7083 1.5972 "{._crit_edge.unr-lcssa:\l|  %.lcssa.ph = phi double [ undef, %.preheader ], [ %32, %16 ]\l  %indvars.iv.unr = phi i64 [ 0, %.preheader ], [ %\
+indvars.iv.next.3, %16 ]\l  %.028.unr = phi double [ 0.000000e+00, %.preheader ], [ %32, %16 ]\l  br i1 %lcmp.mod.not, label %._\
+crit_edge, label %.epil.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x25a84420 15.545 23.229 7.9028 1.4861 "{.preheader.new:\l|  %invariant.gep47 = getelementptr double, ptr %3, i64 %indvars.iv34\l  %invariant.gep51 = getelementptr double, \
+ptr %3, i64 %indvars.iv34\l  %invariant.gep55 = getelementptr double, ptr %3, i64 %indvars.iv34\l  %invariant.gep59 = getelementptr \
+double, ptr %3, i64 %indvars.iv34\l  br label %16\l}" filled record #3d50c3ff #d8564670
+node Node0x25a4cac0 15.823 17.958 9.0556 8.0556 "{16:\l|  %indvars.iv = phi i64 [ 0, %.preheader.new ], [ %indvars.iv.next.3, %16 ]\l  %.028 = phi double [ 0.000000e+00, %.preheader.new ], [ %\
+32, %16 ]\l  %niter = phi i64 [ 0, %.preheader.new ], [ %niter.next.3, %16 ]\l  %gep = getelementptr double, ptr %invariant.gep, \
+i64 %indvars.iv\l  %17 = load double, ptr %gep, align 8\l  %18 = mul nsw i64 %indvars.iv, %9\l  %gep48 = getelementptr double, ptr %\
+invariant.gep47, i64 %18\l  %19 = load double, ptr %gep48, align 8\l  %20 = tail call double @llvm.fmuladd.f64(double %17, double %\
+19, double\l... %.028)\l  %indvars.iv.next = or disjoint i64 %indvars.iv, 1\l  %gep50 = getelementptr double, ptr %invariant.gep49, \
+i64 %indvars.iv.next\l  %21 = load double, ptr %gep50, align 8\l  %22 = mul nsw i64 %indvars.iv.next, %9\l  %gep52 = getelementptr \
+double, ptr %invariant.gep51, i64 %22\l  %23 = load double, ptr %gep52, align 8\l  %24 = tail call double @llvm.fmuladd.f64(double %\
+21, double %23, double %20)\l  %indvars.iv.next.1 = or disjoint i64 %indvars.iv, 2\l  %gep54 = getelementptr double, ptr %invariant.gep53, \
+i64 %indvars.iv.next.1\l  %25 = load double, ptr %gep54, align 8\l  %26 = mul nsw i64 %indvars.iv.next.1, %9\l  %gep56 = getelementptr \
+double, ptr %invariant.gep55, i64 %26\l  %27 = load double, ptr %gep56, align 8\l  %28 = tail call double @llvm.fmuladd.f64(double %\
+25, double %27, double %24)\l  %indvars.iv.next.2 = or disjoint i64 %indvars.iv, 3\l  %gep58 = getelementptr double, ptr %invariant.gep57, \
+i64 %indvars.iv.next.2\l  %29 = load double, ptr %gep58, align 8\l  %30 = mul nsw i64 %indvars.iv.next.2, %9\l  %gep60 = getelementptr \
+double, ptr %invariant.gep59, i64 %30\l  %31 = load double, ptr %gep60, align 8\l  %32 = tail call double @llvm.fmuladd.f64(double %\
+29, double %31, double %28)\l  %indvars.iv.next.3 = add nuw nsw i64 %indvars.iv, 4\l  %niter.next.3 = add i64 %niter, 4\l  %niter.ncmp.3 = \
+icmp eq i64 %niter.next.3, %unroll_iter\l  br i1 %niter.ncmp.3, label %._crit_edge.unr-lcssa, label %16, !llvm.loop !4\l|{<s0>T|<\
+s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x25a4cb10 6.1704 4.5764 9.1667 2.0139 "{._crit_edge:\l|  %.lcssa = phi double [ %.lcssa.ph, %._crit_edge.unr-lcssa ], [ %37, %33 ]\l  %gep66 = getelementptr double, ptr %\
+invariant.gep65, i64 %indvars.iv34\l  store double %.lcssa, ptr %gep66, align 8\l  %indvars.iv.next35 = add nuw nsw i64 %indvars.iv34, \
+1\l  %exitcond38.not = icmp eq i64 %indvars.iv.next35, %wide.trip.count37\l  br i1 %exitcond38.not, label %._crit_edge30, label %\
+.preheader, !llvm.loop !8\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x25a863f0 6.2538 10.903 7.7917 0.86111 "{.epil.preheader:\l|  %invariant.gep63 = getelementptr double, ptr %3, i64 %indvars.iv34\l  br label %33\l}" filled record #3d50c3ff #d6524470
+node Node0x25a7a8c0 5.9065 8.0278 8.7083 3.8889 "{33:\l|  %indvars.iv.epil = phi i64 [ %indvars.iv.unr, %.epil.preheader ], [\l... %indvars.iv.next.epil, %33 ]\l  %.028.epil = phi \
+double [ %.028.unr, %.epil.preheader ], [ %37, %33 ]\l  %epil.iter = phi i64 [ 0, %.epil.preheader ], [ %epil.iter.next, %33 ]\l  %\
+gep62 = getelementptr double, ptr %invariant.gep61, i64 %indvars.iv.epil\l  %34 = load double, ptr %gep62, align 8\l  %35 = mul \
+nsw i64 %indvars.iv.epil, %9\l  %gep64 = getelementptr double, ptr %invariant.gep63, i64 %35\l  %36 = load double, ptr %gep64, align \
+8\l  %37 = tail call double @llvm.fmuladd.f64(double %34, double %36, double\l... %.028.epil)\l  %indvars.iv.next.epil = add nuw \
+nsw i64 %indvars.iv.epil, 1\l  %epil.iter.next = add i64 %epil.iter, 1\l  %epil.iter.cmp.not = icmp eq i64 %epil.iter.next, %xtraiter\l  \
+br i1 %epil.iter.cmp.not, label %._crit_edge, label %33, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x25a4f730 17.657 2.2708 9.0556 1.5972 "{._crit_edge30:\l|  %indvars.iv.next40 = add nuw nsw i64 %indvars.iv39, 1\l  %exitcond43.not = icmp eq i64 %indvars.iv.next40, %\
+wide.trip.count42\l  br i1 %exitcond43.not, label %._crit_edge32, label %.preheader26, !llvm.loop\l... !9\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e97a5f70
+edge Node0x25a47f20 Node0x25a4b900 4 18.823 32.833 18.823 32.712 18.811 32.589 18.79 32.467 solid black
+edge Node0x25a47f20 Node0x25a4b720 13 22.268 32.833 22.268 30.567 22.573 30.009 22.573 27.743 22.573 27.743 22.573 27.743 22.573 4.5625 22.573 3.184 23.206 2.519 22.309 1.4722 22.015 1.1289 20.898 0.90706 20.037 0.78334 solid black
+edge Node0x25a4b900 Node0x25a7f820 4 18.064 29.6 18.052 29.478 18.039 29.354 18.027 29.231 solid black
+edge Node0x25a7f820 Node0x25a7c470 4 15.196 26.366 14.89 26.212 14.587 26.06 14.306 25.919 solid black
+edge Node0x25a7c470 Node0x25a7aae0 4 8.8649 24.639 4.2119 24.639 4.5841 16.381 4.8456 13.57 solid black
+edge Node0x25a7c470 Node0x25a84420 4 14.809 24.472 14.809 24.344 14.839 24.218 14.886 24.098 solid black
+edge Node0x25a7aae0 Node0x25a4cb10 7 0.5732 11.993 -0.75349 11.993 0.56059 7.0937 1.4204 6.0833 1.5524 5.9282 1.7004 5.789 1.8602 5.6641 solid black
+edge Node0x25a7aae0 Node0x25a863f0 4 7.1288 11.833 7.1288 11.685 7.068 11.551 6.9786 11.434 solid black
+edge Node0x25a84420 Node0x25a4cac0 4 15.584 22.492 15.59 22.378 15.596 22.254 15.603 22.122 solid black
+edge Node0x25a4cac0 Node0x25a7aae0 4 11.282 14.097 9.9591 14.097 8.5197 13.793 7.3478 13.463 solid black
+edge Node0x25a4cac0 Node0x25a4cac0 7 18.289 13.935 19.757 12.791 20.601 12.924 20.601 16.028 20.601 16.514 20.529 16.927 20.403 17.273 solid black
+edge Node0x25a4cb10 Node0x25a7c470 13 10.768 3.7292 13.95 3.7292 10.907 7.7062 10.907 10.889 10.907 17.972 10.907 17.972 10.907 17.972 10.907 18.848 11.002 23.113 11.476 23.972 11.556 24.118 11.662 24.254 11.779 24.378 solid black
+edge Node0x25a4cb10 Node0x25a4f730 4 3.8788 3.5694 3.8788 3.1013 8.9885 2.7269 12.984 2.5056 solid black
+edge Node0x25a863f0 Node0x25a7a8c0 4 6.2033 10.475 6.1901 10.367 6.1751 10.244 6.1589 10.111 solid black
+edge Node0x25a7a8c0 Node0x25a4cb10 4 3.726 6.0833 3.726 5.9442 3.7552 5.8177 3.8072 5.7027 solid black
+edge Node0x25a7a8c0 Node0x25a7a8c0 7 8.4516 6.0889 9.7617 5.5455 10.511 5.6663 10.511 7.1389 10.511 7.3608 10.452 7.5519 10.347 7.7148 solid black
+edge Node0x25a4f730 Node0x25a4b720 4 15.393 1.4722 15.393 0.94949 16.861 0.76306 17.918 0.69657 solid black
+edge Node0x25a4f730 Node0x25a7f820 10 22.198 1.6319 22.92 1.6319 20.99 7.2922 20.99 8.0139 20.99 23.243 20.99 23.243 20.99 23.243 20.99 24.395 20.286 25.463 19.547 26.266 solid black
+stop

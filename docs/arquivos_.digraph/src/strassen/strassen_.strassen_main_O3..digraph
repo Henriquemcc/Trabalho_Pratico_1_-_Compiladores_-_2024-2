@@ -1,0 +1,5 @@
+graph 1 9.2778 2.2222
+node Node0x1fe51ad0 4.6389 1.2708 9.2778 1.9028 "{4:\l|  %5 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.1, i32 noundef %3)\l  tail call \
+void @OptimizedStrassenMultiply(ptr noundef %2, ptr noundef %0,\l... ptr noundef %1, i32 noundef %3, i32 noundef %3, i32 noundef %\
+3, i32 noundef\l... %3, i32 noundef 1)\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.1)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

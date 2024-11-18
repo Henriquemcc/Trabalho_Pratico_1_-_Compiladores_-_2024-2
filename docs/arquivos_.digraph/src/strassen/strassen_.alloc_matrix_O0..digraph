@@ -1,0 +1,5 @@
+graph 1 5.8472 2.6389
+node Node0x6057c50 2.9236 1.4792 5.8472 2.3194 "{1:\l|  %2 = alloca i32, align 4\l  store i32 %0, ptr %2, align 4\l  %3 = load i32, ptr %2, align 4\l  %4 = load i32, ptr %2, align \
+4\l  %5 = mul nsw i32 %3, %4\l  %6 = sext i32 %5 to i64\l  %7 = mul i64 %6, 8\l  %8 = call noalias ptr @malloc(i64 noundef %7) #\
+7\l  ret ptr %8\l}" filled record #b70d28ff #b70d2870
+stop

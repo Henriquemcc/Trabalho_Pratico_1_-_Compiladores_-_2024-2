@@ -1,0 +1,64 @@
+graph 1 21.58 33.444
+node Node0x1fe11630 12.941 31.708 5.7361 3.4722 "{7:\l|  %8 = shl i32 %6, 3\l  %9 = zext i32 %8 to i64\l  %10 = shl i32 %5, 3\l  %11 = zext i32 %10 to i64\l  %12 = shl i32 %3, 3\l  %\
+13 = zext i32 %12 to i64\l  %14 = sub i32 %4, %3\l  %15 = shl i32 %14, 3\l  %16 = zext i32 %15 to i64\l  switch i32 %3, label %.preheader.us.preheader [\l    \
+i32 0, label %._crit_edge\l    i32 1, label %._crit_edge.loopexit\l  ]\l|{<s0>def|<s1>0|<s2>1}}" filled record #3d50c3ff #f59c7d70
+node Node0x1fe4e540 9.5939 29.042 2.9861 0.86111 "{.preheader.us.preheader:\l|  %17 = zext i32 %3 to i64\l  br label %.preheader.us\l}" filled record #3d50c3ff #f6a38570
+node Node0x1fe16550 13.052 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #f59c7d70
+node Node0x1fe15f60 17.511 25.493 8.1389 5.2361 "{._crit_edge.loopexit:\l|  %70 = load double, ptr %1, align 8\l  %71 = getelementptr inbounds double, ptr %2, i64 2\l  %72 = getelementptr \
+inbounds double, ptr %2, i64 4\l  %73 = getelementptr inbounds double, ptr %2, i64 6\l  %74 = load \<2 x double\>, ptr %2, align \
+8\l  %75 = insertelement \<2 x double\> poison, double %70, i64 0\l  %76 = shufflevector \<2 x double\> %75, \<2 x double\> poison, \<\
+2 x i32\>\l... zeroinitializer\l  %77 = fmul \<2 x double\> %76, %74\l  %78 = getelementptr inbounds double, ptr %0, i64 2\l  %79 = \
+load \<2 x double\>, ptr %71, align 8\l  %80 = fmul \<2 x double\> %76, %79\l  %81 = getelementptr inbounds double, ptr %0, i64 \
+4\l  %82 = load \<2 x double\>, ptr %72, align 8\l  %83 = fmul \<2 x double\> %76, %82\l  %84 = getelementptr inbounds double, ptr %\
+0, i64 6\l  %85 = load \<2 x double\>, ptr %73, align 8\l  %86 = fmul \<2 x double\> %76, %85\l  store \<2 x double\> %77, ptr %\
+0, align 8\l  store \<2 x double\> %80, ptr %78, align 8\l  store \<2 x double\> %83, ptr %81, align 8\l  store \<2 x double\> %\
+86, ptr %84, align 8\l  br label %._crit_edge\l}" filled record #3d50c3ff #f6a38570
+node Node0x1fe3e1a0 8.08 25.493 9.1667 1.6944 "{.preheader.us:\l|  %.0124.us = phi ptr [ %68, %.split.us.us ], [ %0, %.preheader.us.preheader\l... ]\l  %.094123.us = phi ptr [ %\
+65, %.split.us.us ], [ %1, %.preheader.us.preheader\l... ]\l  %.096122.us = phi i32 [ %69, %.split.us.us ], [ 0, %.preheader.us.preheader ]\l  \
+br label %.lr.ph.us.us\l}" filled record #3d50c3ff #ec7f6370
+node Node0x1fe54cc0 6.5244 19.653 8.3611 5.4444 "{.lr.ph.us.us:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %._crit_edge.us.us ], [ 0,\l... %.preheader.us ]\l  %.1120.us.us = \
+phi ptr [ %62, %._crit_edge.us.us ], [ %.0124.us,\l... %.preheader.us ]\l  %.195118.us.us = phi ptr [ %58, %._crit_edge.us.us ], [ %\
+.094123.us,\l... %.preheader.us ]\l  %18 = getelementptr inbounds double, ptr %2, i64 %indvars.iv\l  %19 = load double, ptr %.195118.us.us, \
+align 8\l  %20 = load \<2 x double\>, ptr %18, align 8\l  %21 = insertelement \<2 x double\> poison, double %19, i64 0\l  %22 = \
+shufflevector \<2 x double\> %21, \<2 x double\> poison, \<2 x i32\>\l... zeroinitializer\l  %23 = fmul \<2 x double\> %22, %20\l  %\
+24 = getelementptr inbounds double, ptr %18, i64 2\l  %25 = load \<2 x double\>, ptr %24, align 8\l  %26 = fmul \<2 x double\> %\
+22, %25\l  %27 = getelementptr inbounds double, ptr %18, i64 4\l  %28 = load \<2 x double\>, ptr %27, align 8\l  %29 = fmul \<2 \
+x double\> %22, %28\l  %30 = getelementptr inbounds double, ptr %18, i64 6\l  %31 = load \<2 x double\>, ptr %30, align 8\l  %32 = \
+fmul \<2 x double\> %22, %31\l  %.298.us.us = getelementptr inbounds double, ptr %.195118.us.us, i64 1\l  br label %33\l}" filled record #3d50c3ff #d6524470
+node Node0x1fe28f70 6.5244 12.611 8.5972 7.6389 "{33:\l|  %.2109.us.us = phi ptr [ %.298.us.us, %.lr.ph.us.us ], [ %.2.us.us, %33 ]\l  %.083108.us.us = phi i32 [ 1, %.lr.ph.us.us ], [ %\
+55, %33 ]\l  %.09399.us.us = phi ptr [ %18, %.lr.ph.us.us ], [ %41, %33 ]\l  %34 = phi \<2 x double\> [ %23, %.lr.ph.us.us ], [ %\
+45, %33 ]\l  %35 = phi \<2 x double\> [ %26, %.lr.ph.us.us ], [ %48, %33 ]\l  %36 = phi \<2 x double\> [ %29, %.lr.ph.us.us ], [ %\
+51, %33 ]\l  %37 = phi \<2 x double\> [ %32, %.lr.ph.us.us ], [ %54, %33 ]\l  %38 = load double, ptr %.2109.us.us, align 8\l  %39 = \
+ptrtoint ptr %.09399.us.us to i64\l  %40 = add i64 %39, %9\l  %41 = inttoptr i64 %40 to ptr\l  %42 = load \<2 x double\>, ptr %41, \
+align 8\l  %43 = insertelement \<2 x double\> poison, double %38, i64 0\l  %44 = shufflevector \<2 x double\> %43, \<2 x double\> \
+poison, \<2 x i32\>\l... zeroinitializer\l  %45 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %44, \<2 x\l... double\> %\
+42, \<2 x double\> %34)\l  %46 = getelementptr inbounds double, ptr %41, i64 2\l  %47 = load \<2 x double\>, ptr %46, align 8\l  %\
+48 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %44, \<2 x\l... double\> %47, \<2 x double\> %35)\l  %49 = getelementptr \
+inbounds double, ptr %41, i64 4\l  %50 = load \<2 x double\>, ptr %49, align 8\l  %51 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<\
+2 x double\> %44, \<2 x\l... double\> %50, \<2 x double\> %36)\l  %52 = getelementptr inbounds double, ptr %41, i64 6\l  %53 = load \<\
+2 x double\>, ptr %52, align 8\l  %54 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %44, \<2 x\l... double\> %53, \<\
+2 x double\> %37)\l  %55 = add nuw i32 %.083108.us.us, 1\l  %.2.us.us = getelementptr inbounds double, ptr %.2109.us.us, i64 1\l  %\
+exitcond.not = icmp eq i32 %55, %3\l  br i1 %exitcond.not, label %._crit_edge.us.us, label %33, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1fe0f900 4.3717 6.4514 7.9028 3.6806 "{._crit_edge.us.us:\l|  %56 = ptrtoint ptr %.2.us.us to i64\l  %57 = sub i64 %56, %13\l  %58 = inttoptr i64 %57 to ptr\l  store \<\
+2 x double\> %45, ptr %.1120.us.us, align 8\l  %59 = getelementptr inbounds double, ptr %.1120.us.us, i64 2\l  store \<2 x double\> %\
+48, ptr %59, align 8\l  %60 = getelementptr inbounds double, ptr %.1120.us.us, i64 4\l  store \<2 x double\> %51, ptr %60, align \
+8\l  %61 = getelementptr inbounds double, ptr %.1120.us.us, i64 6\l  store \<2 x double\> %54, ptr %61, align 8\l  %62 = getelementptr \
+inbounds double, ptr %.1120.us.us, i64 8\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 8\l  %63 = icmp ult i64 %indvars.iv.next, %\
+17\l  br i1 %63, label %.lr.ph.us.us, label %.split.us.us, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x1fe3ec00 8.1356 2.7917 9.0556 2.6389 "{.split.us.us:\l|  %64 = add i64 %57, %11\l  %65 = inttoptr i64 %64 to ptr\l  %66 = ptrtoint ptr %62 to i64\l  %67 = add i64 %66, %\
+16\l  %68 = inttoptr i64 %67 to ptr\l  %69 = add nuw i32 %.096122.us, 1\l  %exitcond139.not = icmp eq i32 %69, %3\l  br i1 %exitcond139.not, \
+label %._crit_edge, label %.preheader.us, !llvm.loop\l... !7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ec7f6370
+edge Node0x1fe11630 Node0x1fe4e540 4 10.052 30.139 9.7948 30.139 9.6798 29.876 9.6293 29.61 solid black
+edge Node0x1fe11630 Node0x1fe16550 10 13.052 29.972 13.052 27.988 13.052 27.492 13.052 25.507 13.052 25.507 13.052 25.507 13.052 6.4375 13.052 4.4523 13.052 2.0833 13.052 1.1105 solid black
+edge Node0x1fe11630 Node0x1fe15f60 4 15.83 30.139 16.79 30.139 17.231 29.249 17.424 28.249 solid black
+edge Node0x1fe4e540 Node0x1fe3e1a0 4 9.4173 28.617 9.1918 28.093 8.7948 27.169 8.4917 26.465 solid black
+edge Node0x1fe15f60 Node0x1fe16550 10 16.874 22.881 16.298 20.298 15.538 16.212 15.538 12.625 15.538 12.625 15.538 12.625 15.538 6.4375 15.538 4.2794 14.057 2.01 13.381 1.0873 solid black
+edge Node0x1fe3e1a0 Node0x1fe54cc0 4 7.8588 24.653 7.7065 24.084 7.4946 23.292 7.2843 22.506 solid black
+edge Node0x1fe54cc0 Node0x1fe28f70 4 6.5244 16.937 6.5244 16.815 6.5244 16.692 6.5244 16.568 solid black
+edge Node0x1fe28f70 Node0x1fe28f70 7 8.8391 8.7981 10.256 7.428 11.073 7.5451 11.073 10.785 11.073 11.302 11.001 11.74 10.874 12.105 solid black
+edge Node0x1fe28f70 Node0x1fe0f900 4 4.3717 8.7917 4.3717 8.6728 4.3717 8.5506 4.3717 8.4272 solid black
+edge Node0x1fe0f900 Node0x1fe54cc0 7 0.39945 4.7708 -0.90969 4.7708 1.3832 15.331 2.0939 16.431 2.1825 16.568 2.2792 16.701 2.3825 16.83 solid black
+edge Node0x1fe0f900 Node0x1fe3ec00 4 8.3439 4.7708 8.6428 4.7708 8.7141 4.5433 8.6782 4.243 solid black
+edge Node0x1fe3ec00 Node0x1fe16550 4 5.8717 1.4722 5.8717 0.8526 10.148 0.70544 12.1 0.67054 solid black
+edge Node0x1fe3ec00 Node0x1fe3e1a0 7 12.677 1.6389 13.256 1.6389 11.062 21.845 10.83 22.375 10.462 23.217 9.7771 23.991 9.1832 24.555 solid black
+stop

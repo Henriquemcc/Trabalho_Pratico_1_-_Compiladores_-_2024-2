@@ -1,0 +1,67 @@
+graph 1 14.112 38.139
+node Node0x25a4d630 3.5556 36.611 7.1111 3.0556 "{7:\l|  %8 = shl i32 %6, 3\l  %9 = zext i32 %8 to i64\l  %10 = shl i32 %5, 3\l  %11 = zext i32 %10 to i64\l  %12 = shl i32 %3, 3\l  %\
+13 = zext i32 %12 to i64\l  %14 = sub i32 %4, %3\l  %15 = shl i32 %14, 3\l  %16 = zext i32 %15 to i64\l  %.not = icmp eq i32 %3, \
+0\l  br i1 %.not, label %._crit_edge124, label %.preheader.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #f4987a70
+node Node0x25a52550 2.7361 0.64583 1.9444 0.65278 "{._crit_edge124:\l|  ret void\l}" filled record #3d50c3ff #f4987a70
+node Node0x25a52730 5.625 34.049 3.4444 1.0694 "{.preheader.lr.ph:\l|  %.not125 = icmp eq i32 %3, 1\l  %17 = zext i32 %3 to i64\l  br label %.preheader\l}" filled record #3d50c3ff #f5a08170
+node Node0x25a8cc00 5.9306 32.375 6.9861 1.2778 "{.preheader:\l|  %.0123 = phi ptr [ %0, %.preheader.lr.ph ], [ %89, %84 ]\l  %.094122 = phi ptr [ %1, %.preheader.lr.ph ], [ %86, %\
+84 ]\l  %.096121 = phi i32 [ 0, %.preheader.lr.ph ], [ %90, %84 ]\l  br label %18\l}" filled record #3d50c3ff #e8765c70
+node Node0x25a52980 5.9306 27.625 8.7083 7.2222 "{18:\l|  %indvars.iv = phi i64 [ 0, %.preheader ], [ %indvars.iv.next, %._crit_edge\l... ]\l  %.1120 = phi ptr [ %.0123, %.preheader ], [ %\
+82, %._crit_edge ]\l  %.195118 = phi ptr [ %.094122, %.preheader ], [ %74, %._crit_edge ]\l  %19 = getelementptr inbounds double, \
+ptr %2, i64 %indvars.iv\l  %20 = load double, ptr %.195118, align 8\l  %21 = load double, ptr %19, align 8\l  %22 = fmul double %\
+20, %21\l  %23 = getelementptr inbounds double, ptr %19, i64 1\l  %24 = load double, ptr %23, align 8\l  %25 = fmul double %20, %\
+24\l  %26 = getelementptr inbounds double, ptr %19, i64 2\l  %27 = load double, ptr %26, align 8\l  %28 = fmul double %20, %27\l  %\
+29 = getelementptr inbounds double, ptr %19, i64 3\l  %30 = load double, ptr %29, align 8\l  %31 = fmul double %20, %30\l  %32 = \
+getelementptr inbounds double, ptr %19, i64 4\l  %33 = load double, ptr %32, align 8\l  %34 = fmul double %20, %33\l  %35 = getelementptr \
+inbounds double, ptr %19, i64 5\l  %36 = load double, ptr %35, align 8\l  %37 = fmul double %20, %36\l  %38 = getelementptr inbounds \
+double, ptr %19, i64 6\l  %39 = load double, ptr %38, align 8\l  %40 = fmul double %20, %39\l  %41 = getelementptr inbounds double, \
+ptr %19, i64 7\l  %42 = load double, ptr %41, align 8\l  %43 = fmul double %20, %42\l  %.298 = getelementptr inbounds double, ptr %\
+.195118, i64 1\l  br i1 %.not125, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x25a55740 4.9028 8.2222 6.6528 7.2222 "{._crit_edge:\l|  %.091.lcssa = phi double [ %22, %18 ], [ %49, %.lr.ph ]\l  %.090.lcssa = phi double [ %25, %18 ], [ %52, %.lr.ph ]\l  %\
+.089.lcssa = phi double [ %28, %18 ], [ %55, %.lr.ph ]\l  %.088.lcssa = phi double [ %31, %18 ], [ %58, %.lr.ph ]\l  %.087.lcssa = \
+phi double [ %34, %18 ], [ %61, %.lr.ph ]\l  %.086.lcssa = phi double [ %37, %18 ], [ %64, %.lr.ph ]\l  %.085.lcssa = phi double [ %\
+40, %18 ], [ %67, %.lr.ph ]\l  %.084.lcssa = phi double [ %43, %18 ], [ %70, %.lr.ph ]\l  %.2.lcssa = phi ptr [ %.298, %18 ], [ %\
+.2, %.lr.ph ]\l  %72 = ptrtoint ptr %.2.lcssa to i64\l  %73 = sub i64 %72, %13\l  %74 = inttoptr i64 %73 to ptr\l  store double %\
+.091.lcssa, ptr %.1120, align 8\l  %75 = getelementptr inbounds double, ptr %.1120, i64 1\l  store double %.090.lcssa, ptr %75, \
+align 8\l  %76 = getelementptr inbounds double, ptr %.1120, i64 2\l  store double %.089.lcssa, ptr %76, align 8\l  %77 = getelementptr \
+inbounds double, ptr %.1120, i64 3\l  store double %.088.lcssa, ptr %77, align 8\l  %78 = getelementptr inbounds double, ptr %.1120, \
+i64 4\l  store double %.087.lcssa, ptr %78, align 8\l  %79 = getelementptr inbounds double, ptr %.1120, i64 5\l  store double %.086.lcssa, \
+ptr %79, align 8\l  %80 = getelementptr inbounds double, ptr %.1120, i64 6\l  store double %.085.lcssa, ptr %80, align 8\l  %81 = \
+getelementptr inbounds double, ptr %.1120, i64 7\l  store double %.084.lcssa, ptr %81, align 8\l  %82 = getelementptr inbounds double, \
+ptr %.1120, i64 8\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 8\l  %83 = icmp ult i64 %indvars.iv.next, %17\l  br i1 %83, \
+label %18, label %84, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x25a556f0 8.25 17.924 8.4861 11.181 "{.lr.ph:\l|  %.2109 = phi ptr [ %.2, %.lr.ph ], [ %.298, %18 ]\l  %.083108 = phi i32 [ %71, %.lr.ph ], [ 1, %18 ]\l  %.084107 = \
+phi double [ %70, %.lr.ph ], [ %43, %18 ]\l  %.085106 = phi double [ %67, %.lr.ph ], [ %40, %18 ]\l  %.086105 = phi double [ %64, %\
+.lr.ph ], [ %37, %18 ]\l  %.087104 = phi double [ %61, %.lr.ph ], [ %34, %18 ]\l  %.088103 = phi double [ %58, %.lr.ph ], [ %31, %\
+18 ]\l  %.089102 = phi double [ %55, %.lr.ph ], [ %28, %18 ]\l  %.090101 = phi double [ %52, %.lr.ph ], [ %25, %18 ]\l  %.091100 = \
+phi double [ %49, %.lr.ph ], [ %22, %18 ]\l  %.09399 = phi ptr [ %47, %.lr.ph ], [ %19, %18 ]\l  %44 = load double, ptr %.2109, \
+align 8\l  %45 = ptrtoint ptr %.09399 to i64\l  %46 = add i64 %45, %9\l  %47 = inttoptr i64 %46 to ptr\l  %48 = load double, ptr %\
+47, align 8\l  %49 = tail call double @llvm.fmuladd.f64(double %44, double %48, double\l... %.091100)\l  %50 = getelementptr inbounds \
+double, ptr %47, i64 1\l  %51 = load double, ptr %50, align 8\l  %52 = tail call double @llvm.fmuladd.f64(double %44, double %51, \
+double\l... %.090101)\l  %53 = getelementptr inbounds double, ptr %47, i64 2\l  %54 = load double, ptr %53, align 8\l  %55 = tail \
+call double @llvm.fmuladd.f64(double %44, double %54, double\l... %.089102)\l  %56 = getelementptr inbounds double, ptr %47, i64 \
+3\l  %57 = load double, ptr %56, align 8\l  %58 = tail call double @llvm.fmuladd.f64(double %44, double %57, double\l... %.088103)\l  %\
+59 = getelementptr inbounds double, ptr %47, i64 4\l  %60 = load double, ptr %59, align 8\l  %61 = tail call double @llvm.fmuladd.f64(\
+double %44, double %60, double\l... %.087104)\l  %62 = getelementptr inbounds double, ptr %47, i64 5\l  %63 = load double, ptr %\
+62, align 8\l  %64 = tail call double @llvm.fmuladd.f64(double %44, double %63, double\l... %.086105)\l  %65 = getelementptr inbounds \
+double, ptr %47, i64 6\l  %66 = load double, ptr %65, align 8\l  %67 = tail call double @llvm.fmuladd.f64(double %44, double %66, \
+double\l... %.085106)\l  %68 = getelementptr inbounds double, ptr %47, i64 7\l  %69 = load double, ptr %68, align 8\l  %70 = tail \
+call double @llvm.fmuladd.f64(double %44, double %69, double\l... %.084107)\l  %71 = add nuw i32 %.083108, 1\l  %.2 = getelementptr \
+inbounds double, ptr %.2109, i64 1\l  %exitcond.not = icmp eq i32 %71, %3\l  br i1 %exitcond.not, label %._crit_edge, label %.lr.ph, !\
+llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x25a529d0 6.5694 2.7917 9.0556 2.6389 "{84:\l|  %85 = add i64 %73, %11\l  %86 = inttoptr i64 %85 to ptr\l  %87 = ptrtoint ptr %82 to i64\l  %88 = add i64 %87, %16\l  %\
+89 = inttoptr i64 %88 to ptr\l  %90 = add nuw i32 %.096121, 1\l  %exitcond137.not = icmp eq i32 %90, %3\l  br i1 %exitcond137.not, \
+label %._crit_edge124, label %.preheader, !llvm.loop\l... !7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+edge Node0x25a4d630 Node0x25a52550 13 1.7778 35.083 1.7778 33.857 1.1806 33.615 1.1806 32.389 1.1806 32.389 1.1806 32.389 1.1806 8.2083 1.1806 5.1967 0.55411 4.158 1.9167 1.4722 1.9931 1.3215 2.1082 1.1818 2.2282 1.0624 solid black
+edge Node0x25a4d630 Node0x25a52730 4 5.3333 35.083 5.3333 34.963 5.3524 34.837 5.3807 34.717 solid black
+edge Node0x25a52730 Node0x25a8cc00 4 5.7208 33.518 5.7427 33.401 5.7664 33.273 5.7897 33.147 solid black
+edge Node0x25a8cc00 Node0x25a52980 4 5.9306 31.739 5.9306 31.627 5.9306 31.504 5.9306 31.372 solid black
+edge Node0x25a52980 Node0x25a55740 7 3.75 24.014 3.75 18.822 3.2111 17.482 3.875 12.333 3.8905 12.213 3.9083 12.091 3.928 11.969 solid black
+edge Node0x25a52980 Node0x25a556f0 4 8.1111 24.014 8.1111 23.893 8.1114 23.771 8.1119 23.648 solid black
+edge Node0x25a55740 Node0x25a52980 10 1.5556 4.7778 1.1636 4.7778 1.537 11.443 1.5694 11.833 2.0051 17.077 1.6977 18.57 3.5 23.514 3.5452 23.638 3.5942 23.762 3.6464 23.887 solid black
+edge Node0x25a55740 Node0x25a529d0 4 6.5694 4.6111 6.5694 4.4927 6.5694 4.3699 6.5694 4.2466 solid black
+edge Node0x25a556f0 Node0x25a55740 4 6.125 12.333 6.125 12.212 6.12 12.089 6.1107 11.966 solid black
+edge Node0x25a556f0 Node0x25a556f0 7 10.471 12.34 11.91 10.072 12.743 10.18 12.743 15.208 12.743 16.038 12.665 16.733 12.528 17.306 solid black
+edge Node0x25a529d0 Node0x25a52550 4 2.0278 1.6389 1.7288 1.6389 1.9821 1.3355 2.2656 1.0665 solid black
+edge Node0x25a529d0 Node0x25a8cc00 10 11.111 1.6389 15.988 1.6389 13.624 18.695 12.875 23.514 12.322 27.073 13.042 28.77 10.417 31.236 10.232 31.409 9.8667 31.565 9.4204 31.702 solid black
+stop
