@@ -1,0 +1,3 @@
+graph 1 4.2361 1.1806
+node Node0x19c56c10 2.1181 0.75 4.2361 0.86111 "{0:\l|  store i64 1, ptr @rand_nxt, align 8\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

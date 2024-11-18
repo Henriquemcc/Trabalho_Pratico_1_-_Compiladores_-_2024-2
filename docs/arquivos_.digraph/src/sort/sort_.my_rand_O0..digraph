@@ -1,0 +1,4 @@
+graph 1 4.5833 2.0139
+node Node0x133666a0 2.2917 1.1667 4.5833 1.6944 "{0:\l|  %1 = load i64, ptr @rand_nxt, align 8\l  %2 = mul i64 %1, 1103515245\l  %3 = add i64 %2, 12345\l  store i64 %3, ptr @rand_\
+nxt, align 8\l  %4 = load i64, ptr @rand_nxt, align 8\l  ret i64 %4\l}" filled record #b70d28ff #b70d2870
+stop

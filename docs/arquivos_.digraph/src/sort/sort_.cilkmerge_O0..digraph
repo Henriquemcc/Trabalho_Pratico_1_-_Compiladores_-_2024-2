@@ -1,0 +1,55 @@
+graph 1 22.889 30.708
+node Node0x1335b980 7.8333 27.306 3.9028 6.8056 "{5:\l|  %6 = alloca ptr, align 8\l  %7 = alloca ptr, align 8\l  %8 = alloca ptr, align 8\l  %9 = alloca ptr, align 8\l  %10 = alloca \
+ptr, align 8\l  %11 = alloca ptr, align 8\l  %12 = alloca ptr, align 8\l  %13 = alloca i64, align 8\l  %14 = alloca ptr, align 8\l  %\
+15 = alloca ptr, align 8\l  store ptr %0, ptr %6, align 8\l  store ptr %1, ptr %7, align 8\l  store ptr %2, ptr %8, align 8\l  store \
+ptr %3, ptr %9, align 8\l  store ptr %4, ptr %10, align 8\l  %16 = load ptr, ptr %9, align 8\l  %17 = load ptr, ptr %8, align 8\l  %\
+18 = ptrtoint ptr %16 to i64\l  %19 = ptrtoint ptr %17 to i64\l  %20 = sub i64 %18, %19\l  %21 = sdiv exact i64 %20, 8\l  %22 = \
+load ptr, ptr %7, align 8\l  %23 = load ptr, ptr %6, align 8\l  %24 = ptrtoint ptr %22 to i64\l  %25 = ptrtoint ptr %23 to i64\l  %\
+26 = sub i64 %24, %25\l  %27 = sdiv exact i64 %26, 8\l  %28 = icmp sgt i64 %21, %27\l  br i1 %28, label %29, label %36\l|{<s0>T|<\
+s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1335ca60 6.625 21.826 4.0139 3.1528 "{29:\l|  %30 = load ptr, ptr %6, align 8\l  store ptr %30, ptr %14, align 8\l  %31 = load ptr, ptr %8, align 8\l  store ptr %31, \
+ptr %6, align 8\l  %32 = load ptr, ptr %14, align 8\l  store ptr %32, ptr %8, align 8\l  %33 = load ptr, ptr %7, align 8\l  store \
+ptr %33, ptr %15, align 8\l  %34 = load ptr, ptr %9, align 8\l  store ptr %34, ptr %7, align 8\l  %35 = load ptr, ptr %15, align \
+8\l  store ptr %35, ptr %9, align 8\l  br label %36\l}" filled record #3d50c3ff #be242e70
+node Node0x1335cab0 7.8194 18.951 3.9028 1.5972 "{36:\l|  %37 = load ptr, ptr %9, align 8\l  %38 = load ptr, ptr %8, align 8\l  %39 = icmp ult ptr %37, %38\l  br i1 %39, label %\
+40, label %50\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1335d470 4.4722 16.181 8.9444 2.9444 "{40:\l|  %41 = load ptr, ptr %10, align 8\l  %42 = load ptr, ptr %6, align 8\l  %43 = load ptr, ptr %7, align 8\l  %44 = load ptr, \
+ptr %6, align 8\l  %45 = ptrtoint ptr %43 to i64\l  %46 = ptrtoint ptr %44 to i64\l  %47 = sub i64 %45, %46\l  %48 = sdiv exact \
+i64 %47, 8\l  %49 = mul i64 8, %48\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %41, ptr align 8 %42, i64 %49,\l... i1 false)\l  \
+br label %115\l}" filled record #3d50c3ff #be242e70
+node Node0x1335d4c0 11.153 16.181 3.9028 2.4306 "{50:\l|  %51 = load ptr, ptr %9, align 8\l  %52 = load ptr, ptr %8, align 8\l  %53 = ptrtoint ptr %51 to i64\l  %54 = ptrtoint ptr %\
+52 to i64\l  %55 = sub i64 %53, %54\l  %56 = sdiv exact i64 %55, 8\l  %57 = icmp slt i64 %56, 1024\l  br i1 %57, label %58, label %\
+64\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x1335e410 9.2778 0.64583 1.1528 0.65278 "{115:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+node Node0x1335e860 9.2778 7.8403 8.8194 2.1111 "{58:\l|  %59 = load ptr, ptr %6, align 8\l  %60 = load ptr, ptr %7, align 8\l  %61 = load ptr, ptr %8, align 8\l  %62 = load ptr, \
+ptr %9, align 8\l  %63 = load ptr, ptr %10, align 8\l  call void @seqmerge(ptr noundef %59, ptr noundef %60, ptr noundef %61, ptr\l... \
+noundef %62, ptr noundef %63)\l  br label %115\l}" filled record #3d50c3ff #c5333470
+node Node0x1335e8b0 18.417 7.8403 8.9444 12.736 "{64:\l|  %65 = load ptr, ptr %7, align 8\l  %66 = load ptr, ptr %6, align 8\l  %67 = ptrtoint ptr %65 to i64\l  %68 = ptrtoint ptr %\
+66 to i64\l  %69 = sub i64 %67, %68\l  %70 = sdiv exact i64 %69, 8\l  %71 = add nsw i64 %70, 1\l  %72 = sdiv i64 %71, 2\l  %73 = \
+load ptr, ptr %6, align 8\l  %74 = getelementptr inbounds i64, ptr %73, i64 %72\l  store ptr %74, ptr %11, align 8\l  %75 = load \
+ptr, ptr %11, align 8\l  %76 = load i64, ptr %75, align 8\l  %77 = load ptr, ptr %8, align 8\l  %78 = load ptr, ptr %9, align 8\l  %\
+79 = call ptr @binsplit(i64 noundef %76, ptr noundef %77, ptr noundef %78)\l  store ptr %79, ptr %12, align 8\l  %80 = load ptr, \
+ptr %11, align 8\l  %81 = load ptr, ptr %6, align 8\l  %82 = ptrtoint ptr %80 to i64\l  %83 = ptrtoint ptr %81 to i64\l  %84 = sub \
+i64 %82, %83\l  %85 = sdiv exact i64 %84, 8\l  %86 = load ptr, ptr %12, align 8\l  %87 = getelementptr inbounds i64, ptr %86, i64 %\
+85\l  %88 = load ptr, ptr %8, align 8\l  %89 = ptrtoint ptr %87 to i64\l  %90 = ptrtoint ptr %88 to i64\l  %91 = sub i64 %89, %90\l  %\
+92 = sdiv exact i64 %91, 8\l  store i64 %92, ptr %13, align 8\l  %93 = load ptr, ptr %11, align 8\l  %94 = load i64, ptr %93, align \
+8\l  %95 = load ptr, ptr %10, align 8\l  %96 = load i64, ptr %13, align 8\l  %97 = getelementptr inbounds i64, ptr %95, i64 %96\l  %\
+98 = getelementptr inbounds i64, ptr %97, i64 1\l  store i64 %94, ptr %98, align 8\l  %99 = load ptr, ptr %6, align 8\l  %100 = \
+load ptr, ptr %11, align 8\l  %101 = getelementptr inbounds i64, ptr %100, i64 -1\l  %102 = load ptr, ptr %8, align 8\l  %103 = \
+load ptr, ptr %12, align 8\l  %104 = load ptr, ptr %10, align 8\l  call void @cilkmerge(ptr noundef %99, ptr noundef %101, ptr noundef %\
+102,\l... ptr noundef %103, ptr noundef %104)\l  %105 = load ptr, ptr %11, align 8\l  %106 = getelementptr inbounds i64, ptr %105, \
+i64 1\l  %107 = load ptr, ptr %7, align 8\l  %108 = load ptr, ptr %12, align 8\l  %109 = getelementptr inbounds i64, ptr %108, i64 \
+1\l  %110 = load ptr, ptr %9, align 8\l  %111 = load ptr, ptr %10, align 8\l  %112 = load i64, ptr %13, align 8\l  %113 = getelementptr \
+inbounds i64, ptr %111, i64 %112\l  %114 = getelementptr inbounds i64, ptr %113, i64 2\l  call void @cilkmerge(ptr noundef %106, \
+ptr noundef %107, ptr noundef %109,\l... ptr noundef %110, ptr noundef %114)\l  br label %115\l}" filled record #3d50c3ff #c5333470
+edge Node0x1335b980 Node0x1335ca60 4 6.8472 23.903 6.8472 23.784 6.8435 23.661 6.8371 23.538 solid black
+edge Node0x1335b980 Node0x1335cab0 7 8.8056 23.903 8.8056 22.279 9.2787 21.79 8.7639 20.25 8.7198 20.118 8.6566 19.988 8.5835 19.865 solid black
+edge Node0x1335ca60 Node0x1335cab0 4 7.2781 20.256 7.3325 20.126 7.3863 19.998 7.4376 19.875 solid black
+edge Node0x1335cab0 Node0x1335d470 4 5.8472 18.312 5.476 18.312 5.1999 18.081 4.9966 17.771 solid black
+edge Node0x1335cab0 Node0x1335d4c0 4 9.7917 18.312 10.257 18.312 10.571 17.946 10.779 17.518 solid black
+edge Node0x1335d470 Node0x1335e410 7 3.962 14.712 3.0468 11.811 1.5065 5.2613 4.7361 1.4722 5.2201 0.90443 7.4045 0.73275 8.5584 0.68135 solid black
+edge Node0x1335d4c0 Node0x1335e860 4 10.167 14.958 10.167 12.856 9.7787 10.431 9.5154 9.0272 solid black
+edge Node0x1335d4c0 Node0x1335e8b0 4 13.125 15.125 13.964 15.125 14.685 14.804 15.299 14.297 solid black
+edge Node0x1335e860 Node0x1335e410 4 9.2778 6.7881 9.2778 5.1992 9.2778 2.2302 9.2778 1.1063 solid black
+edge Node0x1335e8b0 Node0x1335e410 7 13.944 1.5525 13.903 1.5253 13.861 1.4985 13.819 1.4722 13.195 1.0798 11.117 0.83142 10.001 0.72297 solid black
+stop

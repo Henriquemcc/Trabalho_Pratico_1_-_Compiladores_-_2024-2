@@ -1,0 +1,25 @@
+graph 1 10.8 12.083
+node Node0x1efc9b40 3.0347 11.389 6.0694 1.3889 "{2:\l|  %.01421 = getelementptr inbounds i64, ptr %0, i64 1\l  %.not22 = icmp ugt ptr %.01421, %1\l  br i1 %.not22, label %._crit_\
+edge, label %.lr.ph25\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e1675170
+node Node0x1efcab60 2.2014 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #e1675170
+node Node0x1efcab10 4.9375 9.2917 6.6528 1.8056 "{.lr.ph25:\l|  %.01424 = phi ptr [ %.014, %.critedge ], [ %.01421, %2 ]\l  %.pn23 = phi ptr [ %.01424, %.critedge ], [ %0, %2 ]\l  %\
+3 = load i64, ptr %.01424, align 8\l  %.not1617 = icmp ult ptr %.pn23, %0\l  br i1 %.not1617, label %.critedge, label %.lr.ph\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x1efcb940 5.6319 2.4792 8.5972 2.0139 "{.critedge:\l|  %.0.lcssa = phi ptr [ %.pn23, %.lr.ph25 ], [ %.018, %.lr.ph ], [ %8, %6 ]\l  %9 = getelementptr inbounds i64, ptr %\
+.0.lcssa, i64 1\l  store i64 %3, ptr %9, align 8\l  %.014 = getelementptr inbounds i64, ptr %.01424, i64 1\l  %.not = icmp ugt ptr %\
+.014, %1\l  br i1 %.not, label %._crit_edge, label %.lr.ph25, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x1efcb2b0 6.8819 7.0903 5.8472 1.5972 "{.lr.ph:\l|  %.018 = phi ptr [ %8, %6 ], [ %.pn23, %.lr.ph25 ]\l  %4 = load i64, ptr %.018, align 8\l  %5 = icmp sgt i64 %4, %3\l  \
+br i1 %5, label %6, label %.critedge\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1efcb8f0 5.5208 4.8889 7.3333 1.8056 "{6:\l|  %7 = getelementptr inbounds i64, ptr %.018, i64 1\l  store i64 %4, ptr %7, align 8\l  %8 = getelementptr inbounds i64, ptr %\
+.018, i64 -1\l  %.not16 = icmp ult ptr %8, %0\l  br i1 %.not16, label %.critedge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x1efc9b40 Node0x1efcab60 13 1.5069 10.694 1.5069 9.8866 0.9375 7.912 0.9375 7.1042 0.9375 7.1042 0.9375 7.1042 0.9375 4.875 0.9375 3.3581 0.49697 2.8156 1.2014 1.4722 1.285 1.3128 1.4149 1.1733 1.5537 1.0569 solid black
+edge Node0x1efc9b40 Node0x1efcab10 4 4.5486 10.694 4.5486 10.573 4.5625 10.449 4.5849 10.326 solid black
+edge Node0x1efcab10 Node0x1efcb940 7 1.5903 8.5556 1.0823 8.5556 1.4349 4.4001 1.7292 3.9861 1.838 3.833 1.9648 3.6955 2.1047 3.5722 solid black
+edge Node0x1efcab10 Node0x1efcb2b0 4 6.6042 8.3889 6.6042 8.2708 6.6155 8.148 6.6336 8.0271 solid black
+edge Node0x1efcb940 Node0x1efcab60 4 1.3125 1.6319 0.98231 1.6319 1.3073 1.3227 1.6534 1.0531 solid black
+edge Node0x1efcb940 Node0x1efcab10 7 9.9514 1.6319 11.342 1.6319 10.78 6.7829 9.9375 7.8889 9.712 8.1849 9.1114 8.4345 8.4012 8.6368 solid black
+edge Node0x1efcb2b0 Node0x1efcb940 7 9.8264 6.4514 9.8773 6.4514 10.12 4.9461 9.3125 3.9861 9.1817 3.8307 9.0324 3.6913 8.8703 3.5663 solid black
+edge Node0x1efcb2b0 Node0x1efcb8f0 4 5.4097 6.2917 5.4097 6.1743 5.4137 6.0516 5.4202 5.9297 solid black
+edge Node0x1efcb8f0 Node0x1efcb940 4 3.6875 3.9861 3.6875 3.8486 3.7185 3.722 3.7726 3.6058 solid black
+edge Node0x1efcb8f0 Node0x1efcb2b0 10 7.3542 3.9722 7.3542 3.7685 9.044 3.8415 9.1875 3.9861 9.4701 4.2709 9.3908 5.4457 9.1875 5.7917 9.0978 5.9444 8.9825 6.0803 8.8516 6.201 solid black
+stop

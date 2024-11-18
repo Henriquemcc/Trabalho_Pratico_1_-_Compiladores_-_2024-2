@@ -1,0 +1,15 @@
+graph 1 10.583 8.2917
+node Node0x1efd1c70 4.6389 7.7014 5.8472 1.1806 "{3:\l|  %.not17 = icmp eq ptr %1, %2\l  br i1 %.not17, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1efd23c0 3.7222 1.1667 7.4444 1.6944 "{._crit_edge:\l|  %.014.lcssa = phi ptr [ %1, %3 ], [ %.115, %.lr.ph ]\l  %13 = load i64, ptr %.014.lcssa, align 8\l  %14 = icmp \
+sgt i64 %13, %0\l  %.0.idx = sext i1 %14 to i64\l  %.0 = getelementptr inbounds i64, ptr %.014.lcssa, i64 %.0.idx\l  ret ptr %.0\l}" filled record #3d50c3ff #d24b4070
+node Node0x1efd2370 6.6667 4.5625 7.3333 4.0972 "{.lr.ph:\l|  %.01319 = phi ptr [ %.1, %.lr.ph ], [ %2, %3 ]\l  %.01418 = phi ptr [ %.115, %.lr.ph ], [ %1, %3 ]\l  %4 = ptrtoint \
+ptr %.01319 to i64\l  %5 = ptrtoint ptr %.01418 to i64\l  %6 = sub i64 %4, %5\l  %7 = ashr exact i64 %6, 3\l  %8 = add nsw i64 %\
+7, 1\l  %9 = ashr i64 %8, 1\l  %10 = getelementptr inbounds i64, ptr %.01418, i64 %9\l  %11 = load i64, ptr %10, align 8\l  %.not16 = \
+icmp slt i64 %11, %0\l  %12 = getelementptr inbounds i64, ptr %10, i64 -1\l  %.115 = select i1 %.not16, ptr %10, ptr %.01418\l  %\
+.1 = select i1 %.not16, ptr %.01319, ptr %12\l  %.not = icmp eq ptr %.115, %.1\l  br i1 %.not, label %._crit_edge, label %.lr.ph, !\
+llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x1efd1c70 Node0x1efd23c0 10 3.1667 7.1111 3.1667 6.8538 2.9421 6.8595 2.875 6.6111 2.3998 4.8532 2.3665 4.2624 2.875 2.5139 2.9122 2.3859 2.9659 2.2584 3.0284 2.1359 solid black
+edge Node0x1efd1c70 Node0x1efd2370 4 6.0972 7.1111 6.0972 6.9907 6.1034 6.8678 6.1145 6.7443 solid black
+edge Node0x1efd2370 Node0x1efd23c0 4 2.9861 2.6736 2.8356 2.6736 2.9294 2.4265 3.0936 2.1333 solid black
+edge Node0x1efd2370 Node0x1efd2370 7 8.7675 2.5201 9.9111 1.8974 10.583 2.0105 10.583 3.6181 10.583 3.884 10.522 4.1091 10.412 4.2967 solid black
+stop

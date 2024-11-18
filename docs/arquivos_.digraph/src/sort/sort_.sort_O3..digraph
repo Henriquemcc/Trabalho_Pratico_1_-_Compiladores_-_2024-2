@@ -1,0 +1,5 @@
+graph 1 8.5972 2.2222
+node Node0x388eada0 4.2986 1.2708 8.5972 1.9028 "{1:\l|  %2 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str, i64 noundef %0)\l  %3 = load ptr, \
+ptr @array, align 8\l  %4 = load ptr, ptr @tmp, align 8\l  tail call void @cilksort(ptr noundef %3, ptr noundef %4, i64 noundef %\
+0)\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

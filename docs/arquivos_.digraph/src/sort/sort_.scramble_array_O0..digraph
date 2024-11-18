@@ -1,0 +1,21 @@
+graph 1 8.3542 12.25
+node Node0x13362c60 6.4653 11.299 3.6667 1.9028 "{1:\l|  %2 = alloca i64, align 8\l  %3 = alloca i64, align 8\l  %4 = alloca i64, align 8\l  %5 = alloca i64, align 8\l  store i64 %\
+0, ptr %2, align 8\l  store i64 0, ptr %3, align 8\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x13362ff0 6.4653 9.0486 3.7778 1.5972 "{6:\l|  %7 = load i64, ptr %3, align 8\l  %8 = load i64, ptr %2, align 8\l  %9 = icmp ult i64 %7, %8\l  br i1 %9, label %10, label %\
+33\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x13363240 3.0347 4.9236 6.0694 5.6528 "{10:\l|  %11 = call i64 @my_rand()\l  store i64 %11, ptr %4, align 8\l  %12 = load i64, ptr %4, align 8\l  %13 = load i64, ptr %\
+2, align 8\l  %14 = urem i64 %12, %13\l  store i64 %14, ptr %4, align 8\l  %15 = load ptr, ptr @array, align 8\l  %16 = load i64, \
+ptr %3, align 8\l  %17 = getelementptr inbounds i64, ptr %15, i64 %16\l  %18 = load i64, ptr %17, align 8\l  store i64 %18, ptr %\
+5, align 8\l  %19 = load ptr, ptr @array, align 8\l  %20 = load i64, ptr %4, align 8\l  %21 = getelementptr inbounds i64, ptr %19, \
+i64 %20\l  %22 = load i64, ptr %21, align 8\l  %23 = load ptr, ptr @array, align 8\l  %24 = load i64, ptr %3, align 8\l  %25 = getelementptr \
+inbounds i64, ptr %23, i64 %24\l  store i64 %22, ptr %25, align 8\l  %26 = load i64, ptr %5, align 8\l  %27 = load ptr, ptr @array, \
+align 8\l  %28 = load i64, ptr %4, align 8\l  %29 = getelementptr inbounds i64, ptr %27, i64 %28\l  store i64 %26, ptr %29, align \
+8\l  br label %30\l}" filled record #b70d28ff #b70d2870
+node Node0x13363290 7.4375 4.9236 1.1528 0.65278 "{33:\l|  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x133661b0 4.7431 0.95833 3.7778 1.2778 "{30:\l|  %31 = load i64, ptr %3, align 8\l  %32 = add i64 %31, 1\l  store i64 %32, ptr %3, align 8\l  br label %6, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+edge Node0x13362c60 Node0x13362ff0 4 6.4653 10.349 6.4653 10.228 6.4653 10.104 6.4653 9.983 solid black
+edge Node0x13362ff0 Node0x13363240 4 4.5625 8.4097 4.1398 8.4097 3.833 8.1915 3.6106 7.8644 solid black
+edge Node0x13362ff0 Node0x13363290 4 7.4097 8.25 7.4097 7.2251 7.4232 6.0219 7.4314 5.3853 solid black
+edge Node0x13363240 Node0x133661b0 4 4.2535 2.1006 4.3115 1.9669 4.3667 1.8397 4.4178 1.722 solid black
+edge Node0x133661b0 Node0x13362ff0 7 5.7899 1.5918 5.9544 1.7365 6.1025 1.9054 6.2014 2.0972 6.7285 3.12 6.6161 6.4763 6.525 8.1163 solid black
+stop

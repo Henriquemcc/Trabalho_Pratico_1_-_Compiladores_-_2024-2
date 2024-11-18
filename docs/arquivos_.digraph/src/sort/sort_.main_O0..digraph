@@ -1,0 +1,7 @@
+graph 1 5.6111 4.5139
+node Node0x1336add0 2.8056 2.4167 5.6111 4.1944 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca i64, align 8\l  store i32 \
+0, ptr %3, align 4\l  store i32 %0, ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  %7 = load ptr, ptr %5, align 8\l  %8 = getelementptr \
+inbounds ptr, ptr %7, i64 1\l  %9 = load ptr, ptr %8, align 8\l  %10 = call i32 @atoi(ptr noundef %9) #5\l  %11 = sext i32 %10 to \
+i64\l  store i64 %11, ptr %6, align 8\l  %12 = load i64, ptr %6, align 8\l  call void @sort_init(i64 noundef %12)\l  %13 = load \
+i64, ptr %6, align 8\l  call void @sort(i64 noundef %13)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+stop

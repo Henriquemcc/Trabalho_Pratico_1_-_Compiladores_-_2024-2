@@ -1,0 +1,16 @@
+graph 1 13.129 5.9028
+node Node0x19c5bcb0 5.0106 5.3125 3.5556 1.1806 "{3:\l|  %4 = icmp slt i64 %0, %1\l  br i1 %4, label %5, label %8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x19c5c1f0 2.4273 3.6319 3.6667 1.1806 "{5:\l|  %6 = icmp slt i64 %1, %2\l  br i1 %6, label %11, label %7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x19c5c240 7.6078 3.6319 3.7778 1.1806 "{8:\l|  %9 = icmp sgt i64 %1, %2\l  br i1 %9, label %11, label %10\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x19c5c7c0 4.9967 0.75 7.4444 0.86111 "{11:\l|  %.0 = phi i64 [ %1, %5 ], [ %., %7 ], [ %1, %8 ], [ %.22, %10 ]\l  ret i64 %.0\l}" filled record #b70d28ff #b70d2870
+node Node0x19c5c560 3.344 2.1111 5.8472 0.86111 "{7:\l|  %. = tail call i64 @llvm.smax.i64(i64 %0, i64 %2)\l  br label %11\l}" filled record #3d50c3ff #c5333470
+node Node0x19c5d0a0 10.094 2.1111 6.0694 0.86111 "{10:\l|  %.22 = tail call i64 @llvm.smin.i64(i64 %0, i64 %2)\l  br label %11\l}" filled record #3d50c3ff #c5333470
+edge Node0x19c5bcb0 Node0x19c5c1f0 4 3.219 4.8819 2.9231 4.8819 2.7327 4.6277 2.613 4.3497 solid black
+edge Node0x19c5bcb0 Node0x19c5c240 4 6.8023 4.8819 7.1011 4.8819 7.2948 4.6253 7.4172 4.346 solid black
+edge Node0x19c5c1f0 Node0x19c5c7c0 7 0.58006 3.2014 -0.10818 3.2014 -0.1493 2.2117 0.2884 1.6806 0.44858 1.4862 0.79596 1.3325 1.2331 1.2111 solid black
+edge Node0x19c5c1f0 Node0x19c5c560 4 3.344 3.0417 3.344 2.924 3.344 2.7978 3.344 2.6779 solid black
+edge Node0x19c5c240 Node0x19c5c7c0 7 6.6634 3.0417 6.6634 2.4243 6.7314 2.1921 6.3856 1.6806 6.2756 1.5178 6.1261 1.3768 5.9657 1.2576 solid black
+edge Node0x19c5c240 Node0x19c5d0a0 4 9.5106 3.2014 9.7785 3.2014 9.924 2.9405 10.003 2.6756 solid black
+edge Node0x19c5c560 Node0x19c5c7c0 4 3.8533 1.6863 4.0183 1.5532 4.2031 1.4041 4.3752 1.2653 solid black
+edge Node0x19c5d0a0 Node0x19c5c7c0 4 8.5265 1.6872 7.9483 1.536 7.2907 1.3639 6.701 1.2097 solid black
+stop

@@ -1,0 +1,13 @@
+graph 1 9.4444 7.0417
+node Node0x388e4c60 2.8056 6.4514 5.6111 1.1806 "{1:\l|  %.not = icmp eq i64 %0, 0\l  br i1 %.not, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x388e5290 1.7778 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x388e5240 5.0694 3.4167 8.25 3.8889 "{.lr.ph:\l|  %.011 = phi i64 [ %11, %.lr.ph ], [ 0, %1 ]\l  %2 = tail call fastcc i64 @my_rand()\l  %3 = urem i64 %2, %0\l  %4 = \
+load ptr, ptr @array, align 8\l  %5 = getelementptr inbounds i64, ptr %4, i64 %.011\l  %6 = load i64, ptr %5, align 8\l  %7 = getelementptr \
+inbounds i64, ptr %4, i64 %3\l  %8 = load i64, ptr %7, align 8\l  store i64 %8, ptr %5, align 8\l  %9 = load ptr, ptr @array, align \
+8\l  %10 = getelementptr inbounds i64, ptr %9, i64 %3\l  store i64 %6, ptr %10, align 8\l  %11 = add nuw i64 %.011, 1\l  %exitcond.not = \
+icmp eq i64 %11, %0\l  br i1 %exitcond.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x388e4c60 Node0x388e5290 10 1.4028 5.8611 1.4028 5.5196 0.96213 5.6713 0.81944 5.3611 0.097223 3.7908 0.092989 3.0405 0.81944 1.4722 0.89323 1.3129 1.0153 1.1735 1.1481 1.0572 solid black
+edge Node0x388e4c60 Node0x388e5240 4 4.2083 5.8611 4.2083 5.7408 4.2178 5.6189 4.2348 5.4971 solid black
+edge Node0x388e5240 Node0x388e5290 4 0.93056 1.6389 0.60741 1.6389 0.91431 1.3301 1.2456 1.0594 solid black
+edge Node0x388e5240 Node0x388e5240 7 7.4972 1.4791 8.7351 0.96277 9.4444 1.0853 9.4444 2.5278 9.4444 2.7508 9.3861 2.9422 9.2818 3.1046 solid black
+stop

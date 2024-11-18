@@ -1,0 +1,5 @@
+graph 1 6.5278 2.4306
+node Node0x1efe1000 3.2639 1.375 6.5278 2.1111 "{1:\l|  %2 = shl i64 %0, 3\l  %3 = tail call noalias ptr @malloc(i64 noundef %2) #15\l  store ptr %3, ptr @array, align 8\l  %4 = \
+tail call noalias ptr @malloc(i64 noundef %2) #15\l  store ptr %4, ptr @tmp, align 8\l  tail call void @fill_array(i64 noundef %\
+0)\l  tail call void @scramble_array(i64 noundef %0)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

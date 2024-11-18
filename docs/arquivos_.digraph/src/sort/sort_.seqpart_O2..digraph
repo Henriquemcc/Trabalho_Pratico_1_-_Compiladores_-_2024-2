@@ -1,0 +1,22 @@
+graph 1 12.076 10.819
+node Node0x19c3d320 4.1806 10.389 8.3611 0.86111 "{2:\l|  %3 = tail call fastcc i64 @choose_pivot(ptr noundef %0, ptr noundef %1)\l  br label %4\l}" filled record #3d50c3ff #ec7f6370
+node Node0x19c3de00 4.1806 8.9236 4.8194 1.0694 "{4:\l|  %.020 = phi ptr [ %0, %2 ], [ %11, %13 ]\l  %.0 = phi ptr [ %1, %2 ], [ %8, %13 ]\l  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x19c3dec0 5.9583 6.9861 6.3056 1.8056 "{5:\l|  %.1 = phi ptr [ %.0, %4 ], [ %8, %5 ]\l  %6 = load i64, ptr %.1, align 8\l  %7 = icmp sgt i64 %6, %3\l  %8 = getelementptr \
+inbounds i64, ptr %.1, i64 -1\l  br i1 %7, label %5, label %.preheader, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x19c3e720 6.8056 4.6806 6.5278 1.8056 "{.preheader:\l|  %.121 = phi ptr [ %11, %.preheader ], [ %.020, %5 ]\l  %9 = load i64, ptr %.121, align 8\l  %10 = icmp slt i64 %\
+9, %3\l  %11 = getelementptr inbounds i64, ptr %.121, i64 1\l  br i1 %10, label %.preheader, label %12, !llvm.loop !6\l|{<s0>T|<\
+s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x19c3eae0 7.5556 2.6875 4.125 1.1806 "{12:\l|  %.not = icmp ult ptr %.121, %.1\l  br i1 %.not, label %13, label %14\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x19c3f130 2.6944 0.95833 4.0139 1.0694 "{13:\l|  store i64 %9, ptr %.1, align 8\l  store i64 %6, ptr %.121, align 8\l  br label %4\l}" filled record #3d50c3ff #d6524470
+node Node0x19c3f270 8.5833 0.95833 6.9861 1.2778 "{14:\l|  %15 = icmp uge ptr %.1, %1\l  %.022.idx = sext i1 %15 to i64\l  %.022 = getelementptr inbounds i64, ptr %.1, i64 %.022.idx\l  \
+ret ptr %.022\l}" filled record #3d50c3ff #ec7f6370
+edge Node0x19c3d320 Node0x19c3de00 4 4.1806 9.9631 4.1806 9.8473 4.1806 9.7185 4.1806 9.5924 solid black
+edge Node0x19c3de00 Node0x19c3dec0 4 4.6616 8.3929 4.7791 8.2667 4.9088 8.1274 5.0393 7.9873 solid black
+edge Node0x19c3dec0 Node0x19c3dec0 7 3.9593 6.0894 3.0755 5.7849 2.5556 5.88 2.5556 6.6181 2.5556 6.7432 2.6051 6.8499 2.6931 6.9393 solid black
+edge Node0x19c3dec0 Node0x19c3e720 4 7.5417 6.0833 7.5417 5.9584 7.5181 5.8338 7.4795 5.7133 solid black
+edge Node0x19c3e720 Node0x19c3e720 7 4.7498 3.7834 3.8304 3.4648 3.2917 3.559 3.2917 4.3125 3.2917 4.4372 3.3408 4.5439 3.4285 4.6336 solid black
+edge Node0x19c3e720 Node0x19c3eae0 4 8.4444 3.7778 8.4444 3.6411 8.4013 3.5124 8.334 3.3947 solid black
+edge Node0x19c3eae0 Node0x19c3f130 4 5.4722 2.2569 4.756 2.2569 4.0238 1.9007 3.4911 1.5634 solid black
+edge Node0x19c3eae0 Node0x19c3f270 4 8.5833 2.0972 8.5833 1.9793 8.5833 1.8544 8.5833 1.7324 solid black
+edge Node0x19c3f130 Node0x19c3de00 7 2.539 1.4884 2.2074 2.6931 1.549 5.7501 2.6806 7.8889 2.7645 8.0475 2.8854 8.1861 3.0226 8.3057 solid black
+stop

@@ -1,0 +1,17 @@
+graph 1 14.243 8.1806
+node Node0x13348e90 4.4236 7.3333 3.6667 1.6944 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca ptr, align 8\l  %5 = alloca ptr, align 8\l  store ptr %0, ptr %3, align 8\l  store \
+ptr %1, ptr %4, align 8\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x1334bf90 4.4236 4.7708 3.9028 2.4306 "{6:\l|  %7 = load ptr, ptr %4, align 8\l  %8 = load ptr, ptr %3, align 8\l  %9 = ptrtoint ptr %7 to i64\l  %10 = ptrtoint ptr %8 \
+to i64\l  %11 = sub i64 %9, %10\l  %12 = sdiv exact i64 %11, 8\l  %13 = icmp sge i64 %12, 1024\l  br i1 %13, label %14, label %22\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1334ca50 3.4375 1.6875 6.875 2.7361 "{14:\l|  %15 = load ptr, ptr %3, align 8\l  %16 = load ptr, ptr %4, align 8\l  %17 = call ptr @seqpart(ptr noundef %15, ptr noundef %\
+16)\l  store ptr %17, ptr %5, align 8\l  %18 = load ptr, ptr %3, align 8\l  %19 = load ptr, ptr %5, align 8\l  call void @seqquick(\
+ptr noundef %18, ptr noundef %19)\l  %20 = load ptr, ptr %5, align 8\l  %21 = getelementptr inbounds i64, ptr %20, i64 1\l  store \
+ptr %21, ptr %3, align 8\l  br label %6, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x1334caa0 10.688 1.6875 7.1111 1.2778 "{22:\l|  %23 = load ptr, ptr %3, align 8\l  %24 = load ptr, ptr %4, align 8\l  call void @insertion_sort(ptr noundef %23, ptr noundef %\
+24)\l  ret void\l}" filled record #3d50c3ff #d6524470
+edge Node0x13348e90 Node0x1334bf90 4 4.4236 6.493 4.4236 6.3744 4.4236 6.2499 4.4236 6.1244 solid black
+edge Node0x1334bf90 Node0x1334ca50 4 3.4375 3.5556 3.4196 3.4374 3.4042 3.3151 3.3915 3.1922 solid black
+edge Node0x1334bf90 Node0x1334caa0 4 6.3958 3.7153 7.6653 3.7153 8.963 2.9842 9.7941 2.403 solid black
+edge Node0x1334ca50 Node0x1334bf90 4 3.4972 3.0493 3.4866 3.1706 3.4734 3.2927 3.4578 3.412 solid black
+stop

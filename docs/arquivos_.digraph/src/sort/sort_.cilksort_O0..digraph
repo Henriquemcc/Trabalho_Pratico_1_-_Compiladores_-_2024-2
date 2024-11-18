@@ -1,0 +1,44 @@
+graph 1 15.611 25.264
+node Node0x13360360 7.1806 22.694 3.9028 5.1389 "{3:\l|  %4 = alloca ptr, align 8\l  %5 = alloca ptr, align 8\l  %6 = alloca i64, align 8\l  %7 = alloca i64, align 8\l  %8 = alloca \
+ptr, align 8\l  %9 = alloca ptr, align 8\l  %10 = alloca ptr, align 8\l  %11 = alloca ptr, align 8\l  %12 = alloca ptr, align 8\l  %\
+13 = alloca ptr, align 8\l  %14 = alloca ptr, align 8\l  %15 = alloca ptr, align 8\l  store ptr %0, ptr %4, align 8\l  store ptr %\
+1, ptr %5, align 8\l  store i64 %2, ptr %6, align 8\l  %16 = load i64, ptr %6, align 8\l  %17 = sdiv i64 %16, 4\l  store i64 %17, \
+ptr %7, align 8\l  %18 = load i64, ptr %6, align 8\l  %19 = icmp slt i64 %18, 1024\l  br i1 %19, label %20, label %26\l|{<s0>T|<\
+s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x13360e50 3.2083 10.549 6.4167 1.9028 "{20:\l|  %21 = load ptr, ptr %4, align 8\l  %22 = load ptr, ptr %4, align 8\l  %23 = load i64, ptr %6, align 8\l  %24 = getelementptr \
+inbounds i64, ptr %22, i64 %23\l  %25 = getelementptr inbounds i64, ptr %24, i64 -1\l  call void @seqquick(ptr noundef %21, ptr \
+noundef %25)\l  br label %93\l}" filled record #3d50c3ff #be242e70
+node Node0x13360ea0 11.139 10.549 8.9444 18.153 "{26:\l|  %27 = load ptr, ptr %4, align 8\l  store ptr %27, ptr %8, align 8\l  %28 = load ptr, ptr %5, align 8\l  store ptr %28, \
+ptr %12, align 8\l  %29 = load ptr, ptr %8, align 8\l  %30 = load i64, ptr %7, align 8\l  %31 = getelementptr inbounds i64, ptr %\
+29, i64 %30\l  store ptr %31, ptr %9, align 8\l  %32 = load ptr, ptr %12, align 8\l  %33 = load i64, ptr %7, align 8\l  %34 = getelementptr \
+inbounds i64, ptr %32, i64 %33\l  store ptr %34, ptr %13, align 8\l  %35 = load ptr, ptr %9, align 8\l  %36 = load i64, ptr %7, \
+align 8\l  %37 = getelementptr inbounds i64, ptr %35, i64 %36\l  store ptr %37, ptr %10, align 8\l  %38 = load ptr, ptr %13, align \
+8\l  %39 = load i64, ptr %7, align 8\l  %40 = getelementptr inbounds i64, ptr %38, i64 %39\l  store ptr %40, ptr %14, align 8\l  %\
+41 = load ptr, ptr %10, align 8\l  %42 = load i64, ptr %7, align 8\l  %43 = getelementptr inbounds i64, ptr %41, i64 %42\l  store \
+ptr %43, ptr %11, align 8\l  %44 = load ptr, ptr %14, align 8\l  %45 = load i64, ptr %7, align 8\l  %46 = getelementptr inbounds \
+i64, ptr %44, i64 %45\l  store ptr %46, ptr %15, align 8\l  %47 = load ptr, ptr %8, align 8\l  %48 = load ptr, ptr %12, align 8\l  %\
+49 = load i64, ptr %7, align 8\l  call void @cilksort(ptr noundef %47, ptr noundef %48, i64 noundef %49)\l  %50 = load ptr, ptr %\
+9, align 8\l  %51 = load ptr, ptr %13, align 8\l  %52 = load i64, ptr %7, align 8\l  call void @cilksort(ptr noundef %50, ptr noundef %\
+51, i64 noundef %52)\l  %53 = load ptr, ptr %10, align 8\l  %54 = load ptr, ptr %14, align 8\l  %55 = load i64, ptr %7, align 8\l  \
+call void @cilksort(ptr noundef %53, ptr noundef %54, i64 noundef %55)\l  %56 = load ptr, ptr %11, align 8\l  %57 = load ptr, ptr %\
+15, align 8\l  %58 = load i64, ptr %6, align 8\l  %59 = load i64, ptr %7, align 8\l  %60 = mul nsw i64 3, %59\l  %61 = sub nsw i64 %\
+58, %60\l  call void @cilksort(ptr noundef %56, ptr noundef %57, i64 noundef %61)\l  %62 = load ptr, ptr %8, align 8\l  %63 = load \
+ptr, ptr %8, align 8\l  %64 = load i64, ptr %7, align 8\l  %65 = getelementptr inbounds i64, ptr %63, i64 %64\l  %66 = getelementptr \
+inbounds i64, ptr %65, i64 -1\l  %67 = load ptr, ptr %9, align 8\l  %68 = load ptr, ptr %9, align 8\l  %69 = load i64, ptr %7, align \
+8\l  %70 = getelementptr inbounds i64, ptr %68, i64 %69\l  %71 = getelementptr inbounds i64, ptr %70, i64 -1\l  %72 = load ptr, \
+ptr %12, align 8\l  call void @cilkmerge(ptr noundef %62, ptr noundef %66, ptr noundef %67, ptr\l... noundef %71, ptr noundef %72)\l  %\
+73 = load ptr, ptr %10, align 8\l  %74 = load ptr, ptr %10, align 8\l  %75 = load i64, ptr %7, align 8\l  %76 = getelementptr inbounds \
+i64, ptr %74, i64 %75\l  %77 = getelementptr inbounds i64, ptr %76, i64 -1\l  %78 = load ptr, ptr %11, align 8\l  %79 = load ptr, \
+ptr %4, align 8\l  %80 = load i64, ptr %6, align 8\l  %81 = getelementptr inbounds i64, ptr %79, i64 %80\l  %82 = getelementptr \
+inbounds i64, ptr %81, i64 -1\l  %83 = load ptr, ptr %14, align 8\l  call void @cilkmerge(ptr noundef %73, ptr noundef %77, ptr \
+noundef %78, ptr\l... noundef %82, ptr noundef %83)\l  %84 = load ptr, ptr %12, align 8\l  %85 = load ptr, ptr %14, align 8\l  %\
+86 = getelementptr inbounds i64, ptr %85, i64 -1\l  %87 = load ptr, ptr %14, align 8\l  %88 = load ptr, ptr %12, align 8\l  %89 = \
+load i64, ptr %6, align 8\l  %90 = getelementptr inbounds i64, ptr %88, i64 %89\l  %91 = getelementptr inbounds i64, ptr %90, i64 \
+-1\l  %92 = load ptr, ptr %8, align 8\l  call void @cilkmerge(ptr noundef %84, ptr noundef %86, ptr noundef %87, ptr\l... noundef %\
+91, ptr noundef %92)\l  br label %93\l}" filled record #3d50c3ff #be242e70
+node Node0x13361a00 7.1667 0.64583 1.1528 0.65278 "{93:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x13360360 Node0x13360e50 4 5.2083 20.292 1.705 20.292 2.5025 14.164 2.981 11.635 solid black
+edge Node0x13360360 Node0x13360ea0 4 9.1528 20.292 9.8036 20.292 10.306 20.08 10.689 19.719 solid black
+edge Node0x13360e50 Node0x13361a00 7 3.4502 9.601 3.9094 7.9119 5.0012 4.2649 6.5417 1.4722 6.6159 1.3376 6.7112 1.2013 6.8049 1.0798 solid black
+edge Node0x13360ea0 Node0x13361a00 4 7.4951 1.4762 7.4379 1.3341 7.3871 1.2076 7.3434 1.0991 solid black
+stop

@@ -1,0 +1,4 @@
+graph 1 4.4722 1.8056
+node Node0x13367c10 2.2361 1.0625 4.4722 1.4861 "{1:\l|  %2 = alloca i64, align 8\l  store i64 %0, ptr %2, align 8\l  %3 = load i64, ptr %2, align 8\l  store i64 %3, ptr @rand_nxt, \
+align 8\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

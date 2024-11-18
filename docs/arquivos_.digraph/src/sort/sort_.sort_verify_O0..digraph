@@ -1,0 +1,23 @@
+graph 1 11.097 11.958
+node Node0x133697e0 6.4653 11.007 3.6667 1.9028 "{1:\l|  %2 = alloca i64, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  store i64 %0, ptr %2, align 8\l  store \
+i32 1, ptr %4, align 4\l  store i32 0, ptr %3, align 4\l  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x13369b40 6.4653 8.6528 3.7778 1.8056 "{5:\l|  %6 = load i32, ptr %3, align 4\l  %7 = sext i32 %6 to i64\l  %8 = load i64, ptr %2, align 8\l  %9 = icmp ult i64 %7, %8\l  \
+br i1 %9, label %10, label %24\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x13369e00 3.0347 5.9306 6.0694 2.6389 "{10:\l|  %11 = load ptr, ptr @array, align 8\l  %12 = load i32, ptr %3, align 4\l  %13 = sext i32 %12 to i64\l  %14 = getelementptr \
+inbounds i64, ptr %11, i64 %13\l  %15 = load i64, ptr %14, align 8\l  %16 = load i32, ptr %3, align 4\l  %17 = sext i32 %16 to i64\l  %\
+18 = icmp ne i64 %15, %17\l  br i1 %18, label %19, label %20\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x13369e50 8.9792 5.9306 4.2361 1.4861 "{24:\l|  %25 = load i32, ptr %4, align 4\l  %26 = icmp ne i32 %25, 0\l  %27 = zext i1 %26 to i64\l  %28 = select i1 %26, i32 1, \
+i32 -1\l  ret i32 %28\l}" filled record #3d50c3ff #d6524470
+node Node0x1336a3a0 1.9792 3.6806 3.4444 0.86111 "{19:\l|  store i32 0, ptr %4, align 4\l  br label %20\l}" filled record #3d50c3ff #be242e70
+node Node0x1336a3f0 4.5486 2.4236 1.6111 0.65278 "{20:\l|  br label %21\l}" filled record #b70d28ff #b70d2870
+node Node0x1336a640 5.5069 0.95833 3.7778 1.2778 "{21:\l|  %22 = load i32, ptr %3, align 4\l  %23 = add nsw i32 %22, 1\l  store i32 %23, ptr %3, align 4\l  br label %5, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+edge Node0x133697e0 Node0x13369b40 4 6.4653 10.06 6.4653 9.9394 6.4653 9.8151 6.4653 9.6928 solid black
+edge Node0x13369b40 Node0x13369e00 4 4.5625 7.9167 4.1748 7.9167 3.8715 7.6756 3.6409 7.362 solid black
+edge Node0x13369b40 Node0x13369e50 4 8.3681 7.9167 8.8649 7.9167 9.0029 7.3385 9.0249 6.8082 solid black
+edge Node0x13369e00 Node0x1336a3a0 4 1.5069 4.6111 1.5069 4.481 1.545 4.3508 1.5996 4.2311 solid black
+edge Node0x13369e00 Node0x1336a3f0 4 4.5486 4.6111 4.5486 4.0153 4.5486 3.3277 4.5486 2.8881 solid black
+edge Node0x1336a3a0 Node0x1336a3f0 4 2.8383 3.2557 3.1433 3.1098 3.4844 2.9466 3.7812 2.8046 solid black
+edge Node0x1336a3f0 Node0x1336a640 4 4.7542 2.1013 4.8315 1.9853 4.9232 1.8479 5.0154 1.7095 solid black
+edge Node0x1336a640 Node0x13369b40 7 5.6459 1.5933 5.802 2.3149 6.0513 3.5432 6.1875 4.6111 6.3172 5.6278 6.3893 6.7971 6.4274 7.613 solid black
+stop

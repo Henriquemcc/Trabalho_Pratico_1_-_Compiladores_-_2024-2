@@ -1,0 +1,14 @@
+graph 1 12.097 6.625
+node Node0x19c37e90 6.5417 5.7222 5.2778 1.8056 "{2:\l|  %3 = ptrtoint ptr %1 to i64\l  %4 = ptrtoint ptr %0 to i64\l  %5 = sub i64 %3, %4\l  %6 = icmp sgt i64 %5, 8184\l  br i1 %\
+6, label %.lr.ph, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x19c3ba50 4.3194 3.1042 8.1389 2.4306 "{.lr.ph:\l|  %.09 = phi ptr [ %8, %.lr.ph ], [ %0, %2 ]\l  %7 = tail call fastcc ptr @seqpart(ptr noundef %.09, ptr noundef %1)\l  \
+tail call void @seqquick(ptr noundef %.09, ptr noundef %7)\l  %8 = getelementptr inbounds i64, ptr %7, i64 1\l  %9 = ptrtoint ptr %\
+8 to i64\l  %10 = sub i64 %3, %9\l  %11 = icmp sgt i64 %10, 8184\l  br i1 %11, label %.lr.ph, label %._crit_edge, !llvm.loop !4\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x19c3baa0 7.5694 0.85417 9.0556 1.0694 "{._crit_edge:\l|  %.0.lcssa = phi ptr [ %0, %2 ], [ %8, %.lr.ph ]\l  tail call fastcc void @insertion_sort(ptr noundef %.0.lcssa, \
+ptr noundef %1)\l  ret void\l}" filled record #3d50c3ff #d0473d70
+edge Node0x19c37e90 Node0x19c3ba50 4 3.8889 4.9861 3.5875 4.9861 3.5532 4.7523 3.6348 4.4502 solid black
+edge Node0x19c37e90 Node0x19c3baa0 7 9.1944 4.9861 10.604 4.9861 9.1711 3.1357 8.5139 1.8889 8.4399 1.7485 8.3416 1.6129 8.2364 1.4888 solid black
+edge Node0x19c3ba50 Node0x19c3ba50 7 1.858 1.8952 0.6764 1.4974 0 1.5968 0 2.5764 0 2.7217 0.051168 2.8477 0.14327 2.9555 solid black
+edge Node0x19c3ba50 Node0x19c3baa0 4 8.4028 2.0486 8.7147 2.0486 8.527 1.7701 8.2515 1.4836 solid black
+stop

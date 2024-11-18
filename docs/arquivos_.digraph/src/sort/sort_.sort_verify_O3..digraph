@@ -1,0 +1,42 @@
+graph 1 13.062 21.889
+node Node0x388eb7e0 3.3056 21.299 5.8472 1.1806 "{1:\l|  %.not11 = icmp eq i64 %0, 0\l  br i1 %.not11, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x388ebe50 3.6111 0.75 7.2222 0.86111 "{._crit_edge:\l|  %.0.lcssa = phi i32 [ 1, %1 ], [ %19, %._crit_edge.loopexit ]\l  ret i32 %.0.lcssa\l}" filled record #3d50c3ff #d0473d70
+node Node0x388e8fb0 5.4722 19.41 7.9028 1.5972 "{.lr.ph:\l|  %2 = load ptr, ptr @array, align 8\l  %xtraiter = and i64 %0, 3\l  %3 = icmp ult i64 %0, 4\l  br i1 %3, label %._crit_\
+edge.loopexit.unr-lcssa, label %.lr.ph.new\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x388cec70 5.8889 8.9583 8.7083 1.8056 "{._crit_edge.loopexit.unr-lcssa:\l|  %spec.select.lcssa.ph = phi i32 [ undef, %.lr.ph ], [ %spec.select.3, %4 ]\l  %indvars.iv.unr = \
+phi i64 [ 0, %.lr.ph ], [ %indvars.iv.next.3, %4 ]\l  %.010.unr = phi i32 [ 1, %.lr.ph ], [ %spec.select.3, %4 ]\l  %lcmp.mod.not = \
+icmp eq i64 %xtraiter, 0\l  br i1 %lcmp.mod.not, label %._crit_edge.loopexit, label %.epil.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x388d0ba0 7.7083 17.681 3.5556 0.86111 "{.lr.ph.new:\l|  %unroll_iter = and i64 %0, -4\l  br label %4\l}" filled record #3d50c3ff #d8564670
+node Node0x388ebe00 7.9722 13.556 8.25 6.3889 "{4:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph.new ], [ %indvars.iv.next.3, %4 ]\l  %.010 = phi i32 [ 1, %.lr.ph.new ], [ %spec.select.3, %\
+4 ]\l  %niter = phi i64 [ 0, %.lr.ph.new ], [ %niter.next.3, %4 ]\l  %5 = getelementptr inbounds i64, ptr %2, i64 %indvars.iv\l  %\
+6 = load i64, ptr %5, align 8\l  %.not8 = icmp eq i64 %6, %indvars.iv\l  %indvars.iv.next = or disjoint i64 %indvars.iv, 1\l  %7 = \
+getelementptr inbounds i64, ptr %2, i64 %indvars.iv.next\l  %8 = load i64, ptr %7, align 8\l  %.not8.1 = icmp eq i64 %8, %indvars.iv.next\l  %\
+indvars.iv.next.1 = or disjoint i64 %indvars.iv, 2\l  %9 = getelementptr inbounds i64, ptr %2, i64 %indvars.iv.next.1\l  %10 = load \
+i64, ptr %9, align 8\l  %.not8.2 = icmp eq i64 %10, %indvars.iv.next.1\l  %indvars.iv.next.2 = or disjoint i64 %indvars.iv, 3\l  %\
+11 = getelementptr inbounds i64, ptr %2, i64 %indvars.iv.next.2\l  %12 = load i64, ptr %11, align 8\l  %.not8.3 = icmp eq i64 %12, %\
+indvars.iv.next.2\l  %13 = select i1 %.not8.3, i1 %.not8.2, i1 false\l  %14 = select i1 %13, i1 %.not8.1, i1 false\l  %15 = select \
+i1 %14, i1 %.not8, i1 false\l  %spec.select.3 = select i1 %15, i32 %.010, i32 0\l  %indvars.iv.next.3 = add nuw nsw i64 %indvars.iv, \
+4\l  %niter.next.3 = add i64 %niter, 4\l  %niter.ncmp.3 = icmp eq i64 %niter.next.3, %unroll_iter\l  br i1 %niter.ncmp.3, label %\
+._crit_edge.loopexit.unr-lcssa, label %4,\l... !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x389674a0 6.0972 2.4236 9.1667 1.4861 "{._crit_edge.loopexit:\l|  %spec.select.lcssa = phi i32 [ %spec.select.lcssa.ph,\l... %._crit_edge.loopexit.unr-lcssa ], [ %spec.select.epil, %\
+.epil.preheader ]\l  %18 = icmp eq i32 %spec.select.lcssa, 0\l  %19 = select i1 %18, i32 -1, i32 1\l  br label %._crit_edge\l}" filled record #3d50c3ff #d24b4070
+node Node0x388e7850 8.4028 5.6111 8.8194 3.8889 "{.epil.preheader:\l|  %indvars.iv.epil = phi i64 [ %indvars.iv.next.epil, %.epil.preheader ], [\l... %indvars.iv.unr, %._crit_edge.loopexit.unr-lcssa ]\l  %\
+.010.epil = phi i32 [ %spec.select.epil, %.epil.preheader ], [ %.010.unr,\l... %._crit_edge.loopexit.unr-lcssa ]\l  %epil.iter = \
+phi i64 [ %epil.iter.next, %.epil.preheader ], [ 0,\l... %._crit_edge.loopexit.unr-lcssa ]\l  %16 = getelementptr inbounds i64, \
+ptr %2, i64 %indvars.iv.epil\l  %17 = load i64, ptr %16, align 8\l  %.not8.epil = icmp eq i64 %17, %indvars.iv.epil\l  %spec.select.epil = \
+select i1 %.not8.epil, i32 %.010.epil, i32 0\l  %indvars.iv.next.epil = add nuw nsw i64 %indvars.iv.epil, 1\l  %epil.iter.next = \
+add i64 %epil.iter, 1\l  %epil.iter.cmp.not = icmp eq i64 %epil.iter.next, %xtraiter\l  br i1 %epil.iter.cmp.not, label %._crit_\
+edge.loopexit, label\l... %.epil.preheader, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x388eb7e0 Node0x388ebe50 16 1.8333 20.708 1.8333 20.411 1.5089 20.48 1.3889 20.208 0.9353 19.181 1.125 18.818 1.125 17.694 1.125 17.694 1.125 17.694 1.125 5.5972 1.125 3.8525 0.37032 3.097 1.3889 1.6806 1.5158 1.5041 1.6831 1.3614 1.869 1.2462 solid black
+edge Node0x388eb7e0 Node0x388e8fb0 4 4.7639 20.708 4.7639 20.581 4.7908 20.455 4.8342 20.334 solid black
+edge Node0x388e8fb0 Node0x388cec70 7 3.4861 18.611 3.4861 14.943 1.9165 13.554 3.7222 10.361 3.8056 10.214 3.9117 10.08 4.0321 9.9579 solid black
+edge Node0x388e8fb0 Node0x388d0ba0 4 7.4444 18.611 7.4444 18.49 7.4661 18.363 7.497 18.243 solid black
+edge Node0x388cec70 Node0x389674a0 7 3.7083 8.0556 3.7083 6.1038 2.8384 5.3291 3.8611 3.6667 3.9573 3.5103 4.0809 3.3724 4.2206 3.251 solid black
+edge Node0x388cec70 Node0x388e7850 4 8.0694 8.0556 8.0694 7.9364 8.0734 7.8143 8.0805 7.6913 solid black
+edge Node0x388d0ba0 Node0x388ebe00 4 7.7348 17.255 7.7418 17.148 7.7498 17.023 7.7586 16.886 solid black
+edge Node0x388ebe00 Node0x388cec70 4 5.9028 10.361 5.9028 10.244 5.9023 10.122 5.9015 9.9998 solid black
+edge Node0x388ebe00 Node0x388ebe00 7 10.279 10.366 11.592 9.5079 12.347 9.6415 12.347 12.042 12.347 12.43 12.279 12.758 12.159 13.033 solid black
+edge Node0x389674a0 Node0x388ebe50 4 5.0032 1.6854 4.7832 1.5398 4.5569 1.39 4.3524 1.2546 solid black
+edge Node0x388e7850 Node0x389674a0 4 6.1944 3.6667 6.1944 3.5497 6.19 3.4267 6.1831 3.3056 solid black
+edge Node0x388e7850 Node0x388e7850 7 10.942 3.6725 12.291 3.0507 13.062 3.1648 13.062 4.7222 13.062 4.9542 13.003 5.1542 12.897 5.3245 solid black
+stop
