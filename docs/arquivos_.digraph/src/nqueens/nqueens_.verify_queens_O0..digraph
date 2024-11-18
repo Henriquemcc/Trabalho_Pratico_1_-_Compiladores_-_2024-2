@@ -1,0 +1,18 @@
+graph 1 12.188 8.1944
+node Node0x3ef4b270 4.8333 7.0833 3.7778 2.2222 "{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca i32, align 4\l  store i32 %0, ptr %3, align 4\l  %4 = load i32, ptr %3, align 4\l  %\
+5 = sext i32 %4 to i64\l  %6 = icmp ugt i64 %5, 14\l  br i1 %6, label %7, label %8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3ef4b590 1.7222 4.2569 3.4444 0.86111 "{7:\l|  store i32 0, ptr %2, align 4\l  br label %18\l}" filled record #3d50c3ff #be242e70
+node Node0x3ef4b5e0 7.9444 4.2569 8.4861 2.4306 "{8:\l|  %9 = load i32, ptr @total_count, align 4\l  %10 = load i32, ptr %3, align 4\l  %11 = sub nsw i32 %10, 1\l  %12 = sext i32 %\
+11 to i64\l  %13 = getelementptr inbounds [14 x i32], ptr @solutions, i64 0, i64 %12\l  %14 = load i32, ptr %13, align 4\l  %15 = \
+icmp eq i32 %9, %14\l  br i1 %15, label %16, label %17\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x3ef4b780 5.8194 0.75 3.7778 0.86111 "{18:\l|  %19 = load i32, ptr %2, align 4\l  ret i32 %19\l}" filled record #b70d28ff #b70d2870
+node Node0x3ef4bc40 5.8194 2.1111 3.4444 0.86111 "{16:\l|  store i32 1, ptr %2, align 4\l  br label %18\l}" filled record #3d50c3ff #c5333470
+node Node0x3ef4bc90 9.8194 2.1111 3.5556 0.86111 "{17:\l|  store i32 -1, ptr %2, align 4\l  br label %18\l}" filled record #3d50c3ff #c5333470
+edge Node0x3ef4b270 Node0x3ef4b590 4 2.9306 6.1389 2.295 6.1389 1.9772 5.367 1.8313 4.8156 solid black
+edge Node0x3ef4b270 Node0x3ef4b5e0 4 6.7361 6.1389 7.089 6.1389 7.344 5.9009 7.5259 5.5948 solid black
+edge Node0x3ef4b590 Node0x3ef4b780 7 2.0054 3.8301 2.3967 3.2831 3.1485 2.3138 3.9722 1.6806 4.1885 1.5142 4.4398 1.3657 4.686 1.2391 solid black
+edge Node0x3ef4b5e0 Node0x3ef4bc40 4 5.8194 3.0417 5.8194 2.924 5.8194 2.7978 5.8194 2.6779 solid black
+edge Node0x3ef4b5e0 Node0x3ef4bc90 4 10.069 3.0417 10.069 2.9207 10.049 2.7939 10.02 2.6744 solid black
+edge Node0x3ef4bc40 Node0x3ef4b780 4 5.8194 1.6863 5.8194 1.5697 5.8194 1.4408 5.8194 1.3173 solid black
+edge Node0x3ef4bc90 Node0x3ef4b780 4 8.5867 1.6863 8.1438 1.5387 7.6417 1.3713 7.1879 1.22 solid black
+stop

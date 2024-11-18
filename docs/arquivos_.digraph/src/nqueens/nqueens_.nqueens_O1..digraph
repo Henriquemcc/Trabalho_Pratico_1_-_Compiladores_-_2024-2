@@ -1,0 +1,69 @@
+graph 1 13.058 37.583
+node Node0x47060d0 3.9931 36.993 5.7361 1.1806 "{5:\l|  %6 = icmp eq i32 %0, %1\l  br i1 %6, label %.loopexit.sink.split, label %7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x4708260 4.2986 2.1111 8.5972 1.2778 "{.loopexit.sink.split:\l|  %.sink = phi i32 [ 1, %5 ], [ %.lcssa.ph,\l... %.loopexit.sink.split.loopexit.unr-lcssa ], [ %53, %.epil.preheader ]\l  \
+store i32 %.sink, ptr %3, align 4\l  br label %.loopexit\l}" filled record #3d50c3ff #d0473d70
+node Node0x4708690 7.4653 34.688 8.5972 2.4306 "{7:\l|  store i32 0, ptr %3, align 4\l  %8 = sext i32 %0 to i64\l  %9 = shl nsw i64 %8, 2\l  %10 = alloca i8, i64 %9, align 16\l  \
+call void @llvm.memset.p0.i64(ptr nonnull align 16 %10, i8 0, i64 %9, i1\l... false)\l  %11 = icmp sgt i32 %0, 0\l  br i1 %11, label %\
+.lr.ph, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x4708d80 5.3125 32.333 5.1528 1.2778 "{.lr.ph:\l|  %12 = sext i32 %1 to i64\l  %13 = add nsw i32 %1, 1\l  %wide.trip.count = zext nneg i32 %0 to i64\l  br label %16\l}" filled record #3d50c3ff #d6524470
+node Node0x474fa60 9.1458 23.59 5.3889 1.1806 "{.preheader:\l|  %14 = icmp sgt i32 %0, 0\l  br i1 %14, label %.lr.ph34, label %.loopexit\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x47095a0 5.3125 29.771 8.8194 2.8472 "{16:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph ], [ %indvars.iv.next, %23 ]\l  %17 = alloca i8, i64 %8, align 16\l  call void @llvm.memcpy.p0.p0.i64(\
+ptr nonnull align 16 %17, ptr align 1 %2,\l... i64 %12, i1 false)\l  %18 = trunc i64 %indvars.iv to i8\l  %19 = getelementptr inbounds \
+i8, ptr %17, i64 %12\l  store i8 %18, ptr %19, align 1\l  %20 = call i32 @ok(i32 noundef %13, ptr noundef nonnull %17), !range !\
+4\l  %.not = icmp eq i32 %20, 0\l  br i1 %.not, label %23, label %21\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x4709310 5.6597 21.493 7.6806 2.0139 "{.lr.ph34:\l|  %.promoted = load i32, ptr %3, align 4\l  %wide.trip.count39 = zext nneg i32 %0 to i64\l  %xtraiter = and i64 %wide.trip.count39, \
+7\l  %15 = icmp ult i32 %0, 8\l  br i1 %15, label %.loopexit.sink.split.loopexit.unr-lcssa, label\l... %.lr.ph34.new\l|{<s0>T|<s1>\
+F}}" filled record #3d50c3ff #d6524470
+node Node0x47088b0 7.8681 0.64583 1.375 0.65278 "{.loopexit:\l|  ret void\l}" filled record #3d50c3ff #cc403a70
+node Node0x476b3b0 5.3681 8.3333 8.9444 1.8056 "{.loopexit.sink.split.loopexit.unr-lcssa:\l|  %.lcssa.ph = phi i32 [ undef, %.lr.ph34 ], [ %49, %24 ]\l  %indvars.iv36.unr = phi \
+i64 [ 0, %.lr.ph34 ], [ %indvars.iv.next37.7, %24 ]\l  %.unr = phi i32 [ %.promoted, %.lr.ph34 ], [ %49, %24 ]\l  %lcmp.mod.not = \
+icmp eq i64 %xtraiter, 0\l  br i1 %lcmp.mod.not, label %.loopexit.sink.split, label %.epil.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x470c910 7.5764 19.556 6.3056 0.86111 "{.lr.ph34.new:\l|  %unroll_iter = and i64 %wide.trip.count39, 2147483640\l  br label %24\l}" filled record #3d50c3ff #dc5d4a70
+node Node0x470bcb0 7.5764 14.181 8.8194 8.8889 "{24:\l|  %indvars.iv36 = phi i64 [ 0, %.lr.ph34.new ], [ %indvars.iv.next37.7, %24 ]\l  %25 = phi i32 [ %.promoted, %.lr.ph34.new ], [ %\
+49, %24 ]\l  %niter = phi i64 [ 0, %.lr.ph34.new ], [ %niter.next.7, %24 ]\l  %26 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv36\l  %\
+27 = load i32, ptr %26, align 16\l  %28 = add nsw i32 %25, %27\l  %indvars.iv.next37 = or disjoint i64 %indvars.iv36, 1\l  %29 = \
+getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37\l  %30 = load i32, ptr %29, align 4\l  %31 = add nsw i32 %28, %30\l  %\
+indvars.iv.next37.1 = or disjoint i64 %indvars.iv36, 2\l  %32 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.1\l  %\
+33 = load i32, ptr %32, align 8\l  %34 = add nsw i32 %31, %33\l  %indvars.iv.next37.2 = or disjoint i64 %indvars.iv36, 3\l  %35 = \
+getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.2\l  %36 = load i32, ptr %35, align 4\l  %37 = add nsw i32 %34, %36\l  %\
+indvars.iv.next37.3 = or disjoint i64 %indvars.iv36, 4\l  %38 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.3\l  %\
+39 = load i32, ptr %38, align 16\l  %40 = add nsw i32 %37, %39\l  %indvars.iv.next37.4 = or disjoint i64 %indvars.iv36, 5\l  %41 = \
+getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.4\l  %42 = load i32, ptr %41, align 4\l  %43 = add nsw i32 %40, %42\l  %\
+indvars.iv.next37.5 = or disjoint i64 %indvars.iv36, 6\l  %44 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.5\l  %\
+45 = load i32, ptr %44, align 8\l  %46 = add nsw i32 %43, %45\l  %indvars.iv.next37.6 = or disjoint i64 %indvars.iv36, 7\l  %47 = \
+getelementptr inbounds i32, ptr %10, i64 %indvars.iv.next37.6\l  %48 = load i32, ptr %47, align 4\l  %49 = add nsw i32 %46, %48\l  %\
+indvars.iv.next37.7 = add nuw nsw i64 %indvars.iv36, 8\l  %niter.next.7 = add i64 %niter, 8\l  %niter.ncmp.7 = icmp eq i64 %niter.next.7, %\
+unroll_iter\l  br i1 %niter.ncmp.7, label %.loopexit.sink.split.loopexit.unr-lcssa, label\l... %24, !llvm.loop !7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x470b620 6.6458 25.375 7.6806 1.3889 "{23:\l|  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %exitcond.not = icmp eq i64 %indvars.iv.next, %wide.trip.count\l  \
+br i1 %exitcond.not, label %.preheader, label %16, !llvm.loop !5\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x470add0 8.0347 27.208 9.0556 1.2778 "{21:\l|  %22 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv\l  call void @nqueens(i32 noundef %0, i32 noundef %13, ptr noundef \
+nonnull %17,\l... ptr noundef nonnull %22, i32 noundef %4)\l  br label %23\l}" filled record #b70d28ff #bb1b2c70
+node Node0x47643d0 7.6736 5.0903 8.4861 3.6806 "{.epil.preheader:\l|  %indvars.iv36.epil = phi i64 [ %indvars.iv.next37.epil, %.epil.preheader\l... ], [ %indvars.iv36.unr, %.loopexit.sink.split.loopexit.unr-lcssa ]\l  %\
+50 = phi i32 [ %53, %.epil.preheader ], [ %.unr,\l... %.loopexit.sink.split.loopexit.unr-lcssa ]\l  %epil.iter = phi i64 [ %epil.iter.next, %\
+.epil.preheader ], [ 0,\l... %.loopexit.sink.split.loopexit.unr-lcssa ]\l  %51 = getelementptr inbounds i32, ptr %10, i64 %indvars.iv36.epil\l  %\
+52 = load i32, ptr %51, align 4\l  %53 = add nsw i32 %50, %52\l  %indvars.iv.next37.epil = add nuw nsw i64 %indvars.iv36.epil, 1\l  %\
+epil.iter.next = add i64 %epil.iter, 1\l  %epil.iter.cmp.not = icmp eq i64 %epil.iter.next, %xtraiter\l  br i1 %epil.iter.cmp.not, \
+label %.loopexit.sink.split, label\l... %.epil.preheader, !llvm.loop !8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+edge Node0x47060d0 Node0x4708260 13 1.1042 36.562 -0.788 36.562 0.50694 34.239 0.50694 32.347 0.50694 32.347 0.50694 32.347 0.50694 8.3194 0.50694 6.7451 1.1133 5.421 2.8819 3.25 3.0009 3.104 3.1418 2.9647 3.2879 2.837 solid black
+edge Node0x47060d0 Node0x4708690 4 6.8819 36.562 7.1872 36.562 7.3498 36.332 7.4324 36.033 solid black
+edge Node0x4708260 Node0x47088b0 4 5.8383 1.4772 6.255 1.3093 6.69 1.1342 7.0498 0.98924 solid black
+edge Node0x4708690 Node0x4708d80 4 5.3125 33.472 5.3125 33.354 5.3125 33.229 5.3125 33.107 solid black
+edge Node0x4708690 Node0x474fa60 10 11.785 33.632 13.571 33.632 12.951 31.571 12.951 29.785 12.951 29.785 12.951 29.785 12.951 27.194 12.951 25.832 11.645 24.834 10.564 24.241 solid black
+edge Node0x4708d80 Node0x47095a0 4 5.3125 31.699 5.3125 31.584 5.3125 31.459 5.3125 31.33 solid black
+edge Node0x474fa60 Node0x4709310 4 6.4375 23.16 6.1309 23.16 5.9449 22.924 5.8322 22.63 solid black
+edge Node0x474fa60 Node0x47088b0 13 11.854 23.16 13.487 23.16 12.632 21.202 12.632 19.569 12.632 19.569 12.632 19.569 12.632 5.0764 12.632 4.2513 12.772 3.9258 12.299 3.25 11.415 1.9894 9.7068 1.2506 8.6888 0.90344 solid black
+edge Node0x47095a0 Node0x470b620 10 3.1042 28.347 3.1042 28.111 2.9643 28.08 2.9236 27.847 2.8257 27.288 2.5882 27.028 2.9236 26.569 3.0412 26.409 3.1808 26.269 3.3359 26.149 solid black
+edge Node0x47095a0 Node0x470add0 4 7.5208 28.347 7.5208 28.222 7.5473 28.096 7.5883 27.976 solid black
+edge Node0x4709310 Node0x476b3b0 10 3.7292 20.486 3.7292 19.605 3.2022 19.492 3.0486 18.625 2.3597 14.735 1.1006 13.173 3.0486 9.7361 3.1335 9.5863 3.2417 9.4509 3.3648 9.3288 solid black
+edge Node0x4709310 Node0x470c910 4 7.5764 20.486 7.5764 20.368 7.5764 20.242 7.5764 20.122 solid black
+edge Node0x476b3b0 Node0x4708260 7 3.1319 7.4306 3.1319 5.5708 2.6202 4.9761 3.3125 3.25 3.368 3.1116 3.4482 2.9787 3.5393 2.8557 solid black
+edge Node0x476b3b0 Node0x47643d0 4 7.6042 7.4306 7.6042 7.3117 7.6051 7.1894 7.6067 7.066 solid black
+edge Node0x470c910 Node0x470bcb0 4 7.5764 19.131 7.5764 19.025 7.5764 18.901 7.5764 18.763 solid black
+edge Node0x470bcb0 Node0x476b3b0 4 5.3681 9.7361 5.3681 9.6191 5.3681 9.4966 5.3681 9.3748 solid black
+edge Node0x470bcb0 Node0x470bcb0 7 9.9769 9.7412 11.412 8.5686 12.236 8.7086 12.236 12.042 12.236 12.571 12.164 13.02 12.037 13.396 solid black
+edge Node0x470b620 Node0x474fa60 4 4.7153 24.681 4.7153 24.27 5.4423 24.016 6.3074 23.858 solid black
+edge Node0x470b620 Node0x47095a0 13 8.5625 24.667 8.5625 24.453 10.336 24.529 10.486 24.681 10.921 25.119 10.907 25.618 10.486 26.069 9.407 27.227 4.461 25.412 3.3819 26.569 2.9219 27.063 3.157 27.683 3.5972 28.245 solid black
+edge Node0x470add0 Node0x470b620 4 7.5567 26.573 7.4587 26.446 7.3542 26.31 7.2523 26.177 solid black
+edge Node0x47643d0 Node0x4708260 4 3.4097 3.4097 3.0919 3.4097 3.2513 3.1405 3.5176 2.8486 solid black
+edge Node0x47643d0 Node0x47643d0 7 10.122 3.2569 11.421 2.6754 12.167 2.7842 12.167 4.25 12.167 4.4715 12.108 4.662 12.003 4.8238 solid black
+stop

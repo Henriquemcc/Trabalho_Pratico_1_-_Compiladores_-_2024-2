@@ -1,0 +1,35 @@
+graph 1 14.194 18.778
+node Node0x4701090 10.868 18.188 6.6528 1.1806 "{2:\l|  %3 = icmp sgt i32 %0, 0\l  br i1 %3, label %.lr.ph31.preheader, label %.loopexit27\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x4750a90 8.5208 16.458 5.3889 1.2778 "{.lr.ph31.preheader:\l|  %4 = zext nneg i32 %0 to i64\l  %wide.trip.count39 = zext nneg i32 %0 to i64\l  %wide.trip.count = zext \
+nneg i32 %0 to i64\l  br label %.lr.ph31\l}" filled record #3d50c3ff #d0473d70
+node Node0x4706ec0 3.8958 0.75 7.7917 0.86111 "{.loopexit27:\l|  %.0 = phi i32 [ 1, %2 ], [ 0, %14 ], [ 0, %10 ], [ 1, %.loopexit ]\l  ret i32 %.0\l}" filled record #3d50c3ff #cc403a70
+node Node0x4704970 8.1736 14 8.5972 2.6389 "{.lr.ph31:\l|  %indvars.iv36 = phi i64 [ 0, %.lr.ph31.preheader ], [ %indvars.iv.next37,\l... %.loopexit ]\l  %indvars.iv = phi \
+i64 [ 1, %.lr.ph31.preheader ], [ %indvars.iv.next,\l... %.loopexit ]\l  %5 = getelementptr inbounds i8, ptr %1, i64 %indvars.iv36\l  %\
+6 = load i8, ptr %5, align 1\l  %indvars.iv.next37 = add nuw nsw i64 %indvars.iv36, 1\l  %7 = icmp ult i64 %indvars.iv.next37, %\
+4\l  br i1 %7, label %.lr.ph, label %.loopexit\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x4707f70 7.7431 2.375 8.7083 1.3889 "{.loopexit:\l|  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %exitcond40.not = icmp eq i64 %indvars.iv.next37, %wide.trip.count39\l  \
+br i1 %exitcond40.not, label %.loopexit27, label %.lr.ph31, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x4706f80 5.4236 11.75 2.75 0.86111 "{.lr.ph:\l|  %8 = sext i8 %6 to i32\l  br label %10\l}" filled record #3d50c3ff #cc403a70
+node Node0x4705230 4.3819 9.8125 8.7083 2.0139 "{10:\l|  %indvars.iv33 = phi i64 [ %indvars.iv, %.lr.ph ], [ %indvars.iv.next34, %9\l... ]\l  %11 = getelementptr inbounds i8, ptr %\
+1, i64 %indvars.iv33\l  %12 = load i8, ptr %11, align 1\l  %13 = icmp eq i8 %12, %6\l  br i1 %13, label %.loopexit27, label %14\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x4704fe0 6.8403 4.2639 7.6806 1.3889 "{9:\l|  %indvars.iv.next34 = add nuw nsw i64 %indvars.iv33, 1\l  %exitcond.not = icmp eq i64 %indvars.iv.next34, %wide.trip.count\l  \
+br i1 %exitcond.not, label %.loopexit, label %10, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x47059b0 5.3264 6.8819 6.0694 2.8472 "{14:\l|  %15 = sext i8 %12 to i32\l  %16 = sub nuw nsw i64 %indvars.iv33, %indvars.iv36\l  %17 = trunc i64 %16 to i32\l  %18 = sub \
+i32 %8, %17\l  %19 = icmp eq i32 %18, %15\l  %20 = trunc i64 %16 to i32\l  %21 = add i32 %20, %8\l  %22 = icmp eq i32 %21, %15\l  %\
+or.cond = or i1 %19, %22\l  br i1 %or.cond, label %.loopexit27, label %9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x4701090 Node0x4750a90 4 9.2014 17.597 9.2014 17.468 9.1682 17.341 9.1164 17.222 solid black
+edge Node0x4701090 Node0x4706ec0 13 12.535 17.597 12.535 15.998 12.868 15.613 12.868 14.014 12.868 14.014 12.868 14.014 12.868 4.25 12.868 3.0717 13.104 2.4538 12.215 1.6806 11.873 1.3825 9.8811 1.157 7.9326 1.0042 solid black
+edge Node0x4750a90 Node0x4704970 4 8.4323 15.825 8.4158 15.709 8.3979 15.584 8.3795 15.455 solid black
+edge Node0x4704970 Node0x4707f70 13 10.326 12.681 10.326 11.369 11.076 11.138 11.076 9.8264 11.076 9.8264 11.076 9.8264 11.076 6.8681 11.076 5.3968 11.681 4.7468 10.799 3.5694 10.677 3.4067 10.529 3.2665 10.366 3.1455 solid black
+edge Node0x4704970 Node0x4706f80 4 6.0208 12.681 6.0208 12.545 5.9746 12.414 5.9078 12.296 solid black
+edge Node0x4707f70 Node0x4706ec0 4 3.3681 1.8472 3.0959 1.8472 3.2366 1.5675 3.4408 1.2924 solid black
+edge Node0x4707f70 Node0x4704970 13 12.118 1.8472 13.24 1.8472 11.604 5.7465 11.604 6.8681 11.604 9.8264 11.604 9.8264 11.604 9.8264 11.604 10.883 11.86 11.304 11.271 12.181 11.173 12.326 11.059 12.462 10.934 12.588 solid black
+edge Node0x4706f80 Node0x4705230 4 5.1976 11.322 5.1348 11.207 5.0635 11.076 4.9899 10.941 solid black
+edge Node0x4705230 Node0x4706ec0 13 2.2014 8.8056 2.2014 8.5826 2.169 8.5284 2.1597 8.3056 2.0722 6.2024 1.8792 5.6517 2.1875 3.5694 2.3154 2.7055 2.2418 2.4053 2.7292 1.6806 2.8323 1.5273 2.9692 1.3879 3.1128 1.2667 solid black
+edge Node0x4705230 Node0x47059b0 4 6.5625 8.8056 6.5625 8.6807 6.5437 8.5576 6.5106 8.4377 solid black
+edge Node0x4704fe0 Node0x4707f70 4 4.9097 3.5694 4.9097 3.4243 4.9418 3.2966 4.9992 3.1844 solid black
+edge Node0x4704fe0 Node0x4705230 13 8.7569 3.5556 8.7569 3.3418 10.53 3.4178 10.681 3.5694 10.898 3.7885 10.769 4.6627 10.681 4.9583 10.17 6.6641 9.8756 7.2009 8.4792 8.3056 8.2744 8.4675 8.0504 8.613 7.8162 8.7434 solid black
+edge Node0x47059b0 Node0x4706ec0 7 2.2708 5.6181 1.8198 5.6181 3.0688 2.0905 3.2569 1.6806 3.3183 1.547 3.3993 1.4121 3.4829 1.2885 solid black
+edge Node0x47059b0 Node0x4704fe0 4 6.8403 5.4583 6.8403 5.3405 6.8403 5.216 6.8403 5.0938 solid black
+stop

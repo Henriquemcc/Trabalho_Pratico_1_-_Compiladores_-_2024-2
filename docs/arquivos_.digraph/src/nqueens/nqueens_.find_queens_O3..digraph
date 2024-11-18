@@ -1,0 +1,6 @@
+graph 1 9.0556 2.6389
+node Node0x39207730 4.5278 1.4792 9.0556 2.3194 "{1:\l|  store i32 0, ptr @total_count, align 4\l  %2 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @\
+.str, i32 noundef %0)\l  %3 = sext i32 %0 to i64\l  %4 = alloca i8, i64 %3, align 16\l  call void @nqueens(i32 noundef %0, i32 noundef \
+0, ptr noundef nonnull %4,\l... ptr noundef nonnull @total_count, i32 noundef 0)\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(\
+1) @str)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

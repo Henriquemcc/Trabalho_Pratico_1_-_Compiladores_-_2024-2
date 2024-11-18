@@ -1,0 +1,4 @@
+graph 1 6.4167 1.8056
+node Node0x470e260 3.2083 1.0625 6.4167 1.4861 "{2:\l|  %3 = getelementptr inbounds ptr, ptr %1, i64 1\l  %4 = load ptr, ptr %3, align 8\l  %5 = tail call i32 @atoi(ptr nocapture \
+noundef %4) #9\l  tail call void @find_queens(i32 noundef %5)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+stop
