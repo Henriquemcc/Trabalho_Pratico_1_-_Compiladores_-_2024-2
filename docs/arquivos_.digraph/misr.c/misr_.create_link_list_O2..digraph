@@ -1,0 +1,16 @@
+graph 1 10.729 7.4583
+node Node0x2432ec80 3.6667 6.5556 7.3333 1.8056 "{1:\l|  tail call void @llvm.memset.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %0, i8 0, i64 16, i1 false)\l  %\
+2 = load i32, ptr @reg_len, align 4\l  %.not10 = icmp slt i32 %2, 0\l  br i1 %.not10, label %._crit_edge, label %.lr.ph\l|{<s0>T|<\
+s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x24332310 2.5556 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x243322c0 6.0694 3.3125 8.8194 3.6806 "{.lr.ph:\l|  %.012 = phi ptr [ %3, %.lr.ph ], [ %0, %1 ]\l  %.0911 = phi i32 [ %7, %.lr.ph ], [ 0, %1 ]\l  %3 = tail call noalias \
+dereferenceable_or_null(16) ptr @malloc(i64 noundef\l... 16) #12\l  store i32 1, ptr %3, align 8\l  %4 = getelementptr inbounds %\
+struct.cells, ptr %3, i64 0, i32 1\l  store i32 1, ptr %4, align 4\l  %5 = getelementptr inbounds %struct.cells, ptr %3, i64 0, \
+i32 2\l  store ptr null, ptr %5, align 8\l  %6 = getelementptr inbounds %struct.cells, ptr %.012, i64 0, i32 2\l  store ptr %3, \
+ptr %6, align 8\l  %7 = add nuw i32 %.0911, 1\l  %exitcond.not = icmp eq i32 %.0911, %2\l  br i1 %exitcond.not, label %._crit_edge, \
+label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x2432ec80 Node0x24332310 10 1.8333 5.6528 1.8333 5.3923 1.5983 5.4035 1.5278 5.1528 1.0847 3.5781 0.8149 2.9445 1.5278 1.4722 1.606 1.3107 1.7336 1.1715 1.8728 1.0563 solid black
+edge Node0x2432ec80 Node0x243322c0 4 5.5 5.6528 5.5 5.5334 5.5072 5.4116 5.5199 5.2894 solid black
+edge Node0x243322c0 Node0x24332310 4 1.6389 1.6319 1.304 1.6319 1.6384 1.3227 1.9937 1.0531 solid black
+edge Node0x243322c0 Node0x243322c0 7 8.6551 1.4786 9.9755 0.97591 10.729 1.0918 10.729 2.4722 10.729 2.6763 10.672 2.8527 10.57 3.0036 solid black
+stop

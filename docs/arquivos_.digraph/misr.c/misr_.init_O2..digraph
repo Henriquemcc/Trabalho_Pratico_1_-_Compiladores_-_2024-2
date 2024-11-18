@@ -1,0 +1,13 @@
+graph 1 10.021 6.2083
+node Node0x24333a80 3.7222 5.4097 7.4444 1.5972 "{1:\l|  %2 = getelementptr inbounds %struct.cells, ptr %0, i64 0, i32 2\l  %3 = load ptr, ptr %2, align 8\l  %.not4 = icmp eq ptr %\
+3, null\l  br i1 %.not4, label %._crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x24333ed0 2.75 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x24333e80 5.875 2.7917 7.7917 2.6389 "{.lr.ph:\l|  %4 = phi ptr [ %8, %.lr.ph ], [ %3, %1 ]\l  %.05 = phi ptr [ %4, %.lr.ph ], [ %0, %1 ]\l  %5 = load i32, ptr %.05, \
+align 8\l  %6 = getelementptr inbounds %struct.cells, ptr %.05, i64 0, i32 1\l  store i32 %5, ptr %6, align 4\l  %7 = getelementptr \
+inbounds %struct.cells, ptr %4, i64 0, i32 2\l  %8 = load ptr, ptr %7, align 8\l  %.not = icmp eq ptr %8, null\l  br i1 %.not, label %\
+._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x24333a80 Node0x24333ed0 7 1.8611 4.6111 1.8611 3.216 1.2797 2.7466 1.8472 1.4722 1.9169 1.3157 2.0333 1.1767 2.1597 1.0599 solid black
+edge Node0x24333a80 Node0x24333e80 4 5.5833 4.6111 5.5833 4.4923 5.5896 4.3696 5.6002 4.2468 solid black
+edge Node0x24333e80 Node0x24333ed0 4 1.9583 1.6389 1.6441 1.6389 1.9324 1.3301 2.2456 1.0594 solid black
+edge Node0x24333e80 Node0x24333e80 7 8.2671 1.4786 9.3765 1.1184 10.021 1.23 10.021 2.2153 10.021 2.3698 9.9674 2.5028 9.8716 2.6159 solid black
+stop

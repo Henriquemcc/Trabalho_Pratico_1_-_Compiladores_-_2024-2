@@ -1,0 +1,129 @@
+graph 1 41.576 50.653
+node Node0x1f30ee70 12.312 48.083 5.2778 5.1389 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  %6 = alloca %struct.cells, align 8\l  %\
+7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca double, \
+align 8\l  %12 = alloca [100 x i8], align 16\l  %13 = alloca [3 x i16], align 2\l  store i32 0, ptr %3, align 4\l  store i32 %0, \
+ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  store i32 10, ptr %7, align 4\l  store i32 10, ptr @reg_len, align 4\l  store \
+double 2.500000e-01, ptr %11, align 8\l  store i32 100000, ptr %8, align 4\l  %14 = load i32, ptr %4, align 4\l  %15 = icmp sgt \
+i32 %14, 6\l  br i1 %15, label %16, label %22\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f3139c0 15.979 42.806 7.3333 1.6944 "{16:\l|  %17 = getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 0\l  %18 = load ptr, ptr %5, align 8\l  %19 = getelementptr \
+inbounds ptr, ptr %18, i64 6\l  %20 = load ptr, ptr %19, align 8\l  %21 = call ptr @strcpy(ptr noundef %17, ptr noundef %20) #6\l  \
+br label %39\l}" filled record #3d50c3ff #d6524470
+node Node0x1f313a50 9.9375 44.583 3.5556 0.86111 "{22:\l|  store i32 1, ptr %10, align 4\l  br label %23\l}" filled record #3d50c3ff #d6524470
+node Node0x1f314000 14.424 38.361 3.9028 1.3889 "{39:\l|  %40 = load i32, ptr %4, align 4\l  %41 = icmp sgt i32 %40, 7\l  br i1 %41, label %42, label %48\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f314160 8.6458 42.806 4.5833 1.5972 "{23:\l|  %24 = load i32, ptr %10, align 4\l  %25 = load i32, ptr @reg_len, align 4\l  %26 = icmp slt i32 %24, %25\l  br i1 %26, \
+label %27, label %34\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x1f3143b0 3.8403 40.507 7.6806 1.4861 "{27:\l|  %28 = load i32, ptr %10, align 4\l  %29 = sext i32 %28 to i64\l  %30 = getelementptr inbounds [100 x i8], ptr %12, i64 \
+0, i64 %29\l  store i8 48, ptr %30, align 1\l  br label %31\l}" filled record #b70d28ff #b70d2870
+node Node0x1f314400 12.312 40.507 7.6806 1.9028 "{34:\l|  %35 = getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 0\l  store i8 49, ptr %35, align 16\l  %36 = load i32, ptr @\
+reg_len, align 4\l  %37 = sext i32 %36 to i64\l  %38 = getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 %37\l  store i8 0, \
+ptr %38, align 1\l  br label %39\l}" filled record #3d50c3ff #d6524470
+node Node0x1f3147c0 5.9653 38.361 3.9028 1.2778 "{31:\l|  %32 = load i32, ptr %10, align 4\l  %33 = add nsw i32 %32, 1\l  store i32 %33, ptr %10, align 4\l  br label %23, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+node Node0x1f315b70 10.229 36.215 9.0556 1.9028 "{42:\l|  %43 = load ptr, ptr %5, align 8\l  %44 = getelementptr inbounds ptr, ptr %43, i64 7\l  %45 = load ptr, ptr %44, align 8\l  %\
+46 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 0\l  %47 = call i32 (ptr, ptr, ...) @__isoc99_sscanf(ptr noundef %45, \
+ptr noundef\l... @.str, ptr noundef %46) #6\l  br label %50\l}" filled record #3d50c3ff #d6524470
+node Node0x1f315bc0 18.618 36.215 7.2222 1.0694 "{48:\l|  %49 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 0\l  store i16 1, ptr %49, align 2\l  br label %50\l}" filled record #3d50c3ff #d6524470
+node Node0x1f316890 14.424 34.069 3.9028 1.3889 "{50:\l|  %51 = load i32, ptr %4, align 4\l  %52 = icmp sgt i32 %51, 8\l  br i1 %52, label %53, label %59\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f316c90 10.229 31.924 9.0556 1.9028 "{53:\l|  %54 = load ptr, ptr %5, align 8\l  %55 = getelementptr inbounds ptr, ptr %54, i64 8\l  %56 = load ptr, ptr %55, align 8\l  %\
+57 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 1\l  %58 = call i32 (ptr, ptr, ...) @__isoc99_sscanf(ptr noundef %56, \
+ptr noundef\l... @.str, ptr noundef %57) #6\l  br label %61\l}" filled record #3d50c3ff #d6524470
+node Node0x1f316ce0 18.618 31.924 7.2222 1.0694 "{59:\l|  %60 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 1\l  store i16 0, ptr %60, align 2\l  br label %61\l}" filled record #3d50c3ff #d6524470
+node Node0x1f317140 14.424 29.778 3.9028 1.3889 "{61:\l|  %62 = load i32, ptr %4, align 4\l  %63 = icmp sgt i32 %62, 9\l  br i1 %63, label %64, label %70\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f317510 10.229 27.632 9.0556 1.9028 "{64:\l|  %65 = load ptr, ptr %5, align 8\l  %66 = getelementptr inbounds ptr, ptr %65, i64 9\l  %67 = load ptr, ptr %66, align 8\l  %\
+68 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 2\l  %69 = call i32 (ptr, ptr, ...) @__isoc99_sscanf(ptr noundef %67, \
+ptr noundef\l... @.str, ptr noundef %68) #6\l  br label %72\l}" filled record #3d50c3ff #d6524470
+node Node0x1f317560 18.618 27.632 7.2222 1.0694 "{70:\l|  %71 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 2\l  store i16 0, ptr %71, align 2\l  br label %72\l}" filled record #3d50c3ff #d6524470
+node Node0x1f3179c0 14.424 25.486 4.4722 1.3889 "{72:\l|  %73 = load i32, ptr @reg_len, align 4\l  %74 = icmp sgt i32 %73, 100\l  br i1 %74, label %75, label %77\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f317d60 11.535 21.708 8.3611 1.0694 "{75:\l|  %76 = call i32 (ptr, ...) @printf(ptr noundef @.str.1, i32 noundef 100)\l  store i32 2, ptr %3, align 4\l  br label %156\l}" filled record #3d50c3ff #d6524470
+node Node0x1f317db0 17.312 23.597 4.8194 1.3889 "{77:\l|  %78 = load double, ptr %11, align 8\l  %79 = fcmp ogt double %78, 1.000000e+00\l  br i1 %79, label %83, label %80\l|{<s0>\
+T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x1f318170 14.618 0.75 3.9028 0.86111 "{156:\l|  %157 = load i32, ptr %3, align 4\l  ret i32 %157\l}" filled record #3d50c3ff #d0473d70
+node Node0x1f318340 15.854 19.507 6.4167 1.0694 "{83:\l|  %84 = call i32 (ptr, ...) @printf(ptr noundef @.str.2)\l  store i32 3, ptr %3, align 4\l  br label %156\l}" filled record #3d50c3ff #d8564670
+node Node0x1f3183d0 18.91 21.708 4.8194 1.3889 "{80:\l|  %81 = load double, ptr %11, align 8\l  %82 = fcmp olt double %81, 0.000000e+00\l  br i1 %82, label %83, label %85\l|{<s0>\
+T|<s1>F}}" filled record #3d50c3ff #dc5d4a70
+node Node0x1f318620 22.979 19.507 7.3333 2.0139 "{85:\l|  %86 = getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 0\l  %87 = call i64 @strlen(ptr noundef %86) #7\l  %88 = load \
+i32, ptr @reg_len, align 4\l  %89 = sext i32 %88 to i64\l  %90 = icmp ne i64 %87, %89\l  br i1 %90, label %91, label %93\l|{<s0>\
+T|<s1>F}}" filled record #3d50c3ff #e1675170
+node Node0x1f318dc0 18.59 16.889 6.4167 1.0694 "{91:\l|  %92 = call i32 (ptr, ...) @printf(ptr noundef @.str.3)\l  store i32 4, ptr %3, align 4\l  br label %156\l}" filled record #3d50c3ff #e5705870
+node Node0x1f318e10 26.299 16.889 7.2222 2.2222 "{93:\l|  %94 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 0\l  %95 = call ptr @seed48(ptr noundef %94) #6\l  call void @\
+create_link_list(ptr noundef %6)\l  store i32 0, ptr %9, align 4\l  %96 = load i32, ptr %7, align 4\l  %97 = icmp ne i32 %96, 0\l  \
+br i1 %97, label %98, label %114\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e5705870
+node Node0x1f316430 24.493 14.326 3.5556 0.86111 "{98:\l|  store i32 0, ptr %10, align 4\l  br label %99\l}" filled record #3d50c3ff #e8765c70
+node Node0x1f316480 32.479 14.326 8.9444 1.9028 "{114:\l|  call void @init(ptr noundef %6)\l  %115 = load double, ptr %11, align 8\l  %116 = getelementptr inbounds [100 x i8], ptr %\
+12, i64 0, i64 0\l  %117 = call i32 @simulate(i32 noundef 10000, ptr noundef %6, double noundef\l... %115, ptr noundef %116)\l  \
+store i32 0, ptr %10, align 4\l  br label %118\l}" filled record #3d50c3ff #e97a5f70
+node Node0x1f316620 24.493 12.076 4.2361 1.5972 "{99:\l|  %100 = load i32, ptr %10, align 4\l  %101 = load i32, ptr %8, align 4\l  %102 = icmp slt i32 %100, %101\l  br i1 %102, \
+label %103, label %113\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x1f31a400 19.688 9.5139 8.8194 2.5278 "{103:\l|  call void @init(ptr noundef %6)\l  %104 = load i32, ptr %7, align 4\l  %105 = load double, ptr %11, align 8\l  %106 = \
+getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 0\l  %107 = call i32 @simulate(i32 noundef %104, ptr noundef %6, double noundef\l... %\
+105, ptr noundef %106)\l  %108 = load i32, ptr %9, align 4\l  %109 = add nsw i32 %108, %107\l  store i32 %109, ptr %9, align 4\l  \
+br label %110\l}" filled record #3d50c3ff #d0473d70
+node Node0x1f31a450 25.743 9.5139 1.7222 0.65278 "{113:\l|  br label %132\l}" filled record #3d50c3ff #e8765c70
+node Node0x1f31ad20 22.09 4.7153 4.0139 1.2778 "{110:\l|  %111 = load i32, ptr %10, align 4\l  %112 = add nsw i32 %111, 1\l  store i32 %112, ptr %10, align 4\l  br label %99, !\
+llvm.loop !6\l}" filled record #3d50c3ff #d0473d70
+node Node0x1f31b100 36.993 4.7153 9.1667 6.0694 "{132:\l|  %133 = call i32 (ptr, ...) @printf(ptr noundef @.str.4)\l  %134 = load i32, ptr @reg_len, align 4\l  %135 = load i32, \
+ptr %7, align 4\l  %136 = load double, ptr %11, align 8\l  %137 = load i32, ptr %8, align 4\l  %138 = getelementptr inbounds [100 \
+x i8], ptr %12, i64 0, i64 0\l  %139 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 0\l  %140 = load i16, ptr %139, align \
+2\l  %141 = zext i16 %140 to i32\l  %142 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 1\l  %143 = load i16, ptr %142, \
+align 2\l  %144 = zext i16 %143 to i32\l  %145 = getelementptr inbounds [3 x i16], ptr %13, i64 0, i64 2\l  %146 = load i16, ptr %\
+145, align 2\l  %147 = zext i16 %146 to i32\l  %148 = load i32, ptr %8, align 4\l  %149 = load i32, ptr %9, align 4\l  %150 = sub \
+nsw i32 %148, %149\l  %151 = sitofp i32 %150 to double\l  %152 = load i32, ptr %8, align 4\l  %153 = sitofp i32 %152 to double\l  %\
+154 = fdiv double %151, %153\l  %155 = call i32 (ptr, ...) @printf(ptr noundef @.str.5, i32 noundef %134,\l... i32 noundef %135, \
+double noundef %136, i32 noundef %137, ptr noundef %138,\l... i32 noundef %141, i32 noundef %144, i32 noundef %147, double noundef %\
+154)\l  store i32 0, ptr %3, align 4\l  br label %156\l}" filled record #3d50c3ff #e5705870
+node Node0x1f31b610 33.951 12.076 4.2361 1.5972 "{118:\l|  %119 = load i32, ptr %10, align 4\l  %120 = load i32, ptr %8, align 4\l  %121 = icmp slt i32 %119, %120\l  br i1 %121, \
+label %122, label %131\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x1f31b860 31.104 9.5139 8.4861 2.1111 "{122:\l|  %123 = load double, ptr %11, align 8\l  %124 = getelementptr inbounds [100 x i8], ptr %12, i64 0, i64 0\l  %125 = call \
+i32 @simulate(i32 noundef 1, ptr noundef %6, double noundef\l... %123, ptr noundef %124)\l  %126 = load i32, ptr %9, align 4\l  %\
+127 = add nsw i32 %126, %125\l  store i32 %127, ptr %9, align 4\l  br label %128\l}" filled record #3d50c3ff #d24b4070
+node Node0x1f31b8b0 36.993 9.5139 1.7222 0.65278 "{131:\l|  br label %132\l}" filled record #3d50c3ff #e97a5f70
+node Node0x1f31be30 30.146 4.7153 4.0139 1.2778 "{128:\l|  %129 = load i32, ptr %10, align 4\l  %130 = add nsw i32 %129, 1\l  store i32 %130, ptr %10, align 4\l  br label %118, !\
+llvm.loop !7\l}" filled record #3d50c3ff #d24b4070
+edge Node0x1f30ee70 Node0x1f3139c0 4 10.993 45.514 10.993 45.466 12.838 44.48 14.283 43.714 solid black
+edge Node0x1f30ee70 Node0x1f313a50 4 13.632 45.514 13.632 45.102 12.757 44.874 11.858 44.748 solid black
+edge Node0x1f3139c0 Node0x1f314000 7 16.305 41.961 16.519 41.274 16.691 40.295 16.285 39.556 16.2 39.402 16.087 39.266 15.957 39.145 solid black
+edge Node0x1f313a50 Node0x1f314160 4 9.6347 44.159 9.5351 44.024 9.4201 43.868 9.3046 43.712 solid black
+edge Node0x1f314000 Node0x1f315b70 4 12.451 37.833 11.958 37.833 11.499 37.57 11.128 37.256 solid black
+edge Node0x1f314000 Node0x1f315bc0 4 16.396 37.833 17.096 37.833 17.726 37.303 18.135 36.852 solid black
+edge Node0x1f314160 Node0x1f3143b0 4 6.3403 42.167 5.6764 42.167 5.0525 41.757 4.594 41.346 solid black
+edge Node0x1f314160 Node0x1f314400 4 10.951 42.167 11.336 42.167 11.633 41.896 11.849 41.575 solid black
+edge Node0x1f3143b0 Node0x1f3147c0 4 4.5656 39.77 4.7846 39.552 5.0249 39.312 5.2436 39.094 solid black
+edge Node0x1f314400 Node0x1f314000 4 13.245 39.558 13.38 39.422 13.518 39.283 13.65 39.151 solid black
+edge Node0x1f3147c0 Node0x1f314160 7 7.2214 38.994 7.4442 39.151 7.6551 39.338 7.8125 39.556 7.95 39.745 8.246 40.985 8.4456 41.874 solid black
+edge Node0x1f315b70 Node0x1f316890 4 12.075 35.269 12.372 35.119 12.675 34.966 12.961 34.822 solid black
+edge Node0x1f315bc0 Node0x1f316890 4 17.597 35.686 17.083 35.426 16.451 35.107 15.886 34.822 solid black
+edge Node0x1f316890 Node0x1f316c90 4 12.451 33.542 11.958 33.542 11.499 33.278 11.128 32.965 solid black
+edge Node0x1f316890 Node0x1f316ce0 4 16.396 33.542 17.096 33.542 17.726 33.011 18.135 32.56 solid black
+edge Node0x1f316c90 Node0x1f317140 4 12.075 30.978 12.372 30.828 12.675 30.674 12.961 30.53 solid black
+edge Node0x1f316ce0 Node0x1f317140 4 17.597 31.394 17.083 31.135 16.451 30.815 15.886 30.53 solid black
+edge Node0x1f317140 Node0x1f317510 4 12.451 29.25 11.958 29.25 11.499 28.986 11.128 28.673 solid black
+edge Node0x1f317140 Node0x1f317560 4 16.396 29.25 17.096 29.25 17.726 28.72 18.135 28.269 solid black
+edge Node0x1f317510 Node0x1f3179c0 4 12.075 26.686 12.372 26.536 12.675 26.383 12.961 26.238 solid black
+edge Node0x1f317560 Node0x1f3179c0 4 17.597 27.103 17.083 26.843 16.451 26.524 15.886 26.239 solid black
+edge Node0x1f3179c0 Node0x1f317d60 4 13.299 24.792 13.299 23.846 12.661 22.928 12.152 22.346 solid black
+edge Node0x1f3179c0 Node0x1f317db0 4 16.674 24.958 16.959 24.958 17.117 24.709 17.204 24.425 solid black
+edge Node0x1f317d60 Node0x1f318170 10 11.622 21.179 11.761 20.302 12.021 18.466 12.021 16.903 12.021 16.903 12.021 16.903 12.021 9.5 12.021 6.2728 13.669 2.6426 14.34 1.3001 solid black
+edge Node0x1f317db0 Node0x1f318340 4 16.104 22.903 16.104 21.952 16.005 20.855 15.931 20.174 solid black
+edge Node0x1f317db0 Node0x1f3183d0 4 18.521 22.903 18.521 22.78 18.54 22.654 18.57 22.532 solid black
+edge Node0x1f318340 Node0x1f318170 10 15.598 18.977 15.17 18.065 14.354 16.099 14.354 14.34 14.354 14.34 14.354 14.34 14.354 9.5 14.354 6.4072 14.521 2.7014 14.59 1.3192 solid black
+edge Node0x1f3183d0 Node0x1f318340 4 16.479 21.181 16.366 21.181 16.178 20.637 16.037 20.172 solid black
+edge Node0x1f3183d0 Node0x1f318620 4 21.34 21.181 21.744 21.181 22.082 20.929 22.344 20.621 solid black
+edge Node0x1f318620 Node0x1f318dc0 4 19.299 18.66 19.237 18.66 19.003 18.052 18.82 17.552 solid black
+edge Node0x1f318620 Node0x1f318e10 4 26.66 18.66 26.95 18.66 26.981 18.427 26.903 18.131 solid black
+edge Node0x1f318dc0 Node0x1f318170 10 17.804 16.36 16.715 15.579 14.882 13.982 14.882 12.09 14.882 12.09 14.882 12.09 14.882 9.5 14.882 6.4072 14.715 2.7014 14.646 1.3192 solid black
+edge Node0x1f318e10 Node0x1f316430 4 24.493 15.778 24.493 15.487 24.493 15.164 24.493 14.897 solid black
+edge Node0x1f318e10 Node0x1f316480 4 29.924 15.944 30.472 15.944 30.999 15.676 31.43 15.359 solid black
+edge Node0x1f316430 Node0x1f316620 4 24.493 13.9 24.493 13.649 24.493 13.319 24.493 13.01 solid black
+edge Node0x1f316480 Node0x1f31b610 4 33.099 13.377 33.185 13.248 33.272 13.115 33.357 12.987 solid black
+edge Node0x1f316620 Node0x1f31a400 4 22.354 11.438 21.824 11.438 21.326 11.185 20.908 10.863 solid black
+edge Node0x1f316620 Node0x1f31a450 4 25.549 11.278 25.549 10.834 25.611 10.33 25.665 9.9777 solid black
+edge Node0x1f31a400 Node0x1f31ad20 4 20.316 8.2528 20.76 7.3706 21.341 6.2172 21.715 5.4747 solid black
+edge Node0x1f31a450 Node0x1f31b100 7 25.894 9.1933 26.059 8.8961 26.351 8.4605 26.743 8.25 28.882 7.1007 29.908 8.4995 32.277 7.7498 solid black
+edge Node0x1f31ad20 Node0x1f316620 7 22.597 5.3518 23.11 6.0222 23.877 7.1423 24.229 8.25 24.532 9.2025 24.57 10.354 24.549 11.141 solid black
+edge Node0x1f31b100 Node0x1f318170 7 32.41 1.7221 32.368 1.7078 32.326 1.6939 32.285 1.6806 30.838 1.2153 21.069 0.92156 16.711 0.8122 solid black
+edge Node0x1f31b610 Node0x1f31b860 4 31.812 11.438 31.431 11.438 31.246 11.099 31.158 10.707 solid black
+edge Node0x1f31b610 Node0x1f31b8b0 4 36.09 11.438 36.735 11.438 36.92 10.538 36.973 9.9735 solid black
+edge Node0x1f31b860 Node0x1f31be30 4 30.896 8.4648 30.717 7.5703 30.461 6.2981 30.299 5.4933 solid black
+edge Node0x1f31b8b0 Node0x1f31b100 4 36.993 9.1943 36.993 8.9007 36.993 8.4238 36.993 7.8885 solid black
+edge Node0x1f31be30 Node0x1f31b610 13 30.405 5.353 30.733 6.058 31.367 7.1811 32.285 7.75 33.506 8.5072 34.545 7.1581 35.479 8.25 36.21 9.1036 35.953 9.7593 35.479 10.778 35.412 10.922 35.319 11.056 35.213 11.179 solid black
+stop
