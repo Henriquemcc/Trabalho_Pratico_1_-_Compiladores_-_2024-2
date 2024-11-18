@@ -1,0 +1,10 @@
+graph 1 8.2361 5.4722
+node Node0x36e1e200 4.7431 4.8819 3.5556 1.1806 "{2:\l|  %3 = icmp eq i32 %0, 2\l  br i1 %3, label %4, label %9\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x36e1ebb0 3.0347 3.0486 6.0694 1.4861 "{4:\l|  %5 = getelementptr inbounds ptr, ptr %1, i64 1\l  %6 = load ptr, ptr %5, align 8\l  %7 = tail call i32 @atoi(ptr nocapture \
+noundef %6)\l  %8 = sext i32 %7 to i64\l  br label %9\l}" filled record #3d50c3ff #be242e70
+node Node0x36e1f010 4.7431 1.0625 6.9861 1.4861 "{9:\l|  %10 = phi i64 [ %8, %4 ], [ 43, %2 ]\l  %11 = tail call i64 @fib(i64 noundef %10)\l  %12 = tail call i32 (ptr, ...) @printf(\
+ptr noundef nonnull\l... dereferenceable(1) @.str, i64 noundef %11)\l  ret i32 0\l}" filled record #b70d28ff #b70d2870
+edge Node0x36e1e200 Node0x36e1ebb0 4 2.9514 4.4514 2.6918 4.4514 2.6648 4.2066 2.721 3.9225 solid black
+edge Node0x36e1e200 Node0x36e1f010 7 6.5347 4.4514 6.5898 4.4514 6.9887 3.6967 6.2014 2.3056 6.1192 2.1603 6.0129 2.0247 5.8951 1.9004 solid black
+edge Node0x36e1ebb0 Node0x36e1f010 4 3.666 2.3111 3.78 2.1804 3.8997 2.0432 4.0161 1.9097 solid black
+stop
