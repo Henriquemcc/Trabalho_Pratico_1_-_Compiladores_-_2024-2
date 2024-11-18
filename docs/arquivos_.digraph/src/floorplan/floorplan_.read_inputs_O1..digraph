@@ -1,0 +1,88 @@
+graph 1 36 41.361
+node Node0x3a5d7830 7.625 40.354 8.8194 2.0139 "{0:\l|  %1 = alloca i32, align 4\l  %2 = load ptr, ptr @inputFile, align 8\l  %3 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr \
+noundef %2, ptr noundef\l... nonnull @.str.4, ptr noundef nonnull %1) #14\l  %4 = icmp eq i32 %3, -1\l  br i1 %4, label %5, label %\
+6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+node Node0x3a5d7b60 3.7222 35.965 7.4444 1.0694 "{5:\l|  %puts23 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #d4dbe670
+node Node0x3a5d7bb0 11.542 35.965 7.6806 5.7639 "{6:\l|  %7 = load i32, ptr %1, align 4\l  store i32 %7, ptr @N, align 4\l  %8 = add nsw i32 %7, 1\l  %9 = sext i32 %8 to i64\l  %\
+10 = mul nsw i64 %9, 48\l  %11 = call noalias ptr @malloc(i64 noundef %10) #16\l  store ptr %11, ptr @gcells, align 8\l  store i32 \
+0, ptr %11, align 8\l  %12 = getelementptr inbounds %struct.cell, ptr %11, i64 0, i32 1\l  %13 = getelementptr inbounds %struct.cell, \
+ptr %11, i64 0, i32 4\l  call void @llvm.memset.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %12, i8 0, i64 16, i1 \
+false)\l  store i32 -1, ptr %13, align 8\l  %14 = getelementptr inbounds %struct.cell, ptr %11, i64 0, i32 5\l  store i32 -1, ptr %\
+14, align 4\l  %15 = getelementptr inbounds %struct.cell, ptr %11, i64 0, i32 6\l  store i32 0, ptr %15, align 8\l  %16 = getelementptr \
+inbounds %struct.cell, ptr %11, i64 0, i32 7\l  store i32 0, ptr %16, align 4\l  %17 = getelementptr inbounds %struct.cell, ptr %\
+11, i64 0, i32 8\l  store i32 0, ptr %17, align 8\l  %18 = load i32, ptr %1, align 4\l  %.not27 = icmp slt i32 %18, 1\l  br i1 %\
+.not27, label %._crit_edge31, label %.lr.ph30\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+node Node0x3a5dbd60 18.778 4.9931 5.0417 1.5972 "{._crit_edge31:\l|  %82 = load ptr, ptr @inputFile, align 8\l  %83 = call i32 @feof(ptr noundef %82) #14\l  %.not16 = icmp eq i32 %\
+83, 0\l  br i1 %.not16, label %84, label %89\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+node Node0x3a5dbd10 15.639 31.368 9.0556 2.4306 "{.lr.ph30:\l|  %indvars.iv34 = phi i64 [ %indvars.iv.next35, %19 ], [ 1, %6 ]\l  %22 = load ptr, ptr @inputFile, align 8\l  %23 = \
+load ptr, ptr @gcells, align 8\l  %24 = getelementptr inbounds %struct.cell, ptr %23, i64 %indvars.iv34\l  %25 = call i32 (ptr, \
+ptr, ...) @__isoc99_fscanf(ptr noundef %22, ptr noundef\l... nonnull @.str.4, ptr noundef nonnull %24) #14\l  %26 = icmp eq i32 %\
+25, -1\l  br i1 %26, label %27, label %28\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5db220 27.139 7.1944 8.25 1.8056 "{19:\l|  %indvars.iv.next35 = add nuw nsw i64 %indvars.iv34, 1\l  %20 = load i32, ptr %1, align 4\l  %21 = sext i32 %20 to i64\l  %\
+.not.not = icmp slt i64 %indvars.iv34, %21\l  br i1 %.not.not, label %.lr.ph30, label %._crit_edge31, !llvm.loop !4\l|{<s0>T|<s1>\
+F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5dc2c0 12.458 27.917 7.4444 1.0694 "{27:\l|  %puts22 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #e8d6cc70
+node Node0x3a5dc310 27.056 27.917 9.0556 3.4722 "{28:\l|  %29 = load ptr, ptr @gcells, align 8\l  %30 = getelementptr inbounds %struct.cell, ptr %29, i64 %indvars.iv34\l  %31 = \
+load i32, ptr %30, align 8\l  %32 = sext i32 %31 to i64\l  %33 = shl nsw i64 %32, 3\l  %34 = call noalias ptr @malloc(i64 noundef %\
+33) #16\l  %35 = getelementptr inbounds %struct.cell, ptr %29, i64 %indvars.iv34, i32 1\l  store ptr %34, ptr %35, align 8\l  %36 = \
+load ptr, ptr @gcells, align 8\l  %37 = getelementptr inbounds %struct.cell, ptr %36, i64 %indvars.iv34\l  %38 = load i32, ptr %\
+37, align 8\l  %39 = icmp sgt i32 %38, 0\l  br i1 %39, label %.lr.ph, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5dd510 24.792 24.257 9.0556 2.8472 "{.lr.ph:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %40 ], [ 0, %28 ]\l  %46 = phi ptr [ %41, %40 ], [ %36, %28 ]\l  %47 = load \
+ptr, ptr @inputFile, align 8\l  %48 = getelementptr inbounds %struct.cell, ptr %46, i64 %indvars.iv34, i32 1\l  %49 = load ptr, \
+ptr %48, align 8\l  %50 = getelementptr inbounds [2 x i32], ptr %49, i64 %indvars.iv\l  %51 = call i32 (ptr, ptr, ...) @__isoc99_\
+fscanf(ptr noundef %47, ptr noundef\l... nonnull @.str.4, ptr noundef %50) #14\l  %52 = icmp eq i32 %51, -1\l  br i1 %52, label %\
+53, label %54\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a5dd560 30.361 15.257 9.0556 2.4306 "{._crit_edge:\l|  %.lcssa = phi ptr [ %36, %28 ], [ %41, %40 ]\l  %63 = load ptr, ptr @inputFile, align 8\l  %64 = getelementptr \
+inbounds %struct.cell, ptr %.lcssa, i64 %indvars.iv34,\l... i32 6\l  %65 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %\
+63, ptr noundef\l... nonnull @.str.4, ptr noundef nonnull %64) #14\l  %66 = icmp eq i32 %65, -1\l  br i1 %66, label %67, label %\
+68\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5dcff0 29.444 18.083 8.25 2.2222 "{40:\l|  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %41 = load ptr, ptr @gcells, align 8\l  %42 = getelementptr inbounds %\
+struct.cell, ptr %41, i64 %indvars.iv34\l  %43 = load i32, ptr %42, align 8\l  %44 = sext i32 %43 to i64\l  %45 = icmp slt i64 %\
+indvars.iv.next, %44\l  br i1 %45, label %.lr.ph, label %._crit_edge, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a5db590 20.681 21.014 7.4444 1.0694 "{53:\l|  %puts21 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x3a5db5e0 29.708 21.014 9.0556 2.6389 "{54:\l|  %55 = load ptr, ptr @inputFile, align 8\l  %56 = load ptr, ptr @gcells, align 8\l  %57 = getelementptr inbounds %struct.cell, \
+ptr %56, i64 %indvars.iv34, i32 1\l  %58 = load ptr, ptr %57, align 8\l  %59 = getelementptr inbounds [2 x i32], ptr %58, i64 %indvars.iv, \
+i64 1\l  %60 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %55, ptr noundef\l... nonnull @.str.4, ptr noundef nonnull %\
+59) #14\l  %61 = icmp eq i32 %60, -1\l  br i1 %61, label %62, label %40\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a5df230 21.347 18.083 7.4444 1.0694 "{62:\l|  %puts20 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x3a5dfe80 22.972 12.431 7.4444 1.0694 "{67:\l|  %puts19 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #e8d6cc70
+node Node0x3a5dfed0 31.472 12.431 9.0556 2.2222 "{68:\l|  %69 = load ptr, ptr @inputFile, align 8\l  %70 = load ptr, ptr @gcells, align 8\l  %71 = getelementptr inbounds %struct.cell, \
+ptr %70, i64 %indvars.iv34, i32 7\l  %72 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %69, ptr noundef\l... nonnull @\
+.str.4, ptr noundef nonnull %71) #14\l  %73 = icmp eq i32 %72, -1\l  br i1 %73, label %74, label %75\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5e0770 22.958 9.7083 7.4444 1.0694 "{74:\l|  %puts18 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #e8d6cc70
+node Node0x3a5e07c0 31.458 9.7083 9.0556 2.2222 "{75:\l|  %76 = load ptr, ptr @inputFile, align 8\l  %77 = load ptr, ptr @gcells, align 8\l  %78 = getelementptr inbounds %struct.cell, \
+ptr %77, i64 %indvars.iv34, i32 8\l  %79 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %76, ptr noundef\l... nonnull @\
+.str.4, ptr noundef nonnull %78) #14\l  %80 = icmp eq i32 %79, -1\l  br i1 %80, label %81, label %19\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3a5e1020 19.042 7.1944 7.4444 1.0694 "{81:\l|  %puts17 = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #e8d6cc70
+node Node0x3a5e1ab0 16.319 2.7917 9.0556 1.8056 "{84:\l|  %85 = load ptr, ptr @inputFile, align 8\l  %86 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(ptr noundef %85, ptr noundef\l... \
+nonnull @.str.4, ptr noundef nonnull @solution) #14\l  %87 = icmp eq i32 %86, -1\l  br i1 %87, label %88, label %89\l|{<s0>T|<s1>\
+F}}" filled record #3d50c3ff #ec7f6370
+node Node0x3a5e1a60 19.903 0.85417 1.1528 0.65278 "{89:\l|  ret void\l}" filled record #3d50c3ff #e8765c70
+node Node0x3a5e1e30 14.056 0.85417 7.2222 1.0694 "{88:\l|  %puts = call i32 @puts(ptr nonnull dereferenceable(1) @str.8)\l  call void @exit(i32 noundef -1) #15\l  unreachable\l}" filled record #3d50c3ff #cedaeb70
+edge Node0x3a5d7830 Node0x3a5d7b60 4 3.1944 39.507 2.0408 39.507 2.8456 37.639 3.3694 36.622 solid black
+edge Node0x3a5d7830 Node0x3a5d7bb0 4 12.056 39.507 12.44 39.507 12.608 39.299 12.641 38.985 solid black
+edge Node0x3a5d7bb0 Node0x3a5dbd60 10 7.6806 33.243 7.3831 33.243 8.3472 28.228 8.3472 27.931 8.3472 27.931 8.3472 27.931 8.3472 9.6944 8.3472 6.2923 13.021 5.3445 16.111 5.0896 solid black
+edge Node0x3a5d7bb0 Node0x3a5dbd10 4 15.403 33.243 15.695 33.243 15.811 33.014 15.839 32.717 solid black
+edge Node0x3a5dbd60 Node0x3a5e1ab0 4 16.236 4.3542 15.966 4.3542 15.921 4.1172 15.965 3.8287 solid black
+edge Node0x3a5dbd60 Node0x3a5e1a60 7 21.319 4.3542 21.376 4.3542 21.935 3.756 20.972 1.8889 20.849 1.6502 20.648 1.4361 20.453 1.2664 solid black
+edge Node0x3a5dbd10 Node0x3a5dc2c0 4 13.375 30.153 13.375 29.587 13.118 28.997 12.876 28.567 solid black
+edge Node0x3a5dbd10 Node0x3a5dc310 4 20.181 30.312 21.258 30.312 22.381 30.048 23.399 29.695 solid black
+edge Node0x3a5db220 Node0x3a5dbd60 4 29.208 6.2917 29.208 5.51 24.534 5.1992 21.444 5.079 solid black
+edge Node0x3a5db220 Node0x3a5dbd10 19 23 6.4583 22.817 6.4583 23.014 7.9641 22.889 8.0972 21.73 9.3325 20.548 7.701 19.111 8.5972 17.381 9.6762 16.569 10.378 16.569 12.417 16.569 24.271 16.569 24.271 16.569 24.271 16.569 26.666 16.808 27.311 16.306 29.653 16.279 29.775 16.246 29.899 16.207 30.023 solid black
+edge Node0x3a5dc310 Node0x3a5dd510 4 24.792 26.181 24.792 26.064 24.792 25.943 24.792 25.822 solid black
+edge Node0x3a5dc310 Node0x3a5dd560 10 31.597 26.347 34.799 26.347 34.745 22.873 34.361 19.694 34.212 18.458 34.467 17.949 33.694 16.972 33.576 16.823 33.441 16.685 33.294 16.558 solid black
+edge Node0x3a5dd510 Node0x3a5db590 4 20.25 22.993 19.697 22.993 19.993 22.241 20.299 21.667 solid black
+edge Node0x3a5dd510 Node0x3a5db5e0 4 29.333 22.993 29.635 22.993 29.775 22.768 29.828 22.469 solid black
+edge Node0x3a5dd560 Node0x3a5dfe80 4 25.819 14.201 24.926 14.201 24.079 13.568 23.545 13.061 solid black
+edge Node0x3a5dd560 Node0x3a5dfed0 4 32.625 14.042 32.625 13.912 32.6 13.786 32.557 13.666 solid black
+edge Node0x3a5dcff0 Node0x3a5dd510 10 25.306 17.139 25.191 17.139 25.213 19.082 25.194 19.194 25.157 19.422 25.093 19.467 25.056 19.694 24.891 20.685 24.825 21.812 24.8 22.696 solid black
+edge Node0x3a5dcff0 Node0x3a5dd560 4 31.514 16.972 31.514 16.844 31.491 16.718 31.452 16.596 solid black
+edge Node0x3a5db5e0 Node0x3a5dcff0 4 31.972 19.694 31.972 19.557 31.945 19.43 31.896 19.315 solid black
+edge Node0x3a5db5e0 Node0x3a5df230 4 25.167 19.861 24.879 19.861 23.495 19.191 22.476 18.677 solid black
+edge Node0x3a5dfed0 Node0x3a5e0770 7 26.931 11.486 26.842 11.486 26.888 11.376 26.819 11.319 26.274 10.872 25.585 10.533 24.941 10.286 solid black
+edge Node0x3a5dfed0 Node0x3a5e07c0 4 33.736 11.319 33.736 11.183 33.708 11.056 33.659 10.94 solid black
+edge Node0x3a5e07c0 Node0x3a5db220 4 33.722 8.5972 33.722 7.9992 32.669 7.6574 31.405 7.4625 solid black
+edge Node0x3a5e07c0 Node0x3a5e1020 10 26.917 8.7639 26.828 8.7639 26.881 8.6441 26.806 8.5972 25.314 7.6727 24.616 8.4062 22.889 8.0972 22.349 8.0007 21.771 7.8777 21.232 7.7542 solid black
+edge Node0x3a5e1ab0 Node0x3a5e1a60 4 20.861 2.0556 21.277 2.0556 20.823 1.6091 20.409 1.2637 solid black
+edge Node0x3a5e1ab0 Node0x3a5e1e30 4 14.056 1.8889 14.056 1.7704 14.056 1.6442 14.056 1.5224 solid black
+stop

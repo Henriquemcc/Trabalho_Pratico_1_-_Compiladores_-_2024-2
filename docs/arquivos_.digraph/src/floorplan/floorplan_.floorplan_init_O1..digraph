@@ -1,0 +1,10 @@
+graph 1 14.583 4.1111
+node Node0x3a5c3f80 7.0903 3.2083 8.1389 1.8056 "{1:\l|  %2 = tail call noalias ptr @fopen(ptr noundef %0, ptr noundef nonnull\l... @.str)\l  store ptr %2, ptr @inputFile, align \
+8\l  %3 = icmp eq ptr %2, null\l  br i1 %3, label %4, label %6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a5c9140 3.3819 1.0625 6.7639 1.2778 "{4:\l|  %5 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.1, ptr noundef %0)\l  tail call \
+void @exit(i32 noundef 1) #14\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x3a5c91d0 10.799 1.0625 7.5694 1.4861 "{6:\l|  tail call fastcc void @read_inputs()\l  store i32 4096, ptr @MIN_AREA, align 4\l  tail call void @llvm.memset.p0.i64(ptr \
+noundef nonnull align 16\l... dereferenceable(4096) @board, i8 0, i64 4096, i1 false)\l  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x3a5c3f80 Node0x3a5c9140 4 3.0069 2.4722 2.701 2.4722 2.7715 2.1556 2.9293 1.824 solid black
+edge Node0x3a5c3f80 Node0x3a5c91d0 4 11.174 2.4722 11.448 2.4722 11.42 2.2174 11.297 1.9256 solid black
+stop

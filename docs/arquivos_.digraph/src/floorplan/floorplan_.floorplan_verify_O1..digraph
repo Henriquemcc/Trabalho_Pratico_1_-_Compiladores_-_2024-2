@@ -1,0 +1,4 @@
+graph 1 4.5833 2.2222
+node Node0x3a5d6490 2.2917 1.2708 4.5833 1.9028 "{0:\l|  %1 = load i32, ptr @solution, align 4\l  %.not = icmp eq i32 %1, -1\l  %2 = load i32, ptr @MIN_AREA, align 4\l  %3 = icmp \
+eq i32 %2, %1\l  %4 = select i1 %3, i32 1, i32 -1\l  %.0 = select i1 %.not, i32 0, i32 %4\l  ret i32 %.0\l}" filled record #b70d28ff #b70d2870
+stop

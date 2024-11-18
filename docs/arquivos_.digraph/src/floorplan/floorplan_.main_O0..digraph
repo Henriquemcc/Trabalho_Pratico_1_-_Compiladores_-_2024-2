@@ -1,0 +1,6 @@
+graph 1 5.6111 3.2639
+node Node0x2e5cdf70 2.8056 1.7917 5.6111 2.9444 "{2:\l|  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  %5 = alloca ptr, align 8\l  store i32 0, ptr %3, align 4\l  store \
+i32 %0, ptr %4, align 4\l  store ptr %1, ptr %5, align 8\l  %6 = load ptr, ptr %5, align 8\l  %7 = getelementptr inbounds ptr, ptr %\
+6, i64 1\l  %8 = load ptr, ptr %7, align 8\l  call void @floorplan_init(ptr noundef %8)\l  call void @compute_floorplan()\l  ret \
+i32 0\l}" filled record #b70d28ff #b70d2870
+stop

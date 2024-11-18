@@ -1,0 +1,26 @@
+graph 1 14.305 12.694
+node Node0x3df34240 9.7773 11.688 9.0556 2.0139 "{0:\l|  %1 = load i32, ptr @MIN_AREA, align 4\l  %2 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @\
+.str.9, i32 noundef %1)\l  %3 = load i32, ptr @MIN_FOOTPRINT, align 4\l  %4 = icmp sgt i32 %3, 0\l  br i1 %4, label %.preheader, \
+label %._crit_edge14\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e8765c70
+node Node0x3df54050 7.4023 9.2778 8.7083 1.8056 "{.preheader:\l|  %indvars.iv16 = phi i64 [ %indvars.iv.next17, %._crit_edge ], [ 0, %0 ]\l  %5 = load i32, ptr getelementptr inbounds ([\
+2 x i32], ptr @MIN_FOOTPRINT,\l... i64 0, i64 1), align 4\l  %6 = icmp sgt i32 %5, 0\l  br i1 %6, label %.lr.ph, label %._crit_edge\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x3df34760 10.861 0.64583 1.8333 0.65278 "{._crit_edge14:\l|  ret void\l}" filled record #3d50c3ff #e8765c70
+node Node0x3df36550 5.3329 5.9306 8.8194 3.8889 "{.lr.ph:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %.lr.ph ], [ 0, %.preheader ]\l  %7 = getelementptr inbounds [64 x [64 x \
+i8]], ptr @BEST_BOARD, i64 0, i64\l... %indvars.iv16, i64 %indvars.iv\l  %8 = load i8, ptr %7, align 1\l  %9 = icmp eq i8 %8, 0\l  %\
+10 = sext i8 %8 to i32\l  %11 = add nsw i32 %10, 64\l  %.sink = select i1 %9, i32 32, i32 %11\l  %putchar11 = tail call i32 @putchar(\
+i32 %.sink)\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %12 = load i32, ptr getelementptr inbounds ([2 x i32], ptr @\
+MIN_FOOTPRINT,\l... i64 0, i64 1), align 4\l  %13 = sext i32 %12 to i64\l  %14 = icmp slt i64 %indvars.iv.next, %13\l  br i1 %14, \
+label %.lr.ph, label %._crit_edge, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3df365a0 7.7495 2.4792 7.7917 2.0139 "{._crit_edge:\l|  %putchar = tail call i32 @putchar(i32 10)\l  %indvars.iv.next17 = add nuw nsw i64 %indvars.iv16, 1\l  %15 = load \
+i32, ptr @MIN_FOOTPRINT, align 4\l  %16 = sext i32 %15 to i64\l  %17 = icmp slt i64 %indvars.iv.next17, %16\l  br i1 %17, label %\
+.preheader, label %._crit_edge14, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+edge Node0x3df34240 Node0x3df54050 4 7.5134 10.681 7.5134 10.563 7.5094 10.44 7.503 10.319 solid black
+edge Node0x3df34240 Node0x3df34760 7 12.041 10.681 12.041 6.5863 13.511 5.1816 11.777 1.4722 11.704 1.3157 11.585 1.1767 11.457 1.0598 solid black
+edge Node0x3df54050 Node0x3df36550 4 5.2218 8.375 5.2218 8.2581 5.2231 8.1381 5.2254 8.017 solid black
+edge Node0x3df54050 Node0x3df365a0 10 9.5829 8.375 9.5829 8.1177 9.8074 8.1234 9.8745 7.875 10.326 6.2065 10.671 5.5199 9.8745 3.9861 9.799 3.8408 9.7022 3.7066 9.5915 3.5834 solid black
+edge Node0x3df36550 Node0x3df36550 7 2.811 3.9918 1.4511 3.3277 0.67315 3.4389 0.67315 5.0417 0.67315 5.2794 0.73237 5.4844 0.83853 5.6588 solid black
+edge Node0x3df36550 Node0x3df365a0 4 7.5412 3.9861 7.5412 3.8673 7.5478 3.7436 7.5585 3.6206 solid black
+edge Node0x3df365a0 Node0x3df54050 7 3.8329 1.6319 0.74639 1.6319 -1.154 5.4786 0.79121 7.875 1.1045 8.2609 1.9351 8.5435 2.9061 8.749 solid black
+edge Node0x3df365a0 Node0x3df34760 4 11.666 1.6319 11.981 1.6319 11.689 1.3254 11.371 1.0566 solid black
+stop

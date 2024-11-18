@@ -1,0 +1,32 @@
+graph 1 13.84 14.472
+node Node0x2e5baf80 8.0764 13.049 7.5694 2.8472 "{1:\l|  %2 = alloca ptr, align 8\l  %3 = alloca i32, align 4\l  %4 = alloca i32, align 4\l  store ptr %0, ptr %2, align 8\l  %5 = \
+load ptr, ptr %2, align 8\l  %6 = call noalias ptr @fopen(ptr noundef %5, ptr noundef @.str)\l  store ptr %6, ptr @inputFile, align \
+8\l  %7 = load ptr, ptr @inputFile, align 8\l  %8 = icmp eq ptr null, %7\l  br i1 %8, label %9, label %12\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ec7f6370
+node Node0x2e5c0140 4.6458 10.486 8.4861 1.2778 "{9:\l|  %10 = load ptr, ptr %2, align 8\l  %11 = call i32 (ptr, ...) @printf(ptr noundef @.str.1, ptr noundef %10)\l  call void @\
+exit(i32 noundef 1) #7\l  unreachable\l}" filled record #3d50c3ff #cedaeb70
+node Node0x2e5c01d0 11.493 10.486 4.6944 1.2778 "{12:\l|  call void @read_inputs()\l  store i32 4096, ptr @MIN_AREA, align 4\l  store i32 0, ptr %3, align 4\l  br label %13\l}" filled record #3d50c3ff #ec7f6370
+node Node0x2e5c0a60 11.493 8.6528 3.9028 1.3889 "{13:\l|  %14 = load i32, ptr %3, align 4\l  %15 = icmp slt i32 %14, 64\l  br i1 %15, label %16, label %34\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x2e5c0c60 9.2431 7.0278 3.4444 0.86111 "{16:\l|  store i32 0, ptr %4, align 4\l  br label %17\l}" filled record #3d50c3ff #d6524470
+node Node0x2e5c0cb0 12.465 7.0278 1.1528 0.65278 "{34:\l|  ret void\l}" filled record #3d50c3ff #ec7f6370
+node Node0x2e5c0e50 9.1181 5.4028 3.9028 1.3889 "{17:\l|  %18 = load i32, ptr %4, align 4\l  %19 = icmp slt i32 %18, 64\l  br i1 %19, label %20, label %30\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2e5c1020 4.3542 3.1528 8.7083 2.1111 "{20:\l|  %21 = load i32, ptr %3, align 4\l  %22 = sext i32 %21 to i64\l  %23 = getelementptr inbounds [64 x [64 x i8]], ptr @board, \
+i64 0, i64 %22\l  %24 = load i32, ptr %4, align 4\l  %25 = sext i32 %24 to i64\l  %26 = getelementptr inbounds [64 x i8], ptr %23, \
+i64 0, i64 %25\l  store i8 0, ptr %26, align 1\l  br label %27\l}" filled record #b70d28ff #b70d2870
+node Node0x2e5c1070 10.299 3.1528 1.6111 0.65278 "{30:\l|  br label %31\l}" filled record #3d50c3ff #d6524470
+node Node0x2e5c1610 5.9097 0.95833 3.7778 1.2778 "{27:\l|  %28 = load i32, ptr %4, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, ptr %4, align 4\l  br label %17, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+node Node0x2e5c2400 10.896 0.95833 3.7778 1.2778 "{31:\l|  %32 = load i32, ptr %3, align 4\l  %33 = add nsw i32 %32, 1\l  store i32 %33, ptr %3, align 4\l  br label %13, !llvm.loop !\
+6\l}" filled record #3d50c3ff #d6524470
+edge Node0x2e5baf80 Node0x2e5c0140 4 4.2708 11.785 4.0057 11.785 4.0514 11.529 4.1836 11.246 solid black
+edge Node0x2e5baf80 Node0x2e5c01d0 4 11.882 11.785 12.148 11.785 12.099 11.529 11.964 11.246 solid black
+edge Node0x2e5c01d0 Node0x2e5c0a60 4 11.493 9.8509 11.493 9.7335 11.493 9.6092 11.493 9.4869 solid black
+edge Node0x2e5c0a60 Node0x2e5c0c60 4 9.5208 8.125 9.2772 8.125 9.2057 7.8648 9.1961 7.5995 solid black
+edge Node0x2e5c0a60 Node0x2e5c0cb0 4 12.465 7.9583 12.465 7.8067 12.465 7.6411 12.465 7.4928 solid black
+edge Node0x2e5c0c60 Node0x2e5c0e50 4 9.2109 6.6026 9.2019 6.4885 9.1919 6.3606 9.1819 6.2321 solid black
+edge Node0x2e5c0e50 Node0x2e5c1020 4 7.1458 4.875 6.5723 4.875 6.017 4.6094 5.5547 4.2876 solid black
+edge Node0x2e5c0e50 Node0x2e5c1070 4 10.09 4.7083 10.09 4.3376 10.15 3.9212 10.206 3.6147 solid black
+edge Node0x2e5c1020 Node0x2e5c1610 4 5.1001 2.1 5.1956 1.9669 5.2917 1.833 5.3828 1.7062 solid black
+edge Node0x2e5c1070 Node0x2e5c2400 4 10.383 2.8331 10.462 2.5474 10.582 2.1092 10.687 1.7298 solid black
+edge Node0x2e5c1610 Node0x2e5c0e50 7 7.8022 1.3539 8.1967 1.5195 8.5701 1.7569 8.8264 2.0972 9.3571 2.8018 9.3555 3.8474 9.2696 4.5702 solid black
+edge Node0x2e5c2400 Node0x2e5c0a60 7 11.109 1.5906 11.157 1.7535 11.202 1.9304 11.229 2.0972 11.567 4.1358 11.558 6.5781 11.525 7.8226 solid black
+stop

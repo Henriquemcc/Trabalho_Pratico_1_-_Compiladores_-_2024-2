@@ -1,0 +1,3 @@
+graph 1 4.5833 1.1806
+node Node0x3df1b0b0 2.2917 0.75 4.5833 0.86111 "{0:\l|  tail call fastcc void @write_outputs()\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

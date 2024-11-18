@@ -1,0 +1,6 @@
+graph 1 9.0556 3.0556
+node Node0x3df11130 4.5278 1.6875 9.0556 2.7361 "{0:\l|  %1 = alloca [2 x i32], align 4\l  store i32 0, ptr %1, align 4\l  %2 = getelementptr inbounds [2 x i32], ptr %1, i64 0, \
+i64 1\l  store i32 0, ptr %2, align 4\l  %3 = tail call i32 (ptr, ...) @printf(ptr noundef nonnull dereferenceable(1)\l... @.str.2)\l  %\
+4 = load ptr, ptr @gcells, align 8\l  %5 = call fastcc i32 @add_cell(i32 noundef 1, ptr noundef nonnull %1, ptr\l... noundef nonnull @\
+board, ptr noundef %4)\l  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str)\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

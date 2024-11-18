@@ -1,0 +1,12 @@
+graph 1 8.2778 5.6806
+node Node0x2e5cd490 4.4167 4.8819 4.5833 1.5972 "{0:\l|  %1 = alloca i32, align 4\l  %2 = load i32, ptr @solution, align 4\l  %3 = icmp ne i32 %2, -1\l  br i1 %3, label %4, label %\
+10\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2e5cd670 2.2917 2.6319 4.5833 1.9028 "{4:\l|  %5 = load i32, ptr @MIN_AREA, align 4\l  %6 = load i32, ptr @solution, align 4\l  %7 = icmp eq i32 %5, %6\l  %8 = zext i1 %\
+7 to i64\l  %9 = select i1 %7, i32 1, i32 -1\l  store i32 %9, ptr %1, align 4\l  br label %11\l}" filled record #b70d28ff #bb1b2c70
+node Node0x2e5cd6c0 6.5556 2.6319 3.4444 0.86111 "{10:\l|  store i32 0, ptr %1, align 4\l  br label %11\l}" filled record #3d50c3ff #c32e3170
+node Node0x2e5cdb10 4.4167 0.75 3.7778 0.86111 "{11:\l|  %12 = load i32, ptr %1, align 4\l  ret i32 %12\l}" filled record #b70d28ff #b70d2870
+edge Node0x2e5cd490 Node0x2e5cd670 4 2.1111 4.2431 1.8364 4.2431 1.7997 4.007 1.8585 3.7163 solid black
+edge Node0x2e5cd490 Node0x2e5cd6c0 4 6.7222 4.2431 7.1561 4.2431 7.0008 3.6527 6.8124 3.1898 solid black
+edge Node0x2e5cd670 Node0x2e5cdb10 4 3.3604 1.6855 3.5251 1.5419 3.6895 1.3983 3.838 1.2688 solid black
+edge Node0x2e5cd6c0 Node0x2e5cdb10 4 6.0809 2.2066 5.761 1.9293 5.3371 1.5618 4.9972 1.2671 solid black
+stop
