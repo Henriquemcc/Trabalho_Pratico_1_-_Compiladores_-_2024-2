@@ -1,0 +1,31 @@
+graph 1 11.972 15.722
+node Node0x2e27b820 4.7361 15.028 7.1111 1.3889 "{4:\l|  %5 = sub nsw i32 %2, %1\l  %6 = icmp slt i32 %5, 128\l  br i1 %6, label %tailrecurse._crit_edge, label %tailrecurse\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2e0ace90 3.6111 9.7917 7.2222 1.8056 "{tailrecurse._crit_edge:\l|  %.tr33.lcssa = phi i32 [ %1, %4 ], [ %25, %tailrecurse ]\l  %7 = sitofp i32 %0 to double\l  %8 = fdiv \
+double 0x401921FB54442D18, %7\l  %.not37 = icmp sgt i32 %.tr33.lcssa, %2\l  br i1 %.not37, label %._crit_edge, label %.lr.ph39.preheader\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2e0b06e0 7.1944 12.514 9.0556 2.6389 "{tailrecurse:\l|  %.tr3336 = phi i32 [ %25, %tailrecurse ], [ %1, %4 ]\l  %23 = add nsw i32 %.tr3336, %2\l  %24 = sdiv i32 %23, \
+2\l  tail call void @compute_w_coefficients(i32 noundef %0, i32 noundef %.tr3336,\l... i32 noundef %24, ptr noundef %3)\l  %25 = \
+add nsw i32 %24, 1\l  %26 = sub nsw i32 %2, %25\l  %27 = icmp slt i32 %26, 128\l  br i1 %27, label %tailrecurse._crit_edge, label %\
+tailrecurse\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2e0b4de0 2.4722 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x2e27f600 5.7361 7.75 4.0139 1.2778 "{.lr.ph39.preheader:\l|  %9 = sext i32 %.tr33.lcssa to i64\l  %10 = sext i32 %0 to i64\l  %11 = add i32 %2, 1\l  br label %.lr.ph39\l}" filled record #3d50c3ff #d6524470
+node Node0x2e0b1800 6.0694 4.0417 9.0556 5.1389 "{.lr.ph39:\l|  %indvars.iv = phi i64 [ %9, %.lr.ph39.preheader ], [ %indvars.iv.next,\l... %.lr.ph39 ]\l  %12 = trunc i64 %indvars.iv \
+to i32\l  %13 = sitofp i32 %12 to double\l  %14 = fmul double %8, %13\l  %15 = tail call double @cos(double noundef %14) #17\l  %\
+16 = sub nsw i64 %10, %indvars.iv\l  %17 = getelementptr inbounds %struct.COMPLEX, ptr %3, i64 %16\l  store double %15, ptr %17, \
+align 8\l  %18 = getelementptr inbounds %struct.COMPLEX, ptr %3, i64 %indvars.iv\l  store double %15, ptr %18, align 8\l  %19 = \
+tail call double @sin(double noundef %14) #17\l  %20 = fneg double %19\l  %21 = getelementptr inbounds %struct.COMPLEX, ptr %3, \
+i64 %indvars.iv, i32 1\l  store double %20, ptr %21, align 8\l  %22 = getelementptr inbounds %struct.COMPLEX, ptr %3, i64 %16, i32 \
+1\l  store double %19, ptr %22, align 8\l  %indvars.iv.next = add nsw i64 %indvars.iv, 1\l  %lftr.wideiv = trunc i64 %indvars.iv.next \
+to i32\l  %exitcond.not = icmp eq i32 %11, %lftr.wideiv\l  br i1 %exitcond.not, label %._crit_edge, label %.lr.ph39, !llvm.loop !\
+4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x2e27b820 Node0x2e0ace90 10 2.9583 14.333 2.9583 14.044 2.6401 14.105 2.5417 13.833 2.1424 12.731 2.1637 12.305 2.5417 11.194 2.5865 11.063 2.6495 10.934 2.7227 10.811 solid black
+edge Node0x2e27b820 Node0x2e0b06e0 4 6.5139 14.333 6.5139 14.212 6.5276 14.088 6.5511 13.966 solid black
+edge Node0x2e0ace90 Node0x2e0b4de0 10 1.8056 8.8889 1.8056 7.8619 1.5034 7.6344 1.4167 6.6111 1.2238 4.3353 0.40805 3.5214 1.4167 1.4722 1.498 1.3069 1.631 1.1657 1.7756 1.0498 solid black
+edge Node0x2e0ace90 Node0x2e27f600 4 5.4167 8.8889 5.4167 8.7679 5.434 8.6423 5.4605 8.5208 solid black
+edge Node0x2e0b06e0 Node0x2e0ace90 4 2.6528 11.361 2.4882 11.361 2.6145 11.106 2.8229 10.802 solid black
+edge Node0x2e0b06e0 Node0x2e0b06e0 7 9.8926 11.201 11.217 10.747 11.972 10.85 11.972 11.938 11.972 12.092 11.92 12.227 11.824 12.343 solid black
+edge Node0x2e27f600 Node0x2e0b1800 4 5.7923 7.1159 5.8025 7.0026 5.8138 6.8781 5.8258 6.7462 solid black
+edge Node0x2e0b1800 Node0x2e0b4de0 4 1.5278 1.6389 1.1842 1.6389 1.536 1.3228 1.9038 1.0498 solid black
+edge Node0x2e0b1800 Node0x2e0b1800 7 8.6504 1.4774 10.048 0.80124 10.847 0.93171 10.847 2.8403 10.847 3.1296 10.784 3.3781 10.67 3.589 solid black
+stop

@@ -1,0 +1,134 @@
+graph 1 19.174 82.361
+node Node0x38992e00 10.903 77.188 4.0139 10.347 "{8:\l|  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca ptr, align 8\l  %12 = alloca ptr, align 8\l  %13 = \
+alloca ptr, align 8\l  %14 = alloca i32, align 4\l  %15 = alloca i32, align 4\l  %16 = alloca i32, align 4\l  %17 = alloca i32, \
+align 4\l  %18 = alloca i32, align 4\l  %19 = alloca ptr, align 8\l  %20 = alloca ptr, align 8\l  %21 = alloca double, align 8\l  %\
+22 = alloca double, align 8\l  %23 = alloca double, align 8\l  %24 = alloca double, align 8\l  %25 = alloca double, align 8\l  %\
+26 = alloca double, align 8\l  %27 = alloca double, align 8\l  %28 = alloca double, align 8\l  %29 = alloca double, align 8\l  %\
+30 = alloca double, align 8\l  %31 = alloca double, align 8\l  %32 = alloca double, align 8\l  %33 = alloca double, align 8\l  %\
+34 = alloca double, align 8\l  %35 = alloca double, align 8\l  %36 = alloca double, align 8\l  %37 = alloca double, align 8\l  %\
+38 = alloca double, align 8\l  %39 = alloca double, align 8\l  %40 = alloca double, align 8\l  %41 = alloca i32, align 4\l  store \
+i32 %0, ptr %9, align 4\l  store i32 %1, ptr %10, align 4\l  store ptr %2, ptr %11, align 8\l  store ptr %3, ptr %12, align 8\l  \
+store ptr %4, ptr %13, align 8\l  store i32 %5, ptr %14, align 4\l  store i32 %6, ptr %15, align 4\l  store i32 %7, ptr %16, align \
+4\l  %42 = load i32, ptr %10, align 4\l  %43 = load i32, ptr %9, align 4\l  %44 = sub nsw i32 %42, %43\l  %45 = icmp slt i32 %44, \
+128\l  br i1 %45, label %46, label %306\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x38993db0 8.8472 70.042 7.4444 2.9444 "{46:\l|  %47 = load i32, ptr %9, align 4\l  store i32 %47, ptr %18, align 4\l  %48 = load i32, ptr %15, align 4\l  %49 = load i32, \
+ptr %18, align 4\l  %50 = mul nsw i32 %48, %49\l  store i32 %50, ptr %17, align 4\l  %51 = load ptr, ptr %12, align 8\l  %52 = load \
+i32, ptr %18, align 4\l  %53 = sext i32 %52 to i64\l  %54 = getelementptr inbounds %struct.COMPLEX, ptr %51, i64 %53\l  store ptr %\
+54, ptr %20, align 8\l  br label %55\l}" filled record #3d50c3ff #d6524470
+node Node0x389954e0 14.417 64.931 9.5139 6.2778 "{306:\l|  %307 = load i32, ptr %9, align 4\l  %308 = load i32, ptr %10, align 4\l  %309 = add nsw i32 %307, %308\l  %310 = sdiv \
+i32 %309, 2\l  store i32 %310, ptr %41, align 4\l  %311 = load i32, ptr %9, align 4\l  %312 = load i32, ptr %41, align 4\l  %313 = \
+load ptr, ptr %11, align 8\l  %314 = load ptr, ptr %12, align 8\l  %315 = load ptr, ptr %13, align 8\l  %316 = load i32, ptr %14, \
+align 4\l  %317 = load i32, ptr %15, align 4\l  %318 = load i32, ptr %16, align 4\l  call void @fft_twiddle_4(i32 noundef %311, \
+i32 noundef %312, ptr noundef\l... %313, ptr noundef %314, ptr noundef %315, i32 noundef %316, i32 noundef %317,\l... i32 noundef %\
+318)\l  %319 = load i32, ptr %41, align 4\l  %320 = load i32, ptr %10, align 4\l  %321 = load ptr, ptr %11, align 8\l  %322 = load \
+ptr, ptr %12, align 8\l  %323 = load ptr, ptr %13, align 8\l  %324 = load i32, ptr %14, align 4\l  %325 = load i32, ptr %15, align \
+4\l  %326 = load i32, ptr %16, align 4\l  call void @fft_twiddle_4(i32 noundef %319, i32 noundef %320, ptr noundef\l... %321, ptr \
+noundef %322, ptr noundef %323, i32 noundef %324, i32 noundef %325,\l... i32 noundef %326)\l  br label %327\l}" filled record #3d50c3ff #d6524470
+node Node0x389963f0 7.4028 64.931 4.0139 1.5972 "{55:\l|  %56 = load i32, ptr %18, align 4\l  %57 = load i32, ptr %10, align 4\l  %58 = icmp slt i32 %56, %57\l  br i1 %58, label %\
+59, label %305\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x38996640 4.4722 32.424 8.9444 57.736 "{59:\l|  %60 = load ptr, ptr %11, align 8\l  %61 = load i32, ptr %18, align 4\l  %62 = sext i32 %61 to i64\l  %63 = getelementptr \
+inbounds %struct.COMPLEX, ptr %60, i64 %62\l  store ptr %63, ptr %19, align 8\l  %64 = load ptr, ptr %19, align 8\l  %65 = load \
+i32, ptr %16, align 4\l  %66 = mul nsw i32 0, %65\l  %67 = sext i32 %66 to i64\l  %68 = getelementptr inbounds %struct.COMPLEX, \
+ptr %64, i64 %67\l  %69 = getelementptr inbounds %struct.COMPLEX, ptr %68, i32 0, i32 0\l  %70 = load double, ptr %69, align 8\l  \
+store double %70, ptr %33, align 8\l  %71 = load ptr, ptr %19, align 8\l  %72 = load i32, ptr %16, align 4\l  %73 = mul nsw i32 \
+0, %72\l  %74 = sext i32 %73 to i64\l  %75 = getelementptr inbounds %struct.COMPLEX, ptr %71, i64 %74\l  %76 = getelementptr inbounds %\
+struct.COMPLEX, ptr %75, i32 0, i32 1\l  %77 = load double, ptr %76, align 8\l  store double %77, ptr %34, align 8\l  %78 = load \
+ptr, ptr %13, align 8\l  %79 = load i32, ptr %17, align 4\l  %80 = mul nsw i32 2, %79\l  %81 = sext i32 %80 to i64\l  %82 = getelementptr \
+inbounds %struct.COMPLEX, ptr %78, i64 %81\l  %83 = getelementptr inbounds %struct.COMPLEX, ptr %82, i32 0, i32 0\l  %84 = load \
+double, ptr %83, align 8\l  store double %84, ptr %23, align 8\l  %85 = load ptr, ptr %13, align 8\l  %86 = load i32, ptr %17, align \
+4\l  %87 = mul nsw i32 2, %86\l  %88 = sext i32 %87 to i64\l  %89 = getelementptr inbounds %struct.COMPLEX, ptr %85, i64 %88\l  %\
+90 = getelementptr inbounds %struct.COMPLEX, ptr %89, i32 0, i32 1\l  %91 = load double, ptr %90, align 8\l  store double %91, ptr %\
+24, align 8\l  %92 = load ptr, ptr %19, align 8\l  %93 = load i32, ptr %16, align 4\l  %94 = mul nsw i32 2, %93\l  %95 = sext i32 %\
+94 to i64\l  %96 = getelementptr inbounds %struct.COMPLEX, ptr %92, i64 %95\l  %97 = getelementptr inbounds %struct.COMPLEX, ptr %\
+96, i32 0, i32 0\l  %98 = load double, ptr %97, align 8\l  store double %98, ptr %21, align 8\l  %99 = load ptr, ptr %19, align \
+8\l  %100 = load i32, ptr %16, align 4\l  %101 = mul nsw i32 2, %100\l  %102 = sext i32 %101 to i64\l  %103 = getelementptr inbounds %\
+struct.COMPLEX, ptr %99, i64 %102\l  %104 = getelementptr inbounds %struct.COMPLEX, ptr %103, i32 0, i32 1\l  %105 = load double, \
+ptr %104, align 8\l  store double %105, ptr %22, align 8\l  %106 = load double, ptr %23, align 8\l  %107 = load double, ptr %21, \
+align 8\l  %108 = load double, ptr %24, align 8\l  %109 = load double, ptr %22, align 8\l  %110 = fmul double %108, %109\l  %111 = \
+fneg double %110\l  %112 = call double @llvm.fmuladd.f64(double %106, double %107, double %111)\l  store double %112, ptr %35, align \
+8\l  %113 = load double, ptr %24, align 8\l  %114 = load double, ptr %21, align 8\l  %115 = load double, ptr %23, align 8\l  %116 = \
+load double, ptr %22, align 8\l  %117 = fmul double %115, %116\l  %118 = call double @llvm.fmuladd.f64(double %113, double %114, \
+double %117)\l  store double %118, ptr %36, align 8\l  %119 = load double, ptr %33, align 8\l  %120 = load double, ptr %35, align \
+8\l  %121 = fadd double %119, %120\l  store double %121, ptr %25, align 8\l  %122 = load double, ptr %34, align 8\l  %123 = load \
+double, ptr %36, align 8\l  %124 = fadd double %122, %123\l  store double %124, ptr %26, align 8\l  %125 = load double, ptr %33, \
+align 8\l  %126 = load double, ptr %35, align 8\l  %127 = fsub double %125, %126\l  store double %127, ptr %29, align 8\l  %128 = \
+load double, ptr %34, align 8\l  %129 = load double, ptr %36, align 8\l  %130 = fsub double %128, %129\l  store double %130, ptr %\
+30, align 8\l  %131 = load ptr, ptr %13, align 8\l  %132 = load i32, ptr %17, align 4\l  %133 = mul nsw i32 1, %132\l  %134 = sext \
+i32 %133 to i64\l  %135 = getelementptr inbounds %struct.COMPLEX, ptr %131, i64 %134\l  %136 = getelementptr inbounds %struct.COMPLEX, \
+ptr %135, i32 0, i32 0\l  %137 = load double, ptr %136, align 8\l  store double %137, ptr %23, align 8\l  %138 = load ptr, ptr %\
+13, align 8\l  %139 = load i32, ptr %17, align 4\l  %140 = mul nsw i32 1, %139\l  %141 = sext i32 %140 to i64\l  %142 = getelementptr \
+inbounds %struct.COMPLEX, ptr %138, i64 %141\l  %143 = getelementptr inbounds %struct.COMPLEX, ptr %142, i32 0, i32 1\l  %144 = \
+load double, ptr %143, align 8\l  store double %144, ptr %24, align 8\l  %145 = load ptr, ptr %19, align 8\l  %146 = load i32, ptr %\
+16, align 4\l  %147 = mul nsw i32 1, %146\l  %148 = sext i32 %147 to i64\l  %149 = getelementptr inbounds %struct.COMPLEX, ptr %\
+145, i64 %148\l  %150 = getelementptr inbounds %struct.COMPLEX, ptr %149, i32 0, i32 0\l  %151 = load double, ptr %150, align 8\l  \
+store double %151, ptr %21, align 8\l  %152 = load ptr, ptr %19, align 8\l  %153 = load i32, ptr %16, align 4\l  %154 = mul nsw \
+i32 1, %153\l  %155 = sext i32 %154 to i64\l  %156 = getelementptr inbounds %struct.COMPLEX, ptr %152, i64 %155\l  %157 = getelementptr \
+inbounds %struct.COMPLEX, ptr %156, i32 0, i32 1\l  %158 = load double, ptr %157, align 8\l  store double %158, ptr %22, align 8\l  %\
+159 = load double, ptr %23, align 8\l  %160 = load double, ptr %21, align 8\l  %161 = load double, ptr %24, align 8\l  %162 = load \
+double, ptr %22, align 8\l  %163 = fmul double %161, %162\l  %164 = fneg double %163\l  %165 = call double @llvm.fmuladd.f64(double %\
+159, double %160, double %164)\l  store double %165, ptr %37, align 8\l  %166 = load double, ptr %24, align 8\l  %167 = load double, \
+ptr %21, align 8\l  %168 = load double, ptr %23, align 8\l  %169 = load double, ptr %22, align 8\l  %170 = fmul double %168, %169\l  %\
+171 = call double @llvm.fmuladd.f64(double %166, double %167, double %170)\l  store double %171, ptr %38, align 8\l  %172 = load \
+ptr, ptr %13, align 8\l  %173 = load i32, ptr %17, align 4\l  %174 = mul nsw i32 3, %173\l  %175 = sext i32 %174 to i64\l  %176 = \
+getelementptr inbounds %struct.COMPLEX, ptr %172, i64 %175\l  %177 = getelementptr inbounds %struct.COMPLEX, ptr %176, i32 0, i32 \
+0\l  %178 = load double, ptr %177, align 8\l  store double %178, ptr %23, align 8\l  %179 = load ptr, ptr %13, align 8\l  %180 = \
+load i32, ptr %17, align 4\l  %181 = mul nsw i32 3, %180\l  %182 = sext i32 %181 to i64\l  %183 = getelementptr inbounds %struct.COMPLEX, \
+ptr %179, i64 %182\l  %184 = getelementptr inbounds %struct.COMPLEX, ptr %183, i32 0, i32 1\l  %185 = load double, ptr %184, align \
+8\l  store double %185, ptr %24, align 8\l  %186 = load ptr, ptr %19, align 8\l  %187 = load i32, ptr %16, align 4\l  %188 = mul \
+nsw i32 3, %187\l  %189 = sext i32 %188 to i64\l  %190 = getelementptr inbounds %struct.COMPLEX, ptr %186, i64 %189\l  %191 = getelementptr \
+inbounds %struct.COMPLEX, ptr %190, i32 0, i32 0\l  %192 = load double, ptr %191, align 8\l  store double %192, ptr %21, align 8\l  %\
+193 = load ptr, ptr %19, align 8\l  %194 = load i32, ptr %16, align 4\l  %195 = mul nsw i32 3, %194\l  %196 = sext i32 %195 to i64\l  %\
+197 = getelementptr inbounds %struct.COMPLEX, ptr %193, i64 %196\l  %198 = getelementptr inbounds %struct.COMPLEX, ptr %197, i32 \
+0, i32 1\l  %199 = load double, ptr %198, align 8\l  store double %199, ptr %22, align 8\l  %200 = load double, ptr %23, align 8\l  %\
+201 = load double, ptr %21, align 8\l  %202 = load double, ptr %24, align 8\l  %203 = load double, ptr %22, align 8\l  %204 = fmul \
+double %202, %203\l  %205 = fneg double %204\l  %206 = call double @llvm.fmuladd.f64(double %200, double %201, double %205)\l  store \
+double %206, ptr %39, align 8\l  %207 = load double, ptr %24, align 8\l  %208 = load double, ptr %21, align 8\l  %209 = load double, \
+ptr %23, align 8\l  %210 = load double, ptr %22, align 8\l  %211 = fmul double %209, %210\l  %212 = call double @llvm.fmuladd.f64(\
+double %207, double %208, double %211)\l  store double %212, ptr %40, align 8\l  %213 = load double, ptr %37, align 8\l  %214 = \
+load double, ptr %39, align 8\l  %215 = fadd double %213, %214\l  store double %215, ptr %27, align 8\l  %216 = load double, ptr %\
+38, align 8\l  %217 = load double, ptr %40, align 8\l  %218 = fadd double %216, %217\l  store double %218, ptr %28, align 8\l  %\
+219 = load double, ptr %37, align 8\l  %220 = load double, ptr %39, align 8\l  %221 = fsub double %219, %220\l  store double %221, \
+ptr %31, align 8\l  %222 = load double, ptr %38, align 8\l  %223 = load double, ptr %40, align 8\l  %224 = fsub double %222, %223\l  \
+store double %224, ptr %32, align 8\l  %225 = load double, ptr %25, align 8\l  %226 = load double, ptr %27, align 8\l  %227 = fadd \
+double %225, %226\l  %228 = load ptr, ptr %20, align 8\l  %229 = load i32, ptr %16, align 4\l  %230 = mul nsw i32 0, %229\l  %231 = \
+sext i32 %230 to i64\l  %232 = getelementptr inbounds %struct.COMPLEX, ptr %228, i64 %231\l  %233 = getelementptr inbounds %struct.COMPLEX, \
+ptr %232, i32 0, i32 0\l  store double %227, ptr %233, align 8\l  %234 = load double, ptr %26, align 8\l  %235 = load double, ptr %\
+28, align 8\l  %236 = fadd double %234, %235\l  %237 = load ptr, ptr %20, align 8\l  %238 = load i32, ptr %16, align 4\l  %239 = \
+mul nsw i32 0, %238\l  %240 = sext i32 %239 to i64\l  %241 = getelementptr inbounds %struct.COMPLEX, ptr %237, i64 %240\l  %242 = \
+getelementptr inbounds %struct.COMPLEX, ptr %241, i32 0, i32 1\l  store double %236, ptr %242, align 8\l  %243 = load double, ptr %\
+25, align 8\l  %244 = load double, ptr %27, align 8\l  %245 = fsub double %243, %244\l  %246 = load ptr, ptr %20, align 8\l  %247 = \
+load i32, ptr %16, align 4\l  %248 = mul nsw i32 2, %247\l  %249 = sext i32 %248 to i64\l  %250 = getelementptr inbounds %struct.COMPLEX, \
+ptr %246, i64 %249\l  %251 = getelementptr inbounds %struct.COMPLEX, ptr %250, i32 0, i32 0\l  store double %245, ptr %251, align \
+8\l  %252 = load double, ptr %26, align 8\l  %253 = load double, ptr %28, align 8\l  %254 = fsub double %252, %253\l  %255 = load \
+ptr, ptr %20, align 8\l  %256 = load i32, ptr %16, align 4\l  %257 = mul nsw i32 2, %256\l  %258 = sext i32 %257 to i64\l  %259 = \
+getelementptr inbounds %struct.COMPLEX, ptr %255, i64 %258\l  %260 = getelementptr inbounds %struct.COMPLEX, ptr %259, i32 0, i32 \
+1\l  store double %254, ptr %260, align 8\l  %261 = load double, ptr %29, align 8\l  %262 = load double, ptr %32, align 8\l  %263 = \
+fadd double %261, %262\l  %264 = load ptr, ptr %20, align 8\l  %265 = load i32, ptr %16, align 4\l  %266 = mul nsw i32 1, %265\l  %\
+267 = sext i32 %266 to i64\l  %268 = getelementptr inbounds %struct.COMPLEX, ptr %264, i64 %267\l  %269 = getelementptr inbounds %\
+struct.COMPLEX, ptr %268, i32 0, i32 0\l  store double %263, ptr %269, align 8\l  %270 = load double, ptr %30, align 8\l  %271 = \
+load double, ptr %31, align 8\l  %272 = fsub double %270, %271\l  %273 = load ptr, ptr %20, align 8\l  %274 = load i32, ptr %16, \
+align 4\l  %275 = mul nsw i32 1, %274\l  %276 = sext i32 %275 to i64\l  %277 = getelementptr inbounds %struct.COMPLEX, ptr %273, \
+i64 %276\l  %278 = getelementptr inbounds %struct.COMPLEX, ptr %277, i32 0, i32 1\l  store double %272, ptr %278, align 8\l  %279 = \
+load double, ptr %29, align 8\l  %280 = load double, ptr %32, align 8\l  %281 = fsub double %279, %280\l  %282 = load ptr, ptr %\
+20, align 8\l  %283 = load i32, ptr %16, align 4\l  %284 = mul nsw i32 3, %283\l  %285 = sext i32 %284 to i64\l  %286 = getelementptr \
+inbounds %struct.COMPLEX, ptr %282, i64 %285\l  %287 = getelementptr inbounds %struct.COMPLEX, ptr %286, i32 0, i32 0\l  store double %\
+281, ptr %287, align 8\l  %288 = load double, ptr %30, align 8\l  %289 = load double, ptr %31, align 8\l  %290 = fadd double %288, %\
+289\l  %291 = load ptr, ptr %20, align 8\l  %292 = load i32, ptr %16, align 4\l  %293 = mul nsw i32 3, %292\l  %294 = sext i32 %\
+293 to i64\l  %295 = getelementptr inbounds %struct.COMPLEX, ptr %291, i64 %294\l  %296 = getelementptr inbounds %struct.COMPLEX, \
+ptr %295, i32 0, i32 1\l  store double %290, ptr %296, align 8\l  br label %297\l}" filled record #b70d28ff #b70d2870
+node Node0x38996690 11.875 32.424 1.7222 0.65278 "{305:\l|  br label %327\l}" filled record #3d50c3ff #d6524470
+node Node0x389a1bc0 6.8472 1.6875 7.4444 2.7361 "{297:\l|  %298 = load i32, ptr %18, align 4\l  %299 = add nsw i32 %298, 1\l  store i32 %299, ptr %18, align 4\l  %300 = load i32, \
+ptr %15, align 4\l  %301 = load i32, ptr %17, align 4\l  %302 = add nsw i32 %301, %300\l  store i32 %302, ptr %17, align 4\l  %303 = \
+load ptr, ptr %20, align 8\l  %304 = getelementptr inbounds %struct.COMPLEX, ptr %303, i32 1\l  store ptr %304, ptr %20, align 8\l  \
+br label %55, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x389a2350 12.819 1.6875 1.1528 0.65278 "{327:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+edge Node0x38992e00 Node0x38993db0 4 8.875 72.174 8.5704 72.174 8.46 71.952 8.45 71.652 solid black
+edge Node0x38992e00 Node0x389954e0 4 12.931 72.174 14.677 72.174 14.985 70.123 14.891 68.206 solid black
+edge Node0x38993db0 Node0x389963f0 4 8.4333 68.571 8.1853 67.698 7.8776 66.615 7.6633 65.861 solid black
+edge Node0x389954e0 Node0x389a2350 4 14.338 61.798 14.035 49.797 12.954 7.0215 12.831 2.1535 solid black
+edge Node0x389963f0 Node0x38996640 4 6.3889 64.125 6.3889 63.237 6.3813 62.335 6.3671 61.425 solid black
+edge Node0x389963f0 Node0x38996690 7 8.4028 64.125 8.4028 62.77 9.2195 62.611 9.5278 61.292 12.17 49.986 11.955 35.589 11.888 32.886 solid black
+edge Node0x38996640 Node0x389a1bc0 4 6.7036 3.5589 6.7135 3.4306 6.723 3.3081 6.732 3.1916 solid black
+edge Node0x38996690 Node0x389a2350 4 11.885 32.101 11.976 29.132 12.697 5.6839 12.806 2.1474 solid black
+edge Node0x389a1bc0 Node0x389963f0 10 8.7465 3.051 8.8742 3.2074 8.9853 3.3758 9.0694 3.5556 11.789 9.3659 10.441 55.025 9.0694 61.292 8.855 62.271 8.3499 63.303 7.9516 64.014 solid black
+stop

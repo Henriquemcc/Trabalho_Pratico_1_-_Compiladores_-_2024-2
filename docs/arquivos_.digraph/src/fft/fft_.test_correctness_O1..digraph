@@ -1,0 +1,25 @@
+graph 1 10.806 12.778
+node Node0x2974e710 7.5972 12.188 6.4167 1.1806 "{3:\l|  %4 = icmp sgt i32 %0, 0\l  br i1 %4, label %.lr.ph.preheader, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x29627ff0 5.0139 10.667 5.0417 0.86111 "{.lr.ph.preheader:\l|  %wide.trip.count = zext nneg i32 %0 to i64\l  br label %.lr.ph\l}" filled record #3d50c3ff #d6524470
+node Node0x2974f020 5.9722 1.1667 7.2222 1.6944 "{._crit_edge:\l|  %.0.lcssa = phi double [ 0.000000e+00, %3 ], [ %.1, %.lr.ph ]\l  %27 = tail call i32 (ptr, ...) @printf(ptr noundef \
+nonnull\l... dereferenceable(1) @.str.3, double noundef %.0.lcssa)\l  %28 = fcmp ogt double %.0.lcssa, 1.000000e-03\l  %. = select \
+i1 %28, i32 -1, i32 1\l  ret i32 %.\l}" filled record #3d50c3ff #d24b4070
+node Node0x2974efd0 4.5278 6.125 9.0556 7.2222 "{.lr.ph:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph.preheader ], [ %indvars.iv.next,\l... %.lr.ph ]\l  %.041 = phi double [ 0.000000e+\
+00, %.lr.ph.preheader ], [ %.1, %.lr.ph ]\l  %5 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 %indvars.iv\l  %6 = load double, \
+ptr %5, align 8\l  %7 = getelementptr inbounds %struct.COMPLEX, ptr %2, i64 %indvars.iv\l  %8 = load double, ptr %7, align 8\l  %\
+9 = fsub double %6, %8\l  %10 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 %indvars.iv, i32 1\l  %11 = load double, ptr %\
+10, align 8\l  %12 = getelementptr inbounds %struct.COMPLEX, ptr %2, i64 %indvars.iv, i32 1\l  %13 = load double, ptr %12, align \
+8\l  %14 = fsub double %11, %13\l  %15 = fmul double %14, %14\l  %16 = tail call double @llvm.fmuladd.f64(double %9, double %9, \
+double %15)\l  %17 = tail call double @sqrt(double noundef %16) #16\l  %18 = load double, ptr %7, align 8\l  %19 = load double, \
+ptr %12, align 8\l  %20 = fmul double %19, %19\l  %21 = tail call double @llvm.fmuladd.f64(double %18, double %18, double %20)\l  %\
+22 = tail call double @sqrt(double noundef %21) #16\l  %23 = fcmp olt double %22, -1.000000e-10\l  %24 = fcmp ogt double %22, 1.000000e-10\l  %\
+or.cond = or i1 %23, %24\l  %25 = select i1 %or.cond, double %22, double 1.000000e+00\l  %.038 = fdiv double %17, %25\l  %26 = fcmp \
+ogt double %.038, %.041\l  %.1 = select i1 %26, double %.038, double %.041\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %\
+exitcond.not = icmp eq i64 %indvars.iv.next, %wide.trip.count\l  br i1 %exitcond.not, label %._crit_edge, label %.lr.ph, !llvm.loop !\
+4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x2974e710 Node0x29627ff0 4 4.375 11.757 4.0898 11.757 4.2649 11.474 4.5033 11.198 solid black
+edge Node0x2974e710 Node0x2974f020 10 9.2083 11.597 9.2083 10.764 9.3811 10.568 9.4306 9.7361 9.6212 6.5319 11.247 5.1606 9.4306 2.5139 9.3232 2.3575 9.1947 2.2194 9.0514 2.0975 solid black
+edge Node0x29627ff0 Node0x2974efd0 4 4.9695 10.24 4.9579 10.133 4.9446 10.009 4.9298 9.8721 solid black
+edge Node0x2974efd0 Node0x2974f020 4 2.2639 2.5139 2.2639 2.3566 2.3835 2.2128 2.5798 2.0827 solid black
+edge Node0x2974efd0 Node0x2974efd0 7 7.0246 2.5201 8.4737 1.5557 9.3056 1.6908 9.3056 4.4028 9.3056 4.8228 9.2366 5.181 9.1138 5.4829 solid black
+stop

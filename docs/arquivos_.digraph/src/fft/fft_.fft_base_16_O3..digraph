@@ -1,0 +1,107 @@
+graph 1 9.4028 61.806
+node Node0x2e119460 4.7014 31.062 9.4028 61.486 "{2:\l|  %3 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 8\l  %4 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 4\l  %\
+5 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 12\l  %6 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 2\l  %7 = \
+getelementptr inbounds %struct.COMPLEX, ptr %0, i64 10\l  %8 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 6\l  %9 = getelementptr \
+inbounds %struct.COMPLEX, ptr %0, i64 14\l  %10 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 1\l  %11 = getelementptr inbounds %\
+struct.COMPLEX, ptr %0, i64 9\l  %12 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 5\l  %13 = getelementptr inbounds %struct.COMPLEX, \
+ptr %0, i64 13\l  %14 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 3\l  %15 = getelementptr inbounds %struct.COMPLEX, ptr %\
+0, i64 11\l  %16 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 7\l  %17 = getelementptr inbounds %struct.COMPLEX, ptr %0, \
+i64 15\l  %18 = load \<2 x double\>, ptr %0, align 8\l  %19 = load \<2 x double\>, ptr %3, align 8\l  %20 = fadd \<2 x double\> %\
+18, %19\l  %21 = load \<2 x double\>, ptr %4, align 8\l  %22 = load \<2 x double\>, ptr %5, align 8\l  %23 = fadd \<2 x double\> %\
+21, %22\l  %24 = fadd \<2 x double\> %20, %23\l  %25 = load \<2 x double\>, ptr %6, align 8\l  %26 = load \<2 x double\>, ptr %7, \
+align 8\l  %27 = fadd \<2 x double\> %25, %26\l  %28 = load \<2 x double\>, ptr %8, align 8\l  %29 = load \<2 x double\>, ptr %9, \
+align 8\l  %30 = fadd \<2 x double\> %28, %29\l  %31 = shufflevector \<2 x double\> %25, \<2 x double\> %28, \<2 x i32\> \<i32 1,\l... \
+i32 2\>\l  %32 = shufflevector \<2 x double\> %26, \<2 x double\> %29, \<2 x i32\> \<i32 1,\l... i32 2\>\l  %33 = fsub \<2 x double\> %\
+31, %32\l  %34 = shufflevector \<2 x double\> %25, \<2 x double\> %28, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %35 = shufflevector \<\
+2 x double\> %26, \<2 x double\> %29, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %36 = fsub \<2 x double\> %34, %35\l  %37 = fadd \<2 \
+x double\> %27, %30\l  %38 = extractelement \<2 x double\> %36, i64 0\l  %39 = extractelement \<2 x double\> %36, i64 1\l  %40 = \
+fadd double %38, %39\l  %41 = extractelement \<2 x double\> %33, i64 0\l  %42 = extractelement \<2 x double\> %33, i64 1\l  %43 = \
+fsub double %41, %42\l  %44 = fsub double %38, %39\l  %45 = fadd double %41, %42\l  %46 = fadd \<2 x double\> %24, %37\l  %47 = \
+fsub double %45, %44\l  %48 = fmul double %47, 0x3FE6A09E667F4BB8\l  %49 = fadd double %45, %44\l  %50 = fmul double %49, 0x3FE6A09E667F4BB8\l  %\
+51 = load \<2 x double\>, ptr %10, align 8\l  %52 = load \<2 x double\>, ptr %11, align 8\l  %53 = fadd \<2 x double\> %51, %52\l  %\
+54 = load \<2 x double\>, ptr %12, align 8\l  %55 = load \<2 x double\>, ptr %13, align 8\l  %56 = fadd \<2 x double\> %54, %55\l  %\
+57 = fadd \<2 x double\> %53, %56\l  %58 = load \<2 x double\>, ptr %14, align 8\l  %59 = load \<2 x double\>, ptr %15, align 8\l  %\
+60 = fadd \<2 x double\> %58, %59\l  %61 = load \<2 x double\>, ptr %16, align 8\l  %62 = load \<2 x double\>, ptr %17, align 8\l  %\
+63 = fadd \<2 x double\> %61, %62\l  %64 = shufflevector \<2 x double\> %58, \<2 x double\> %61, \<2 x i32\> \<i32 1,\l... i32 2\>\l  %\
+65 = shufflevector \<2 x double\> %59, \<2 x double\> %62, \<2 x i32\> \<i32 1,\l... i32 2\>\l  %66 = fsub \<2 x double\> %64, %\
+65\l  %67 = shufflevector \<2 x double\> %58, \<2 x double\> %61, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %68 = shufflevector \<2 x \
+double\> %59, \<2 x double\> %62, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %69 = fsub \<2 x double\> %67, %68\l  %70 = fadd \<2 x double\> %\
+60, %63\l  %71 = shufflevector \<2 x double\> %53, \<2 x double\> %60, \<2 x i32\> \<i32 1,\l... i32 2\>\l  %72 = shufflevector \<\
+2 x double\> %56, \<2 x double\> %63, \<2 x i32\> \<i32 1,\l... i32 2\>\l  %73 = fsub \<2 x double\> %71, %72\l  %74 = shufflevector \<\
+2 x double\> %53, \<2 x double\> %60, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %75 = shufflevector \<2 x double\> %56, \<2 x double\> %\
+63, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %76 = fsub \<2 x double\> %74, %75\l  %77 = extractelement \<2 x double\> %69, i64 0\l  %\
+78 = extractelement \<2 x double\> %69, i64 1\l  %79 = fadd double %77, %78\l  %80 = extractelement \<2 x double\> %66, i64 0\l  %\
+81 = extractelement \<2 x double\> %66, i64 1\l  %82 = fsub double %80, %81\l  %83 = fsub double %77, %78\l  %84 = fadd double %\
+80, %81\l  %85 = fadd \<2 x double\> %57, %70\l  %86 = extractelement \<2 x double\> %76, i64 0\l  %87 = extractelement \<2 x double\> %\
+76, i64 1\l  %88 = fadd double %86, %87\l  %89 = extractelement \<2 x double\> %73, i64 0\l  %90 = extractelement \<2 x double\> %\
+73, i64 1\l  %91 = fsub double %89, %90\l  %92 = fsub double %86, %87\l  %93 = fadd double %89, %90\l  %94 = fsub double %84, %83\l  %\
+95 = fmul double %94, 0x3FE6A09E667F4BB8\l  %96 = fadd double %84, %83\l  %97 = fmul double %96, 0x3FE6A09E667F4BB8\l  %98 = fadd \<\
+2 x double\> %46, %85\l  store \<2 x double\> %98, ptr %1, align 8\l  %99 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 \
+8\l  %100 = fsub \<2 x double\> %46, %85\l  store \<2 x double\> %100, ptr %99, align 8\l  %101 = getelementptr inbounds %struct.COMPLEX, \
+ptr %1, i64 1\l  %102 = fsub \<2 x double\> %18, %19\l  %103 = fsub \<2 x double\> %21, %22\l  %104 = shufflevector \<2 x double\> %\
+103, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 0\>\l  %105 = fadd \<2 x double\> %102, %104\l  %106 = fsub \<2 x double\> %\
+102, %104\l  %107 = shufflevector \<2 x double\> %105, \<2 x double\> %106, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %108 = fsub \<2 \
+x double\> %102, %104\l  %109 = extractelement \<2 x double\> %108, i64 0\l  %110 = fadd \<2 x double\> %102, %104\l  %111 = extractelement \<\
+2 x double\> %110, i64 1\l  %112 = insertelement \<2 x double\> poison, double %43, i64 0\l  %113 = insertelement \<2 x double\> \
+poison, double %43, i64 0\l  %114 = insertelement \<2 x double\> poison, double %40, i64 0\l  %115 = insertelement \<2 x double\> \
+poison, double %40, i64 0\l  %116 = fadd \<2 x double\> %113, %115\l  %117 = fsub \<2 x double\> %112, %114\l  %118 = shufflevector \<\
+2 x double\> %116, \<2 x double\> %117, \<2 x i32\> \<i32 0,\l... i32 2\>\l  %119 = fmul \<2 x double\> %118, \<double 0x3FE6A09E667F4BB8, \
+double\l... 0x3FE6A09E667F4BB8\>\l  %120 = fadd \<2 x double\> %107, %119\l  %121 = fadd double %109, %48\l  %122 = fsub double %\
+111, %50\l  %123 = fsub double %109, %48\l  %124 = fadd double %111, %50\l  %125 = fsub \<2 x double\> %51, %52\l  %126 = fsub \<\
+2 x double\> %54, %55\l  %127 = shufflevector \<2 x double\> %126, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 0\>\l  %\
+128 = fadd \<2 x double\> %125, %127\l  %129 = fsub \<2 x double\> %125, %127\l  %130 = shufflevector \<2 x double\> %128, \<2 x \
+double\> %129, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %131 = fsub \<2 x double\> %125, %127\l  %132 = extractelement \<2 x double\> %\
+131, i64 0\l  %133 = fadd \<2 x double\> %125, %127\l  %134 = extractelement \<2 x double\> %133, i64 1\l  %135 = insertelement \<\
+2 x double\> poison, double %82, i64 0\l  %136 = insertelement \<2 x double\> poison, double %82, i64 0\l  %137 = insertelement \<\
+2 x double\> poison, double %79, i64 0\l  %138 = insertelement \<2 x double\> poison, double %79, i64 0\l  %139 = fadd \<2 x double\> %\
+136, %138\l  %140 = fsub \<2 x double\> %135, %137\l  %141 = shufflevector \<2 x double\> %139, \<2 x double\> %140, \<2 x i32\> \<\
+i32 0,\l... i32 2\>\l  %142 = fmul \<2 x double\> %141, \<double 0x3FE6A09E667F4BB8, double\l... 0x3FE6A09E667F4BB8\>\l  %143 = \
+fadd \<2 x double\> %130, %142\l  %144 = fadd double %132, %95\l  %145 = fsub double %134, %97\l  %146 = fsub double %132, %95\l  %\
+147 = fadd double %134, %97\l  %148 = fmul \<2 x double\> %143, \<double 0xBFD87DE2A6AEA312, double\l... 0x3FD87DE2A6AEA312\>\l  %\
+149 = shufflevector \<2 x double\> %148, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 0\>\l  %150 = tail call \<2 x double\> @\
+llvm.fmuladd.v2f64(\<2 x double\> %143, \<2 x\l... double\> \<double 0x3FED906BCF32832F, double 0x3FED906BCF32832F\>, \<2 x double\>\l... %\
+149)\l  %151 = fadd \<2 x double\> %120, %150\l  store \<2 x double\> %151, ptr %101, align 8\l  %152 = getelementptr inbounds %\
+struct.COMPLEX, ptr %1, i64 9\l  %153 = fsub \<2 x double\> %120, %150\l  store \<2 x double\> %153, ptr %152, align 8\l  %154 = \
+getelementptr inbounds %struct.COMPLEX, ptr %1, i64 2\l  %155 = fsub \<2 x double\> %20, %23\l  %156 = fsub \<2 x double\> %27, %\
+30\l  %157 = shufflevector \<2 x double\> %156, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 0\>\l  %158 = fadd \<2 x double\> %\
+155, %157\l  %159 = fsub \<2 x double\> %155, %157\l  %160 = shufflevector \<2 x double\> %158, \<2 x double\> %159, \<2 x i32\> \<\
+i32 0,\l... i32 3\>\l  %161 = fsub \<2 x double\> %155, %157\l  %162 = extractelement \<2 x double\> %161, i64 0\l  %163 = fadd \<\
+2 x double\> %155, %157\l  %164 = extractelement \<2 x double\> %163, i64 1\l  %165 = insertelement \<2 x double\> poison, double %\
+91, i64 0\l  %166 = insertelement \<2 x double\> poison, double %91, i64 0\l  %167 = insertelement \<2 x double\> poison, double %\
+88, i64 0\l  %168 = insertelement \<2 x double\> poison, double %88, i64 0\l  %169 = fadd \<2 x double\> %166, %168\l  %170 = fsub \<\
+2 x double\> %165, %167\l  %171 = shufflevector \<2 x double\> %169, \<2 x double\> %170, \<2 x i32\> \<i32 0,\l... i32 2\>\l  %\
+172 = fmul \<2 x double\> %171, \<double 0x3FE6A09E667F4BB8, double\l... 0x3FE6A09E667F4BB8\>\l  %173 = fadd \<2 x double\> %160, %\
+172\l  store \<2 x double\> %173, ptr %154, align 8\l  %174 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 10\l  %175 = fsub \<\
+2 x double\> %160, %172\l  store \<2 x double\> %175, ptr %174, align 8\l  %176 = fmul double %145, 0x3FED906BCF32832F\l  %177 = \
+tail call double @llvm.fmuladd.f64(double %144, double\l... 0x3FD87DE2A6AEA312, double %176)\l  %178 = fmul double %144, 0xBFED906BCF32832F\l  %\
+179 = tail call double @llvm.fmuladd.f64(double %145, double\l... 0x3FD87DE2A6AEA312, double %178)\l  %180 = fadd double %121, %\
+177\l  %181 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 3\l  store double %180, ptr %181, align 8\l  %182 = fadd double %\
+122, %179\l  %183 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 3, i32 1\l  store double %182, ptr %183, align 8\l  %184 = \
+fsub double %121, %177\l  %185 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 11\l  store double %184, ptr %185, align 8\l  %\
+186 = fsub double %122, %179\l  %187 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 11, i32 1\l  store double %186, ptr %\
+187, align 8\l  %188 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 4\l  %189 = fsub \<2 x double\> %24, %37\l  %190 = fsub \<\
+2 x double\> %57, %70\l  %191 = shufflevector \<2 x double\> %190, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 0\>\l  %\
+192 = fadd \<2 x double\> %189, %191\l  %193 = fsub \<2 x double\> %189, %191\l  %194 = shufflevector \<2 x double\> %192, \<2 x \
+double\> %193, \<2 x i32\> \<i32 0,\l... i32 3\>\l  store \<2 x double\> %194, ptr %188, align 8\l  %195 = getelementptr inbounds %\
+struct.COMPLEX, ptr %1, i64 12\l  %196 = shufflevector \<2 x double\> %193, \<2 x double\> %192, \<2 x i32\> \<i32 0,\l... i32 3\>\l  \
+store \<2 x double\> %196, ptr %195, align 8\l  %197 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 5\l  %198 = fsub \<2 \
+x double\> %107, %119\l  %199 = fsub \<2 x double\> %130, %142\l  %200 = shufflevector \<2 x double\> %199, \<2 x double\> poison, \<\
+2 x i32\> \<i32\l... 1, i32 0\>\l  %201 = fmul \<2 x double\> %199, \<double 0xBFD87DE2A6AEA312, double\l... 0x3FD87DE2A6AEA312\>\l  %\
+202 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %200, \<2 x\l... double\> \<double 0x3FED906BCF32832F, double \
+0x3FED906BCF32832F\>, \<2 x double\>\l... %201)\l  %203 = fadd \<2 x double\> %198, %202\l  %204 = fsub \<2 x double\> %198, %202\l  %\
+205 = shufflevector \<2 x double\> %203, \<2 x double\> %204, \<2 x i32\> \<i32 0,\l... i32 3\>\l  store \<2 x double\> %205, ptr %\
+197, align 8\l  %206 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 13\l  %207 = shufflevector \<2 x double\> %204, \<2 x \
+double\> %203, \<2 x i32\> \<i32 0,\l... i32 3\>\l  store \<2 x double\> %207, ptr %206, align 8\l  %208 = fsub double %93, %92\l  %\
+209 = fmul double %208, 0x3FE6A09E667F4BB8\l  %210 = fadd double %93, %92\l  %211 = fmul double %210, 0x3FE6A09E667F4BB8\l  %212 = \
+fadd double %162, %209\l  %213 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 6\l  store double %212, ptr %213, align 8\l  %\
+214 = fsub double %164, %211\l  %215 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 6, i32 1\l  store double %214, ptr %215, \
+align 8\l  %216 = fsub double %162, %209\l  %217 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 14\l  store double %216, \
+ptr %217, align 8\l  %218 = fadd double %164, %211\l  %219 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 14, i32 1\l  store \
+double %218, ptr %219, align 8\l  %220 = fmul double %146, 0xBFED906BCF32832F\l  %221 = tail call double @llvm.fmuladd.f64(double %\
+147, double\l... 0x3FD87DE2A6AEA312, double %220)\l  %222 = fmul double %147, 0x3FED906BCF32832F\l  %223 = tail call double @llvm.fmuladd.f64(\
+double %146, double\l... 0x3FD87DE2A6AEA312, double %222)\l  %224 = fadd double %123, %221\l  %225 = getelementptr inbounds %struct.COMPLEX, \
+ptr %1, i64 7\l  store double %224, ptr %225, align 8\l  %226 = fsub double %124, %223\l  %227 = getelementptr inbounds %struct.COMPLEX, \
+ptr %1, i64 7, i32 1\l  store double %226, ptr %227, align 8\l  %228 = fsub double %123, %221\l  %229 = getelementptr inbounds %\
+struct.COMPLEX, ptr %1, i64 15\l  store double %228, ptr %229, align 8\l  %230 = fadd double %124, %223\l  %231 = getelementptr \
+inbounds %struct.COMPLEX, ptr %1, i64 15, i32 1\l  store double %230, ptr %231, align 8\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

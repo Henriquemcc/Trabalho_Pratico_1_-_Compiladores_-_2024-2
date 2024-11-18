@@ -1,0 +1,30 @@
+graph 1 12.396 16.236
+node Node0x2958a090 9.5278 15.646 5.7361 1.1806 "{8:\l|  %9 = icmp sgt i32 %3, 0\l  br i1 %9, label %.lr.ph59, label %._crit_edge60\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e97a5f70
+node Node0x29633dd0 7.5833 14.021 3.3194 1.0694 "{.lr.ph59:\l|  %10 = sext i32 %4 to i64\l  %11 = sext i32 %4 to i64\l  br label %.lr.ph.preheader\l}" filled record #3d50c3ff #ec7f6370
+node Node0x2958c250 7.8194 0.64583 1.8333 0.65278 "{._crit_edge60:\l|  ret void\l}" filled record #3d50c3ff #e97a5f70
+node Node0x2958c200 7.3194 12.243 6.9861 1.4861 "{.lr.ph.preheader:\l|  %.04157 = phi i32 [ 0, %.lr.ph59 ], [ %35, %._crit_edge ]\l  %.04356 = phi ptr [ %1, %.lr.ph59 ], [ %36, %\
+._crit_edge ]\l  %12 = mul nsw i32 %.04157, %7\l  %13 = add nsw i32 %12, %6\l  br label %.lr.ph\l}" filled record #3d50c3ff #d6524470
+node Node0x2958cd00 4.5278 7.7014 9.0556 6.5972 "{.lr.ph:\l|  %.054 = phi i32 [ %spec.select, %.lr.ph ], [ 0, %.lr.ph.preheader ]\l  %.04053 = phi i32 [ %32, %.lr.ph ], [ 0, %.lr.ph.preheader ]\l  %\
+.04252 = phi ptr [ %33, %.lr.ph ], [ %0, %.lr.ph.preheader ]\l  %.04451 = phi double [ %25, %.lr.ph ], [ 0.000000e+00, %.lr.ph.preheader ]\l  %\
+.04550 = phi double [ %28, %.lr.ph ], [ 0.000000e+00, %.lr.ph.preheader ]\l  %14 = sext i32 %.054 to i64\l  %15 = getelementptr \
+inbounds %struct.COMPLEX, ptr %2, i64 %14\l  %16 = load double, ptr %15, align 8\l  %17 = getelementptr inbounds %struct.COMPLEX, \
+ptr %2, i64 %14, i32 1\l  %18 = load double, ptr %17, align 8\l  %19 = load double, ptr %.04252, align 8\l  %20 = getelementptr \
+inbounds %struct.COMPLEX, ptr %.04252, i64 0, i32 1\l  %21 = load double, ptr %20, align 8\l  %22 = fneg double %21\l  %23 = fmul \
+double %18, %22\l  %24 = tail call double @llvm.fmuladd.f64(double %19, double %16, double %23)\l  %25 = fadd double %.04451, %24\l  %\
+26 = fmul double %16, %21\l  %27 = tail call double @llvm.fmuladd.f64(double %19, double %18, double %26)\l  %28 = fadd double %\
+.04550, %27\l  %29 = add nsw i32 %13, %.054\l  %30 = icmp sgt i32 %29, %5\l  %31 = select i1 %30, i32 %5, i32 0\l  %spec.select = \
+sub nsw i32 %29, %31\l  %32 = add nuw nsw i32 %.04053, 1\l  %33 = getelementptr inbounds %struct.COMPLEX, ptr %.04252, i64 %10\l  %\
+exitcond.not = icmp eq i32 %32, %3\l  br i1 %exitcond.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2958cd50 6.5694 2.6875 8.4861 2.4306 "{._crit_edge:\l|  store double %25, ptr %.04356, align 8\l  %34 = getelementptr inbounds %struct.COMPLEX, ptr %.04356, i64 0, i32 \
+1\l  store double %28, ptr %34, align 8\l  %35 = add nuw nsw i32 %.04157, 1\l  %36 = getelementptr inbounds %struct.COMPLEX, ptr %\
+.04356, i64 %11\l  %exitcond62.not = icmp eq i32 %35, %3\l  br i1 %exitcond62.not, label %._crit_edge60, label %.lr.ph.preheader,\l... !\
+llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+edge Node0x2958a090 Node0x29633dd0 4 8.0833 15.056 8.0833 14.928 8.0515 14.8 8.0038 14.679 solid black
+edge Node0x2958a090 Node0x2958c250 13 10.958 15.056 10.958 13.807 11.208 13.506 11.208 12.257 11.208 12.257 11.208 12.257 11.208 7.6875 11.208 4.9227 12.682 3.6231 10.944 1.4722 10.684 1.1498 9.6818 0.92876 8.8816 0.79957 solid black
+edge Node0x29633dd0 Node0x2958c200 4 7.5056 13.491 7.4881 13.376 7.4691 13.25 7.4502 13.124 solid black
+edge Node0x2958c200 Node0x2958cd00 4 6.8709 11.504 6.7976 11.385 6.7177 11.256 6.633 11.119 solid black
+edge Node0x2958cd00 Node0x2958cd00 7 7.0157 4.408 8.4703 3.4367 9.3056 3.5598 9.3056 6.1319 9.3056 6.5277 9.2372 6.8655 9.1155 7.1502 solid black
+edge Node0x2958cd00 Node0x2958cd50 4 2.2639 4.4028 2.2639 4.2567 2.3507 4.1177 2.4998 3.9869 solid black
+edge Node0x2958cd50 Node0x2958c250 4 4.4444 1.4722 4.4444 0.98899 5.7688 0.79234 6.7583 0.71286 solid black
+edge Node0x2958cd50 Node0x2958c200 10 10.833 1.6319 11.086 1.6319 10.845 3.6517 10.819 3.9028 10.5 7.101 11.294 8.3811 9.4306 11 9.3198 11.156 9.1826 11.295 9.0317 11.418 solid black
+stop

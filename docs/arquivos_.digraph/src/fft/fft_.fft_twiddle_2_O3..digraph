@@ -1,0 +1,160 @@
+graph 1 18.639 81.736
+node Node0x2e0f9360 11.236 81.042 7.2222 1.3889 "{8:\l|  %9 = sub nsw i32 %1, %0\l  %10 = icmp slt i32 %9, 128\l  br i1 %10, label %tailrecurse._crit_edge, label %tailrecurse\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2e0c9400 10.083 76.014 6.5278 1.3889 "{tailrecurse._crit_edge:\l|  %.tr.lcssa = phi i32 [ %0, %8 ], [ %127, %tailrecurse ]\l  %11 = icmp slt i32 %.tr.lcssa, %1\l  br \
+i1 %11, label %.lr.ph81, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2e0ca2b0 13.75 78.528 9.2778 2.6389 "{tailrecurse:\l|  %.tr77 = phi i32 [ %127, %tailrecurse ], [ %0, %8 ]\l  %126 = add nsw i32 %.tr77, %1\l  %127 = sdiv i32 %126, \
+2\l  tail call void @fft_twiddle_2(i32 noundef %.tr77, i32 noundef %127, ptr\l... noundef %2, ptr noundef %3, ptr noundef %4, i32 \
+noundef %5, i32 noundef %6,\l... i32 noundef %7)\l  %128 = sub nsw i32 %1, %127\l  %129 = icmp slt i32 %128, 128\l  br i1 %129, \
+label %tailrecurse._crit_edge, label %tailrecurse\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2e0c8c80 5.0417 73.396 8.9444 2.8472 "{.lr.ph81:\l|  %12 = sext i32 %.tr.lcssa to i64\l  %13 = getelementptr %struct.COMPLEX, ptr %3, i64 %12\l  %14 = mul i32 %.tr.lcssa, %\
+6\l  %15 = sext i32 %7 to i64\l  %16 = sext i32 %14 to i64\l  %17 = sext i32 %6 to i64\l  %wide.trip.count = sext i32 %1 to i64\l  %\
+18 = sub nsw i64 %wide.trip.count, %12\l  %min.iters.check = icmp ult i64 %18, 56\l  br i1 %min.iters.check, label %scalar.ph.preheader, \
+label %vector.scevcheck\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x2e0d0170 9.6944 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x2e13a920 4.5278 11.396 9.0556 1.9028 "{scalar.ph.preheader:\l|  %indvars.iv82.ph = phi i64 [ %12, %vector.memcheck ], [ %12,\l... %vector.scevcheck ], [ %12, %.lr.ph81 ], [ %\
+ind.end, %middle.block ]\l  %indvars.iv.ph = phi i64 [ %16, %vector.memcheck ], [ %16, %vector.scevcheck\l... ], [ %16, %.lr.ph81 ], [ %\
+ind.end249, %middle.block ]\l  %.06978.ph = phi ptr [ %13, %vector.memcheck ], [ %13, %vector.scevcheck ],\l... [ %13, %.lr.ph81 ], [ %\
+ind.end251, %middle.block ]\l  br label %scalar.ph\l}" filled record #3d50c3ff #d6524470
+node Node0x2e228b40 7.2639 65.257 8.1389 12.431 "{vector.scevcheck:\l|  %ident.check = icmp ne i32 %6, 1\l  %19 = xor i64 %12, -1\l  %20 = add nsw i64 %19, %wide.trip.count\l  %\
+21 = shl nsw i64 %15, 4\l  %22 = shl nsw i64 %12, 4\l  %23 = add nsw i64 %21, %22\l  %scevgep = getelementptr i8, ptr %3, i64 %23\l  %\
+mul.result = shl nsw i64 %20, 4\l  %mul.overflow = icmp ugt i64 %20, 1152921504606846975\l  %24 = getelementptr i8, ptr %scevgep, \
+i64 %mul.result\l  %25 = add nsw i64 %21, %22\l  %26 = or disjoint i64 %25, 8\l  %scevgep87 = getelementptr i8, ptr %3, i64 %26\l  %\
+mul.result89 = shl nsw i64 %20, 4\l  %27 = getelementptr i8, ptr %scevgep87, i64 %mul.result89\l  %scevgep91 = getelementptr i8, \
+ptr %2, i64 %22\l  %mul.result93 = shl nsw i64 %20, 4\l  %28 = getelementptr i8, ptr %scevgep91, i64 %mul.result93\l  %29 = or disjoint \
+i64 %22, 8\l  %scevgep95 = getelementptr i8, ptr %2, i64 %29\l  %mul.result97 = shl nsw i64 %20, 4\l  %30 = getelementptr i8, ptr %\
+scevgep95, i64 %mul.result97\l  %scevgep99 = getelementptr i8, ptr %4, i64 %22\l  %mul.result101 = shl nsw i64 %20, 4\l  %31 = getelementptr \
+i8, ptr %scevgep99, i64 %mul.result101\l  %scevgep103 = getelementptr i8, ptr %4, i64 %29\l  %mul.result105 = shl nsw i64 %20, 4\l  %\
+32 = getelementptr i8, ptr %scevgep103, i64 %mul.result105\l  %scevgep107 = getelementptr i8, ptr %2, i64 %23\l  %mul.result109 = \
+shl nsw i64 %20, 4\l  %33 = getelementptr i8, ptr %scevgep107, i64 %mul.result109\l  %scevgep111 = getelementptr i8, ptr %2, i64 %\
+26\l  %mul.result113 = shl nsw i64 %20, 4\l  %34 = getelementptr i8, ptr %scevgep111, i64 %mul.result113\l  %35 = insertelement \<\
+8 x ptr\> poison, ptr %24, i64 0\l  %36 = insertelement \<8 x ptr\> %35, ptr %27, i64 1\l  %37 = insertelement \<8 x ptr\> %36, \
+ptr %28, i64 2\l  %38 = insertelement \<8 x ptr\> %37, ptr %30, i64 3\l  %39 = insertelement \<8 x ptr\> %38, ptr %31, i64 4\l  %\
+40 = insertelement \<8 x ptr\> %39, ptr %32, i64 5\l  %41 = insertelement \<8 x ptr\> %40, ptr %33, i64 6\l  %42 = insertelement \<\
+8 x ptr\> %41, ptr %34, i64 7\l  %43 = insertelement \<8 x ptr\> poison, ptr %scevgep, i64 0\l  %44 = insertelement \<8 x ptr\> %\
+43, ptr %scevgep87, i64 1\l  %45 = insertelement \<8 x ptr\> %44, ptr %scevgep91, i64 2\l  %46 = insertelement \<8 x ptr\> %45, \
+ptr %scevgep95, i64 3\l  %47 = insertelement \<8 x ptr\> %46, ptr %scevgep99, i64 4\l  %48 = insertelement \<8 x ptr\> %47, ptr %\
+scevgep103, i64 5\l  %49 = insertelement \<8 x ptr\> %48, ptr %scevgep107, i64 6\l  %50 = insertelement \<8 x ptr\> %49, ptr %scevgep111, \
+i64 7\l  %51 = icmp ult \<8 x ptr\> %42, %50\l  %52 = bitcast \<8 x i1\> %51 to i8\l  %53 = icmp ne i8 %52, 0\l  %op.rdx283 = or \
+i1 %53, %ident.check\l  %op.rdx284 = or i1 %op.rdx283, %mul.overflow\l  br i1 %op.rdx284, label %scalar.ph.preheader, label %vector.memcheck\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #dc5d4a70
+node Node0x2e12c900 8.375 43.056 7.4444 30.972 "{vector.memcheck:\l|  %54 = shl nsw i64 %wide.trip.count, 4\l  %55 = add nsw i64 %54, -8\l  %scevgep115 = getelementptr i8, ptr %\
+3, i64 %55\l  %56 = shl nsw i64 %12, 4\l  %57 = or disjoint i64 %56, 8\l  %scevgep116 = getelementptr i8, ptr %3, i64 %57\l  %scevgep117 = \
+getelementptr i8, ptr %3, i64 %54\l  %58 = add nsw i64 %15, %12\l  %59 = shl nsw i64 %58, 4\l  %scevgep118 = getelementptr i8, ptr %\
+3, i64 %59\l  %60 = add nsw i64 %15, %wide.trip.count\l  %61 = shl nsw i64 %60, 4\l  %62 = add nsw i64 %61, -8\l  %scevgep119 = \
+getelementptr i8, ptr %3, i64 %62\l  %63 = or disjoint i64 %59, 8\l  %scevgep120 = getelementptr i8, ptr %3, i64 %63\l  %scevgep121 = \
+getelementptr i8, ptr %3, i64 %61\l  %scevgep122 = getelementptr i8, ptr %2, i64 %56\l  %scevgep123 = getelementptr i8, ptr %2, \
+i64 %55\l  %scevgep124 = getelementptr i8, ptr %2, i64 %57\l  %scevgep125 = getelementptr i8, ptr %2, i64 %54\l  %scevgep126 = getelementptr \
+i8, ptr %4, i64 %56\l  %scevgep127 = getelementptr i8, ptr %4, i64 %55\l  %scevgep128 = getelementptr i8, ptr %4, i64 %57\l  %scevgep129 = \
+getelementptr i8, ptr %4, i64 %54\l  %scevgep130 = getelementptr i8, ptr %2, i64 %59\l  %scevgep131 = getelementptr i8, ptr %2, \
+i64 %62\l  %scevgep132 = getelementptr i8, ptr %2, i64 %63\l  %scevgep133 = getelementptr i8, ptr %2, i64 %61\l  %64 = insertelement \<\
+8 x ptr\> poison, ptr %13, i64 0\l  %65 = shufflevector \<8 x ptr\> %64, \<8 x ptr\> poison, \<8 x i32\>\l... zeroinitializer\l  %\
+66 = insertelement \<8 x ptr\> poison, ptr %scevgep119, i64 0\l  %67 = insertelement \<8 x ptr\> %66, ptr %scevgep117, i64 1\l  %\
+68 = insertelement \<8 x ptr\> %67, ptr %scevgep121, i64 2\l  %69 = insertelement \<8 x ptr\> %68, ptr %scevgep123, i64 3\l  %70 = \
+insertelement \<8 x ptr\> %69, ptr %scevgep125, i64 4\l  %71 = insertelement \<8 x ptr\> %70, ptr %scevgep127, i64 5\l  %72 = insertelement \<\
+8 x ptr\> %71, ptr %scevgep129, i64 6\l  %73 = insertelement \<8 x ptr\> %72, ptr %scevgep131, i64 7\l  %74 = icmp ult \<8 x ptr\> %\
+65, %73\l  %75 = insertelement \<8 x ptr\> poison, ptr %scevgep118, i64 0\l  %76 = insertelement \<8 x ptr\> %75, ptr %scevgep116, \
+i64 1\l  %77 = insertelement \<8 x ptr\> %76, ptr %scevgep120, i64 2\l  %78 = insertelement \<8 x ptr\> %77, ptr %scevgep122, i64 \
+3\l  %79 = insertelement \<8 x ptr\> %78, ptr %scevgep124, i64 4\l  %80 = insertelement \<8 x ptr\> %79, ptr %scevgep126, i64 5\l  %\
+81 = insertelement \<8 x ptr\> %80, ptr %scevgep128, i64 6\l  %82 = insertelement \<8 x ptr\> %81, ptr %scevgep130, i64 7\l  %83 = \
+insertelement \<8 x ptr\> poison, ptr %scevgep115, i64 0\l  %84 = shufflevector \<8 x ptr\> %83, \<8 x ptr\> poison, \<8 x i32\>\l... \
+zeroinitializer\l  %85 = icmp ult \<8 x ptr\> %82, %84\l  %86 = and \<8 x i1\> %74, %85\l  %bound0161 = icmp ult ptr %13, %scevgep133\l  %\
+bound1162 = icmp ult ptr %scevgep132, %scevgep115\l  %found.conflict163 = and i1 %bound0161, %bound1162\l  %bound0165 = icmp ult \
+ptr %scevgep116, %scevgep119\l  %bound1166 = icmp ult ptr %scevgep118, %scevgep117\l  %found.conflict167 = and i1 %bound0165, %bound1166\l  %\
+bound0169 = icmp ult ptr %scevgep116, %scevgep121\l  %bound1170 = icmp ult ptr %scevgep120, %scevgep117\l  %found.conflict171 = \
+and i1 %bound0169, %bound1170\l  %bound0173 = icmp ult ptr %scevgep116, %scevgep123\l  %bound1174 = icmp ult ptr %scevgep122, %scevgep117\l  %\
+found.conflict175 = and i1 %bound0173, %bound1174\l  %bound0177 = icmp ult ptr %scevgep116, %scevgep125\l  %bound1178 = icmp ult \
+ptr %scevgep124, %scevgep117\l  %found.conflict179 = and i1 %bound0177, %bound1178\l  %bound0181 = icmp ult ptr %scevgep116, %scevgep127\l  %\
+bound1182 = icmp ult ptr %scevgep126, %scevgep117\l  %found.conflict183 = and i1 %bound0181, %bound1182\l  %bound0185 = icmp ult \
+ptr %scevgep116, %scevgep129\l  %bound1186 = icmp ult ptr %scevgep128, %scevgep117\l  %found.conflict187 = and i1 %bound0185, %bound1186\l  %\
+bound0189 = icmp ult ptr %scevgep116, %scevgep131\l  %bound1190 = icmp ult ptr %scevgep130, %scevgep117\l  %found.conflict191 = \
+and i1 %bound0189, %bound1190\l  %bound0193 = icmp ult ptr %scevgep116, %scevgep133\l  %bound1194 = icmp ult ptr %scevgep132, %scevgep117\l  %\
+found.conflict195 = and i1 %bound0193, %bound1194\l  %bound0197 = icmp ult ptr %scevgep118, %scevgep121\l  %bound1198 = icmp ult \
+ptr %scevgep120, %scevgep119\l  %found.conflict199 = and i1 %bound0197, %bound1198\l  %bound0201 = icmp ult ptr %scevgep118, %scevgep123\l  %\
+bound1202 = icmp ult ptr %scevgep122, %scevgep119\l  %found.conflict203 = and i1 %bound0201, %bound1202\l  %bound0205 = icmp ult \
+ptr %scevgep118, %scevgep125\l  %bound1206 = icmp ult ptr %scevgep124, %scevgep119\l  %found.conflict207 = and i1 %bound0205, %bound1206\l  %\
+bound0209 = icmp ult ptr %scevgep118, %scevgep127\l  %bound1210 = icmp ult ptr %scevgep126, %scevgep119\l  %found.conflict211 = \
+and i1 %bound0209, %bound1210\l  %bound0213 = icmp ult ptr %scevgep118, %scevgep129\l  %bound1214 = icmp ult ptr %scevgep128, %scevgep119\l  %\
+found.conflict215 = and i1 %bound0213, %bound1214\l  %bound0217 = icmp ult ptr %scevgep118, %scevgep131\l  %bound1218 = icmp ult \
+ptr %scevgep130, %scevgep119\l  %found.conflict219 = and i1 %bound0217, %bound1218\l  %bound0221 = icmp ult ptr %scevgep118, %scevgep133\l  %\
+bound1222 = icmp ult ptr %scevgep132, %scevgep119\l  %found.conflict223 = and i1 %bound0221, %bound1222\l  %bound0225 = icmp ult \
+ptr %scevgep120, %scevgep123\l  %bound1226 = icmp ult ptr %scevgep122, %scevgep121\l  %found.conflict227 = and i1 %bound0225, %bound1226\l  %\
+bound0229 = icmp ult ptr %scevgep120, %scevgep125\l  %bound1230 = icmp ult ptr %scevgep124, %scevgep121\l  %found.conflict231 = \
+and i1 %bound0229, %bound1230\l  %bound0233 = icmp ult ptr %scevgep120, %scevgep127\l  %bound1234 = icmp ult ptr %scevgep126, %scevgep121\l  %\
+found.conflict235 = and i1 %bound0233, %bound1234\l  %bound0237 = icmp ult ptr %scevgep120, %scevgep129\l  %bound1238 = icmp ult \
+ptr %scevgep128, %scevgep121\l  %found.conflict239 = and i1 %bound0237, %bound1238\l  %bound0241 = icmp ult ptr %scevgep120, %scevgep131\l  %\
+bound1242 = icmp ult ptr %scevgep130, %scevgep121\l  %found.conflict243 = and i1 %bound0241, %bound1242\l  %bound0245 = icmp ult \
+ptr %scevgep120, %scevgep133\l  %bound1246 = icmp ult ptr %scevgep132, %scevgep121\l  %found.conflict247 = and i1 %bound0245, %bound1246\l  %\
+87 = bitcast \<8 x i1\> %86 to i8\l  %88 = icmp ne i8 %87, 0\l  %op.rdx = or i1 %88, %found.conflict163\l  %op.rdx262 = or i1 %found.conflict167, %\
+found.conflict171\l  %op.rdx263 = or i1 %found.conflict175, %found.conflict179\l  %op.rdx264 = or i1 %found.conflict183, %found.conflict187\l  %\
+op.rdx265 = or i1 %found.conflict191, %found.conflict195\l  %op.rdx266 = or i1 %found.conflict199, %found.conflict203\l  %op.rdx267 = \
+or i1 %found.conflict207, %found.conflict211\l  %op.rdx268 = or i1 %found.conflict215, %found.conflict219\l  %op.rdx269 = or i1 %\
+found.conflict223, %found.conflict227\l  %op.rdx270 = or i1 %found.conflict231, %found.conflict235\l  %op.rdx271 = or i1 %found.conflict239, %\
+found.conflict243\l  %op.rdx272 = or i1 %op.rdx, %op.rdx262\l  %op.rdx273 = or i1 %op.rdx263, %op.rdx264\l  %op.rdx274 = or i1 %\
+op.rdx265, %op.rdx266\l  %op.rdx275 = or i1 %op.rdx267, %op.rdx268\l  %op.rdx276 = or i1 %op.rdx269, %op.rdx270\l  %op.rdx277 = \
+or i1 %op.rdx271, %found.conflict247\l  %op.rdx278 = or i1 %op.rdx272, %op.rdx273\l  %op.rdx279 = or i1 %op.rdx274, %op.rdx275\l  %\
+op.rdx280 = or i1 %op.rdx276, %op.rdx277\l  %op.rdx281 = or i1 %op.rdx278, %op.rdx279\l  %op.rdx282 = or i1 %op.rdx281, %op.rdx280\l  \
+br i1 %op.rdx282, label %scalar.ph.preheader, label %vector.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e1675170
+node Node0x2e13e690 10.097 25.91 7.9028 2.3194 "{vector.ph:\l|  %n.vec = and i64 %18, -2\l  %ind.end = add nsw i64 %n.vec, %12\l  %89 = mul i64 %n.vec, %17\l  %ind.end249 = add \
+i64 %89, %16\l  %90 = shl nsw i64 %n.vec, 4\l  %ind.end251 = getelementptr i8, ptr %13, i64 %90\l  %invariant.gep = getelementptr %\
+struct.COMPLEX, ptr %2, i64 %12\l  %invariant.gep285 = getelementptr %struct.COMPLEX, ptr %4, i64 %16\l  br label %vector.body\l}" filled record #3d50c3ff #e5705870
+node Node0x2e25b700 9.9722 19.389 9.0556 9.7222 "{vector.body:\l|  %index = phi i64 [ 0, %vector.ph ], [ %index.next, %vector.body ]\l  %91 = shl i64 %index, 4\l  %next.gep = getelementptr \
+i8, ptr %13, i64 %91\l  %92 = mul i64 %index, %17\l  %gep = getelementptr %struct.COMPLEX, ptr %invariant.gep, i64 %index\l  %wide.vec = \
+load \<4 x double\>, ptr %gep, align 8\l  %strided.vec = shufflevector \<4 x double\> %wide.vec, \<4 x double\> poison, \<2\l... \
+x i32\> \<i32 0, i32 2\>\l  %strided.vec254 = shufflevector \<4 x double\> %wide.vec, \<4 x double\> poison,\l... \<2 x i32\> \<\
+i32 1, i32 3\>\l  %gep286 = getelementptr %struct.COMPLEX, ptr %invariant.gep285, i64 %92\l  %wide.vec255 = load \<4 x double\>, \
+ptr %gep286, align 8\l  %strided.vec256 = shufflevector \<4 x double\> %wide.vec255, \<4 x double\>\l... poison, \<2 x i32\> \<i32 \
+0, i32 2\>\l  %strided.vec257 = shufflevector \<4 x double\> %wide.vec255, \<4 x double\>\l... poison, \<2 x i32\> \<i32 1, i32 \
+3\>\l  %93 = getelementptr inbounds %struct.COMPLEX, ptr %gep, i64 %15\l  %wide.vec258 = load \<4 x double\>, ptr %93, align 8\l  %\
+strided.vec259 = shufflevector \<4 x double\> %wide.vec258, \<4 x double\>\l... poison, \<2 x i32\> \<i32 0, i32 2\>\l  %strided.vec260 = \
+shufflevector \<4 x double\> %wide.vec258, \<4 x double\>\l... poison, \<2 x i32\> \<i32 1, i32 3\>\l  %94 = fneg \<2 x double\> %\
+strided.vec257\l  %95 = fmul \<2 x double\> %strided.vec260, %94\l  %96 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\>\l... %\
+strided.vec256, \<2 x double\> %strided.vec259, \<2 x double\> %95)\l  %97 = fmul \<2 x double\> %strided.vec256, %strided.vec260\l  %\
+98 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\>\l... %strided.vec257, \<2 x double\> %strided.vec259, \<2 x double\> %\
+97)\l  %99 = fadd \<2 x double\> %strided.vec, %96\l  %100 = fadd \<2 x double\> %strided.vec254, %98\l  %interleaved.vec = shufflevector \<\
+2 x double\> %99, \<2 x double\> %100, \<4 x\l... i32\> \<i32 0, i32 2, i32 1, i32 3\>\l  store \<4 x double\> %interleaved.vec, \
+ptr %next.gep, align 8\l  %101 = fsub \<2 x double\> %strided.vec, %96\l  %102 = fsub \<2 x double\> %strided.vec254, %98\l  %103 = \
+getelementptr inbounds %struct.COMPLEX, ptr %next.gep, i64 %15\l  %interleaved.vec261 = shufflevector \<2 x double\> %101, \<2 x \
+double\> %102, \<4\l... x i32\> \<i32 0, i32 2, i32 1, i32 3\>\l  store \<4 x double\> %interleaved.vec261, ptr %103, align 8\l  %\
+index.next = add nuw i64 %index, 2\l  %104 = icmp eq i64 %index.next, %n.vec\l  br i1 %104, label %middle.block, label %vector.body, !\
+llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x2e22dab0 8.7917 13.438 7.2222 1.1806 "{middle.block:\l|  %cmp.n = icmp eq i64 %18, %n.vec\l  br i1 %cmp.n, label %._crit_edge, label %scalar.ph.preheader\l|{<s0>T|<s1>\
+F}}" filled record #3d50c3ff #e5705870
+node Node0x2e0cac00 4.5278 5.7083 9.0556 8.4722 "{scalar.ph:\l|  %indvars.iv82 = phi i64 [ %indvars.iv.next83, %scalar.ph ], [\l... %indvars.iv82.ph, %scalar.ph.preheader ]\l  %\
+indvars.iv = phi i64 [ %indvars.iv.next, %scalar.ph ], [ %indvars.iv.ph,\l... %scalar.ph.preheader ]\l  %.06978 = phi ptr [ %125, %\
+scalar.ph ], [ %.06978.ph, %scalar.ph.preheader ]\l  %105 = getelementptr inbounds %struct.COMPLEX, ptr %2, i64 %indvars.iv82\l  %\
+106 = getelementptr inbounds %struct.COMPLEX, ptr %4, i64 %indvars.iv\l  %107 = getelementptr inbounds %struct.COMPLEX, ptr %105, \
+i64 %15\l  %108 = load double, ptr %107, align 8\l  %109 = getelementptr inbounds %struct.COMPLEX, ptr %105, i64 %15, i32 1\l  %\
+110 = load double, ptr %109, align 8\l  %111 = getelementptr inbounds %struct.COMPLEX, ptr %.06978, i64 %15\l  %112 = load \<2 x \
+double\>, ptr %105, align 8\l  %113 = load \<2 x double\>, ptr %106, align 8\l  %114 = insertelement \<2 x double\> poison, double %\
+110, i64 0\l  %115 = shufflevector \<2 x double\> %114, \<2 x double\> poison, \<2 x i32\>\l... zeroinitializer\l  %116 = fneg \<\
+2 x double\> %113\l  %117 = shufflevector \<2 x double\> %113, \<2 x double\> %116, \<2 x i32\> \<i32 0,\l... i32 3\>\l  %118 = \
+fmul \<2 x double\> %115, %117\l  %119 = shufflevector \<2 x double\> %118, \<2 x double\> poison, \<2 x i32\> \<i32\l... 1, i32 \
+0\>\l  %120 = insertelement \<2 x double\> poison, double %108, i64 0\l  %121 = shufflevector \<2 x double\> %120, \<2 x double\> \
+poison, \<2 x i32\>\l... zeroinitializer\l  %122 = tail call \<2 x double\> @llvm.fmuladd.v2f64(\<2 x double\> %113, \<2 x\l... \
+double\> %121, \<2 x double\> %119)\l  %123 = fadd \<2 x double\> %112, %122\l  store \<2 x double\> %123, ptr %.06978, align 8\l  %\
+124 = fsub \<2 x double\> %112, %122\l  store \<2 x double\> %124, ptr %111, align 8\l  %indvars.iv.next83 = add nsw i64 %indvars.iv82, \
+1\l  %indvars.iv.next = add i64 %indvars.iv, %17\l  %125 = getelementptr inbounds %struct.COMPLEX, ptr %.06978, i64 1\l  %exitcond.not = \
+icmp eq i64 %indvars.iv.next83, %wide.trip.count\l  br i1 %exitcond.not, label %._crit_edge, label %scalar.ph, !llvm.loop !8\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x2e0f9360 Node0x2e0c9400 10 9.4306 80.347 9.4306 80.05 9.0918 80.125 8.9861 79.847 8.5693 78.751 8.5572 78.3 8.9861 77.208 9.041 77.069 9.1209 76.936 9.2131 76.813 solid black
+edge Node0x2e0f9360 Node0x2e0ca2b0 4 13.042 80.347 13.042 80.225 13.056 80.101 13.08 79.978 solid black
+edge Node0x2e0c9400 Node0x2e0c8c80 4 6.8056 75.486 6.3933 75.486 6.0574 75.245 5.7935 74.928 solid black
+edge Node0x2e0c9400 Node0x2e0d0170 13 13.361 75.486 17.969 75.486 15.139 69.879 15.139 65.271 15.139 65.271 15.139 65.271 15.139 11.382 15.139 6.5371 13.467 5.3759 10.597 1.4722 10.489 1.3248 10.35 1.1839 10.214 1.0621 solid black
+edge Node0x2e0ca2b0 Node0x2e0c9400 4 9.0972 77.375 8.9319 77.375 9.1096 77.108 9.3576 76.811 solid black
+edge Node0x2e0ca2b0 Node0x2e0ca2b0 7 16.514 77.215 17.869 76.761 18.639 76.864 18.639 77.951 18.639 78.104 18.586 78.237 18.491 78.352 solid black
+edge Node0x2e0c8c80 Node0x2e13a920 10 2.8056 71.972 2.8056 59.127 2.8056 55.915 2.8056 43.069 2.8056 43.069 2.8056 43.069 2.8056 19.375 2.8056 16.858 3.6371 13.993 4.1445 12.479 solid black
+edge Node0x2e0c8c80 Node0x2e228b40 4 7.2778 71.972 7.2778 71.853 7.2778 71.733 7.2777 71.611 solid black
+edge Node0x2e13a920 Node0x2e0cac00 4 4.5278 10.447 4.5278 10.332 4.5278 10.209 4.5278 10.08 solid black
+edge Node0x2e228b40 Node0x2e13a920 13 5.2222 59.042 5.2222 58.661 4.7025 58.879 4.5278 58.542 2.8624 55.323 4.2639 29.548 4.2639 25.924 4.2639 25.924 4.2639 25.924 4.2639 19.375 4.2639 16.906 4.3921 14.009 4.4698 12.48 solid black
+edge Node0x2e228b40 Node0x2e12c900 4 9.3056 59.042 9.3056 58.922 9.3053 58.802 9.3048 58.681 solid black
+edge Node0x2e12c900 Node0x2e13a920 4 4.6389 27.736 4.4477 27.736 4.4999 16.128 4.521 12.488 solid black
+edge Node0x2e12c900 Node0x2e13e690 4 10.236 27.569 10.236 27.451 10.232 27.327 10.226 27.204 solid black
+edge Node0x2e13e690 Node0x2e25b700 4 10.075 24.754 10.073 24.637 10.071 24.515 10.068 24.387 solid black
+edge Node0x2e25b700 Node0x2e25b700 7 12.415 14.531 13.898 13.214 14.75 13.354 14.75 17.042 14.75 17.626 14.676 18.121 14.545 18.536 solid black
+edge Node0x2e25b700 Node0x2e22dab0 4 7.7083 14.528 7.7083 14.385 7.7565 14.254 7.8326 14.137 solid black
+edge Node0x2e22dab0 Node0x2e0d0170 7 6.9861 12.847 6.9861 11.847 8.5171 13.096 9.1806 12.347 12.139 9.0098 10.4 2.7992 9.8458 1.0995 solid black
+edge Node0x2e22dab0 Node0x2e13a920 4 10.597 12.847 10.597 12.739 10.007 12.559 9.1954 12.362 solid black
+edge Node0x2e0cac00 Node0x2e0d0170 4 2.2639 1.4722 2.2639 0.82709 6.7472 0.69396 8.7489 0.66667 solid black
+edge Node0x2e0cac00 Node0x2e0cac00 7 7.0022 1.4764 8.4652 0.38166 9.3056 0.52318 9.3056 3.6736 9.3056 4.1678 9.2341 4.5879 9.1072 4.9408 solid black
+stop

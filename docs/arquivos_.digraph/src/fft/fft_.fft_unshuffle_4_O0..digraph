@@ -1,0 +1,47 @@
+graph 1 18.097 25.278
+node Node0x3899c770 10.549 22.917 3.9028 4.7222 "{5:\l|  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca ptr, align 8\l  %9 = alloca ptr, align 8\l  %10 = alloca \
+i32, align 4\l  %11 = alloca i32, align 4\l  %12 = alloca ptr, align 8\l  %13 = alloca ptr, align 8\l  %14 = alloca i32, align 4\l  \
+store i32 %0, ptr %6, align 4\l  store i32 %1, ptr %7, align 4\l  store ptr %2, ptr %8, align 8\l  store ptr %3, ptr %9, align 8\l  \
+store i32 %4, ptr %10, align 4\l  %15 = load i32, ptr %7, align 4\l  %16 = load i32, ptr %6, align 4\l  %17 = sub nsw i32 %15, %\
+16\l  %18 = icmp slt i32 %17, 128\l  br i1 %18, label %19, label %68\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x3899d2a0 8.4931 18.896 7.4444 2.3194 "{19:\l|  %20 = load ptr, ptr %8, align 8\l  %21 = load i32, ptr %6, align 4\l  %22 = mul nsw i32 %21, 4\l  %23 = sext i32 %22 to \
+i64\l  %24 = getelementptr inbounds %struct.COMPLEX, ptr %20, i64 %23\l  store ptr %24, ptr %12, align 8\l  %25 = load i32, ptr %\
+6, align 4\l  store i32 %25, ptr %11, align 4\l  br label %26\l}" filled record #3d50c3ff #d6524470
+node Node0x3899d2f0 13.799 14.931 8.5972 4.6111 "{68:\l|  %69 = load i32, ptr %6, align 4\l  %70 = load i32, ptr %7, align 4\l  %71 = add nsw i32 %69, %70\l  %72 = sdiv i32 %71, \
+2\l  store i32 %72, ptr %14, align 4\l  %73 = load i32, ptr %6, align 4\l  %74 = load i32, ptr %14, align 4\l  %75 = load ptr, ptr %\
+8, align 8\l  %76 = load ptr, ptr %9, align 8\l  %77 = load i32, ptr %10, align 4\l  call void @fft_unshuffle_4(i32 noundef %73, \
+i32 noundef %74, ptr noundef\l... %75, ptr noundef %76, i32 noundef %77)\l  %78 = load i32, ptr %14, align 4\l  %79 = load i32, \
+ptr %7, align 4\l  %80 = load ptr, ptr %8, align 8\l  %81 = load ptr, ptr %9, align 8\l  %82 = load i32, ptr %10, align 4\l  call \
+void @fft_unshuffle_4(i32 noundef %78, i32 noundef %79, ptr noundef\l... %80, ptr noundef %81, i32 noundef %82)\l  br label %83\l}" filled record #3d50c3ff #d6524470
+node Node0x3899d850 7.2986 14.931 3.9028 1.5972 "{26:\l|  %27 = load i32, ptr %11, align 4\l  %28 = load i32, ptr %7, align 4\l  %29 = icmp slt i32 %27, %28\l  br i1 %29, label %\
+30, label %67\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3899daa0 4.4097 7.1111 8.8194 10.028 "{30:\l|  %31 = load ptr, ptr %9, align 8\l  %32 = load i32, ptr %11, align 4\l  %33 = sext i32 %32 to i64\l  %34 = getelementptr \
+inbounds %struct.COMPLEX, ptr %31, i64 %33\l  store ptr %34, ptr %13, align 8\l  %35 = load ptr, ptr %13, align 8\l  %36 = getelementptr \
+inbounds %struct.COMPLEX, ptr %35, i64 0\l  %37 = load ptr, ptr %12, align 8\l  %38 = getelementptr inbounds %struct.COMPLEX, ptr %\
+37, i64 0\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %36, ptr align 8 %38, i64 16,\l... i1 false)\l  %39 = load ptr, ptr %13, \
+align 8\l  %40 = load i32, ptr %10, align 4\l  %41 = sext i32 %40 to i64\l  %42 = getelementptr inbounds %struct.COMPLEX, ptr %39, \
+i64 %41\l  %43 = load ptr, ptr %12, align 8\l  %44 = getelementptr inbounds %struct.COMPLEX, ptr %43, i64 1\l  call void @llvm.memcpy.p0.p0.i64(\
+ptr align 8 %42, ptr align 8 %44, i64 16,\l... i1 false)\l  %45 = load ptr, ptr %12, align 8\l  %46 = getelementptr inbounds %struct.COMPLEX, \
+ptr %45, i64 2\l  store ptr %46, ptr %12, align 8\l  %47 = load i32, ptr %10, align 4\l  %48 = mul nsw i32 2, %47\l  %49 = load \
+ptr, ptr %13, align 8\l  %50 = sext i32 %48 to i64\l  %51 = getelementptr inbounds %struct.COMPLEX, ptr %49, i64 %50\l  store ptr %\
+51, ptr %13, align 8\l  %52 = load ptr, ptr %13, align 8\l  %53 = getelementptr inbounds %struct.COMPLEX, ptr %52, i64 0\l  %54 = \
+load ptr, ptr %12, align 8\l  %55 = getelementptr inbounds %struct.COMPLEX, ptr %54, i64 0\l  call void @llvm.memcpy.p0.p0.i64(ptr \
+align 8 %53, ptr align 8 %55, i64 16,\l... i1 false)\l  %56 = load ptr, ptr %13, align 8\l  %57 = load i32, ptr %10, align 4\l  %\
+58 = sext i32 %57 to i64\l  %59 = getelementptr inbounds %struct.COMPLEX, ptr %56, i64 %58\l  %60 = load ptr, ptr %12, align 8\l  %\
+61 = getelementptr inbounds %struct.COMPLEX, ptr %60, i64 1\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %59, ptr align 8 %61, \
+i64 16,\l... i1 false)\l  %62 = load ptr, ptr %12, align 8\l  %63 = getelementptr inbounds %struct.COMPLEX, ptr %62, i64 2\l  store \
+ptr %63, ptr %12, align 8\l  br label %64\l}" filled record #b70d28ff #b70d2870
+node Node0x3899daf0 11.201 7.1111 1.6111 0.65278 "{67:\l|  br label %83\l}" filled record #3d50c3ff #d6524470
+node Node0x389a4aa0 7.3681 0.95833 3.9028 1.2778 "{64:\l|  %65 = load i32, ptr %11, align 4\l  %66 = add nsw i32 %65, 1\l  store i32 %66, ptr %11, align 4\l  br label %26, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+node Node0x389a4e80 12.146 0.95833 1.1528 0.65278 "{83:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+edge Node0x3899c770 Node0x3899d2a0 4 8.5764 20.722 8.2882 20.722 8.1953 20.491 8.195 20.193 solid black
+edge Node0x3899c770 Node0x3899d2f0 4 12.521 20.722 13.976 20.722 14.212 18.954 14.133 17.375 solid black
+edge Node0x3899d2a0 Node0x3899d850 4 8.146 17.738 7.9646 17.14 7.7457 16.418 7.5758 15.858 solid black
+edge Node0x3899d2f0 Node0x389a4e80 4 13.528 12.63 13.127 9.247 12.401 3.1261 12.199 1.4228 solid black
+edge Node0x3899d850 Node0x3899daa0 4 5.3264 14.292 4.1994 14.292 3.7506 13.409 3.6427 12.263 solid black
+edge Node0x3899d850 Node0x3899daf0 7 9.2708 14.292 9.3636 14.292 9.3505 12.716 9.3681 12.625 9.7414 10.684 10.621 8.4836 11.01 7.5646 solid black
+edge Node0x3899daa0 Node0x389a4aa0 4 6.822 2.1028 6.8881 1.966 6.9499 1.8379 7.0066 1.7207 solid black
+edge Node0x3899daf0 Node0x389a4e80 4 11.249 6.7893 11.404 5.7855 11.894 2.6045 12.077 1.4213 solid black
+edge Node0x389a4aa0 Node0x3899d850 10 8.5191 1.5928 8.6878 1.7354 8.838 1.9034 8.9375 2.0972 10.974 6.0618 10.107 7.8243 8.9375 12.125 8.7511 12.811 8.349 13.5 7.9898 14.022 solid black
+stop

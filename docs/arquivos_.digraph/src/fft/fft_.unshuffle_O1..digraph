@@ -1,0 +1,85 @@
+graph 1 24.799 42.264
+node Node0x296cc430 19.09 41.938 2.6389 0.65278 "{6:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #e5705870
+node Node0x29583ba0 19.09 40.208 4.6944 1.8056 "{tailrecurse:\l|  %.tr = phi i32 [ %0, %6 ], [ %58, %56 ]\l  %7 = and i32 %4, -4\l  %8 = sub nsw i32 %1, %.tr\l  %9 = icmp slt i32 %\
+8, 16\l  br i1 %9, label %10, label %56\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x29585b60 12.799 38.062 5.3889 1.1806 "{10:\l|  %11 = icmp slt i32 %.tr, %1\l  br i1 %11, label %.lr.ph68, label %.loopexit\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #e5705870
+node Node0x29585bb0 20.271 38.062 9.0556 1.4861 "{56:\l|  %57 = add nsw i32 %1, %.tr\l  %58 = sdiv i32 %57, 2\l  tail call void @unshuffle(i32 noundef %.tr, i32 noundef %58, ptr \
+noundef %2,\l... ptr noundef %3, i32 noundef %4, i32 noundef %5)\l  br label %tailrecurse\l}" filled record #3d50c3ff #cc403a70
+node Node0x29589220 10.771 34.722 7.3333 4.1944 "{.lr.ph68:\l|  %12 = mul nsw i32 %4, %.tr\l  %13 = sext i32 %12 to i64\l  %14 = getelementptr inbounds %struct.COMPLEX, ptr %2, \
+i64 %13\l  %15 = icmp sgt i32 %7, 0\l  %16 = sext i32 %5 to i64\l  %17 = shl nsw i32 %5, 1\l  %18 = sext i32 %17 to i64\l  %19 = \
+mul nsw i32 %5, 3\l  %20 = sext i32 %19 to i64\l  %21 = shl nsw i32 %5, 2\l  %22 = sext i32 %21 to i64\l  %23 = sext i32 %5 to i64\l  %\
+24 = add i32 %7, -1\l  %25 = and i32 %24, -4\l  %26 = add i32 %25, 4\l  %27 = sext i32 %.tr to i64\l  %wide.trip.count = sext i32 %\
+1 to i64\l  br label %28\l}" filled record #3d50c3ff #e97a5f70
+node Node0x29587420 11.674 0.64583 1.375 0.65278 "{.loopexit:\l|  ret void\l}" filled record #3d50c3ff #e5705870
+node Node0x295863e0 10.424 31.222 8.7083 1.8056 "{28:\l|  %indvars.iv = phi i64 [ %27, %.lr.ph68 ], [ %indvars.iv.next, %._crit_edge\l... ]\l  %.05165 = phi ptr [ %14, %.lr.ph68 ], [ %\
+.2.lcssa, %._crit_edge ]\l  %29 = getelementptr inbounds %struct.COMPLEX, ptr %3, i64 %indvars.iv\l  br i1 %15, label %.lr.ph, label %\
+.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x29586b10 6.7986 26.729 9.5139 6.1806 "{.lr.ph:\l|  %.05057 = phi ptr [ %43, %.lr.ph ], [ %29, %28 ]\l  %.15256 = phi ptr [ %44, %.lr.ph ], [ %.05165, %28 ]\l  %.05355 = \
+phi i32 [ %45, %.lr.ph ], [ 0, %28 ]\l  tail call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %\
+.05057, ptr noundef nonnull align 8 dereferenceable(16)\l... %.15256, i64 16, i1 false)\l  %37 = getelementptr inbounds %struct.COMPLEX, \
+ptr %.05057, i64 %16\l  %38 = getelementptr inbounds %struct.COMPLEX, ptr %.15256, i64 1\l  tail call void @llvm.memcpy.p0.p0.i64(\
+ptr noundef nonnull align 8\l... dereferenceable(16) %37, ptr noundef nonnull align 8 dereferenceable(16) %38,\l... i64 16, i1 false)\l  %\
+39 = getelementptr inbounds %struct.COMPLEX, ptr %.05057, i64 %18\l  %40 = getelementptr inbounds %struct.COMPLEX, ptr %.15256, \
+i64 2\l  tail call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %39, ptr noundef nonnull align \
+8 dereferenceable(16) %40,\l... i64 16, i1 false)\l  %41 = getelementptr inbounds %struct.COMPLEX, ptr %.05057, i64 %20\l  %42 = \
+getelementptr inbounds %struct.COMPLEX, ptr %.15256, i64 3\l  tail call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... \
+dereferenceable(16) %41, ptr noundef nonnull align 8 dereferenceable(16) %42,\l... i64 16, i1 false)\l  %43 = getelementptr inbounds %\
+struct.COMPLEX, ptr %.05057, i64 %22\l  %44 = getelementptr inbounds %struct.COMPLEX, ptr %.15256, i64 4\l  %45 = add nuw nsw i32 %\
+.05355, 4\l  %46 = icmp slt i32 %45, %7\l  br i1 %46, label %.lr.ph, label %.preheader, !llvm.loop !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x295b4da0 8.6736 22.236 6.7639 1.8056 "{.preheader:\l|  %.053.lcssa = phi i32 [ 0, %28 ], [ %26, %.lr.ph ]\l  %.152.lcssa = phi ptr [ %.05165, %28 ], [ %44, %.lr.ph ]\l  %\
+.050.lcssa = phi ptr [ %29, %28 ], [ %43, %.lr.ph ]\l  %30 = icmp slt i32 %.053.lcssa, %4\l  br i1 %30, label %.lr.ph63.preheader, \
+label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x2973aef0 5.0069 20.035 8.5972 1.5972 "{.lr.ph63.preheader:\l|  %31 = sub i32 %4, %.053.lcssa\l  %xtraiter = and i32 %31, 3\l  %lcmp.mod.not = icmp eq i32 %xtraiter, 0\l  \
+br i1 %lcmp.mod.not, label %.lr.ph63.prol.loopexit, label %.lr.ph63.prol\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d8564670
+node Node0x29587040 10.507 2.375 7.7917 1.8056 "{._crit_edge:\l|  %.2.lcssa = phi ptr [ %.152.lcssa, %.preheader ], [ %.lcssa77.unr,\l... %.lr.ph63.prol.loopexit ], [ %53, %.lr.ph63 ]\l  %\
+indvars.iv.next = add nsw i64 %indvars.iv, 1\l  %exitcond73.not = icmp eq i64 %indvars.iv.next, %wide.trip.count\l  br i1 %exitcond73.not, \
+label %.loopexit, label %28, !llvm.loop !9\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x29754220 3.9514 12.194 7.9028 3.0556 "{.lr.ph63.prol.loopexit:\l|  %.lcssa77.unr = phi ptr [ undef, %.lr.ph63.preheader ], [ %32,\l... %.lr.ph63.prol ]\l  %.162.unr = \
+phi ptr [ %.050.lcssa, %.lr.ph63.preheader ], [ %33,\l... %.lr.ph63.prol ]\l  %.261.unr = phi ptr [ %.152.lcssa, %.lr.ph63.preheader ], [ %\
+32,\l... %.lr.ph63.prol ]\l  %.15460.unr = phi i32 [ %.053.lcssa, %.lr.ph63.preheader ], [ %34,\l... %.lr.ph63.prol ]\l  %35 = sub \
+i32 %.053.lcssa, %4\l  %36 = icmp ugt i32 %35, -4\l  br i1 %36, label %._crit_edge, label %.lr.ph63\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d8564670
+node Node0x29679480 7.1597 16.479 8.25 4.5139 "{.lr.ph63.prol:\l|  %.162.prol = phi ptr [ %33, %.lr.ph63.prol ], [ %.050.lcssa,\l... %.lr.ph63.preheader ]\l  %.261.prol = phi \
+ptr [ %32, %.lr.ph63.prol ], [ %.152.lcssa,\l... %.lr.ph63.preheader ]\l  %.15460.prol = phi i32 [ %34, %.lr.ph63.prol ], [ %.053.lcssa,\l... %\
+.lr.ph63.preheader ]\l  %prol.iter = phi i32 [ %prol.iter.next, %.lr.ph63.prol ], [ 0,\l... %.lr.ph63.preheader ]\l  tail call void @\
+llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %.162.prol, ptr noundef nonnull align 8\l... dereferenceable(\
+16) %.261.prol, i64 16, i1 false)\l  %32 = getelementptr inbounds %struct.COMPLEX, ptr %.261.prol, i64 1\l  %33 = getelementptr \
+inbounds %struct.COMPLEX, ptr %.162.prol, i64 %23\l  %34 = add nuw nsw i32 %.15460.prol, 1\l  %prol.iter.next = add i32 %prol.iter, \
+1\l  %prol.iter.cmp.not = icmp eq i32 %prol.iter.next, %xtraiter\l  br i1 %prol.iter.cmp.not, label %.lr.ph63.prol.loopexit, label\l... %\
+.lr.ph63.prol, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+node Node0x29589470 6.5208 6.9722 9.5139 6.3889 "{.lr.ph63:\l|  %.162 = phi ptr [ %54, %.lr.ph63 ], [ %.162.unr, %.lr.ph63.prol.loopexit ]\l  %.261 = phi ptr [ %53, %.lr.ph63 ], [ %\
+.261.unr, %.lr.ph63.prol.loopexit ]\l  %.15460 = phi i32 [ %55, %.lr.ph63 ], [ %.15460.unr, %.lr.ph63.prol.loopexit\l... ]\l  tail \
+call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %.162, ptr noundef nonnull align 8 dereferenceable(\
+16)\l... %.261, i64 16, i1 false)\l  %47 = getelementptr inbounds %struct.COMPLEX, ptr %.261, i64 1\l  %48 = getelementptr inbounds %\
+struct.COMPLEX, ptr %.162, i64 %23\l  tail call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %\
+48, ptr noundef nonnull align 8 dereferenceable(16) %47,\l... i64 16, i1 false)\l  %49 = getelementptr inbounds %struct.COMPLEX, \
+ptr %.261, i64 2\l  %50 = getelementptr inbounds %struct.COMPLEX, ptr %48, i64 %23\l  tail call void @llvm.memcpy.p0.p0.i64(ptr \
+noundef nonnull align 8\l... dereferenceable(16) %50, ptr noundef nonnull align 8 dereferenceable(16) %49,\l... i64 16, i1 false)\l  %\
+51 = getelementptr inbounds %struct.COMPLEX, ptr %.261, i64 3\l  %52 = getelementptr inbounds %struct.COMPLEX, ptr %50, i64 %23\l  \
+tail call void @llvm.memcpy.p0.p0.i64(ptr noundef nonnull align 8\l... dereferenceable(16) %52, ptr noundef nonnull align 8 dereferenceable(\
+16) %51,\l... i64 16, i1 false)\l  %53 = getelementptr inbounds %struct.COMPLEX, ptr %.261, i64 4\l  %54 = getelementptr inbounds %\
+struct.COMPLEX, ptr %52, i64 %23\l  %55 = add nuw nsw i32 %.15460, 4\l  %exitcond.not.3 = icmp eq i32 %55, %4\l  br i1 %exitcond.not.3, \
+label %._crit_edge, label %.lr.ph63, !llvm.loop !8\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #be242e70
+edge Node0x296cc430 Node0x29583ba0 4 19.09 41.616 19.09 41.508 19.09 41.381 19.09 41.248 solid black
+edge Node0x29583ba0 Node0x29585b60 4 16.729 39.472 15.743 39.472 14.694 39.077 13.928 38.708 solid black
+edge Node0x29583ba0 Node0x29585bb0 4 20.271 39.306 20.244 39.189 20.223 39.066 20.208 38.945 solid black
+edge Node0x29585b60 Node0x29589220 4 11.451 37.465 11.451 37.297 11.439 37.124 11.418 36.951 solid black
+edge Node0x29585b60 Node0x29587420 13 15.507 37.632 15.863 37.632 15.174 31.592 15.174 31.236 15.174 31.236 15.174 31.236 15.174 6.9583 15.174 4.5036 16.126 3.3418 14.535 1.4722 14.271 1.1628 13.251 0.92679 12.503 0.79084 solid black
+edge Node0x29585bb0 Node0x29583ba0 4 20.35 38.8 20.339 38.918 20.323 39.04 20.301 39.16 solid black
+edge Node0x29589220 Node0x295863e0 4 10.563 32.628 10.55 32.502 10.538 32.378 10.526 32.26 solid black
+edge Node0x295863e0 Node0x29586b10 4 6.0486 30.486 5.6452 30.486 5.4761 30.275 5.4525 29.952 solid black
+edge Node0x295863e0 Node0x295b4da0 7 12.604 30.319 12.604 27.322 13.472 26.047 11.688 23.639 11.572 23.483 11.435 23.345 11.284 23.221 solid black
+edge Node0x29586b10 Node0x29586b10 7 4.1704 23.643 2.6503 22.687 1.7917 22.807 1.7917 25.264 1.7917 25.628 1.858 25.941 1.9767 26.207 solid black
+edge Node0x29586b10 Node0x295b4da0 4 9.1736 23.639 9.1736 23.517 9.1563 23.392 9.1282 23.27 solid black
+edge Node0x295b4da0 Node0x2973aef0 4 5.2708 21.5 5.0022 21.5 4.9094 21.256 4.8934 20.969 solid black
+edge Node0x295b4da0 Node0x29587040 13 12.076 21.5 12.355 21.5 11.924 16.771 11.924 16.493 11.924 16.493 11.924 16.493 11.924 12.181 11.924 10.312 12.321 5.5249 11.66 3.7778 11.609 3.6434 11.539 3.5126 11.459 3.3885 solid black
+edge Node0x2973aef0 Node0x29754220 7 2.8542 19.236 2.8542 17.008 2.3709 16.385 2.9097 14.222 2.9405 14.099 2.9801 13.974 3.0258 13.851 solid black
+edge Node0x2973aef0 Node0x29679480 4 7.1597 19.236 7.1597 19.117 7.1597 18.994 7.1597 18.871 solid black
+edge Node0x29587040 Node0x29587420 4 8.5486 1.4722 8.5486 0.99701 9.9193 0.79487 10.845 0.71254 solid black
+edge Node0x29587040 Node0x295863e0 19 12.451 1.4583 12.451 1.2415 14.25 1.3184 14.403 1.4722 14.968 2.0417 14.489 2.48 14.403 3.2778 13.967 7.305 12.451 8.1298 12.451 12.181 12.451 22.25 12.451 22.25 12.451 22.25 12.451 25.631 13.065 26.731 11.688 29.819 11.627 29.955 11.548 30.086 11.459 30.211 solid black
+edge Node0x29754220 Node0x29587040 10 1.9653 10.667 1.9653 10.4 1.7093 10.422 1.6319 10.167 0.8091 7.449 -0.21416 5.9353 1.6319 3.7778 2.2719 3.0299 4.4384 2.6819 6.4705 2.5212 solid black
+edge Node0x29754220 Node0x29589470 4 5.9236 10.667 5.9236 10.547 5.9267 10.425 5.9325 10.302 solid black
+edge Node0x29679480 Node0x29754220 4 5.0903 14.222 5.0903 14.098 5.0737 13.975 5.0446 13.854 solid black
+edge Node0x29679480 Node0x29679480 7 9.4913 14.228 10.789 13.5 11.535 13.612 11.535 15.431 11.535 15.714 11.472 15.956 11.361 16.16 solid black
+edge Node0x29589470 Node0x29587040 4 4.1319 3.7778 4.1319 3.1828 5.2054 2.8423 6.4713 2.6475 solid black
+edge Node0x29589470 Node0x29589470 7 9.1399 3.782 10.658 2.8052 11.528 2.9311 11.528 5.4583 11.528 5.835 11.461 6.1584 11.341 6.4327 solid black
+stop

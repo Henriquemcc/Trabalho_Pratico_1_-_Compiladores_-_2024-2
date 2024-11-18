@@ -1,0 +1,16 @@
+graph 1 13.271 7.6667
+node Node0xf514200 5.8681 6.9722 7.2222 1.3889 "{9:\l|  %10 = add nsw i32 %1, -1\l  %11 = icmp eq i32 %10, %0\l  br i1 %11, label %tailrecurse._crit_edge, label %tailrecurse\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0xf519120 4.7014 1.5833 9.4028 2.5278 "{tailrecurse._crit_edge:\l|  %.tr.lcssa = phi i32 [ %0, %9 ], [ %10, %tailrecurse ]\l  %12 = sext i32 %.tr.lcssa to i64\l  %13 = \
+getelementptr inbounds %struct.COMPLEX, ptr %2, i64 %12\l  %14 = getelementptr inbounds %struct.COMPLEX, ptr %3, i64 %12\l  %15 = \
+mul nsw i32 %.tr.lcssa, %6\l  %16 = mul nsw i32 %8, %6\l  tail call void @fft_twiddle_gen1(ptr noundef %13, ptr noundef %14, ptr\l... \
+noundef %4, i32 noundef %7, i32 noundef %8, i32 noundef %5, i32 noundef %15,\l... i32 noundef %16)\l  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0xf519170 8.3819 4.5625 9.2778 2.4306 "{tailrecurse:\l|  %.tr41 = phi i32 [ %18, %tailrecurse ], [ %0, %9 ]\l  %17 = add nsw i32 %.tr41, %1\l  %18 = sdiv i32 %17, 2\l  \
+tail call void @fft_twiddle_gen(i32 noundef %.tr41, i32 noundef %18, ptr\l... noundef %2, ptr noundef %3, ptr noundef %4, i32 noundef %\
+5, i32 noundef %6,\l... i32 noundef %7, i32 noundef %8)\l  %19 = icmp eq i32 %10, %18\l  br i1 %19, label %tailrecurse._crit_edge, \
+label %tailrecurse\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0xf514200 Node0xf519120 10 4.0625 6.2778 4.0625 5.9805 3.7237 6.0557 3.6181 5.7778 3.2342 4.768 3.3225 4.3862 3.6181 3.3472 3.654 3.221 3.7019 3.0949 3.7576 2.9716 solid black
+edge Node0xf514200 Node0xf519170 4 7.6736 6.2778 7.6736 6.1557 7.6893 6.0323 7.7161 5.9106 solid black
+edge Node0xf519170 Node0xf519120 4 3.7292 3.5069 3.5625 3.5069 3.6316 3.273 3.7919 2.9688 solid black
+edge Node0xf519170 Node0xf519170 7 11.146 3.3538 12.501 2.9198 13.271 3.0163 13.271 4.0347 13.271 4.1748 13.22 4.2974 13.129 4.4036 solid black
+stop

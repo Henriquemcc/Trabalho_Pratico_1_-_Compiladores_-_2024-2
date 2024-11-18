@@ -1,0 +1,39 @@
+graph 1 18.097 20.486
+node Node0x38988450 10.549 18.125 3.9028 4.7222 "{5:\l|  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca ptr, align 8\l  %9 = alloca ptr, align 8\l  %10 = alloca \
+i32, align 4\l  %11 = alloca i32, align 4\l  %12 = alloca ptr, align 8\l  %13 = alloca ptr, align 8\l  %14 = alloca i32, align 4\l  \
+store i32 %0, ptr %6, align 4\l  store i32 %1, ptr %7, align 4\l  store ptr %2, ptr %8, align 8\l  store ptr %3, ptr %9, align 8\l  \
+store i32 %4, ptr %10, align 4\l  %15 = load i32, ptr %7, align 4\l  %16 = load i32, ptr %6, align 4\l  %17 = sub nsw i32 %15, %\
+16\l  %18 = icmp slt i32 %17, 128\l  br i1 %18, label %19, label %51\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x38988f80 8.4931 14.104 7.4444 2.3194 "{19:\l|  %20 = load ptr, ptr %8, align 8\l  %21 = load i32, ptr %6, align 4\l  %22 = mul nsw i32 %21, 2\l  %23 = sext i32 %22 to \
+i64\l  %24 = getelementptr inbounds %struct.COMPLEX, ptr %20, i64 %23\l  store ptr %24, ptr %12, align 8\l  %25 = load i32, ptr %\
+6, align 4\l  store i32 %25, ptr %11, align 4\l  br label %26\l}" filled record #3d50c3ff #d6524470
+node Node0x38988fd0 13.799 10.139 8.5972 4.6111 "{51:\l|  %52 = load i32, ptr %6, align 4\l  %53 = load i32, ptr %7, align 4\l  %54 = add nsw i32 %52, %53\l  %55 = sdiv i32 %54, \
+2\l  store i32 %55, ptr %14, align 4\l  %56 = load i32, ptr %6, align 4\l  %57 = load i32, ptr %14, align 4\l  %58 = load ptr, ptr %\
+8, align 8\l  %59 = load ptr, ptr %9, align 8\l  %60 = load i32, ptr %10, align 4\l  call void @fft_unshuffle_2(i32 noundef %56, \
+i32 noundef %57, ptr noundef\l... %58, ptr noundef %59, i32 noundef %60)\l  %61 = load i32, ptr %14, align 4\l  %62 = load i32, \
+ptr %7, align 4\l  %63 = load ptr, ptr %8, align 8\l  %64 = load ptr, ptr %9, align 8\l  %65 = load i32, ptr %10, align 4\l  call \
+void @fft_unshuffle_2(i32 noundef %61, i32 noundef %62, ptr noundef\l... %63, ptr noundef %64, i32 noundef %65)\l  br label %66\l}" filled record #3d50c3ff #d6524470
+node Node0x38989410 7.2986 10.139 3.9028 1.5972 "{26:\l|  %27 = load i32, ptr %11, align 4\l  %28 = load i32, ptr %7, align 4\l  %29 = icmp slt i32 %27, %28\l  br i1 %29, label %\
+30, label %50\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3898c500 4.4097 4.7153 8.8194 5.2361 "{30:\l|  %31 = load ptr, ptr %9, align 8\l  %32 = load i32, ptr %11, align 4\l  %33 = sext i32 %32 to i64\l  %34 = getelementptr \
+inbounds %struct.COMPLEX, ptr %31, i64 %33\l  store ptr %34, ptr %13, align 8\l  %35 = load ptr, ptr %13, align 8\l  %36 = getelementptr \
+inbounds %struct.COMPLEX, ptr %35, i64 0\l  %37 = load ptr, ptr %12, align 8\l  %38 = getelementptr inbounds %struct.COMPLEX, ptr %\
+37, i64 0\l  call void @llvm.memcpy.p0.p0.i64(ptr align 8 %36, ptr align 8 %38, i64 16,\l... i1 false)\l  %39 = load ptr, ptr %13, \
+align 8\l  %40 = load i32, ptr %10, align 4\l  %41 = sext i32 %40 to i64\l  %42 = getelementptr inbounds %struct.COMPLEX, ptr %39, \
+i64 %41\l  %43 = load ptr, ptr %12, align 8\l  %44 = getelementptr inbounds %struct.COMPLEX, ptr %43, i64 1\l  call void @llvm.memcpy.p0.p0.i64(\
+ptr align 8 %42, ptr align 8 %44, i64 16,\l... i1 false)\l  %45 = load ptr, ptr %12, align 8\l  %46 = getelementptr inbounds %struct.COMPLEX, \
+ptr %45, i64 2\l  store ptr %46, ptr %12, align 8\l  br label %47\l}" filled record #b70d28ff #b70d2870
+node Node0x3898c550 11.201 4.7153 1.6111 0.65278 "{50:\l|  br label %66\l}" filled record #3d50c3ff #d6524470
+node Node0x3898d370 7.3681 0.95833 3.9028 1.2778 "{47:\l|  %48 = load i32, ptr %11, align 4\l  %49 = add nsw i32 %48, 1\l  store i32 %49, ptr %11, align 4\l  br label %26, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+node Node0x3898df60 12.146 0.95833 1.1528 0.65278 "{66:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+edge Node0x38988450 Node0x38988f80 4 8.5764 15.931 8.2882 15.931 8.1953 15.699 8.195 15.402 solid black
+edge Node0x38988450 Node0x38988fd0 4 12.521 15.931 13.976 15.931 14.212 14.163 14.133 12.583 solid black
+edge Node0x38988f80 Node0x38989410 4 8.146 12.946 7.9646 12.348 7.7457 11.627 7.5758 11.067 solid black
+edge Node0x38988fd0 Node0x3898df60 4 13.386 7.839 12.993 5.6654 12.433 2.563 12.226 1.4185 solid black
+edge Node0x38989410 Node0x3898c500 4 5.3264 9.5 4.3547 9.5 4.072 8.5339 4.0548 7.4711 solid black
+edge Node0x38989410 Node0x3898c550 7 9.2708 9.5 9.3636 9.5 9.341 7.9221 9.3681 7.8333 9.6882 6.7831 10.43 5.7147 10.866 5.1461 solid black
+edge Node0x3898c500 Node0x3898d370 4 6.4724 2.1012 6.5833 1.9614 6.689 1.8282 6.7863 1.7056 solid black
+edge Node0x3898c550 Node0x3898df60 4 11.28 4.3899 11.448 3.7288 11.839 2.1835 12.033 1.4181 solid black
+edge Node0x3898d370 Node0x38989410 10 8.5191 1.5928 8.6878 1.7354 8.838 1.9034 8.9375 2.0972 10.001 4.1673 9.548 5.0877 8.9375 7.3333 8.7511 8.019 8.349 8.7084 7.9898 9.2305 solid black
+stop

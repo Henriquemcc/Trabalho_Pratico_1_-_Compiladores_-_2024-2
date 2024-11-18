@@ -1,0 +1,31 @@
+graph 1 19.056 14.431
+node Node0x3897eea0 9.5347 11.549 4.0139 5.7639 "{9:\l|  %10 = alloca i32, align 4\l  %11 = alloca i32, align 4\l  %12 = alloca ptr, align 8\l  %13 = alloca ptr, align 8\l  %14 = \
+alloca ptr, align 8\l  %15 = alloca i32, align 4\l  %16 = alloca i32, align 4\l  %17 = alloca i32, align 4\l  %18 = alloca i32, \
+align 4\l  %19 = alloca i32, align 4\l  store i32 %0, ptr %10, align 4\l  store i32 %1, ptr %11, align 4\l  store ptr %2, ptr %12, \
+align 8\l  store ptr %3, ptr %13, align 8\l  store ptr %4, ptr %14, align 8\l  store i32 %5, ptr %15, align 4\l  store i32 %6, ptr %\
+16, align 4\l  store i32 %7, ptr %17, align 4\l  store i32 %8, ptr %18, align 4\l  %20 = load i32, ptr %10, align 4\l  %21 = load \
+i32, ptr %11, align 4\l  %22 = sub nsw i32 %21, 1\l  %23 = icmp eq i32 %20, %22\l  br i1 %23, label %24, label %43\l|{<s0>T|<s1>\
+F}}" filled record #b70d28ff #b70d2870
+node Node0x38980120 4.7014 4.8194 9.4028 5.0278 "{24:\l|  %25 = load ptr, ptr %12, align 8\l  %26 = load i32, ptr %10, align 4\l  %27 = sext i32 %26 to i64\l  %28 = getelementptr \
+inbounds %struct.COMPLEX, ptr %25, i64 %27\l  %29 = load ptr, ptr %13, align 8\l  %30 = load i32, ptr %10, align 4\l  %31 = sext \
+i32 %30 to i64\l  %32 = getelementptr inbounds %struct.COMPLEX, ptr %29, i64 %31\l  %33 = load ptr, ptr %14, align 8\l  %34 = load \
+i32, ptr %17, align 4\l  %35 = load i32, ptr %18, align 4\l  %36 = load i32, ptr %15, align 4\l  %37 = load i32, ptr %16, align \
+4\l  %38 = load i32, ptr %10, align 4\l  %39 = mul nsw i32 %37, %38\l  %40 = load i32, ptr %16, align 4\l  %41 = load i32, ptr %\
+18, align 4\l  %42 = mul nsw i32 %40, %41\l  call void @fft_twiddle_gen1(ptr noundef %28, ptr noundef %32, ptr noundef\l... %33, \
+i32 noundef %34, i32 noundef %35, i32 noundef %36, i32 noundef %39, i32\l... noundef %42)\l  br label %66\l}" filled record #3d50c3ff #be242e70
+node Node0x38980170 14.354 4.8194 9.4028 6.6944 "{43:\l|  %44 = load i32, ptr %10, align 4\l  %45 = load i32, ptr %11, align 4\l  %46 = add nsw i32 %44, %45\l  %47 = sdiv i32 %46, \
+2\l  store i32 %47, ptr %19, align 4\l  %48 = load i32, ptr %10, align 4\l  %49 = load i32, ptr %19, align 4\l  %50 = load ptr, \
+ptr %12, align 8\l  %51 = load ptr, ptr %13, align 8\l  %52 = load ptr, ptr %14, align 8\l  %53 = load i32, ptr %15, align 4\l  %\
+54 = load i32, ptr %16, align 4\l  %55 = load i32, ptr %17, align 4\l  %56 = load i32, ptr %18, align 4\l  call void @fft_twiddle_\
+gen(i32 noundef %48, i32 noundef %49, ptr noundef\l... %50, ptr noundef %51, ptr noundef %52, i32 noundef %53, i32 noundef %54, \
+i32\l... noundef %55, i32 noundef %56)\l  %57 = load i32, ptr %19, align 4\l  %58 = load i32, ptr %11, align 4\l  %59 = load ptr, \
+ptr %12, align 8\l  %60 = load ptr, ptr %13, align 8\l  %61 = load ptr, ptr %14, align 8\l  %62 = load i32, ptr %15, align 4\l  %\
+63 = load i32, ptr %16, align 4\l  %64 = load i32, ptr %17, align 4\l  %65 = load i32, ptr %18, align 4\l  call void @fft_twiddle_\
+gen(i32 noundef %57, i32 noundef %58, ptr noundef\l... %59, ptr noundef %60, ptr noundef %61, i32 noundef %62, i32 noundef %63, \
+i32\l... noundef %64, i32 noundef %65)\l  br label %66\l}" filled record #3d50c3ff #be242e70
+node Node0x38980e80 9.5208 0.64583 1.1528 0.65278 "{66:\l|  ret void\l}" filled record #b70d28ff #b70d2870
+edge Node0x3897eea0 Node0x38980120 4 7.5069 8.8264 6.6505 8.8264 6.0329 8.2037 5.5992 7.4502 solid black
+edge Node0x3897eea0 Node0x38980170 4 11.562 8.8264 12.075 8.8264 12.501 8.603 12.853 8.2618 solid black
+edge Node0x38980120 Node0x38980e80 4 7.6022 2.3102 8.1695 1.8222 8.6989 1.3668 9.0572 1.0585 solid black
+edge Node0x38980170 Node0x38980e80 4 10.476 1.4788 10.292 1.3213 10.127 1.1793 9.9869 1.0595 solid black
+stop

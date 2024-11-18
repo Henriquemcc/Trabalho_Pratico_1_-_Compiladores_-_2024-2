@@ -1,0 +1,13 @@
+graph 1 9.0556 6.8056
+node Node0xf526590 4.5278 3.5625 9.0556 6.4861 "{2:\l|  %3 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 2\l  %4 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 1\l  %\
+5 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 3\l  %6 = load \<2 x double\>, ptr %0, align 8\l  %7 = load \<2 x double\>, \
+ptr %3, align 8\l  %8 = fadd \<2 x double\> %6, %7\l  %9 = load \<2 x double\>, ptr %4, align 8\l  %10 = load \<2 x double\>, ptr %\
+5, align 8\l  %11 = fadd \<2 x double\> %9, %10\l  %12 = fadd \<2 x double\> %8, %11\l  store \<2 x double\> %12, ptr %1, align \
+8\l  %13 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 2\l  %14 = fsub \<2 x double\> %8, %11\l  store \<2 x double\> %14, \
+ptr %13, align 8\l  %15 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 1\l  %16 = fsub \<2 x double\> %6, %7\l  %17 = fsub \<\
+2 x double\> %9, %10\l  %18 = shufflevector \<2 x double\> %17, \<2 x double\> poison, \<2 x i32\> \<i32 1,\l... i32 0\>\l  %19 = \
+fadd \<2 x double\> %16, %18\l  %20 = fsub \<2 x double\> %16, %18\l  %21 = shufflevector \<2 x double\> %19, \<2 x double\> %20, \<\
+2 x i32\> \<i32 0,\l... i32 3\>\l  store \<2 x double\> %21, ptr %15, align 8\l  %22 = getelementptr inbounds %struct.COMPLEX, ptr %\
+1, i64 3\l  %23 = shufflevector \<2 x double\> %20, \<2 x double\> %19, \<2 x i32\> \<i32 0,\l... i32 3\>\l  store \<2 x double\> %\
+23, ptr %22, align 8\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

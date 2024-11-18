@@ -1,0 +1,18 @@
+graph 1 7.9028 10.556
+node Node0x2959e590 3.9514 5.4375 7.9028 10.236 "{2:\l|  %3 = load double, ptr %0, align 8\l  %4 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 0, i32 1\l  %5 = load double, \
+ptr %4, align 8\l  %6 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 2\l  %7 = load double, ptr %6, align 8\l  %8 = getelementptr \
+inbounds %struct.COMPLEX, ptr %0, i64 2, i32 1\l  %9 = load double, ptr %8, align 8\l  %10 = fadd double %3, %7\l  %11 = fadd double %\
+5, %9\l  %12 = fsub double %3, %7\l  %13 = fsub double %5, %9\l  %14 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 1\l  %\
+15 = load double, ptr %14, align 8\l  %16 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 1, i32 1\l  %17 = load double, ptr %\
+16, align 8\l  %18 = getelementptr inbounds %struct.COMPLEX, ptr %0, i64 3\l  %19 = load double, ptr %18, align 8\l  %20 = getelementptr \
+inbounds %struct.COMPLEX, ptr %0, i64 3, i32 1\l  %21 = load double, ptr %20, align 8\l  %22 = fadd double %15, %19\l  %23 = fadd \
+double %17, %21\l  %24 = fsub double %15, %19\l  %25 = fsub double %17, %21\l  %26 = fadd double %10, %22\l  store double %26, ptr %\
+1, align 8\l  %27 = fadd double %11, %23\l  %28 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 0, i32 1\l  store double %\
+27, ptr %28, align 8\l  %29 = fsub double %10, %22\l  %30 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 2\l  store double %\
+29, ptr %30, align 8\l  %31 = fsub double %11, %23\l  %32 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 2, i32 1\l  store \
+double %31, ptr %32, align 8\l  %33 = fadd double %12, %25\l  %34 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 1\l  store \
+double %33, ptr %34, align 8\l  %35 = fsub double %13, %24\l  %36 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 1, i32 1\l  \
+store double %35, ptr %36, align 8\l  %37 = fsub double %12, %25\l  %38 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 3\l  \
+store double %37, ptr %38, align 8\l  %39 = fadd double %13, %24\l  %40 = getelementptr inbounds %struct.COMPLEX, ptr %1, i64 3, \
+i32 1\l  store double %39, ptr %40, align 8\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop
