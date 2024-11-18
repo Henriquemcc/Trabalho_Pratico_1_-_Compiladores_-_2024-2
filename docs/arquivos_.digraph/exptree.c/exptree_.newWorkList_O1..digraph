@@ -1,0 +1,9 @@
+graph 1 11.035 3.6944
+node Node0x2bd2df80 6.9097 2.8958 8.25 1.5972 "{1:\l|  %2 = sext i32 %0 to i64\l  %3 = tail call noalias ptr @calloc(i64 noundef %2, i64 noundef 4) #12\l  %.not = icmp eq ptr %\
+3, null\l  br i1 %.not, label %5, label %4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2bd333e0 4.2986 0.95833 8.5972 1.2778 "{5:\l|  %6 = load ptr, ptr @stderr, align 8\l  %7 = tail call i64 @fwrite(ptr nonnull @.str, i64 28, i64 1, ptr %6) #13\l  tail \
+call void @exit(i32 noundef 1) #14\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+node Node0x2bd33350 9.5347 0.95833 1.375 0.65278 "{4:\l|  ret ptr %3\l}" filled record #b70d28ff #b70d2870
+edge Node0x2bd2df80 Node0x2bd333e0 4 4.8403 2.0972 4.8403 1.9699 4.8118 1.8417 4.7678 1.7198 solid black
+edge Node0x2bd2df80 Node0x2bd33350 4 8.9792 2.0972 8.9792 1.8501 9.0883 1.601 9.2098 1.4003 solid black
+stop

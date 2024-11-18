@@ -1,0 +1,8 @@
+graph 1 4.3889 4.2222
+node Node0x2bd501c0 1.9514 3.5278 3.9028 1.3889 "{2:\l|  %3 = tail call i32 @getInput()\l  %.not = icmp eq i32 %3, 0\l  br i1 %.not, label %5, label %4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2bd50620 1.9375 0.64583 1.2639 0.65278 "{5:\l|  ret i32 0\l}" filled record #b70d28ff #b70d2870
+node Node0x2bd505d0 2.8958 1.9028 2.9861 0.86111 "{4:\l|  tail call void @search()\l  br label %5\l}" filled record #b70d28ff #bb1b2c70
+edge Node0x2bd501c0 Node0x2bd50620 7 0.96528 2.8333 0.96528 2.2133 0.99894 2.0294 1.2708 1.4722 1.3394 1.3316 1.4369 1.194 1.5362 1.0732 solid black
+edge Node0x2bd501c0 Node0x2bd505d0 4 2.9236 2.8333 2.9236 2.7156 2.9213 2.5894 2.918 2.4695 solid black
+edge Node0x2bd505d0 Node0x2bd50620 4 2.5714 1.4727 2.4724 1.3458 2.3636 1.2063 2.2645 1.0792 solid black
+stop

@@ -1,0 +1,54 @@
+graph 1 49.132 21.667
+node Node0x2225f0e0 42.215 20.715 3.6667 1.9028 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  store \
+i32 %1, ptr %4, align 4\l  store i32 0, ptr %5, align 4\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x2225f490 42.215 18.465 3.7778 1.5972 "{6:\l|  %7 = load i32, ptr %5, align 4\l  %8 = load i32, ptr %4, align 4\l  %9 = icmp slt i32 %7, %8\l  br i1 %9, label %10, label %\
+67\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2225f6e0 24.493 14.701 8.4861 4.9306 "{10:\l|  %11 = load ptr, ptr %3, align 8\l  %12 = load i32, ptr %5, align 4\l  %13 = sext i32 %12 to i64\l  %14 = getelementptr \
+inbounds %struct.Comb, ptr %11, i64 %13\l  %15 = getelementptr inbounds %struct.Comb, ptr %14, i32 0, i32 0\l  %16 = load i32, ptr %\
+15, align 4\l  %17 = call i32 (ptr, ...) @printf(ptr noundef @.str.2, i32 noundef %16)\l  %18 = load ptr, ptr %3, align 8\l  %19 = \
+load i32, ptr %5, align 4\l  %20 = sext i32 %19 to i64\l  %21 = getelementptr inbounds %struct.Comb, ptr %18, i64 %20\l  %22 = getelementptr \
+inbounds %struct.Comb, ptr %21, i32 0, i32 2\l  %23 = load i32, ptr %22, align 4\l  switch i32 %23, label %34 [\l    i32 0, label %\
+24\l    i32 1, label %26\l    i32 2, label %28\l    i32 3, label %30\l    i32 4, label %32\l  ]\l|{<s0>def|<s1>0|<s2>1|<s3>2|<s4>\
+3|<s5>4}}" filled record #b70d28ff #b70d2870
+node Node0x2225f730 45.868 14.701 6.5278 0.86111 "{67:\l|  %68 = call i32 (ptr, ...) @printf(ptr noundef @.str.12)\l  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x222600c0 4.2431 10.681 8.4861 2.1111 "{34:\l|  %35 = load ptr, ptr %3, align 8\l  %36 = load i32, ptr %5, align 4\l  %37 = sext i32 %36 to i64\l  %38 = getelementptr \
+inbounds %struct.Comb, ptr %35, i64 %37\l  %39 = getelementptr inbounds %struct.Comb, ptr %38, i32 0, i32 2\l  %40 = load i32, ptr %\
+39, align 4\l  %41 = call i32 (ptr, ...) @printf(ptr noundef @.str.8, i32 noundef %40)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x22260110 11.951 10.681 6.4167 0.86111 "{24:\l|  %25 = call i32 (ptr, ...) @printf(ptr noundef @.str.3)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x22260160 18.618 10.681 6.4167 0.86111 "{26:\l|  %27 = call i32 (ptr, ...) @printf(ptr noundef @.str.4)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x222601b0 25.285 10.681 6.4167 0.86111 "{28:\l|  %29 = call i32 (ptr, ...) @printf(ptr noundef @.str.5)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x22260240 31.951 10.681 6.4167 0.86111 "{30:\l|  %31 = call i32 (ptr, ...) @printf(ptr noundef @.str.6)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x222602d0 38.618 10.681 6.4167 0.86111 "{32:\l|  %33 = call i32 (ptr, ...) @printf(ptr noundef @.str.7)\l  br label %42\l}" filled record #3d50c3ff #ca3b3770
+node Node0x22260640 25.285 6.8681 8.9444 4.5139 "{42:\l|  %43 = load ptr, ptr %3, align 8\l  %44 = load i32, ptr %5, align 4\l  %45 = sext i32 %44 to i64\l  %46 = getelementptr \
+inbounds %struct.Comb, ptr %43, i64 %45\l  %47 = getelementptr inbounds %struct.Comb, ptr %46, i32 0, i32 1\l  %48 = load i32, ptr %\
+47, align 4\l  %49 = load ptr, ptr %3, align 8\l  %50 = load i32, ptr %5, align 4\l  %51 = sext i32 %50 to i64\l  %52 = getelementptr \
+inbounds %struct.Comb, ptr %49, i64 %51\l  %53 = call i32 @calculate(ptr noundef %52)\l  %54 = call i32 (ptr, ...) @printf(ptr noundef @\
+.str.9, i32 noundef %48, i32\l... noundef %53)\l  %55 = load i32, ptr %5, align 4\l  %56 = load i32, ptr %4, align 4\l  %57 = sub \
+nsw i32 %56, 1\l  %58 = icmp slt i32 %55, %57\l  br i1 %58, label %59, label %61\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x22262220 23.049 3.6806 6.5278 0.86111 "{59:\l|  %60 = call i32 (ptr, ...) @printf(ptr noundef @.str.10)\l  br label %63\l}" filled record #3d50c3ff #be242e70
+node Node0x22262270 29.826 3.6806 6.5278 0.86111 "{61:\l|  %62 = call i32 (ptr, ...) @printf(ptr noundef @.str.11)\l  br label %63\l}" filled record #3d50c3ff #be242e70
+node Node0x22262460 29.826 2.4236 1.6111 0.65278 "{63:\l|  br label %64\l}" filled record #b70d28ff #b70d2870
+node Node0x22262680 36.021 0.95833 3.7778 1.2778 "{64:\l|  %65 = load i32, ptr %5, align 4\l  %66 = add nsw i32 %65, 1\l  store i32 %66, ptr %5, align 4\l  br label %6, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+edge Node0x2225f0e0 Node0x2225f490 4 42.215 19.765 42.215 19.644 42.215 19.52 42.215 19.4 solid black
+edge Node0x2225f490 Node0x2225f6e0 4 40.312 17.826 36.391 17.826 32.023 16.894 28.872 16.051 solid black
+edge Node0x2225f490 Node0x2225f730 4 44.118 17.826 45.277 17.826 45.677 16.165 45.808 15.27 solid black
+edge Node0x2225f6e0 Node0x222600c0 4 20.229 12.396 17.689 12.396 11.395 12.12 8.631 11.737 solid black
+edge Node0x2225f6e0 Node0x22260110 7 22.535 12.236 22.535 11.429 16.078 11.885 15.285 11.736 14.571 11.602 13.796 11.365 13.173 11.152 solid black
+edge Node0x2225f6e0 Node0x22260160 7 23.91 12.236 23.91 11.338 22.816 11.981 21.951 11.736 21.31 11.554 20.605 11.336 20.009 11.147 solid black
+edge Node0x2225f6e0 Node0x222601b0 4 25.285 12.236 25.285 11.909 25.285 11.542 25.285 11.249 solid black
+edge Node0x2225f6e0 Node0x22260240 7 26.66 12.236 26.66 11.338 27.754 11.981 28.618 11.736 29.259 11.554 29.965 11.336 30.56 11.147 solid black
+edge Node0x2225f6e0 Node0x222602d0 7 28.757 12.396 31.673 12.396 32.428 12.321 35.285 11.736 35.986 11.593 36.75 11.36 37.369 11.151 solid black
+edge Node0x222600c0 Node0x22260640 7 8.4912 9.6507 8.5336 9.642 8.576 9.6335 8.6181 9.625 12.671 8.81 17.315 8.0607 20.669 7.552 solid black
+edge Node0x22260110 Node0x22260640 7 13.226 10.257 13.846 10.06 14.603 9.8251 15.285 9.625 17.038 9.1107 18.973 8.573 20.67 8.1113 solid black
+edge Node0x22260160 Node0x22260640 4 19.344 10.254 19.826 9.9808 20.501 9.5975 21.224 9.187 solid black
+edge Node0x222601b0 Node0x22260640 4 25.285 10.254 25.285 9.9976 25.285 9.6442 25.285 9.2622 solid black
+edge Node0x22260240 Node0x22260640 4 31.225 10.254 30.743 9.9808 30.068 9.5975 29.345 9.187 solid black
+edge Node0x222602d0 Node0x22260640 7 37.343 10.257 36.723 10.06 35.967 9.8251 35.285 9.625 33.531 9.1107 31.596 8.573 29.899 8.1113 solid black
+edge Node0x22260640 Node0x22262220 4 23.049 4.6111 23.049 4.4934 23.049 4.3673 23.049 4.2473 solid black
+edge Node0x22260640 Node0x22262270 4 29.771 4.7708 30.007 4.7708 30.024 4.51 29.98 4.2451 solid black
+edge Node0x22262220 Node0x22262460 4 25.31 3.2565 26.526 3.0361 27.96 2.776 28.881 2.609 solid black
+edge Node0x22262270 Node0x22262460 4 29.826 3.2505 29.826 3.1327 29.826 3.0039 29.826 2.8844 solid black
+edge Node0x22262460 Node0x22262680 4 30.636 2.2218 31.484 2.0251 32.848 1.7085 33.991 1.4432 solid black
+edge Node0x22262680 Node0x2225f490 10 37.913 1.0268 39.735 1.1925 42.215 1.7668 42.215 3.6667 42.215 10.694 42.215 10.694 42.215 10.694 42.215 13.164 42.215 16.076 42.215 17.529 solid black
+stop

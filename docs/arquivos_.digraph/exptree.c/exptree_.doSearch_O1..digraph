@@ -1,0 +1,47 @@
+graph 1 17.556 23.708
+node Node0x2bd45f00 9.5208 23.014 5.2778 1.3889 "{0:\l|  %1 = load i32, ptr @listLength, align 4\l  %2 = icmp sgt i32 %1, 0\l  br i1 %2, label %.lr.ph, label %._crit_edge\l|{<s0>\
+T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x2bdc7090 7.9792 21.076 5.3889 1.4861 "{.lr.ph:\l|  %best.promoted = load i32, ptr @best, align 4\l  %3 = load ptr, ptr @workList, align 8\l  %4 = load i32, ptr @goal, \
+align 4\l  %wide.trip.count = zext nneg i32 %1 to i64\l  br label %5\l}" filled record #3d50c3ff #d6524470
+node Node0x2bd46290 8.3125 12.229 4.8194 1.5972 "{._crit_edge:\l|  %17 = load i32, ptr @best, align 4\l  %18 = load i32, ptr @goal, align 4\l  %19 = icmp eq i32 %17, %18\l  br i1 %\
+19, label %22, label %.preheader\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x2bd46240 7.4653 18.41 7.4444 2.8472 "{5:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph ], [ %indvars.iv.next, %15 ]\l  %6 = phi i32 [ %best.promoted, %.lr.ph ], [ %16, %15 ]\l  %\
+7 = getelementptr inbounds i32, ptr %3, i64 %indvars.iv\l  %8 = load i32, ptr %7, align 4\l  %9 = sub nsw i32 %8, %4\l  %10 = tail \
+call i32 @llvm.abs.i32(i32 %9, i1 true)\l  %11 = sub nsw i32 %6, %4\l  %12 = tail call i32 @llvm.abs.i32(i32 %11, i1 true)\l  %13 = \
+icmp ult i32 %10, %12\l  br i1 %13, label %14, label %15\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2bd4a6c0 6.0208 16.056 3.9028 0.86111 "{14:\l|  store i32 %8, ptr @best, align 4\l  br label %15\l}" filled record #3d50c3ff #be242e70
+node Node0x2bd4abf0 6.9931 14.326 7.6806 1.5972 "{15:\l|  %16 = phi i32 [ %6, %5 ], [ %8, %14 ]\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %exitcond.not = icmp eq i64 %\
+indvars.iv.next, %wide.trip.count\l  br i1 %exitcond.not, label %._crit_edge, label %5, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2bd4b120 3.8958 8.1389 7.7917 0.86111 "{22:\l|  %puts = tail call i32 @puts(ptr nonnull dereferenceable(1) @str.1)\l  br label %31\l}" filled record #3d50c3ff #d8564670
+node Node0x2bd47cf0 12.715 10.132 5.6111 1.5972 "{.preheader:\l|  store i32 1, ptr @dmax, align 4\l  %20 = load i32, ptr @listLength, align 4\l  %21 = icmp sgt i32 %20, 1\l  br \
+i1 %21, label %.lr.ph6, label %._crit_edge7\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d8564670
+node Node0x2bd4b750 11.312 8.1389 6.5278 1.3889 "{.lr.ph6:\l|  tail call void @recSearch(i32 noundef 0, i32 noundef 0)\l  %.b4 = load i1, ptr @stopSearch, align 4\l  br i1 %.b4, \
+label %._crit_edge7, label %23\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #c5333470
+node Node0x2bd4b7a0 12.59 3.8403 4.6944 1.1806 "{._crit_edge7:\l|  %.b = load i1, ptr @stopSearch, align 4\l  br i1 %.b, label %31, label %28\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d8564670
+node Node0x2bd4b3a0 9.5903 0.64583 1.1528 0.65278 "{31:\l|  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x2bd4bd00 12.951 5.9375 7.3333 2.0139 "{23:\l|  %24 = load i32, ptr @dmax, align 4\l  %25 = add nsw i32 %24, 1\l  store i32 %25, ptr @dmax, align 4\l  %26 = load i32, \
+ptr @listLength, align 4\l  %27 = icmp slt i32 %25, %26\l  br i1 %27, label %.lr.ph6, label %._crit_edge7, !llvm.loop !6\l|{<s0>\
+T|<s1>F}}" filled record #3d50c3ff #c5333470
+node Node0x2bd4c9c0 13.771 2.1111 7.5694 1.2778 "{28:\l|  %29 = load ptr, ptr @solution, align 8\l  %30 = load i32, ptr @bestDepth, align 4\l  tail call void @printSolution(ptr \
+noundef %29, i32 noundef %30)\l  br label %31\l}" filled record #3d50c3ff #de614d70
+edge Node0x2bd45f00 Node0x2bdc7090 4 8.2014 22.319 8.2014 22.201 8.1913 22.077 8.1754 21.956 solid black
+edge Node0x2bd45f00 Node0x2bd46290 13 10.84 22.319 10.84 20.557 11.576 20.186 11.576 18.424 11.576 18.424 11.576 18.424 11.576 16.042 11.576 14.892 11.688 14.422 10.965 13.528 10.837 13.369 10.685 13.229 10.519 13.105 solid black
+edge Node0x2bdc7090 Node0x2bd46240 4 7.8381 20.338 7.8154 20.221 7.7912 20.097 7.7664 19.97 solid black
+edge Node0x2bd46290 Node0x2bd4b120 4 7.1042 11.431 7.1042 10.141 5.8197 9.1709 4.8763 8.6325 solid black
+edge Node0x2bd46290 Node0x2bd47cf0 4 10.743 11.59 11.208 11.59 11.637 11.325 11.975 11.022 solid black
+edge Node0x2bd46240 Node0x2bd4a6c0 4 5.6042 16.986 5.6042 16.859 5.6377 16.73 5.6858 16.611 solid black
+edge Node0x2bd46240 Node0x2bd4abf0 7 9.3264 16.986 9.3264 16.333 9.1747 16.139 8.7708 15.625 8.6544 15.477 8.5165 15.338 8.3698 15.21 solid black
+edge Node0x2bd4a6c0 Node0x2bd4abf0 4 6.2562 15.63 6.3233 15.512 6.3992 15.38 6.4761 15.245 solid black
+edge Node0x2bd4abf0 Node0x2bd46290 4 5.0625 13.528 5.0625 13.294 5.3568 13.085 5.7682 12.906 solid black
+edge Node0x2bd4abf0 Node0x2bd46240 13 8.9097 13.521 8.9097 13.307 10.683 13.383 10.833 13.535 11.331 14.036 11.27 14.569 10.833 15.125 10.25 15.866 9.5018 15.029 8.7708 15.625 8.5496 15.805 8.2842 16.322 8.0506 16.861 solid black
+edge Node0x2bd4b120 Node0x2bd4b3a0 4 4.2101 7.713 5.2037 6.4104 8.2703 2.3901 9.2709 1.0784 solid black
+edge Node0x2bd47cf0 Node0x2bd4b750 4 11.312 9.3333 11.312 9.2155 11.312 9.091 11.312 8.9688 solid black
+edge Node0x2bd47cf0 Node0x2bd4b7a0 7 15.535 9.4931 17.632 9.4931 18.027 6.5895 16.743 4.9306 16.515 4.6354 15.828 4.4063 15.078 4.2369 solid black
+edge Node0x2bd4b750 Node0x2bd4b7a0 10 9.6736 7.4444 9.6736 7.1258 9.2837 7.238 9.1597 6.9444 8.8115 6.1199 8.63 5.652 9.1597 4.9306 9.3993 4.6043 9.7377 4.3742 10.109 4.2126 solid black
+edge Node0x2bd4b750 Node0x2bd4bd00 4 12.951 7.4444 12.951 7.3258 12.951 7.2018 12.951 7.0783 solid black
+edge Node0x2bd4b7a0 Node0x2bd4b3a0 4 10.229 3.4097 9.2967 3.4097 9.3973 1.8911 9.5105 1.1109 solid black
+edge Node0x2bd4b7a0 Node0x2bd4c9c0 4 13.771 3.25 13.771 3.1321 13.771 3.0072 13.771 2.8852 solid black
+edge Node0x2bd4bd00 Node0x2bd4b750 10 11.118 4.9236 11.118 4.7199 9.4282 4.7929 9.2847 4.9375 8.9706 5.2541 9.0624 6.5578 9.2847 6.9444 9.3753 7.102 9.496 7.2406 9.6334 7.3619 solid black
+edge Node0x2bd4bd00 Node0x2bd4b7a0 4 14.785 4.9306 14.785 4.7778 14.741 4.6467 14.667 4.5343 solid black
+edge Node0x2bd4c9c0 Node0x2bd4b3a0 4 11.968 1.4772 11.381 1.2754 10.763 1.063 10.305 0.90536 solid black
+stop

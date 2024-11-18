@@ -1,0 +1,23 @@
+graph 1 31.37 6.3056
+node Node0x2bd399e0 11.835 5.0903 7.3333 2.4306 "{1:\l|  %2 = getelementptr inbounds %struct.Comb, ptr %0, i64 0, i32 2\l  %3 = load i32, ptr %2, align 4\l  switch i32 %3, label %\
+24 [\l    i32 1, label %4\l    i32 2, label %9\l    i32 3, label %14\l    i32 4, label %19\l  ]\l|{<s0>def|<s1>1|<s2>2|<s3>3|<s4>\
+4}}" filled record #b70d28ff #b70d2870
+node Node0x2bd3ad50 11.946 0.85417 8.7083 1.0694 "{24:\l|  %.0 = phi i32 [ %23, %19 ], [ %18, %14 ], [ %13, %9 ], [ %8, %4 ], [ 0, %1\l... ]\l  ret i32 %.0\l}" filled record #b70d28ff #b70d2870
+node Node0x2bd39de0 4.1822 2.6319 7.4444 1.4861 "{4:\l|  %5 = load i32, ptr %0, align 4\l  %6 = getelementptr inbounds %struct.Comb, ptr %0, i64 0, i32 1\l  %7 = load i32, ptr %\
+6, align 4\l  %8 = add nsw i32 %7, %5\l  br label %24\l}" filled record #3d50c3ff #c5333470
+node Node0x2bd39e70 11.946 2.6319 7.5694 1.4861 "{9:\l|  %10 = load i32, ptr %0, align 4\l  %11 = getelementptr inbounds %struct.Comb, ptr %0, i64 0, i32 1\l  %12 = load i32, ptr %\
+11, align 4\l  %13 = sub nsw i32 %10, %12\l  br label %24\l}" filled record #3d50c3ff #c5333470
+node Node0x2bd39f30 19.766 2.6319 7.5694 1.4861 "{14:\l|  %15 = load i32, ptr %0, align 4\l  %16 = getelementptr inbounds %struct.Comb, ptr %0, i64 0, i32 1\l  %17 = load i32, ptr %\
+16, align 4\l  %18 = mul nsw i32 %17, %15\l  br label %24\l}" filled record #3d50c3ff #c5333470
+node Node0x2bd39ff0 27.585 2.6319 7.5694 1.4861 "{19:\l|  %20 = load i32, ptr %0, align 4\l  %21 = getelementptr inbounds %struct.Comb, ptr %0, i64 0, i32 1\l  %22 = load i32, ptr %\
+21, align 4\l  %23 = sdiv i32 %20, %22\l  br label %24\l}" filled record #3d50c3ff #c5333470
+edge Node0x2bd399e0 Node0x2bd3ad50 10 8.1544 4.0347 7.2825 4.0347 0.92502 4.0169 0.33496 3.375 -0.11201 2.8887 -0.11115 2.376 0.33496 1.8889 0.82398 1.355 4.3949 1.099 7.4492 0.97705 solid black
+edge Node0x2bd399e0 Node0x2bd39de0 4 10.516 3.875 10.516 3.8655 9.3647 3.6407 8.0441 3.3859 solid black
+edge Node0x2bd399e0 Node0x2bd39e70 4 11.946 3.875 11.946 3.7584 11.946 3.6356 11.946 3.5146 solid black
+edge Node0x2bd399e0 Node0x2bd39f30 4 13.363 3.875 13.363 3.8558 14.513 3.632 15.839 3.3805 solid black
+edge Node0x2bd399e0 Node0x2bd39ff0 4 15.516 4.0347 19.111 4.0347 20.049 3.8611 23.655 3.3784 solid black
+edge Node0x2bd39de0 Node0x2bd3ad50 4 7.3905 1.8949 8.1032 1.7342 8.8472 1.5666 9.5223 1.4144 solid black
+edge Node0x2bd39e70 Node0x2bd3ad50 4 11.946 1.8911 11.946 1.7696 11.946 1.6442 11.946 1.5245 solid black
+edge Node0x2bd39f30 Node0x2bd3ad50 4 16.534 1.8949 15.816 1.7342 15.067 1.5666 14.387 1.4144 solid black
+edge Node0x2bd39ff0 Node0x2bd3ad50 7 23.795 1.9046 23.757 1.8993 23.72 1.894 23.682 1.8889 21.303 1.5639 18.637 1.3223 16.448 1.1559 solid black
+stop

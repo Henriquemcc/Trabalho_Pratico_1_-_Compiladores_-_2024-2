@@ -1,0 +1,34 @@
+graph 1 12.484 17.403
+node Node0x36f568e0 8.3264 16.812 6.4167 1.1806 "{2:\l|  %3 = icmp sgt i32 %1, 0\l  br i1 %3, label %.lr.ph.preheader, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x36fded20 4.5903 14.924 9.0556 1.5972 "{.lr.ph.preheader:\l|  %wide.trip.count = zext nneg i32 %1 to i64\l  %xtraiter = and i64 %wide.trip.count, 3\l  %4 = icmp ult i32 %\
+1, 4\l  br i1 %4, label %._crit_edge.loopexit.unr-lcssa, label %.lr.ph.preheader.new\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x36f56f30 4.5625 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x36fd2fc0 4.2986 5.8264 8.5972 1.5972 "{._crit_edge.loopexit.unr-lcssa:\l|  %indvars.iv.unr = phi i64 [ 0, %.lr.ph.preheader ], [ %indvars.iv.next.3,\l... %.lr.ph ]\l  %\
+lcmp.mod.not = icmp eq i64 %xtraiter, 0\l  br i1 %lcmp.mod.not, label %._crit_edge, label %.lr.ph.epil\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x36f4ffd0 6.8542 13.194 6.0694 0.86111 "{.lr.ph.preheader.new:\l|  %unroll_iter = and i64 %wide.trip.count, 2147483644\l  br label %.lr.ph\l}" filled record #3d50c3ff #d8564670
+node Node0x36f56ee0 6.8542 9.6944 9.1667 5.1389 "{.lr.ph:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph.preheader.new ], [ %indvars.iv.next.3,\l... %.lr.ph ]\l  %niter = phi i64 [ 0, %\
+.lr.ph.preheader.new ], [ %niter.next.3, %.lr.ph ]\l  %5 = getelementptr inbounds %struct.Comb, ptr %0, i64 %indvars.iv, i32 2\l  \
+store i32 0, ptr %5, align 4\l  %indvars.iv.next = or disjoint i64 %indvars.iv, 1\l  %6 = getelementptr inbounds %struct.Comb, ptr %\
+0, i64 %indvars.iv.next, i32 2\l  store i32 0, ptr %6, align 4\l  %indvars.iv.next.1 = or disjoint i64 %indvars.iv, 2\l  %7 = getelementptr \
+inbounds %struct.Comb, ptr %0, i64 %indvars.iv.next.1,\l... i32 2\l  store i32 0, ptr %7, align 4\l  %indvars.iv.next.2 = or disjoint \
+i64 %indvars.iv, 3\l  %8 = getelementptr inbounds %struct.Comb, ptr %0, i64 %indvars.iv.next.2,\l... i32 2\l  store i32 0, ptr %\
+8, align 4\l  %indvars.iv.next.3 = add nuw nsw i64 %indvars.iv, 4\l  %niter.next.3 = add i64 %niter, 4\l  %niter.ncmp.3 = icmp eq \
+i64 %niter.next.3, %unroll_iter\l  br i1 %niter.ncmp.3, label %._crit_edge.loopexit.unr-lcssa, label %.lr.ph,\l... !llvm.loop !4\l|{<\
+s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+node Node0x36fbaa20 6.8542 3 9.1667 3.0556 "{.lr.ph.epil:\l|  %indvars.iv.epil = phi i64 [ %indvars.iv.next.epil, %.lr.ph.epil ], [\l... %indvars.iv.unr, %._crit_edge.loopexit.unr-lcssa ]\l  %\
+epil.iter = phi i64 [ %epil.iter.next, %.lr.ph.epil ], [ 0,\l... %._crit_edge.loopexit.unr-lcssa ]\l  %9 = getelementptr inbounds %\
+struct.Comb, ptr %0, i64 %indvars.iv.epil, i32 2\l  store i32 0, ptr %9, align 4\l  %indvars.iv.next.epil = add nuw nsw i64 %indvars.iv.epil, \
+1\l  %epil.iter.next = add i64 %epil.iter, 1\l  %epil.iter.cmp.not = icmp eq i64 %epil.iter.next, %xtraiter\l  br i1 %epil.iter.cmp.not, \
+label %._crit_edge, label %.lr.ph.epil, !llvm.loop\l... !6\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x36f568e0 Node0x36fded20 4 5.1042 16.382 4.8261 16.382 4.6894 16.141 4.625 15.857 solid black
+edge Node0x36f568e0 Node0x36f56f30 13 11.549 16.382 12.978 16.382 12.076 14.638 12.076 13.208 12.076 13.208 12.076 13.208 12.076 5.8125 12.076 3.8799 13.144 2.8731 11.812 1.4722 11.386 1.0232 7.3765 0.78592 5.51 0.69902 solid black
+edge Node0x36fded20 Node0x36fd2fc0 7 2.3264 14.125 2.3264 11.013 0.60927 9.8314 2.1458 7.125 2.2323 6.9727 2.3448 6.8365 2.473 6.7152 solid black
+edge Node0x36fded20 Node0x36f4ffd0 4 6.8542 14.125 6.8542 14.007 6.8542 13.881 6.8542 13.761 solid black
+edge Node0x36fd2fc0 Node0x36f56f30 7 2.1458 5.0278 2.1458 3.4475 1.2235 2.7554 2.1458 1.4722 2.479 1.0087 3.0899 0.80596 3.6141 0.71894 solid black
+edge Node0x36fd2fc0 Node0x36fbaa20 4 6.4514 5.0278 6.4514 4.9086 6.4583 4.7862 6.4702 4.6635 solid black
+edge Node0x36f4ffd0 Node0x36f56ee0 4 6.8542 12.769 6.8542 12.66 6.8542 12.535 6.8542 12.398 solid black
+edge Node0x36f56ee0 Node0x36fd2fc0 4 4.5625 7.125 4.5625 7.0072 4.5517 6.8845 4.5345 6.7637 solid black
+edge Node0x36f56ee0 Node0x36f56ee0 7 9.4533 7.1315 10.875 6.4256 11.688 6.5525 11.688 8.4931 11.688 8.7846 11.624 9.0352 11.51 9.2482 solid black
+edge Node0x36fbaa20 Node0x36f56f30 4 4.5625 1.4722 4.5625 1.3552 4.5625 1.2287 4.5625 1.1111 solid black
+edge Node0x36fbaa20 Node0x36fbaa20 7 9.6197 1.4786 10.938 1.0688 11.688 1.1852 11.688 2.3194 11.688 2.4836 11.633 2.6265 11.535 2.7495 solid black
+stop

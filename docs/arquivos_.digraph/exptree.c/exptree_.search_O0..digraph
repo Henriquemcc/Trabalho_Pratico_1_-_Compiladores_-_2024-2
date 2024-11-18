@@ -1,0 +1,3 @@
+graph 1 4.4722 1.5972
+node Node0x22272880 2.2361 0.95833 4.4722 1.2778 "{0:\l|  store i32 0, ptr @stopSearch, align 4\l  store i32 0, ptr @nbNodes, align 4\l  call void @doSearch()\l  ret void\l}" filled record #b70d28ff #b70d2870
+stop

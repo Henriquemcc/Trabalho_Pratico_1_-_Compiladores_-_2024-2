@@ -1,0 +1,17 @@
+graph 1 9.9653 8.5
+node Node0x222598e0 8.0764 7.5486 3.6667 1.9028 "{2:\l|  %3 = alloca ptr, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store ptr %0, ptr %3, align 8\l  store \
+i32 %1, ptr %4, align 4\l  store i32 0, ptr %5, align 4\l  br label %6\l}" filled record #3d50c3ff #d6524470
+node Node0x22259c90 8.0764 5.2986 3.7778 1.5972 "{6:\l|  %7 = load i32, ptr %5, align 4\l  %8 = load i32, ptr %4, align 4\l  %9 = icmp slt i32 %7, %8\l  br i1 %9, label %10, label %\
+19\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x22259ee0 3.8403 3.0486 7.6806 1.9028 "{10:\l|  %11 = load ptr, ptr %3, align 8\l  %12 = load i32, ptr %5, align 4\l  %13 = sext i32 %12 to i64\l  %14 = getelementptr \
+inbounds %struct.Comb, ptr %11, i64 %13\l  %15 = getelementptr inbounds %struct.Comb, ptr %14, i32 0, i32 2\l  store i32 0, ptr %\
+15, align 4\l  br label %16\l}" filled record #b70d28ff #b70d2870
+node Node0x22259f30 9.0486 3.0486 1.1528 0.65278 "{19:\l|  ret void\l}" filled record #3d50c3ff #d6524470
+node Node0x2225a410 5.9514 0.95833 3.7778 1.2778 "{16:\l|  %17 = load i32, ptr %5, align 4\l  %18 = add nsw i32 %17, 1\l  store i32 %18, ptr %5, align 4\l  br label %6, !llvm.loop !\
+4\l}" filled record #b70d28ff #b70d2870
+edge Node0x222598e0 Node0x22259c90 4 8.0764 6.5987 8.0764 6.4777 8.0764 6.3538 8.0764 6.233 solid black
+edge Node0x22259c90 Node0x22259ee0 4 6.1736 4.6597 5.6643 4.6597 5.1846 4.3974 4.7941 4.0854 solid black
+edge Node0x22259c90 Node0x22259f30 4 9.0208 4.5 9.0208 4.1684 9.0283 3.7939 9.0355 3.5102 solid black
+edge Node0x22259ee0 Node0x2225a410 4 4.797 2.1 4.9378 1.9624 5.081 1.8225 5.2165 1.6902 solid black
+edge Node0x2225a410 Node0x22259c90 7 7.33 1.5919 7.5192 1.7324 7.6902 1.8999 7.8125 2.0972 8.2303 2.7714 8.2641 3.6856 8.2122 4.3621 solid black
+stop

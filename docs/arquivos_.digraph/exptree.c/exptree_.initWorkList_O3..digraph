@@ -1,0 +1,55 @@
+graph 1 13.797 27.236
+node Node0x2f52dbc0 9.7986 26.646 6.4167 1.1806 "{3:\l|  %4 = icmp sgt i32 %2, 0\l  br i1 %4, label %.lr.ph.preheader, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #cc403a70
+node Node0x2f5969a0 6.6597 24.34 6.9861 2.4306 "{.lr.ph.preheader:\l|  %5 = ptrtoint ptr %0 to i64\l  %6 = ptrtoint ptr %1 to i64\l  %wide.trip.count = zext nneg i32 %2 to i64\l  %\
+min.iters.check = icmp ult i32 %2, 8\l  %7 = sub i64 %5, %6\l  %diff.check = icmp ult i64 %7, 32\l  %or.cond = or i1 %min.iters.check, %\
+diff.check\l  br i1 %or.cond, label %.lr.ph.preheader9, label %vector.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x2f52e330 8.4514 0.64583 1.6111 0.65278 "{._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #cc403a70
+node Node0x2f58be40 4.3542 14.917 8.7083 1.8056 "{.lr.ph.preheader9:\l|  %indvars.iv.ph = phi i64 [ 0, %.lr.ph.preheader ], [ %n.vec, %middle.block\l... ]\l  %xtraiter = and i64 %\
+wide.trip.count, 3\l  %lcmp.mod.not = icmp eq i64 %xtraiter, 0\l  br i1 %lcmp.mod.not, label %.lr.ph.prol.loopexit, label %.lr.ph.prol\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x2f5a1960 8.4097 22.194 5.3889 0.86111 "{vector.ph:\l|  %n.vec = and i64 %wide.trip.count, 2147483640\l  br label %vector.body\l}" filled record #3d50c3ff #d6524470
+node Node0x2f538c30 8.4097 19.632 7.7917 3.2639 "{vector.body:\l|  %index = phi i64 [ 0, %vector.ph ], [ %index.next, %vector.body ]\l  %8 = getelementptr inbounds i32, ptr %1, \
+i64 %index\l  %9 = getelementptr inbounds i32, ptr %8, i64 4\l  %wide.load = load \<4 x i32\>, ptr %8, align 4\l  %wide.load8 = \
+load \<4 x i32\>, ptr %9, align 4\l  %10 = getelementptr inbounds i32, ptr %0, i64 %index\l  %11 = getelementptr inbounds i32, ptr %\
+10, i64 4\l  store \<4 x i32\> %wide.load, ptr %10, align 4\l  store \<4 x i32\> %wide.load8, ptr %11, align 4\l  %index.next = \
+add nuw i64 %index, 8\l  %12 = icmp eq i64 %index.next, %n.vec\l  br i1 %12, label %middle.block, label %vector.body, !llvm.loop !\
+4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2f5b5820 8.0069 16.91 6.9861 1.1806 "{middle.block:\l|  %cmp.n = icmp eq i64 %n.vec, %wide.trip.count\l  br i1 %cmp.n, label %._crit_edge, label %.lr.ph.preheader9\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d6524470
+node Node0x2f544300 4.4514 8.6389 7.9028 1.8056 "{.lr.ph.prol.loopexit:\l|  %indvars.iv.unr = phi i64 [ %indvars.iv.ph, %.lr.ph.preheader9 ], [\l... %indvars.iv.next.prol, %.lr.ph.prol ]\l  %\
+16 = sub nsw i64 %indvars.iv.ph, %wide.trip.count\l  %17 = icmp ugt i64 %16, -4\l  br i1 %17, label %._crit_edge, label %.lr.ph\l|{<\
+s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x2f53ef50 6.7569 11.778 8.8194 3.4722 "{.lr.ph.prol:\l|  %indvars.iv.prol = phi i64 [ %indvars.iv.next.prol, %.lr.ph.prol ], [\l... %indvars.iv.ph, %.lr.ph.preheader9 ]\l  %\
+prol.iter = phi i64 [ %prol.iter.next, %.lr.ph.prol ], [ 0,\l... %.lr.ph.preheader9 ]\l  %13 = getelementptr inbounds i32, ptr %\
+1, i64 %indvars.iv.prol\l  %14 = load i32, ptr %13, align 4\l  %15 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.prol\l  \
+store i32 %14, ptr %15, align 4\l  %indvars.iv.next.prol = add nuw nsw i64 %indvars.iv.prol, 1\l  %prol.iter.next = add i64 %prol.iter, \
+1\l  %prol.iter.cmp.not = icmp eq i64 %prol.iter.next, %xtraiter\l  br i1 %prol.iter.cmp.not, label %.lr.ph.prol.loopexit, label %\
+.lr.ph.prol,\l... !llvm.loop !8\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x2f52e2e0 7.0625 4.3542 8.5972 5.7639 "{.lr.ph:\l|  %indvars.iv = phi i64 [ %indvars.iv.next.3, %.lr.ph ], [ %indvars.iv.unr,\l... %.lr.ph.prol.loopexit ]\l  %18 = getelementptr \
+inbounds i32, ptr %1, i64 %indvars.iv\l  %19 = load i32, ptr %18, align 4\l  %20 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv\l  \
+store i32 %19, ptr %20, align 4\l  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %21 = getelementptr inbounds i32, ptr %1, \
+i64 %indvars.iv.next\l  %22 = load i32, ptr %21, align 4\l  %23 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.next\l  store \
+i32 %22, ptr %23, align 4\l  %indvars.iv.next.1 = add nuw nsw i64 %indvars.iv, 2\l  %24 = getelementptr inbounds i32, ptr %1, i64 %\
+indvars.iv.next.1\l  %25 = load i32, ptr %24, align 4\l  %26 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.next.1\l  store \
+i32 %25, ptr %26, align 4\l  %indvars.iv.next.2 = add nuw nsw i64 %indvars.iv, 3\l  %27 = getelementptr inbounds i32, ptr %1, i64 %\
+indvars.iv.next.2\l  %28 = load i32, ptr %27, align 4\l  %29 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv.next.2\l  store \
+i32 %28, ptr %29, align 4\l  %indvars.iv.next.3 = add nuw nsw i64 %indvars.iv, 4\l  %exitcond.not.3 = icmp eq i64 %indvars.iv.next.3, %\
+wide.trip.count\l  br i1 %exitcond.not.3, label %._crit_edge, label %.lr.ph, !llvm.loop !10\l|{<s0>T|<s1>F}}" filled record #b70d28ff #bb1b2c70
+edge Node0x2f52dbc0 Node0x2f5969a0 4 6.5764 26.215 6.2861 26.215 6.2096 25.987 6.2327 25.689 solid black
+edge Node0x2f52dbc0 Node0x2f52e330 13 13.021 26.215 14.802 26.215 12.951 23.989 12.951 22.208 12.951 22.208 12.951 22.208 12.951 8.625 12.951 5.4369 14.517 3.8649 12.41 1.4722 12.021 1.031 10.444 0.81922 9.4021 0.7256 solid black
+edge Node0x2f5969a0 Node0x2f58be40 7 4.9097 23.125 4.9097 22.267 4.5139 22.114 4.3958 21.264 4.1381 19.408 4.205 17.216 4.2786 15.958 solid black
+edge Node0x2f5969a0 Node0x2f5a1960 4 8.4097 23.125 8.4097 23.007 8.4097 22.881 8.4097 22.761 solid black
+edge Node0x2f58be40 Node0x2f544300 7 2.1736 14.014 2.1736 12.248 1.3492 11.58 2.2153 10.042 2.3002 9.8908 2.4089 9.7542 2.5326 9.631 solid black
+edge Node0x2f58be40 Node0x2f53ef50 4 6.5347 14.014 6.5347 13.897 6.5378 13.777 6.5433 13.655 solid black
+edge Node0x2f5a1960 Node0x2f538c30 4 8.4097 21.768 8.4097 21.658 8.4097 21.533 8.4097 21.399 solid black
+edge Node0x2f538c30 Node0x2f538c30 7 10.705 18.007 11.874 17.531 12.556 17.642 12.556 18.896 12.556 19.093 12.499 19.262 12.397 19.404 solid black
+edge Node0x2f538c30 Node0x2f5b5820 4 6.4514 18 6.4514 17.85 6.5011 17.719 6.5827 17.605 solid black
+edge Node0x2f5b5820 Node0x2f52e330 16 6.2569 16.319 6.2569 15.735 8.3133 16.073 8.8403 15.819 10.892 14.833 12.007 14.069 12.007 11.792 12.007 11.792 12.007 11.792 12.007 8.625 12.007 5.4438 13.75 3.9401 11.743 1.4722 11.45 1.1116 10.265 0.88665 9.4009 0.76727 solid black
+edge Node0x2f5b5820 Node0x2f58be40 4 9.7569 16.319 9.7569 15.996 9.3881 15.746 8.8432 15.554 solid black
+edge Node0x2f544300 Node0x2f52e330 7 2.4653 7.7361 2.4653 4.951 0.78794 3.5471 2.6458 1.4722 3.2739 0.77077 6.0269 0.65885 7.5051 0.6507 solid black
+edge Node0x2f544300 Node0x2f52e2e0 4 6.4236 7.7361 6.4236 7.6161 6.4276 7.4941 6.4349 7.3712 solid black
+edge Node0x2f53ef50 Node0x2f544300 4 4.5486 10.042 4.5486 9.9244 4.5451 9.8017 4.5395 9.6798 solid black
+edge Node0x2f53ef50 Node0x2f53ef50 7 9.3002 10.047 10.647 9.4323 11.417 9.5401 11.417 10.993 11.417 11.206 11.36 11.389 11.257 11.546 solid black
+edge Node0x2f52e2e0 Node0x2f52e330 4 4.9097 1.4722 4.9097 0.93976 6.4497 0.75622 7.4987 0.69297 solid black
+edge Node0x2f52e2e0 Node0x2f52e2e0 7 9.4794 1.477 10.833 0.71644 11.611 0.84443 11.611 2.9931 11.611 3.3263 11.547 3.6109 11.432 3.8511 solid black
+stop

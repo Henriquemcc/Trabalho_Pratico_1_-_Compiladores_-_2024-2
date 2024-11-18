@@ -1,0 +1,24 @@
+graph 1 18.132 10.264
+node Node0x2f544f80 8.9792 9.7292 8.1389 1.0694 "{0:\l|  %1 = alloca [16 x i32], align 16\l  store \<4 x i32\> \<i32 13, i32 32, i32 14, i32 1412\>, ptr %1, align 16\l  br label %\
+2\l}" filled record #3d50c3ff #d0473d70
+node Node0x2f546050 8.9792 7.6875 6.7639 2.0139 "{2:\l|  %indvars.iv = phi i64 [ %indvars.iv.next, %4 ], [ 0, %0 ]\l  %3 = call i32 @getchar()\l  switch i32 %3, label %4 [\l    \
+i32 -1, label %10\l    i32 10, label %10\l  ]\l|{<s0>def|<s1>-1|<s2>10}}" filled record #b70d28ff #b70d2870
+node Node0x2f546810 4.4097 3.25 8.8194 2.1111 "{4:\l|  %5 = load ptr, ptr @stdin, align 8\l  %6 = call i32 @ungetc(i32 noundef %3, ptr noundef %5)\l  %7 = load ptr, ptr @stdin, \
+align 8\l  %8 = getelementptr inbounds [16 x i32], ptr %1, i64 0, i64 %indvars.iv\l  %9 = call i32 (ptr, ptr, ...) @__isoc99_fscanf(\
+ptr noundef %7, ptr noundef\l... nonnull @.str.2, ptr noundef nonnull %8) #12\l  %indvars.iv.next = add nuw i64 %indvars.iv, 1\l  \
+br label %2, !llvm.loop !4\l}" filled record #b70d28ff #b70d2870
+node Node0x2f546860 13.604 3.25 9.0556 5.8611 "{10:\l|  %11 = trunc i64 %indvars.iv to i32\l  %12 = icmp eq i32 %11, 0\l  %13 = add nsw i32 %11, -1\l  %14 = select i1 %12, i32 \
+3, i32 %13\l  store i32 %14, ptr @listLength, align 4\l  %15 = sext i32 %14 to i64\l  %16 = getelementptr inbounds [16 x i32], ptr %\
+1, i64 0, i64 %15\l  %17 = load i32, ptr %16, align 4\l  store i32 %17, ptr @goal, align 4\l  %18 = shl nsw i32 %14, 1\l  %19 = \
+call ptr @newWorkList(i32 noundef %18)\l  store ptr %19, ptr @workList, align 8\l  %20 = load i32, ptr @listLength, align 4\l  %\
+21 = call ptr @newCombList(i32 noundef %20)\l  store ptr %21, ptr @combList, align 8\l  %22 = load i32, ptr @listLength, align 4\l  %\
+23 = call ptr @newCombList(i32 noundef %22)\l  store ptr %23, ptr @solution, align 8\l  %24 = load ptr, ptr @workList, align 8\l  %\
+25 = load i32, ptr @listLength, align 4\l  call void @initWorkList(ptr noundef %24, ptr noundef nonnull %1, i32 noundef\l... %25)\l  %\
+26 = load ptr, ptr @combList, align 8\l  call void @initCombList(ptr noundef %26, i32 noundef %25)\l  call void @initCombList(ptr \
+noundef %23, i32 noundef %25)\l  ret i32 %25\l}" filled record #3d50c3ff #d0473d70
+edge Node0x2f544f80 Node0x2f546050 4 8.9792 9.1967 8.9792 9.082 8.9792 8.9561 8.9792 8.8277 solid black
+edge Node0x2f546050 Node0x2f546810 4 5.5764 6.8403 4.4719 6.8403 4.2372 5.4892 4.2493 4.4478 solid black
+edge Node0x2f546050 Node0x2f546860 4 9.0347 6.6806 9.0347 6.5542 9.0461 6.4319 9.0676 6.3137 solid black
+edge Node0x2f546050 Node0x2f546860 4 12.382 6.8403 12.794 6.8403 13.077 6.6251 13.27 6.3004 solid black
+edge Node0x2f546810 Node0x2f546050 4 4.4246 4.3014 4.4346 5.3044 4.566 6.6923 5.4325 6.8293 solid black
+stop

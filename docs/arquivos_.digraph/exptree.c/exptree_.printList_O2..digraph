@@ -1,0 +1,19 @@
+graph 1 11.632 10.611
+node Node0x36f5e730 8.4236 10.021 6.4167 1.1806 "{3:\l|  %4 = icmp sgt i32 %1, 0\l  br i1 %4, label %.lr.ph.preheader, label %._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d24b4070
+node Node0x36fe1ec0 6.0764 8.5 5.0417 0.86111 "{.lr.ph.preheader:\l|  %wide.trip.count = zext nneg i32 %1 to i64\l  br label %.lr.ph\l}" filled record #3d50c3ff #d6524470
+node Node0x36f5fdc0 7.0625 0.75 4.9306 0.86111 "{._crit_edge:\l|  %putchar = tail call i32 @putchar(i32 10)\l  ret void\l}" filled record #3d50c3ff #d24b4070
+node Node0x36f5fd70 5.7014 6.5625 8.5972 2.0139 "{.lr.ph:\l|  %indvars.iv = phi i64 [ 0, %.lr.ph.preheader ], [ %indvars.iv.next, %12 ]\l  %5 = trunc i64 %indvars.iv to i32\l  %\
+6 = shl nuw i32 1, %5\l  %7 = and i32 %6, %2\l  %.not = icmp eq i32 %7, 0\l  br i1 %.not, label %8, label %12\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x36f601c0 3.4931 4.3125 6.9861 1.4861 "{8:\l|  %9 = getelementptr inbounds i32, ptr %0, i64 %indvars.iv\l  %10 = load i32, ptr %9, align 4\l  %11 = tail call i32 (ptr, \
+...) @printf(ptr noundef nonnull\l... dereferenceable(1) @.str.13, i32 noundef %10)\l  br label %12\l}" filled record #3d50c3ff #c32e3170
+node Node0x36f602c0 5.5903 2.375 8.25 1.3889 "{12:\l|  %indvars.iv.next = add nuw nsw i64 %indvars.iv, 1\l  %exitcond.not = icmp eq i64 %indvars.iv.next, %wide.trip.count\l  \
+br i1 %exitcond.not, label %._crit_edge, label %.lr.ph, !llvm.loop !4\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x36f5e730 Node0x36fe1ec0 4 6.8125 9.4306 6.8125 9.2882 6.7579 9.1554 6.6783 9.0374 solid black
+edge Node0x36f5e730 Node0x36f5fdc0 13 10.035 9.4306 10.035 8.1519 10.396 7.855 10.396 6.5764 10.396 6.5764 10.396 6.5764 10.396 4.2986 10.396 3.1091 10.634 2.5665 9.8403 1.6806 9.6788 1.5003 9.4812 1.3554 9.2665 1.239 solid black
+edge Node0x36fe1ec0 Node0x36f5fd70 4 5.995 8.0717 5.9731 7.9602 5.9483 7.834 5.9227 7.7033 solid black
+edge Node0x36f5fd70 Node0x36f601c0 4 3.5486 5.5556 3.5486 5.4389 3.5461 5.316 3.5421 5.1949 solid black
+edge Node0x36f5fd70 Node0x36f602c0 7 7.8542 5.5556 7.8542 4.6642 8.0699 4.3117 7.5764 3.5694 7.4718 3.4122 7.3386 3.2729 7.1907 3.1502 solid black
+edge Node0x36f601c0 Node0x36f602c0 4 4.2919 3.5712 4.4405 3.4359 4.5962 3.2941 4.7461 3.1576 solid black
+edge Node0x36f602c0 Node0x36f5fdc0 4 3.5208 1.6806 3.5208 1.4068 3.9223 1.2135 4.455 1.0775 solid black
+edge Node0x36f602c0 Node0x36f5fd70 16 7.6597 1.6667 7.6597 1.4383 9.5543 1.5185 9.7153 1.6806 10.15 2.1185 10.099 2.5858 9.7153 3.0694 9.1086 3.8343 8.2903 2.9035 7.5764 3.5694 7.071 4.0409 7.467 4.4589 7.1181 5.0556 7.0392 5.1903 6.946 5.3226 6.8457 5.4493 solid black
+stop

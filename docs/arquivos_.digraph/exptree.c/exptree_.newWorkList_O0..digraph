@@ -1,0 +1,10 @@
+graph 1 12.972 4.9444
+node Node0x22250f80 5.1944 3.5208 7.5694 2.8472 "{1:\l|  %2 = alloca i32, align 4\l  %3 = alloca ptr, align 8\l  store i32 %0, ptr %2, align 4\l  %4 = load i32, ptr %2, align 4\l  %\
+5 = sext i32 %4 to i64\l  %6 = call noalias ptr @calloc(i64 noundef %5, i64 noundef 4) #5\l  store ptr %6, ptr %3, align 8\l  %7 = \
+load ptr, ptr %3, align 8\l  %8 = icmp ne ptr %7, null\l  br i1 %8, label %9, label %11\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x22256350 1.8889 0.95833 3.7778 0.86111 "{9:\l|  %10 = load ptr, ptr %3, align 8\l  ret ptr %10\l}" filled record #b70d28ff #b70d2870
+node Node0x222563e0 8.5 0.95833 8.9444 1.2778 "{11:\l|  %12 = load ptr, ptr @stderr, align 8\l  %13 = call i32 (ptr, ptr, ...) @fprintf(ptr noundef %12, ptr noundef @.str)\l  \
+call void @exit(i32 noundef 1) #6\l  unreachable\l}" filled record #3d50c3ff #f4c5ad70
+edge Node0x22250f80 Node0x22256350 4 1.3889 2.2569 1.0459 2.2569 1.2436 1.8544 1.4841 1.5 solid black
+edge Node0x22250f80 Node0x222563e0 4 9 2.2569 9.2756 2.2569 9.2021 1.9971 9.0379 1.7111 solid black
+stop
