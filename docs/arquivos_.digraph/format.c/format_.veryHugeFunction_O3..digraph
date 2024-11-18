@@ -1,0 +1,16 @@
+graph 1 10.234 8.9306
+node Node0x11fd5610 3.9632 8.1319 6.6528 1.5972 "{11:\l|  %12 = icmp eq i32 %0, 0\l  %13 = icmp eq i32 %3, 10\l  %or.cond = or i1 %12, %13\l  br i1 %or.cond, label %._crit_edge.split, \
+label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x11fd60b0 6.8521 0.64583 2.2917 0.65278 "{._crit_edge.split:\l|  ret void\l}" filled record #3d50c3ff #ca3b3770
+node Node0x12008a00 6.7965 5.3056 6.875 3.0556 "{.lr.ph:\l|  %14 = add i32 %2, %1\l  %15 = add i32 %14, %0\l  %16 = add i32 %15, %3\l  %17 = add i32 %16, %5\l  %18 = add i32 %17, %\
+6\l  %19 = add i32 %18, %7\l  %20 = add i32 %19, %8\l  %21 = getelementptr inbounds i32, ptr %9, i64 1\l  %22 = load i32, ptr %21, \
+align 4\l  %.not = icmp eq i8 %10, 115\l  br i1 %.not, label %tailrecurse, label %._crit_edge.split\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x11fd4890 5.0743 2.375 7.1111 1.8056 "{tailrecurse:\l|  %.tr3441 = phi i32 [ %24, %tailrecurse ], [ %4, %.lr.ph ]\l  %23 = add i32 %20, %.tr3441\l  %.not44 = icmp eq \
+i32 %23, %22\l  %24 = add nsw i32 %14, %.tr3441\l  br i1 %.not44, label %tailrecurse, label %._crit_edge.split\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+edge Node0x11fd5610 Node0x11fd60b0 7 0.61597 7.4931 -0.73311 7.4931 0.44851 2.4348 1.3938 1.4722 1.9581 0.8975 4.136 0.72723 5.5643 0.67806 solid black
+edge Node0x11fd5610 Node0x12008a00 4 7.3104 7.4931 7.6294 7.4931 7.6903 7.2687 7.6261 6.9641 solid black
+edge Node0x12008a00 Node0x11fd60b0 10 8.5188 3.7778 8.5188 3.532 8.7011 3.5176 8.7549 3.2778 8.9304 2.4948 9.1971 2.1419 8.7549 1.4722 8.6049 1.245 8.3769 1.0812 8.1303 0.96303 solid black
+edge Node0x12008a00 Node0x11fd4890 4 5.0743 3.7778 5.0743 3.6608 5.0743 3.5383 5.0743 3.4165 solid black
+edge Node0x11fd4890 Node0x11fd60b0 4 6.8521 1.4722 6.8521 1.3552 6.8521 1.2287 6.8521 1.1111 solid black
+edge Node0x11fd4890 Node0x11fd4890 7 2.7726 1.4786 1.8219 1.2255 1.2688 1.3253 1.2688 2.0069 1.2688 2.1157 1.3158 2.2096 1.4003 2.2897 solid black
+stop

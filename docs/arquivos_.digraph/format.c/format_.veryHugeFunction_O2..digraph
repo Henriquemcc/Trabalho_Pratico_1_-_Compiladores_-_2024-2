@@ -1,0 +1,17 @@
+graph 1 11.121 8.9306
+node Node0x39b59610 4.2392 8.1319 7.2222 1.5972 "{11:\l|  %12 = icmp eq i32 %0, 0\l  %13 = icmp eq i32 %3, 10\l  %or.cond = or i1 %12, %13\l  br i1 %or.cond, label %tailrecurse._\
+crit_edge, label %.lr.ph\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #ca3b3770
+node Node0x39b5a0b0 7.3781 0.64583 2.8611 0.65278 "{tailrecurse._crit_edge:\l|  ret void\l}" filled record #3d50c3ff #ca3b3770
+node Node0x39b8c980 7.3364 5.3056 7.5694 3.0556 "{.lr.ph:\l|  %14 = add i32 %2, %1\l  %15 = add i32 %14, %0\l  %16 = add i32 %15, %3\l  %17 = add i32 %16, %5\l  %18 = add i32 %17, %\
+6\l  %19 = add i32 %18, %7\l  %20 = add i32 %19, %8\l  %21 = getelementptr inbounds i32, ptr %9, i64 1\l  %22 = load i32, ptr %21, \
+align 4\l  %.not = icmp eq i8 %10, 115\l  br i1 %.not, label %.lr.ph.split, label %tailrecurse._crit_edge\l|{<s0>T|<s1>F}}" filled record #3d50c3ff #d0473d70
+node Node0x39b58890 5.4337 2.375 7.7917 1.8056 "{.lr.ph.split:\l|  %.tr3441 = phi i32 [ %24, %.lr.ph.split ], [ %4, %.lr.ph ]\l  %23 = add i32 %20, %.tr3441\l  %.not42 = icmp eq \
+i32 %23, %22\l  %24 = add nsw i32 %14, %.tr3441\l  br i1 %.not42, label %.lr.ph.split, label %tailrecurse._crit_edge\l|{<s0>T|<s1>\
+F}}" filled record #b70d28ff #b70d2870
+edge Node0x39b59610 Node0x39b5a0b0 7 0.61422 7.4931 -0.73525 7.4931 0.45323 2.428 1.4059 1.4722 2.0055 0.87061 4.2465 0.70528 5.8059 0.66484 solid black
+edge Node0x39b59610 Node0x39b8c980 4 7.8642 7.4931 8.1836 7.4931 8.2433 7.2687 8.1772 6.9641 solid black
+edge Node0x39b8c980 Node0x39b5a0b0 10 9.2253 3.7778 9.2253 3.5346 9.3971 3.5157 9.4476 3.2778 9.6141 2.4928 9.8996 2.1353 9.4476 1.4722 9.3188 1.2834 9.1389 1.1384 8.9384 1.0272 solid black
+edge Node0x39b8c980 Node0x39b58890 4 5.4337 3.7778 5.4337 3.6608 5.4337 3.5383 5.4337 3.4165 solid black
+edge Node0x39b58890 Node0x39b5a0b0 4 7.3781 1.4722 7.3781 1.3552 7.3781 1.2287 7.3781 1.1111 solid black
+edge Node0x39b58890 Node0x39b58890 7 2.9059 1.4786 1.8747 1.2255 1.2878 1.3253 1.2878 2.0069 1.2878 2.1112 1.3349 2.2019 1.4199 2.2797 solid black
+stop

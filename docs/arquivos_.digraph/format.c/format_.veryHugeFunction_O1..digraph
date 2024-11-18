@@ -1,0 +1,17 @@
+graph 1 7.9167 9.0278
+node Node0x3a87a440 2.5208 8.7014 2.6389 0.65278 "{11:\l|  br label %tailrecurse\l}" filled record #3d50c3ff #d0473d70
+node Node0x3a83c1e0 2.5208 6.9722 5.0417 1.8056 "{tailrecurse:\l|  %.tr34 = phi i32 [ %4, %11 ], [ %29, %27 ]\l  %12 = icmp eq i32 %0, 0\l  %13 = icmp eq i32 %3, 10\l  %or.cond = \
+or i1 %12, %13\l  br i1 %or.cond, label %30, label %14\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a8410b0 2.4236 0.85417 1.1528 0.65278 "{30:\l|  ret void\l}" filled record #3d50c3ff #d0473d70
+node Node0x3a83f890 5.0486 3.7292 5.7361 3.6806 "{14:\l|  %15 = add i32 %2, %1\l  %16 = add i32 %15, %0\l  %17 = add nsw i32 %16, %3\l  %18 = add nsw i32 %17, %.tr34\l  %19 = add \
+nsw i32 %18, %5\l  %20 = add nsw i32 %19, %6\l  %21 = add nsw i32 %20, %7\l  %22 = add nsw i32 %21, %8\l  %23 = getelementptr inbounds \
+i32, ptr %9, i64 1\l  %24 = load i32, ptr %23, align 4\l  %25 = icmp ne i32 %22, %24\l  %26 = icmp ne i8 %10, 115\l  %or.cond4 = \
+or i1 %26, %25\l  br i1 %or.cond4, label %30, label %27\l|{<s0>T|<s1>F}}" filled record #b70d28ff #b70d2870
+node Node0x3a840fb0 5.7847 0.85417 3.6667 1.0694 "{27:\l|  %28 = add nsw i32 %2, %1\l  %29 = add nsw i32 %28, %.tr34\l  br label %tailrecurse\l}" filled record #b70d28ff #b70d2870
+edge Node0x3a87a440 Node0x3a83c1e0 4 2.5208 8.3794 2.5208 8.2721 2.5208 8.145 2.5208 8.0119 solid black
+edge Node0x3a83c1e0 Node0x3a8410b0 7 1.2569 6.0694 1.2569 4.2055 0.89529 3.6184 1.5903 1.8889 1.6807 1.6639 1.8391 1.4502 1.9937 1.277 solid black
+edge Node0x3a83c1e0 Node0x3a83f890 4 5.0625 6.2361 5.3905 6.2361 5.5231 6.0176 5.5472 5.71 solid black
+edge Node0x3a83f890 Node0x3a8410b0 4 2.1597 2.0486 1.8431 2.0486 1.9909 1.6393 2.1659 1.3027 solid black
+edge Node0x3a83f890 Node0x3a840fb0 4 6.4792 1.8889 6.4792 1.7537 6.437 1.6231 6.3734 1.5031 solid black
+edge Node0x3a840fb0 Node0x3a83c1e0 10 3.9512 1.2652 3.0699 1.4746 2.1761 1.7219 2.0486 1.8889 1.5523 2.539 1.9152 4.7625 2.0486 5.5694 2.0685 5.6899 2.0976 5.814 2.1316 5.9361 solid black
+stop
