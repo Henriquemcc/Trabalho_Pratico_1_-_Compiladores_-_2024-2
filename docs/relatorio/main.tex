@@ -20,6 +20,7 @@
 
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
+\usepackage{placeins}
 
    
 \sloppy
@@ -66,6 +67,8 @@
 
 \paragraph{}Durante o processo de geração dos grafos de fluxo de controle, foi encontrado um erro na geração da representação intermediária do Clang para o programa \textit{ReedSolomon} (em \textit{src/singlesource/ReedSolomon.c}). Isso se deve pelo fato de, na linha 60 (‘\textit{static inited = 0;}’), não conter uma declaração de tipo válida para a variável \textit{inited}. A mensagem de erro de compilação foi armazenada no arquivo de texto \textit{nao\_compila.txt} em \textit{src/singlesource/ReedSolomon.c/nao\_compila.txt}.
 
+\FloatBarrier
+
 \section{Análise}
 
 \paragraph{}Para a análise das técnicas de otimização, foram escolhidos os seguintes módulos: Fibonacci (em \textit{src/singlesource/fib2.c}), Private (em \textit{src/singlesource/private.c}) e Recursive (em \textit{src/singlesource/recursive.c}).
@@ -104,6 +107,8 @@
     \caption{Grafo de fluxo de controle para a função 'fib' com nível 3 de otimização}
 \end{figure}
 
+\FloatBarrier
+
 \subsection{Private}
 
 \paragraph{}Para a análise das técnicas de otimização de Private, foi escolhida a função main. Isso se deve pelo fato desta função apresentar um tipo específico de otimização pertinente ao programa Private.
@@ -135,6 +140,8 @@
 \end{figure}
 
 \paragraph{}E em relação aos níveis 2 e 3 de otimização, não houve mudanças em relação ao nível 1.
+
+\FloatBarrier
 
 \subsection{Recursive}
 
@@ -169,6 +176,8 @@
     \includegraphics[width=0.5\linewidth]{recursive_.ack_O3.png}
     \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 3 de otimização.}
 \end{figure}
+
+\FloatBarrier
 
 \section{Conclusão}
 
