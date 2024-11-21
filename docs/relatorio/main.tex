@@ -40,39 +40,39 @@
 
 \paragraph{}O entendimento do funcionamento de compiladores permite o desenvolvimento de novos métodos de otimização de programas, tornando o código final gerado mais eficiente, o desenvolvimento de novas linguagens de programação, permitindo que programadores tenham novas formas de expressarem seus programas, além de possibilitar o aprimoramento das ferramentas existentes. Dessa forma, o estudo de compiladores pode, em última instância, contribuir para o aprimoramento da Computação como um todo.
 
-\paragraph{}Um compilador é composto das seguintes partes: Front e Back. O Front de um compilador é dividido nos seguintes componentes: Analisador léxico, analisador sintático, analisador semântico. E o Back é composto dos componentes: Gerador de código intermediário, otimizador de código dependente de máquina, gerador de código de máquina e otimizador de código independente de máquina.
+\paragraph{}Um compilador é composto das seguintes partes: \textit{Front} e \textit{Back}. O \textit{Front} de um compilador é dividido nos seguintes componentes: Analisador léxico, analisador sintático, analisador semântico. E o \textit{Back} é composto dos componentes: Gerador de código intermediário, otimizador de código dependente de máquina, gerador de código de máquina e otimizador de código independente de máquina.
 
-\paragraph{}Neste trabalho, será analisado o funcionamento da parte de otimização de código dependente de máquina, analisando os diferentes tipos de otimização realizados no código intermediário. Para isso, foi desenvolvido um script (programa de linguagem interpretada), que faz o uso do arcabouço de compilação LLVM (Low Level Virtual Machine), para a geração de grafos de fluxo de controle (CFG) nos formatos .digraph e .png, permitindo o entendimento do processo de otimização de código intermediário, desenvolvido dentro do compilador.
+\paragraph{}Neste trabalho, será analisado o funcionamento da parte de otimização de código dependente de máquina, analisando os diferentes tipos de otimização realizados no código intermediário. Para isso, foi desenvolvido um \textit{script} (programa de linguagem interpretada), que faz o uso do arcabouço de compilação LLVM (\textit{Low Level Virtual Machine}), para a geração de grafos de fluxo de controle (CFG) nos formatos \textit{.digraph} e \textit{.png}, permitindo o entendimento do processo de otimização de código intermediário, desenvolvido dentro do compilador.
 
 \section{Desenvolvimento}
 
-\paragraph{}O script desenvolvido foi feito na linguagem de programação Python. A escolha dessa linguagem se deve pelo fato do Python possuir recursos avançados e de fácil utilização que permitem a manipulação de strings e a manipulação de caminho de arquivos (path).
+\paragraph{}O \textit{script} desenvolvido foi feito na linguagem de programação Python. A escolha dessa linguagem se deve pelo fato do Python possuir recursos avançados e de fácil utilização que permitem a manipulação de strings e a manipulação de caminho de arquivos (\textit{path}).
 
-\paragraph{}O programa desenvolvido é organizado da seguinte forma, ele possui uma única função generate\_unique\_file\_path, responsável por gerar caminhos de arquivo únicos, garantindo que não exista um arquivo com o caminho gerado. E na parte principal do programa (\_\_main\_\_) é feito o processo de chamada do Front do Clang, do otimizador OPT, e do gerador de imagem DOT.
+\paragraph{}O programa desenvolvido é organizado da seguinte forma, ele possui uma única função \textit{generate\_unique\_file\_path}, responsável por gerar caminhos de arquivo únicos, garantindo que não exista um arquivo com o caminho gerado. E na parte principal do programa (\_\_main\_\_) é feito o processo de chamada do \textit{Front} do Clang, do otimizador OPT, e do gerador de imagem DOT.
 
-\paragraph{}Para o desenvolvimento deste programa, foi feito o uso dos seguintes módulos da biblioteca padrão do Python: pathlib, string, sys, os, shutil, subprocess, tempfile e random. Os módulos pathlib e os foram utilizados na resolução dos caminhos dos arquivos. Já o módulo string foi utilizado na geração de caracteres ASCII aleatórios. O módulo sys foi utilizado para a obtenção dos argumentos de linha de comando. Já o módulo shutil, foi utilizado para a obtenção do caminho absoluto dos programas de linha de comando utilizados (clang, opt, dot e llc).
+\paragraph{}Para o desenvolvimento deste programa, foi feito o uso dos seguintes módulos da biblioteca padrão do Python: \textit{pathlib}, \textit{string}, \textit{sys}, \textit{os}, \textit{shutil}, \textit{subprocess}, \textit{tempfile} e \textit{random}. Os módulos \textit{pathlib} e os foram utilizados na resolução dos caminhos dos arquivos. Já o módulo \textit{string} foi utilizado na geração de caracteres ASCII aleatórios. O módulo \textit{sys} foi utilizado para a obtenção dos argumentos de linha de comando. Já o módulo \textit{shutil}, foi utilizado para a obtenção do caminho absoluto dos programas de linha de comando utilizados (\textit{clang}, \textit{opt}, \textit{dot} e \textit{llc}).
 
-\paragraph{}A utilização do programa é feita através da chamada do interpretador python, seguido do caminho do script, e seguido do programa em C a ser compilado. Uma vez executado este script, automaticamente serão gerados os arquivos .digraph e .png para cada função do programa compilado para os diferentes níveis de otimização: O0, O1, O2 e O3. Cada arquivo gerado tem em seu a função analisada e o tipo de otimização aplicada.
+\paragraph{}A utilização do programa é feita através da chamada do interpretador python, seguido do caminho do \textit{script}, e seguido do programa em C a ser compilado. Uma vez executado este \textit{script}, automaticamente serão gerados os arquivos \textit{.digraph} e \textit{.png} para cada função do programa compilado para os diferentes níveis de otimização: \textit{O0}, \textit{O1}, \textit{O2} e \textit{O3}. Cada arquivo gerado tem em seu a função analisada e o tipo de otimização aplicada.
 
 \begin{figure}
     \centering
     \begin{verbatim}
     python ./gen_cfg.py ./exemplo.c
 \end{verbatim}
-    \caption{Comando utilizado para a execução do script desenvolvido}
+    \caption{Comando utilizado para a execução do \textit{script} desenvolvido}
 \end{figure}
 
-\paragraph{}Conforme solicitado no enunciado, foram gerados os grafos de fluxo de controle dos programas de exemplo solicitados, tanto no formato graphviz, como no formato de imagem PNG. Esses arquivos estão localizados nas pastas arquivos\_.digraph e imagens\_cfg. Essas pastas estão organizadas de acordo com a estrutura de arquivos dos arquivos de exemplo.
+\paragraph{}Conforme solicitado no enunciado, foram gerados os grafos de fluxo de controle dos programas de exemplo solicitados, tanto no formato \textit{graphviz}, como no formato de imagem PNG. Esses arquivos estão localizados nas pastas \textit{arquivos\_.digraph} e \textit{imagens\_cfg}. Essas pastas estão organizadas de acordo com a estrutura de arquivos dos arquivos de exemplo.
 
-\paragraph{}Durante o processo de geração dos grafos de fluxo de controle, foi encontrado um erro na geração da representação intermediária do Clang para o programa ReedSolomon (em src/singlesource/ReedSolomon.c). Isso se deve pelo fato de, na linha 60 (‘static inited = 0;’), não conter uma declaração de tipo válida para a variável inited. A mensagem de erro de compilação foi armazenada no arquivo de texto nao\_compila.txt em src/singlesource/ReedSolomon.c/nao\_compila.txt.
+\paragraph{}Durante o processo de geração dos grafos de fluxo de controle, foi encontrado um erro na geração da representação intermediária do Clang para o programa \textit{ReedSolomon} (em \textit{src/singlesource/ReedSolomon.c}). Isso se deve pelo fato de, na linha 60 (‘\textit{static inited = 0;}’), não conter uma declaração de tipo válida para a variável \textit{inited}. A mensagem de erro de compilação foi armazenada no arquivo de texto \textit{nao\_compila.txt} em \textit{src/singlesource/ReedSolomon.c/nao\_compila.txt}.
 
 \section{Análise}
 
-\paragraph{}Para a análise das técnicas de otimização, foram escolhidos os seguintes módulos: Fibonacci (em src/singlesource/fib2.c), Private (em src/singlesource/private.c) e Recursive (em src/singlesource/recursive.c).
+\paragraph{}Para a análise das técnicas de otimização, foram escolhidos os seguintes módulos: Fibonacci (em \textit{src/singlesource/fib2.c}), Private (em \textit{src/singlesource/private.c}) e Recursive (em \textit{src/singlesource/recursive.c}).
 
 \subsection{Fibonacci}
 
-\paragraph{}Na análise das técnicas de otimização de Fibonacci, foi escolhida a função ‘fib’. Isso se deve pelo fato dela ser a parte mais importante do programa, e foram escolhidas as versões com nenhuma otimização (O0) e com nível 1 de otimização (O1).
+\paragraph{}Na análise das técnicas de otimização de Fibonacci, foi escolhida a função ‘fib’. Isso se deve pelo fato dela ser a parte mais importante do programa, e foram escolhidas as versões com nenhuma otimização (\textit{O0}) e com nível 1 de otimização (\textit{O1}).
 
 \paragraph{}No nível 1 de otimização, em comparação com a versão sem nenhuma otimização, é possível perceber que uma das recursões envolvendo a função ‘fib’ foi substituída por uma iteração, uma vez que a chamada de função, feita pela instrução ‘call’, foi substituída pela iteração, feita pela instrução ‘br’.
 
@@ -140,7 +140,7 @@
 
 \paragraph{}Em relação ao programa Recursive, para a análise das técnicas de otimização, foi escolhida a função ‘ack’. A escolha dessa função se deve pelo fato dela ser uma das funções nas quais ocorrerão recursões.
 
-\paragraph{}Uma das otimizações que pode ser percebida, no nível 1, é a redução do número de instruções do tipo ‘load’ e ‘store’, na label filha à esquerda da primeira ramificação. Além disso, é possível notar que a label filha à esquerda, na versão de nível 1 de otimização, está realizando diretamente o retorno da função, sem a necessidade de pular para a label final. Isso se deve pelo fato de que na versão não otimizada, o valor do registrado da label mais à esquerda da primeira ramificação estava sendo armazenado na memória para depois ser carregado pela label final, para realizar o retorno. Dessa forma essa otimização remove os loads e stores desnecessários, tornando o programa mais eficiente, por utilizar menos a memória e mais os registradores do processador.
+\paragraph{}Uma das otimizações que pode ser percebida, no nível 1, é a redução do número de instruções do tipo ‘load’ e ‘store’, na \textit{label} filha à esquerda da primeira ramificação. Além disso, é possível notar que a \textit{label} filha à esquerda, na versão de nível 1 de otimização, está realizando diretamente o retorno da função, sem a necessidade de pular para a label final. Isso se deve pelo fato de que na versão não otimizada, o valor do registrado da \textit{label} mais à esquerda da primeira ramificação estava sendo armazenado na memória para depois ser carregado pela \textit{label} final, para realizar o retorno. Dessa forma essa otimização remove os loads e stores desnecessários, tornando o programa mais eficiente, por utilizar menos a memória e mais os registradores do processador.
 
 \begin{figure}
     \centering
@@ -148,7 +148,7 @@
     \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 0 de otimização.}
 \end{figure}
 
-\paragraph{}E em relação à otimização realizada no nível 2, em relação ao nível 1, é possível perceber, que de maneira semelhante com a otimização de nível 2 da função ‘fib’ do programa Fibonacci, visto anteriormente, foi adicionado uma comparação inicial do valor passado por parâmetro para a função ‘ack’. Dessa forma, se o valor passado for igual a 0, o fluxo de execução do programa será direcionado para a label final, dispensando a necessidade de atribuição estática de valor único, que não seria utilizada caso a função começasse com o valor de x como 0.
+\paragraph{}E em relação à otimização realizada no nível 2, em relação ao nível 1, é possível perceber, que de maneira semelhante com a otimização de nível 2 da função ‘fib’ do programa Fibonacci, visto anteriormente, foi adicionado uma comparação inicial do valor passado por parâmetro para a função ‘ack’. Dessa forma, se o valor passado for igual a 0, o fluxo de execução do programa será direcionado para a \textit{label} final, dispensando a necessidade de atribuição estática de valor único, que não seria utilizada caso a função começasse com o valor de x como 0.
 
 \begin{figure}
     \centering
