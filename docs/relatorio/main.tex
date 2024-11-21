@@ -18,161 +18,162 @@
 
 \usepackage{graphicx,url}
 
-%\usepackage[brazil]{babel}   
+\usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
 
-     
+   
 \sloppy
 
-\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
+\title{Trabalho Prático 1 - Compiladores - 2024-2}
 
-\author{Luciana P. Nedel\inst{1}, Rafael H. Bordini\inst{2}, Flávio Rech
-  Wagner\inst{1}, Jomi F. Hübner\inst{3} }
+\author{Henrique Mendonça Castelar Campos}
 
+\address{}
 
-\address{Instituto de Informática -- Universidade Federal do Rio Grande do Sul
-  (UFRGS)\\
-  Caixa Postal 15.064 -- 91.501-970 -- Porto Alegre -- RS -- Brazil
-\nextinstitute
-  Department of Computer Science -- University of Durham\\
-  Durham, U.K.
-\nextinstitute
-  Departamento de Sistemas e Computação\\
-  Universidade Regional de Blumenal (FURB) -- Blumenau, SC -- Brazil
-  \email{\{nedel,flavio\}@inf.ufrgs.br, R.Bordini@durham.ac.uk,
-  jomi@inf.furb.br}
-}
-
-\begin{document} 
+\begin{document}
 
 \maketitle
 
-\begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
-\end{abstract}
-     
-\begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
-\end{resumo}
+\section{Introdução}
 
+\paragraph{}No desenvolvimento de software, algoritmos são codificados em linguagens de programação de alto nível, como Java, C, C++, C\#, Rust, Go, Kotlin, dentre outras, e depois essa linguagem de alto nível é traduzida para uma forma que possa ser executada pelo computador, seja durante a “tradução” (linguagens interpretadas), seja algum momento depois (linguagens compiladas). Para que essa "tradução" possa ocorrer de forma automatizada, foram desenvolvidos os compiladores, que são softwares que realizam esse processo de “tradução”.
 
-\section{General Information}
+\paragraph{}O entendimento do funcionamento de compiladores permite o desenvolvimento de novos métodos de otimização de programas, tornando o código final gerado mais eficiente, o desenvolvimento de novas linguagens de programação, permitindo que programadores tenham novas formas de expressarem seus programas, além de possibilitar o aprimoramento das ferramentas existentes. Dessa forma, o estudo de compiladores pode, em última instância, contribuir para o aprimoramento da Computação como um todo.
 
-All full papers and posters (short papers) submitted to some SBC conference,
-including any supporting documents, should be written in English or in
-Portuguese. The format paper should be A4 with single column, 3.5 cm for upper
-margin, 2.5 cm for bottom margin and 3.0 cm for lateral margins, without
-headers or footers. The main font must be Times, 12 point nominal size, with 6
-points of space before each paragraph. Page numbers must be suppressed.
+\paragraph{}Um compilador é composto das seguintes partes: Front e Back. O Front de um compilador é dividido nos seguintes componentes: Analisador léxico, analisador sintático, analisador semântico. E o Back é composto dos componentes: Gerador de código intermediário, otimizador de código dependente de máquina, gerador de código de máquina e otimizador de código independente de máquina.
 
-Full papers must respect the page limits defined by the conference.
-Conferences that publish just abstracts ask for \textbf{one}-page texts.
+\paragraph{}Neste trabalho, será analisado o funcionamento da parte de otimização de código dependente de máquina, analisando os diferentes tipos de otimização realizados no código intermediário. Para isso, foi desenvolvido um script (programa de linguagem interpretada), que faz o uso do arcabouço de compilação LLVM (Low Level Virtual Machine), para a geração de grafos de fluxo de controle (CFG) nos formatos .digraph e .png, permitindo o entendimento do processo de otimização de código intermediário, desenvolvido dentro do compilador.
 
-\section{First Page} \label{sec:firstpage}
+\section{Desenvolvimento}
 
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
+\paragraph{}O script desenvolvido foi feito na linguagem de programação Python. A escolha dessa linguagem se deve pelo fato do Python possuir recursos avançados e de fácil utilização que permitem a manipulação de strings e a manipulação de caminho de arquivos (path).
 
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
+\paragraph{}O programa desenvolvido é organizado da seguinte forma, ele possui uma única função generate\_unique\_file\_path, responsável por gerar caminhos de arquivo únicos, garantindo que não exista um arquivo com o caminho gerado. E na parte principal do programa (\_\_main\_\_) é feito o processo de chamada do Front do Clang, do otimizador OPT, e do gerador de imagem DOT.
 
-\section{CD-ROMs and Printed Proceedings}
+\paragraph{}Para o desenvolvimento deste programa, foi feito o uso dos seguintes módulos da biblioteca padrão do Python: pathlib, string, sys, os, shutil, subprocess, tempfile e random. Os módulos pathlib e os foram utilizados na resolução dos caminhos dos arquivos. Já o módulo string foi utilizado na geração de caracteres ASCII aleatórios. O módulo sys foi utilizado para a obtenção dos argumentos de linha de comando. Já o módulo shutil, foi utilizado para a obtenção do caminho absoluto dos programas de linha de comando utilizados (clang, opt, dot e llc).
 
-In some conferences, the papers are published on CD-ROM while only the
-abstract is published in the printed Proceedings. In this case, authors are
-invited to prepare two final versions of the paper. One, complete, to be
-published on the CD and the other, containing only the first page, with
-abstract and ``resumo'' (for papers in Portuguese).
+\paragraph{}A utilização do programa é feita através da chamada do interpretador python, seguido do caminho do script, e seguido do programa em C a ser compilado. Uma vez executado este script, automaticamente serão gerados os arquivos .digraph e .png para cada função do programa compilado para os diferentes níveis de otimização: O0, O1, O2 e O3. Cada arquivo gerado tem em seu a função analisada e o tipo de otimização aplicada.
 
-\section{Sections and Paragraphs}
-
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
-
-\subsection{Subsections}
-
-The subsection titles must be in boldface, 12pt, flush left.
-
-\section{Figures and Captions}\label{sec:figs}
-
-
-Figure and table captions should be centered if less than one line
-(Figure~\ref{fig:exampleFig1}), otherwise justified and indented by 0.8cm on
-both margins, as shown in Figure~\ref{fig:exampleFig2}. The caption font must
-be Helvetica, 10 point, boldface, with 6 points of space before and after each
-caption.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.5\textwidth]{fig1.jpg}
-\caption{A typical figure}
-\label{fig:exampleFig1}
+\begin{figure}
+    \centering
+    \begin{verbatim}
+    python ./gen_cfg.py ./exemplo.c
+\end{verbatim}
+    \caption{Comando utilizado para a execução do script desenvolvido}
 \end{figure}
 
-\begin{figure}[ht]
-\centering
-\includegraphics[width=.3\textwidth]{fig2.jpg}
-\caption{This figure is an example of a figure caption taking more than one
-  line and justified considering margins mentioned in Section~\ref{sec:figs}.}
-\label{fig:exampleFig2}
+\paragraph{}Conforme solicitado no enunciado, foram gerados os grafos de fluxo de controle dos programas de exemplo solicitados, tanto no formato graphviz, como no formato de imagem PNG. Esses arquivos estão localizados nas pastas arquivos\_.digraph e imagens\_cfg. Essas pastas estão organizadas de acordo com a estrutura de arquivos dos arquivos de exemplo.
+
+\paragraph{}Durante o processo de geração dos grafos de fluxo de controle, foi encontrado um erro na geração da representação intermediária do Clang para o programa ReedSolomon (em src/singlesource/ReedSolomon.c). Isso se deve pelo fato de, na linha 60 (‘static inited = 0;’), não conter uma declaração de tipo válida para a variável inited. A mensagem de erro de compilação foi armazenada no arquivo de texto nao\_compila.txt em src/singlesource/ReedSolomon.c/nao\_compila.txt.
+
+\section{Análise}
+
+\paragraph{}Para a análise das técnicas de otimização, foram escolhidos os seguintes módulos: Fibonacci (em src/singlesource/fib2.c), Private (em src/singlesource/private.c) e Recursive (em src/singlesource/recursive.c).
+
+\subsection{Fibonacci}
+
+\paragraph{}Na análise das técnicas de otimização de Fibonacci, foi escolhida a função ‘fib’. Isso se deve pelo fato dela ser a parte mais importante do programa, e foram escolhidas as versões com nenhuma otimização (O0) e com nível 1 de otimização (O1).
+
+\paragraph{}No nível 1 de otimização, em comparação com a versão sem nenhuma otimização, é possível perceber que uma das recursões envolvendo a função ‘fib’ foi substituída por uma iteração, uma vez que a chamada de função, feita pela instrução ‘call’, foi substituída pela iteração, feita pela instrução ‘br’.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fib2_.fib_O0.png}
+    \caption{Grafo de fluxo de controle para a função 'fib' com nível 0 de otimização}
 \end{figure}
 
-In tables, try to avoid the use of colored or shaded backgrounds, and avoid
-thick, doubled, or unnecessary framing lines. When reporting empirical data,
-do not use more decimal digits than warranted by their precision and
-reproducibility. Table caption must be placed before the table (see Table 1)
-and the font used must also be Helvetica, 10 point, boldface, with 6 points of
-space before and after each caption.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fib2_.fib_O1.png}
+    \caption{Grafo de fluxo de controle para a função 'fib' com nível 1 de otimização}
+\end{figure}
 
-\begin{table}[ht]
-\centering
-\caption{Variables to be considered on the evaluation of interaction
-  techniques}
-\label{tab:exTable1}
-\includegraphics[width=.7\textwidth]{table.jpg}
-\end{table}
+\paragraph{}Em relação ao nível 2 de otimização, se comparado com ao nível 1, é possível perceber que foi adicionado uma comparação inicial do valor passado à função ‘fib’, por meio da instrução ‘icmp’. Essa comparação garante que se na primeira vez que a função ‘fib’ for chamada, for passado um valor menor ou igual a 2, a função não irá executar instruções da recursão, aumentando a eficiência do programa.
 
-\section{Images}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fib2_.fib_O2.png}
+    \caption{Grafo de fluxo de controle para a função 'fib' com nível 2 de otimização}
+\end{figure}
 
-All images and illustrations should be in black-and-white, or gray tones,
-excepting for the papers that will be electronically available (on CD-ROMs,
-internet, etc.). The image resolution on paper should be about 600 dpi for
-black-and-white images, and 150-300 dpi for grayscale images.  Do not include
-images with excessive resolution, as they may take hours to print, without any
-visible difference in the result. 
+\paragraph{}E em relação ao nível 3 de otimização, se comparado com o nível 2, não ocorreu nenhuma mudança no grafo de fluxo de controle.
 
-\section{References}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fib2_.fib_O3.png}
+    \caption{Grafo de fluxo de controle para a função 'fib' com nível 3 de otimização}
+\end{figure}
 
-Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
+\subsection{Private}
 
-The references must be listed using 12 point font size, with 6 points of space
-before each reference. The first line of each reference should not be
-indented, while the subsequent should be indented by 0.5 cm.
+\paragraph{}Para a análise das técnicas de otimização de Private, foi escolhida a função main. Isso se deve pelo fato desta função apresentar um tipo específico de otimização pertinente ao programa Private.
 
-\bibliographystyle{sbc}
-\bibliography{sbc-template}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{private_.main_O0.png}
+    \caption{Grafo de fluxo de controle para a função ‘main’ com nível 0 de otimização.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{private_.main_O1.png}
+    \caption{Grafo de fluxo de controle para a função ‘main’ com nível 1 de otimização.}
+\end{figure}
+
+\paragraph{}Como é possível perceber, no nível 1 de otimização, se comparado com a versão sem otimização, a função ‘main’ deixou de executar as instruções de inicialização de uma função. Isso se deve pelo fato de que na ‘main’, nada é executado, portanto essas instruções são desnecessárias.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{private_.main_O2.png}
+    \caption{Grafo de fluxo de controle para a função ‘main’ com nível 2 de otimização.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{fib2_.fib_O3.png}
+    \caption{Grafo de fluxo de controle para a função ‘main’ com nível 3 de otimização.}
+\end{figure}
+
+\paragraph{}E em relação aos níveis 2 e 3 de otimização, não houve mudanças em relação ao nível 1.
+
+\subsection{Recursive}
+
+\paragraph{}Em relação ao programa Recursive, para a análise das técnicas de otimização, foi escolhida a função ‘ack’. A escolha dessa função se deve pelo fato dela ser uma das funções nas quais ocorrerão recursões.
+
+\paragraph{}Uma das otimizações que pode ser percebida, no nível 1, é a redução do número de instruções do tipo ‘load’ e ‘store’, na label filha à esquerda da primeira ramificação. Além disso, é possível notar que a label filha à esquerda, na versão de nível 1 de otimização, está realizando diretamente o retorno da função, sem a necessidade de pular para a label final. Isso se deve pelo fato de que na versão não otimizada, o valor do registrado da label mais à esquerda da primeira ramificação estava sendo armazenado na memória para depois ser carregado pela label final, para realizar o retorno. Dessa forma essa otimização remove os loads e stores desnecessários, tornando o programa mais eficiente, por utilizar menos a memória e mais os registradores do processador.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{recursive_.ack_O0.png}
+    \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 0 de otimização.}
+\end{figure}
+
+\paragraph{}E em relação à otimização realizada no nível 2, em relação ao nível 1, é possível perceber, que de maneira semelhante com a otimização de nível 2 da função ‘fib’ do programa Fibonacci, visto anteriormente, foi adicionado uma comparação inicial do valor passado por parâmetro para a função ‘ack’. Dessa forma, se o valor passado for igual a 0, o fluxo de execução do programa será direcionado para a label final, dispensando a necessidade de atribuição estática de valor único, que não seria utilizada caso a função começasse com o valor de x como 0.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{recursive_.ack_O1.png}
+    \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 1 de otimização.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{recursive_.ack_O2.png}
+    \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 2 de otimização.}
+\end{figure}
+
+\paragraph{}E em relação ao nível 3 de otimização, se comparado com o nível 2, não ocorreu nenhuma mudança no grafo de fluxo de controle.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\linewidth]{recursive_.ack_O3.png}
+    \caption{Grafo de fluxo de controle para a função ‘ack’ com nível 3 de otimização.}
+\end{figure}
+
+\section{Conclusão}
+
+\paragraph{}Através deste trabalho foi possível compreender o funcionamento básico de um compilador de linguagens de programação, além dos diferentes níveis de otimização que o código intermediário sofre, permitindo, em última instância, a geração de um objeto executável otimizado para a máquina alvo.
+
+\paragraph{}Além disso, foi possível compreender, em parte, o funcionamento de uma das ferramentas mais utilizadas na compilação de código fonte, que é o LLVM, o seu funcionamento, e como é possível realizar o desenvolvimento de novos métodos de otimização para o código intermediário.
 
 \end{document}
