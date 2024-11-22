@@ -68,7 +68,7 @@ Você deve entregar um arquivo .zip contendo:
 
 #### **Referências**
 
-[1] Grafos de Fluxo de Controle: https://en.wikipedia.org/wiki/Control-flow graph
+[1] Grafos de Fluxo de Controle: https://en.wikipedia.org/wiki/Control-flow_graph
 
 [2] clang: https://clang.llvm.org/
 
