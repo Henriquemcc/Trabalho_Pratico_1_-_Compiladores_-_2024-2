@@ -76,7 +76,7 @@
 
 \subsection{Fibonacci}
 
-\paragraph{}Na análise das técnicas de otimização de Fibonacci, foi escolhida a função ‘\textit{fib}’. Isso se deve pelo fato dela ser a parte mais importante do programa.
+\paragraph{}Na análise das técnicas de otimização de Fibonacci, foi escolhida a função ‘\textit{fib}’. Isso se fundamenta no fato dela ser a parte mais importante do programa.
 
 \paragraph{}No nível 1 de otimização, em comparação com a versão sem nenhuma otimização, é possível perceber que uma das recursões envolvendo a função ‘\textit{fib}’, foi substituída por uma iteração, como é possível perceber, uma vez que a chamada de função, feita pela instrução ‘\textit{call}’, foi substituída pela iteração, feita pela instrução ‘\textit{br}’.
 
@@ -92,7 +92,7 @@
     \caption{Grafo de fluxo de controle para a função '\textit{fib}' com nível 1 de otimização}
 \end{figure}
 
-\paragraph{}Em relação ao nível 2 de otimização, se comparado com o nível 1, é possível perceber que foi adicionado uma comparação inicial do valor passado à função ‘\textit{fib}’, por meio da instrução ‘\textit{icmp}’. Essa comparação garante que se na primeira vez que a função ‘\textit{fib}’ for chamada, for passado um valor menor ou igual a 2, a função não irá executar instruções da recursão, aumentando a eficiência do programa.
+\paragraph{}Em relação ao nível 2 de otimização, se comparado com o nível 1, é possível perceber que foi adicionado uma comparação inicial do valor passado à função ‘\textit{fib}’, por meio da instrução ‘\textit{icmp}’. Essa comparação garante que se na primeira vez que a função ‘\textit{fib}’ for chamada, caso seja passado um valor menor ou igual a 2, a função não irá executar instruções da recursão, aumentando a eficiência do programa.
 
 \begin{figure}
     \centering
@@ -112,7 +112,7 @@
 
 \subsection{\textit{Private}}
 
-\paragraph{}Para a análise das técnicas de otimização de \textit{Private}, foi escolhida a função \textit{main}. Isso se deve pelo fato desta função apresentar um tipo específico de otimização pertinente ao programa \textit{Private}.
+\paragraph{}Para a análise das técnicas de otimização de \textit{Private}, foi escolhida a função \textit{main}. Isso surge em virtude desta função apresentar um tipo específico de otimização pertinente ao programa \textit{Private}.
 
 \begin{figure}
     \centering
@@ -126,7 +126,7 @@
     \caption{Grafo de fluxo de controle para a função ‘\textit{main}’ com nível 1 de otimização.}
 \end{figure}
 
-\paragraph{}Como é possível perceber, no nível 1 de otimização, se comparado com a versão sem otimização, a função ‘\textit{main}’ deixou de executar as instruções de inicialização de uma função. Isso se deve pelo fato de que na ‘\textit{main}’, nada é executado, portanto essas instruções são desnecessárias.
+\paragraph{}Como é possível perceber, no nível 1 de otimização, se comparado com a versão sem otimização, a função ‘\textit{main}’ deixou de executar as instruções de inicialização de uma função. Isso pode ser atribuído ao fato de que na ‘\textit{main}’, nada é executado, portanto essas instruções são desnecessárias.
 
 \begin{figure}
     \centering
@@ -146,9 +146,9 @@
 
 \subsection{\textit{Recursive}}
 
-\paragraph{}Em relação ao programa \textit{Recursive}, para a análise das técnicas de otimização, foi escolhida a função ‘\textit{ack}’. A escolha dessa função se deve pelo fato dela ser uma das funções nas quais ocorrerão mais recursões.
+\paragraph{}Em relação ao programa \textit{Recursive}, para a análise das técnicas de otimização, foi escolhida a função ‘\textit{ack}’. A escolha dessa função deriva do fato dela ser uma das funções nas quais ocorrerão mais recursões.
 
-\paragraph{}Uma das otimizações que pode ser percebida, no nível 1, é a redução do número de instruções do tipo ‘\textit{load}’ e ‘\textit{store}’, na \textit{label} filha à esquerda da primeira ramificação. Além disso, é possível notar que a \textit{label} filha à esquerda, na versão de nível 1 de otimização, está realizando diretamente o retorno da função, sem a necessidade de pular para a \textit{label} final. Isso se deve pelo fato de que na versão não otimizada, o valor do registrado da \textit{label} mais à esquerda da primeira ramificação estava sendo armazenado na memória para depois ser carregado pela \textit{label} final, para realizar o retorno. Dessa forma essa otimização remove os \textit{loads} e \textit{stores} desnecessários, tornando o programa mais eficiente, por utilizar menos a memória e mais os registradores do processador.
+\paragraph{}Uma das otimizações que pode ser percebida, no nível 1, é a redução do número de instruções do tipo ‘\textit{load}’ e ‘\textit{store}’, na \textit{label} filha à esquerda da primeira ramificação. Além disso, é possível notar que a \textit{label} filha à esquerda, na versão de nível 1 de otimização, está realizando diretamente o retorno da função, sem a necessidade de pular para a \textit{label} final. Isso é consequência de que na versão não otimizada, o valor do registrado da \textit{label} mais à esquerda da primeira ramificação, estava sendo armazenado na memória para depois ser carregado pela \textit{label} final, para realizar o retorno. Dessa forma essa otimização remove os \textit{loads} e \textit{stores} desnecessários, tornando o programa mais eficiente, por utilizar menos a memória e mais os registradores do processador.
 
 \begin{figure}
     \centering
