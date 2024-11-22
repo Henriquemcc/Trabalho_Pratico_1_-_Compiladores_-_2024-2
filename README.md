@@ -1,3 +1,5 @@
+[English Version](README.EN.md)
+
 # Trabalho Prático 1 - Compiladores - 2024-2
 
 Trabalho prático da disciplina Compiladores do curso de Ciência da Computação da Pontifícia Universidade Católica de Minas Gerais.
