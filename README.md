@@ -73,3 +73,19 @@ Você deve entregar um arquivo .zip contendo:
 [4] Graphviz: https://graphviz.org/
 
 Bom trabalho!
+
+## Código-fonte
+
+O código-fonte do programa desenvolvido, na linguagem de programação Python, está disponível em [gen_cfg.py](gen_cfg.py).
+
+## Arquivos PNG
+
+Os arquivos PNG gerados, a partir do programa desenvolvido, estão localizados em [imagens_cfg](docs/imagens_cfg).
+
+## Arquivos Digraph
+
+Os arquivos Digraph gerados estão em [arquivos_.digraph](docs/arquivos_.digraph).
+
+## Relatório
+
+O relatório desenvolvido está disponível em [Relatorio.pdf](docs/relatorio/Relatorio.pdf).
