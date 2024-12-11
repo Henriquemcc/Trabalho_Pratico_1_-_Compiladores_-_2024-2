@@ -17,7 +17,7 @@
 \usepackage{sbc-template}
 
 \usepackage{graphicx,url}
-
+\usepackage{cite}
 \usepackage[brazil]{babel}   
 \usepackage[utf8]{inputenc}  
 \usepackage{placeins}
@@ -40,7 +40,7 @@
 
 \paragraph{}No desenvolvimento de software, algoritmos são codificados em linguagens de programação de alto nível, como Java, C, C++, C\#, Rust, Go, Kotlin, dentre outras, e depois essa linguagem de alto nível é traduzida para uma forma que possa ser executada pelo computador, seja durante a “tradução” (linguagens interpretadas), seja algum momento depois (linguagens compiladas). Para que esse processo possa ocorrer de forma automatizada, foram desenvolvidos os compiladores.
 
-\paragraph{}Um compilador é composto das seguintes partes: \textit{Front} e \textit{Back}. O \textit{Front} de um compilador é dividido nos seguintes componentes: Analisador léxico, analisador sintático e analisador semântico. E o \textit{Back} é composto dos componentes: Gerador de código intermediário, otimizador de código dependente de máquina, gerador de código de máquina e otimizador de código independente de máquina.
+\paragraph{}Um compilador é composto das seguintes partes: \textit{Front} e \textit{Back}. O \textit{Front} de um compilador é dividido nos seguintes componentes: Analisador léxico, analisador sintático e analisador semântico. E o \textit{Back} é composto dos componentes: Gerador de código intermediário, otimizador de código dependente de máquina, gerador de código de máquina e otimizador de código independente de máquina.\cite{introducao}
 
 \paragraph{}O entendimento do funcionamento de compiladores permite o desenvolvimento de novos métodos de otimização de programas, tornando o código final gerado mais eficiente, o desenvolvimento de novas linguagens de programação, permitindo que programadores tenham novas formas de expressarem seus programas, além de possibilitar o aprimoramento das ferramentas existentes. Dessa forma, o estudo de compiladores pode, em última instância, contribuir para o aprimoramento da Computação como um todo.
 
@@ -186,4 +186,7 @@
 
 \paragraph{}Além disso, foi possível compreender, em parte, o funcionamento de uma das ferramentas mais utilizadas na compilação de código fonte, que é o LLVM, e como é possível realizar o desenvolvimento de novos métodos de otimização para o código intermediário.
 
+\bibliographystyle{sbc}
+\bibliography{bibliografia}
+\nocite{otimizacao}
 \end{document}
